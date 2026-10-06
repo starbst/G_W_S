@@ -1,0 +1,53 @@
+[
+  {
+    "id": "3a7e0c5c-6a50-4a0b-b068-b67d5d4d8fe7",
+    "scriptName": "[高达战争模拟器][显示] 战斗方案入口",
+    "findRegex": "/()(?:^[ \\t]*\\x60{3}(?:json)?[ \\t]*\\r?\\n[ \\t]*<GWS_BATTLE>\\s*\\{[\\s\\S]*?<\\/GWS_BATTLE>[ \\t]*\\r?\\n[ \\t]*\\x60{3}[ \\t]*$|<GWS_BATTLE>\\s*\\{[\\s\\S]*?<\\/GWS_BATTLE>)/gm",
+    "replaceString": "<div class=\"gws-chat-entry\"><button type=\"button\" data-gws-battle-launch=\"1\" aria-label=\"载入本楼层战斗方案并打开模拟器\"><span aria-hidden=\"true\">⚔</span><span>进入战斗</span><span aria-hidden=\"true\">›</span></button></div>",
+    "trimStrings": [],
+    "placement": [
+      2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+  },
+  {
+    "id": "a61e2a1c-9181-4247-a4aa-02873c2a9aa1",
+    "scriptName": "[高达战争模拟器][显示] 隐藏正在生成的战斗方案",
+    "findRegex": "/()(?:^[ \\t]*\\x60{3}(?:json)?[ \\t]*\\r?\\n[ \\t]*)?<GWS_BATTLE>(?![\\s\\S]*<\\/GWS_BATTLE>)[ \\t\\r\\n]*(?:\\{[\\s\\S]*|)$/gm",
+    "replaceString": "$1",
+    "trimStrings": [],
+    "placement": [
+      2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+  },
+  {
+    "id": "9c60f407-293f-456b-9a84-2993fa1c2cfe",
+    "scriptName": "[高达战争模拟器][提示] 排除历史战斗方案",
+    "findRegex": "/()(?:^[ \\t]*\\x60{3}(?:json)?[ \\t]*\\r?\\n[ \\t]*<GWS_BATTLE>\\s*\\{[\\s\\S]*?<\\/GWS_BATTLE>[ \\t]*\\r?\\n[ \\t]*\\x60{3}[ \\t]*$|<GWS_BATTLE>\\s*\\{[\\s\\S]*?<\\/GWS_BATTLE>)/gm",
+    "replaceString": "$1",
+    "trimStrings": [],
+    "placement": [
+      2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+  }
+]
