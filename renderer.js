@@ -128,7 +128,15 @@ export class BattleRenderer {
   },opts);
   const endPointer=e=>{if(e.pointerType==='touch'){this.touchPoints.delete(e.pointerId);this.touchGesture=gesture();this.drag=this.touchPoints.size?{touch:true}:null;}else this.drag=null;this.touchCamera(performance.now());};
   canvas.addEventListener('pointerup',endPointer,opts);canvas.addEventListener('pointercancel',endPointer,opts);canvas.addEventListener('lostpointercapture',endPointer,opts);
-  canvas.addEventListener('wheel',e=>{e.preventDefault();this.cameraZoom=clamp(this.cameraZoom*Math.exp(e.deltaY*0.001),.25,4);this.touchCamera(performance.now());this.manualDistance=clamp(this.distance*Math.exp(e.deltaY*.001),130,180000);},{...opts,passive:false});
+  canvas.addEventListener('wheel',e=>{
+   e.preventDefault();if(!e.deltaY)return;
+   const now=performance.now(),unit=e.deltaMode===1?32:e.deltaMode===2?canvas.clientHeight||window.innerHeight:1;
+   const ratio=Math.exp(clamp(e.deltaY*unit*.0025,-.6,.6));
+   // Accumulate against the requested distance so rapid wheel ticks survive camera smoothing.
+   const distance=now<(this.cameraHoldUntil||0)?this.manualDistance??this.distance:this.distance;
+   this.cameraZoom=clamp(this.cameraZoom*ratio,.25,4);this.touchCamera(now);
+   this.manualDistance=clamp(distance*ratio,130,180000);
+  },{...opts,passive:false});
   canvas.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','-','w','a','s','d'].includes(e.key)){e.preventDefault();this.touchCamera(performance.now());}if(e.key==='ArrowLeft')this.yaw-=0.12;if(e.key==='ArrowRight')this.yaw+=0.12;if(e.key==='ArrowUp')this.pitch=clamp(this.pitch+0.1,0.04,1.45);if(e.key==='ArrowDown')this.pitch=clamp(this.pitch-0.1,0.04,1.45);if(e.key==='+'){this.cameraZoom=clamp(this.cameraZoom*.85,.25,4);this.manualDistance=clamp(this.distance*.85,130,180000);}if(e.key==='-'){this.cameraZoom=clamp(this.cameraZoom/.85,.25,4);this.manualDistance=clamp(this.distance/.85,130,180000);}if(['w','a','s','d'].includes(e.key)){this.targetPan[2]+=(e.key==='w'?-1:e.key==='s'?1:0)*150;this.targetPan[0]+=(e.key==='a'?-1:e.key==='d'?1:0)*150;this.panHoldUntil=performance.now()+2500;}},opts);
  }
  reset(){this.touchPoints.clear();this.touchGesture=null;this.drag=null;this.impactFeedback.reset();this.projectileTrails.clear();this.trails.clear();this.lastTrailTick=-1;this.yaw=0.7;this.pitch=0.43;this.distance=3000;this.pan=[0,0,0];this.targetPan=[0,0,0];this.followYaw=null;this.lastFocus=null;this.cameraTime=null;this.cameraCenter=null;this.cameraZoom=1;this.panHoldUntil=0;this.cameraHoldUntil=0;this.manualDistance=null;}
@@ -143,7 +151,7 @@ export class BattleRenderer {
   if(!manual){this.yaw+=angleDelta(plan.yaw??.7,this.yaw)*blend;this.pitch+=((plan.pitch??.43)-this.pitch)*blend;this.cameraCenter=lerp(this.cameraCenter,plan.center,blend);this.targetPan=lerp(this.targetPan,[0,0,0],blend);this.cameraZoom+=(1-this.cameraZoom)*blend;}
   this.pan=lerp(this.pan,this.targetPan,1-Math.exp(-dt*8));this.target=add(this.cameraCenter,this.pan);
   const fit=clamp(framingDistance(plan,this.yaw,this.pitch,this.w,this.h),focused?260:1500,180000),wanted=manual?(this.manualDistance??this.distance):clamp(fit*this.cameraZoom,130,180000);
-  this.distance+=(wanted-this.distance)*(1-Math.exp(-dt*1.4));
+  this.distance+=(wanted-this.distance)*(1-Math.exp(-dt*(manual?8:1.4)));
   this.eye=add(this.target,[Math.sin(this.yaw)*Math.cos(this.pitch)*this.distance,Math.sin(this.pitch)*this.distance,Math.cos(this.yaw)*Math.cos(this.pitch)*this.distance]);
   this.view=norm(sub(this.target,this.eye));this.right=norm(cross(this.view,[0,1,0]));this.up=cross(this.right,this.view);this.focal=Math.min(this.w,this.h)*1.15;
   this.cameraFraming={members:plan.members.map(u=>u.id),enemyId:plan.enemyId,enemyIds:plan.enemyIds,fitDistance:fit,manual};

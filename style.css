@@ -1,6 +1,6 @@
 #gundam-war-simulator{--gws-text:#dce7ef;--gws-line:#314657;color:var(--gws-text);font:13px/1.5 system-ui,sans-serif}
 #gundam-war-simulator *{box-sizing:border-box}#gundam-war-simulator [hidden]{display:none!important}
-#gundam-war-simulator .gws-launch{position:fixed;right:18px;bottom:18px;z-index:2900;background:#152c3c;color:#8ce2e8;border:1px solid #447488;border-radius:8px;padding:10px 15px;box-shadow:0 4px 20px #0006}
+#gundam-war-simulator .gws-launch{position:fixed;right:auto;bottom:auto;left:18px;top:18px;width:max-content;max-width:calc(100vw - 16px);min-height:44px;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;touch-action:none;z-index:2900;background:#152c3c;color:#8ce2e8;border:1px solid #447488;border-radius:8px;padding:10px 15px;box-shadow:0 4px 20px #0006}
 #gundam-war-simulator .gws-panel{position:fixed;inset:3vh 3vw;width:94vw;height:94vh;z-index:3010;background:#0d1822;color:var(--gws-text);border:1px solid #405365;border-radius:12px;box-shadow:0 20px 100px #000b;display:flex;flex-direction:column;overflow:hidden}
 #gundam-war-simulator header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--gws-line);background:#122330}
 #gundam-war-simulator h2{color:#eef6fb;margin:3px 0;font-size:22px;letter-spacing:2px}#gundam-war-simulator small{display:block;color:#8da9ba}
