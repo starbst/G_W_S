@@ -3,7 +3,7 @@ import {estimateMeleeClash,meleeContest,meleeEngagementWindow,readMeleeRisk} fro
 import {captureFireHeld} from './capture-coordination.js';
 import { add, sub, mul, dot, length, norm, clamp, bodyBasis, rotateToward, segmentSphere, arcSolution, bodyVector, interceptPoint } from "./math.js";
 
-import {remotePermission,remoteDelay,remoteQuota} from "./seed-systems.js";
+import {remotePermission,remoteDelay,remoteQuota,concurrentRemoteControl} from "./seed-systems.js";
 import {globalPoint} from "./collision.js";
 import { detachWeapons, localPoint } from "./entities.js";
 
@@ -53,7 +53,7 @@ export function launchDrones(b, u, target, state) {
 }
 
 function fireDrone(b, d, owner, target, state) {
-    if (b.t<(owner.microControlUntil||0)||captureFireHeld(b,owner,target)) { d.aim=null; return; }
+    if (b.t<(owner.microControlUntil||0)&&!concurrentRemoteControl(owner,state.definition)||captureFireHeld(b,owner,target)) { d.aim=null; return; }
     if (b.projectiles.length >= 192) return;
     const s = state.definition.sim, solution = d.aim,kind=state.definition.remoteControl?.projectileKind||"beam";
     if(state.ammo===0){d.phase="return";d.aim=null;return;}
@@ -182,6 +182,7 @@ export function updateDrones(b, dt) {
                 }
                 d.position=add(d.position,mul(d.velocity,dt));d.forward=norm(d.velocity);if(d.strikePoint&&dot(sub(d.strikePoint,d.position),d.velocity)<0){d.strikePoint=null;d.nextAt=Math.max(d.nextAt,b.t+.45);d.phase='reposition';d.aim=null;}continue;
             }
+            if(owner.remoteGuardUntil>b.t&&owner.remoteGuardWeaponId===state.definition.id&&owner.remoteGuardTerminalIds?.has(d.id)){const guardBasis=bodyBasis(owner.forward),angle=d.lane/Math.max(1,s.droneCount)*Math.PI*2,point=add(owner.position,add(mul(guardBasis.right,Math.cos(angle)*180),mul(guardBasis.up,Math.sin(angle)*180))),desired=add(owner.velocity,mul(norm(sub(point,d.position)),Math.min(s.droneSpeedMps,length(sub(point,d.position))*8))),force=sub(desired,d.velocity);d.velocity=add(d.velocity,mul(force,Math.min(1,s.droneAcceleration*dt/Math.max(1,length(force)))));d.position=add(d.position,mul(d.velocity,dt));d.energy=Math.max(0,d.energy-3*dt);d.aim=null;d.phase='barrier';continue;}
             const basis = bodyBasis(norm(sub(target.position, owner.position))), phase = d.lane / Math.max(1, s.droneCount) * Math.PI * 2+d.shots*.9;
             let attackPoint = add(target.position, add(mul(basis.right, Math.cos(phase) * s.droneAttackRangeM * .65), add(mul(basis.up, Math.sin(phase) * s.droneAttackRangeM * .65), mul(basis.forward, (d.lane % 3 - 1) * s.droneAttackRangeM * .35))));
             if(wire&&length(sub(attackPoint,owner.position))>wire)attackPoint=add(owner.position,mul(norm(sub(attackPoint,owner.position)),wire*.9));
@@ -189,12 +190,12 @@ export function updateDrones(b, dt) {
             if (length(sub(attackPoint, d.position)) < 180) desired = target.velocity;
             const force = sub(desired, d.velocity), a = length(force);
             d.velocity = add(d.velocity, mul(force, Math.min(1, s.droneAcceleration * dt / Math.max(1, a))));
-            const assisted=state.definition.remoteControl?.assisted,defending=!assisted&&(owner.order==="missileBreak"||owner.pendingReaction&&owner.pendingReaction.priority>1);
-            if (owner.stability < (assisted?.1:.22) || !assisted&&b.t < owner.evadeUntil || defending) {
+            const assisted=state.definition.remoteControl?.assisted,concurrentControl=concurrentRemoteControl(owner,state.definition),defending=!concurrentControl&&(owner.order==="missileBreak"||owner.pendingReaction&&owner.pendingReaction.priority>1);
+            if (owner.stability < (assisted?.1:.22) || !concurrentControl&&b.t < owner.evadeUntil || defending) {
                 d.aim = null;
                 d.phase = "outbound";
             }
-            if (remoteMode!=='ram' && distance < s.droneAttackRangeM && length(sub(attackPoint, d.position)) < 400 && owner.stability >= (assisted?.1:.22) && !defending && (assisted||b.t >= owner.evadeUntil) && b.canSee(d.position, target.position) && b.t >= d.nextAt && d.energy >= (s.droneShotCost??s.energyCost)) {
+            if (remoteMode!=='ram' && distance < s.droneAttackRangeM && length(sub(attackPoint, d.position)) < 400 && owner.stability >= (assisted?.1:.22) && !defending && (concurrentControl||b.t >= owner.evadeUntil) && b.canSee(d.position, target.position) && b.t >= d.nextAt && d.energy >= (s.droneShotCost??s.energyCost)) {
                 if (!d.aim) {
                     const delay=remoteDelay(owner,state.definition),leadTime = delay + distance / s.projectileSpeedMps;
                     const estimate = add(add(target.position, mul(target.velocity, leadTime)), mul(target.acceleration || [ 0, 0, 0 ], .5 * leadTime * leadTime * owner.pilotState.sim.tracking));

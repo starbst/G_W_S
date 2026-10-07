@@ -1,3 +1,4 @@
+import {concurrentRemoteControl} from './seed-systems.js';
 import {add,sub,mul,norm,length,clamp,boxEntry} from './math.js';
 import {sphereEntry,hullEntry} from './collision.js';
 
@@ -30,7 +31,7 @@ export function evadeBeamContact(b,shot,u){
  // Break offensive posture without moving the hull or issuing a thrust pulse.
  // Sensor contacts and any actual emergency evasion remain intact.
  u.captureIntent=null;u.grappleContactSince=null;u.drift=null;u.breakaway=null;u.engagementPlan=null;b.cancelAttacks(u);u.swing=null;u.flightMode='normal';
- for(const d of b.drones||[])if(d.owner===u.id)d.aim=null;
+ for(const d of b.drones||[])if(d.owner===u.id){const weapon=u.weapons?.find(w=>w.definition.id===d.weaponId)?.definition;if(!weapon||!concurrentRemoteControl(u,weapon))d.aim=null;}
  u.stableTime=0;u.locked=false;u.lockedTargetId=null;u.track=0;
  for(const state of u.weapons)if(state.fireControl){state.fireControl.track=0;state.fireControl.locked=false;}
  u.microControlUntil=Math.max(u.microControlUntil||0,b.t+.08);u.nextDecision=b.t;

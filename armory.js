@@ -102,7 +102,7 @@ Object.assign(definitions,{
  speedFactor:['形态速度倍率','相对于MS基础最大速度，切换时实际参与运动计算'],
  thrustFactor:['形态推力倍率','形态对基础推力的修正，决定真实加速度'],
  turnFactor:['形态转向倍率','形态对基础朝向转速的修正，高速MA通常更难转向'],
- remoteControl:['远程终端控制','与UC浮游炮独立的龙骑兵/有线炮能力限制，但复用轻量实体运行'],
+ remoteControl:['远程终端控制','赛可谬、龙骑兵、有线炮、GN终端各有环境及空间感知门槛，共用轻量实体运行'],
  system:['远程系统种类','dragoon为龙骑兵，wired为有线炮，gn-bit为GN遥控枪，gn-fang为GN獠牙'],
  generation:['龙骑兵技术代','技术资料标记；实际操控差异由空间门槛、辅助、延迟与通道参数决定'],
  requiredSpatial:['空间感知最低能力','驾驶员空间感知低于此值不可放出终端；仍允许使用可固定发射的炮'],
@@ -139,3 +139,5 @@ Object.assign(definitions,{cForces:['第三方编组','独立于我方和敌方�
 Object.assign(definitions,{failure:["战场结构失效条件","指定真实可损坏支撑，累计伤害达到比例才发生结构失效；不按时间触发"],obstacleIds:["关键支撑ID","引用本战场实际障碍，按各自结构容量统计累计损伤"],damageFraction:["累计损坏比例","关键支撑损失结构占总容量的比例，达到门槛即失效；未受击不会发生"]});
 
 Object.assign(definitions,{recoveryS:['爆发后回充时间','技能结束后进入此秒数的回充阶段，期间不能再次激活'],recoveryModifiers:['回充期能力倍率','临时降低出力和回气，结束后恢复基础能力'],endEnergyFraction:['结束剩余能源比例','技能结束时保留当前能源的比例，模拟集中释放储粒后的消耗'],attackMode:['遥控终端攻击模式','beam为射击，ram为近身刺击，hybrid根据距离采用射击或刺击']});
+
+Object.assign(definitions,{ucStyle:['UC轮廓特征','精神感应框架、四翼荚舱、光之翼或气垫机体的显示样式'],remoteWeaponId:['屏障关联终端','指定已装备的浮游武器；至少三枚带电终端返回身边才展开屏障，期间停止攻击'],remoteDisruption:['赛可谬干扰','技能激活时打断范围内敌方赛可谬终端；不影响龙骑兵、GN终端或有线炮'],retryS:['干扰间隔（秒）','同一技能两次干扰间隔，防止连续无条件封锁'],durationS:['生效时间（秒）','技能持续时间；干扰效果中为终端不能射击的持续时间']});

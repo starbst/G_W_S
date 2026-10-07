@@ -7,7 +7,7 @@ export function validateSkills(definitions){
  if(!Array.isArray(definitions)||definitions.length>512)throw Error('技能定义数量无效');
  const ids=new Set();for(const d of definitions){if(!d||Object.keys(d).some(k=>!['kind','id','name','description','activation','modifiers','pressureThreshold','durationS','energyCost','oncePerBattle','effects','facts','activationGate','equipmentGate','recoveryS','recoveryModifiers','endEnergyFraction'].includes(k)))throw Error('技能包含未知字段');if(!/^[a-z][a-z0-9-]{0,63}$/.test(d.id)||ids.has(d.id))throw Error('技能ID重复或无效');ids.add(d.id);
  if(!['passive','pressure'].includes(d.activation)||!d.modifiers||typeof d.modifiers!=='object'||Array.isArray(d.modifiers)||!Object.keys(d.modifiers).length&&!d.effects)throw Error('技能激活/倍率无效');
- if(d.effects&&(!d.effects||Array.isArray(d.effects)||Object.keys(d.effects).some(k=>k!=="onLethal")||d.effects.onLethal!=="disable"))throw Error("技能结果效果无效");
+ if(d.effects){if(Array.isArray(d.effects)||Object.keys(d.effects).some(k=>!['onLethal','remoteDisruption'].includes(k))||(d.effects.onLethal!==undefined&&d.effects.onLethal!=='disable'))throw Error('技能结果效果无效');const e=d.effects.remoteDisruption;if(e){if(typeof e!=='object'||Array.isArray(e)||Object.keys(e).some(k=>!['radiusM','durationS','retryS','energyCost'].includes(k)))throw Error('赛可谬干扰参数无效');for(const[k,lo,hi]of [['radiusM',1,10000],['durationS',.1,5],['retryS',1,60],['energyCost',0,100]])if(!Number.isFinite(e[k])||e[k]<lo||e[k]>hi)throw Error('赛可谬干扰参数越界 '+k);}}
  for(const[k,v]of Object.entries(d.modifiers)){const r=FACTORS[k];if(!r||!Number.isFinite(v)||v<r[0]||v>r[1])throw Error('技能倍率越界 '+k);}
  for(const[k,lo,hi]of [['pressureThreshold',0,10],['durationS',1,1200],['energyCost',0,100]])if(!Number.isFinite(d[k])||d[k]<lo||d[k]>hi)throw Error('技能参数无效 '+k);
  if(d.activationGate!==undefined&&!['protected-ally-crisis','ranged-window','melee-window'].includes(d.activationGate))throw Error('技能触发门槛无效');
@@ -65,6 +65,7 @@ export function updateSkills(b,u){
   if(!rt.active.has(d.id)&&!rt.recovering.has(d.id)&&(!d.oncePerBattle||!rt.used.has(d.id))&&(d.activation==='passive'||threat>=d.pressureThreshold)&&skillWindow(b,u,d.activationGate)&&(!d.equipmentGate||u.machine.tags.includes(d.equipmentGate))&&u.energy>=d.energyCost){
  b.spend(u,d.energyCost);rt.active.set(d.id,d.activation==='passive'?Infinity:b.t+d.durationS);rt.used.add(d.id);changed=true;b.emit('skill',u.id,u.machine.name+'：'+d.name,{skill:d.id,skillName:d.name,duration:d.activation==='passive'?null:d.durationS,pressure:+threat.toFixed(3),modifiers:d.modifiers});u.nextDecision=b.t;
  }}
+ applyRemoteDisruption(b,u,rt);
  if(!changed)return;const factors={};for(const d of rt.definitions){const modifiers=rt.active.has(d.id)?d.modifiers:rt.recovering.has(d.id)?d.recoveryModifiers:null;for(const[k,v]of Object.entries(modifiers||{}))factors[k]=Math.min(3,(factors[k]??1)*v);}
  const base=rt.base,configured={...(base.configuredSim||base.sim)};for(const[k,stat]of [['reaction','reactionS'],['aim','aim'],['tracking','tracking'],['maneuver','maneuver'],['melee','melee']])if(configured[stat]!==undefined||factors[k]!==undefined)configured[stat]=(configured[stat]??configured.maneuver??.65)*(factors[k]??1);u.pilotState.sim=runtimePilotStats(configured);
  u.pilotState.tactics.maneuverRecovery=base.tactics.maneuverRecovery*(factors.recovery??1);
@@ -81,4 +82,13 @@ export function trackingSignature(u){
  if(strength===1)return 1;
  const v=Math.hypot(...u.velocity),a=Math.hypot(...u.acceleration);
  return 1-(1-strength)*Math.min(1,v/400)*Math.min(1,a/250);
+}
+
+// Only deployed enemy psycommu terminals are interrupted; other remote systems remain independent.
+export function applyRemoteDisruption(b,u,rt=u.skillRuntime){
+ if(!rt?.active?.size||!b.drones?.length)return;rt.disruptionAt??=new Map();
+ for(const d of rt.definitions){const e=d.effects?.remoteDisruption;if(!e||!rt.active.has(d.id)||b.t<(rt.disruptionAt.get(d.id)??0)||u.energy<e.energyCost)continue;
+ const terminals=b.drones.filter(t=>{const owner=b.unitById.get(t.owner),weapon=owner?.weapons.find(w=>w.definition.id===t.weaponId);return owner?.alive&&owner.side!==u.side&&t.phase!=='return'&&!t.dead&&weapon?.definition.remoteControl?.system==='psycommu'&&Math.hypot(...t.position.map((v,i)=>v-u.position[i]))<=e.radiusM;});
+ if(!terminals.length)continue;b.spend(u,e.energyCost);rt.disruptionAt.set(d.id,b.t+e.retryS);for(const t of terminals){t.nextAt=Math.max(t.nextAt||0,b.t+e.durationS);t.aim=null;}b.emit('remote-disruption',u.id,u.machine.name+'：赛可谬干扰',{skill:d.id,count:terminals.length,duration:e.durationS});
+ }
 }

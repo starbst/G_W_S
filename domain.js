@@ -50,7 +50,7 @@ export function parseWorldbook(book) {
  requireThat(book?.entries&&typeof book.entries==='object','不是酒馆世界书');
  const catalog={machines:[],pilots:[],pilotTemplates:[],skillTemplates:[],weaponTemplates:[],environments:[],battlefields:[],missions:[],rules:null,options:null};
  const names={machine:'machines',pilot:'pilots',environment:'environments', 'entity-template':'machines'},keys=new Set(),entries=Object.values(book.entries);
- requireThat(entries.length<=1000,'世界书条目过多');
+ requireThat(entries.length<=5000,'世界书条目过多');
  for(const e of entries){
   if(e.disable||e.enabled===false)continue;const content=String(e.content||'');if(!content.includes('<GWS_DATA>'))continue;
   const blocks=[...content.matchAll(/<GWS_DATA>\s*([\s\S]*?)\s*<\/GWS_DATA>/g)];
@@ -85,7 +85,7 @@ export function parseWorldbook(book) {
  const r=catalog.rules;if(r.damageMultiplier!==undefined)number(r.damageMultiplier,1,6,'伤害倍率');requireThat(r.stepSeconds===0.05,'当前计算器使用固定20Hz');
  for(const [k,lo,hi]of [['maxSeconds',0,86400],['lockThreshold',0.1,1],['unlockThreshold',0,0.9],['damageVariance',0,0.5],['armorAbsorption',0,0.9],['componentDamageFraction',0,0.01],['boundaryRadiusM',3000,200000],['minimumAltitudeM',10,100]])number(r[k],lo,hi,k);
  requireThat(r.unlockThreshold<r.lockThreshold,'丢锁阈值必须低于锁定阈值');
- for(const k of ['machines','pilots','environments'])requireThat(catalog[k].length>0&&catalog[k].length<=(k==='environments'?100:512),'缺少或过多条目 '+k);
+ for(const k of ['machines','pilots','environments'])requireThat(catalog[k].length>0&&catalog[k].length<=(k==='environments'?100:2048),'缺少或过多条目 '+k);
  validateV5Catalog(catalog);
  validateScenario(catalog.options.defaultScenario,catalog);return registerWorldbookOrigins(catalog,book);
 }

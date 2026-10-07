@@ -1,0 +1,6894 @@
+{
+  "sourceHash": "af47f3f1e8b4a8fefb6e5da4ed4070ef03e69382be8408d3ce1f4abc59e110cf",
+  "sourceName": "黄毛.高达UC v1.4",
+  "entries": [
+    {
+      "cardId": 9,
+      "id": "rx78",
+      "name": "高达",
+      "keys": [
+        "RX-78-2",
+        "高达",
+        "RX-78-2 高达",
+        "Gundam"
+      ],
+      "category": "machine",
+      "type": "",
+      "year": 79,
+      "physics": {
+        "massT": 60,
+        "power": 1380,
+        "height": 18,
+        "thrustKg": 55500
+      },
+      "equipment": [
+        "60mm 头部火神炮 ×2：头部内置的近距离防御武器。",
+        "光束军刀 ×2：收纳于背部背包，拥有能轻易熔断MS装甲的超高热量光束剑刃。",
+        "光束步枪：划时代的主力武器，威力远超传统实弹机枪，一击便可摧毁一台MS。",
+        "超级火箭筒：380mm口径的火箭炮，用于对舰或攻击重装甲目标。",
+        "高达锤/超级锤：带有长链的流星锤，用于破坏性的物理攻击。",
+        "专用盾牌：由月神钛合金制成，可抵挡大部分攻击，提供优异的防御。"
+      ]
+    },
+    {
+      "cardId": 10,
+      "id": "guntank",
+      "name": "钢坦克",
+      "keys": [
+        "RX-75",
+        "钢坦克",
+        "RX-75 钢坦克",
+        "Guntank"
+      ],
+      "category": "machine",
+      "type": "",
+      "year": 79,
+      "physics": {
+        "massT": 80,
+        "power": 878,
+        "height": 15,
+        "thrustKg": 88000
+      },
+      "equipment": [
+        "120mm 低后座力加农炮 ×2：位于双肩的主武器，使用实体炮弹，拥有超远射程，用于摧毁战舰或进行远程火力压制。",
+        "40mm 4联装榴弹发射器 ×2：位于双臂，取代了手部结构，用于中近距离的范围攻击和弹幕防御。"
+      ]
+    },
+    {
+      "cardId": 11,
+      "id": "guncannon",
+      "name": "钢加农",
+      "keys": [
+        "RX-77-2",
+        "钢加农",
+        "RX-77-2 钢加农",
+        "Guncannon"
+      ],
+      "category": "machine",
+      "type": "",
+      "year": 79,
+      "physics": {
+        "massT": 70,
+        "power": 1380,
+        "height": 17.5,
+        "thrustKg": 51800
+      },
+      "equipment": [
+        "60mm 头部火神炮 ×2：头部内置的近距离防御武器。",
+        "240mm 加农炮 ×2：位于双肩的主武器，可单发或齐射，发射高爆实体弹，对MS和战舰都有巨大威胁。也可换装为导弹发射巢。",
+        "专用光束步枪 (XBR-L Type)：一种高精度、长射程的光束武器，使其具备一定的狙击能力。",
+        "手榴弹：用于近距离防御或特殊作战。",
+        "未装备光束军刀等任何专用格斗武器，极度不擅长近身白刃战。"
+      ]
+    },
+    {
+      "cardId": 12,
+      "id": "gm",
+      "name": "吉姆",
+      "keys": [
+        "RGM-79",
+        "吉姆",
+        "RGM-79 吉姆",
+        "GM"
+      ],
+      "category": "machine",
+      "type": "",
+      "year": 79,
+      "physics": {
+        "massT": 58.8,
+        "power": 1250,
+        "height": 18,
+        "thrustKg": 55500
+      },
+      "equipment": [
+        "60mm 头部火神炮 ×2：头部内置的近距离防御武器。",
+        "光束军刀 ×1：标准配备一把，用于近身格斗。",
+        "光束手枪：近距离用光束武器，是对MS的有效装备。",
+        "90mm/100mm 机关枪：地面部队常用的实弹武器。",
+        "380mm 高能火箭筒：与高达使用的型号相似，用于对舰或攻击重装甲目标。",
+        "专用盾牌：提供额外防御的实体盾。"
+      ]
+    },
+    {
+      "cardId": 13,
+      "id": "ball",
+      "name": "铁球",
+      "keys": [
+        "RB-79",
+        "铁球",
+        "RB-79 铁球",
+        "Ball"
+      ],
+      "category": "machine",
+      "type": "",
+      "year": 79,
+      "physics": {
+        "massT": 25,
+        "power": 400,
+        "height": 12.8,
+        "thrustKg": 24000
+      },
+      "equipment": [
+        "120mm 低后座力加农炮 ×1：安装在机体顶部的唯一武器，与钢坦克的主炮型号相同，用于远程炮击支援。"
+      ]
+    },
+    {
+      "cardId": 14,
+      "id": "core-fighter",
+      "name": "核心战机",
+      "keys": [
+        "FF-X7",
+        "FF-X7 核心战机",
+        "Core Fighter"
+      ],
+      "category": "machine",
+      "type": "",
+      "year": 79,
+      "physics": {
+        "massT": 8.9,
+        "length": 8.6
+      },
+      "equipment": [
+        "25mm 火神炮 ×4：内置于机头的机枪，用于空战和近距离防御。",
+        "导弹发射器 ×2：可携带共计8枚空对空导弹，具备一定的空战能力。"
+      ]
+    },
+    {
+      "cardId": 15,
+      "id": "g-fighter",
+      "name": "G-战机",
+      "keys": [
+        "G-战机",
+        "G战机",
+        "G-Fighter"
+      ],
+      "category": "machine",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "光束加农炮 ×2：机身两侧的主武器，威力巨大，足以威胁战舰。",
+        "二联装导弹发射器：用于范围攻击和补充火力。"
+      ]
+    },
+    {
+      "cardId": 16,
+      "id": "g-armor",
+      "name": "G-装甲",
+      "keys": [
+        "G-装甲",
+        "G装甲",
+        "G-Armor"
+      ],
+      "category": "machine",
+      "type": "Gundam & G-Fighter Combined Assault Mode",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "光束加农炮 ×2 (G-Fighter)",
+        "二联装导弹发射器 (G-Fighter)",
+        "高达头部60mm火神炮 (Gundam)",
+        "高达光束步枪 (Gundam, 可在分离后使用)",
+        "RX-78-2高达的盾牌 ×2 (构成机头部分)"
+      ]
+    },
+    {
+      "cardId": 17,
+      "id": "g-bull",
+      "name": "G-公牛",
+      "keys": [
+        "G-公牛",
+        "G公牛",
+        "G-Bull"
+      ],
+      "category": "machine",
+      "type": "Gundam Upper Body & G-Fighter A-Part Combined Tank Mode",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "光束加农炮 ×2 (G-Fighter)",
+        "高达光束步枪 (Gundam, 由手臂持有)",
+        "高达头部60mm火神炮 (Gundam)",
+        "RX-78-2高达的盾牌 ×2 (构成车体前装甲)"
+      ]
+    },
+    {
+      "cardId": 18,
+      "id": "g-bull-easy",
+      "name": "G-公牛简易型",
+      "keys": [
+        "G-公牛简易型",
+        "G公牛简易型",
+        "G-Bull Easy"
+      ],
+      "category": "machine",
+      "type": "G-Fighter A-Part & Gundam Shields Combined Tank Mode",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "光束加农炮 ×2 (G-Fighter)",
+        "RX-78-2高达的盾牌 ×2 (构成车体前装甲)"
+      ]
+    },
+    {
+      "cardId": 19,
+      "id": "g-sky",
+      "name": "G-天空",
+      "keys": [
+        "G-天空",
+        "G天空",
+        "G-Sky"
+      ],
+      "category": "machine",
+      "type": "Core Fighter, Gundam Lower Body & G-Fighter B-Part Combined Fighter Mode",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "25mm 火神炮 ×4 (来自核心战机)",
+        "导弹发射器 ×2 (来自核心战机)"
+      ]
+    },
+    {
+      "cardId": 20,
+      "id": "g-sky-easy",
+      "name": "G-天空简易型",
+      "keys": [
+        "G-天空简易型",
+        "G天空简易型",
+        "G-Sky Easy"
+      ],
+      "category": "machine",
+      "type": "G-Fighter B-Part & Gundam Shields Combined Flight System",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装支援平台)。"
+      ]
+    },
+    {
+      "cardId": 21,
+      "id": "gundam-b-parts",
+      "name": "高达+B组件",
+      "keys": [
+        "高达+B组件",
+        "Gundam + B-Parts"
+      ],
+      "category": "machine",
+      "type": "Gundam Upper Body & G-Fighter B-Part Combined High-Mobility Mode",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "60mm 头部火神炮 ×2",
+        "光束军刀 ×2",
+        "光束步枪",
+        "专用盾牌"
+      ]
+    },
+    {
+      "cardId": 22,
+      "id": "tv-space-boat",
+      "name": "电视太空船",
+      "keys": [
+        "电视太空船",
+        "TV Space Boat"
+      ],
+      "category": "machine",
+      "type": "民间太空广播船 (Civilian Space Broadcasting Ship)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为纯粹的民用船只，不具备任何武装)。"
+      ]
+    },
+    {
+      "cardId": 23,
+      "id": "space-launch",
+      "name": "宇宙快艇",
+      "keys": [
+        "宇宙快艇",
+        "运输艇",
+        "Space Launch"
+      ],
+      "category": "machine",
+      "type": "小型人员运输艇 (Small Personnel Transport Shuttle)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为纯粹的民用/勤务运输载具，不具备任何武装)。"
+      ]
+    },
+    {
+      "cardId": 24,
+      "id": "hulke",
+      "name": "哈尔克",
+      "keys": [
+        "哈尔克",
+        "Hulke"
+      ],
+      "category": "machine",
+      "type": "小型联络飞船 (Small Liaison Spacecraft)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为纯粹的民用/勤务运输载具，不具备任何武装)。"
+      ]
+    },
+    {
+      "cardId": 25,
+      "id": "vulcan-armored-car",
+      "name": "火神炮装甲车",
+      "keys": [
+        "火神炮装甲车",
+        "Vulcan Armored Car"
+      ],
+      "category": "machine",
+      "type": "量产型陆战车 (Mass-Production Land Vehicle)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "60mm 9管火神炮 ×1"
+      ]
+    },
+    {
+      "cardId": 26,
+      "id": "missile-buggy",
+      "name": "导弹车",
+      "keys": [
+        "导弹车",
+        "Missile Buggy"
+      ],
+      "category": "machine",
+      "type": "陆战装甲车辆 (Land Combat Vehicle)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "十管导弹发射器 ×1"
+      ]
+    },
+    {
+      "cardId": 27,
+      "id": "missile-car",
+      "name": "有线导弹车",
+      "keys": [
+        "有线导弹车",
+        "Missile Car"
+      ],
+      "category": "machine",
+      "type": "殖民地内防卫车辆 (Colony Defense Vehicle)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "八管有线导弹发射器 ×1"
+      ]
+    },
+    {
+      "cardId": 28,
+      "id": "anti-zaku-tank",
+      "name": "反扎古坦克",
+      "keys": [
+        "反扎古坦克",
+        "Anti-Zaku Tank"
+      ],
+      "category": "machine",
+      "type": "反MS自走炮 (Anti-MS Self-Propelled Gun)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "双联装对MS机炮 ×2"
+      ]
+    },
+    {
+      "cardId": 29,
+      "id": "type-61-main-battle-tank",
+      "name": "61式主战坦克",
+      "keys": [
+        "61式主战坦克",
+        "Type 61 Main Battle Tank"
+      ],
+      "category": "machine",
+      "type": "量产型主战坦克 (Mass-Production Main Battle Tank)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "双联装150mm/155mm加农炮 ×2 (型号随改动升级)",
+        "12.7mm/13.2mm 重机枪 ×1 (通常为车长机枪)"
+      ]
+    },
+    {
+      "cardId": 30,
+      "id": "flyarrow",
+      "name": "飞箭",
+      "keys": [
+        "飞箭",
+        "Flyarrow"
+      ],
+      "category": "machine",
+      "type": "喷气式战斗机 (Jet Fighter)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "火神炮 ×2",
+        "通常携带空对空或空对地导弹。"
+      ]
+    },
+    {
+      "cardId": 31,
+      "id": "dish",
+      "name": "天碟",
+      "keys": [
+        "天碟",
+        "Dish"
+      ],
+      "category": "machine",
+      "type": "侦察机 / 要员运输机 (Reconnaissance / VIP Transport Aircraft)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "机枪 (用于基础自卫)。"
+      ]
+    },
+    {
+      "cardId": 32,
+      "id": "dragonfly",
+      "name": "蜻蜓",
+      "keys": [
+        "蜻蜓",
+        "Dragonfly"
+      ],
+      "category": "machine",
+      "type": "轻型侦查联络机 (Light Reconnaissance/Liaison Aircraft)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装侦察联络机)。"
+      ]
+    },
+    {
+      "cardId": 33,
+      "id": "depp-rog",
+      "name": "德普·罗格",
+      "keys": [
+        "德普·罗格",
+        "Depp Rog"
+      ],
+      "category": "machine",
+      "type": "重型高空战略轰炸机 (Heavy High-Altitude Strategic Bomber)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "大量常规炸弹",
+        "激光炮 ×5",
+        "防空导弹"
+      ]
+    },
+    {
+      "cardId": 34,
+      "id": "don-escargot",
+      "name": "唐·埃斯卡特",
+      "keys": [
+        "唐·埃斯卡特",
+        "Don Escargot"
+      ],
+      "category": "machine",
+      "type": "量产型反潜巡逻机 (Mass-Production Anti-Submarine Patrol Aircraft)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "鱼雷 (Torpedoes)",
+        "深水炸弹 (Depth Charges)",
+        "防空机枪 ×4"
+      ]
+    },
+    {
+      "cardId": 35,
+      "id": "fanfan",
+      "name": "芳芳",
+      "keys": [
+        "芳芳",
+        "Fanfan"
+      ],
+      "category": "machine",
+      "type": "轻型悬浮直升机/基地内炮艇 (Light Hover Helicopter / Intabase Gunship)",
+      "year": 79,
+      "physics": {
+        "length": 9.2
+      },
+      "equipment": [
+        "五联装导弹发射器 ×2",
+        "7.7mm机枪 ×4"
+      ]
+    },
+    {
+      "cardId": 36,
+      "id": "saberfish",
+      "name": "剑鱼",
+      "keys": [
+        "剑鱼",
+        "Saberfish"
+      ],
+      "category": "machine",
+      "type": "量产型宇宙战斗轰炸机 (Mass-Production Space Fighter-Bomber)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "25mm机枪 ×4",
+        "导弹发射器 ×12",
+        "反舰导弹"
+      ]
+    },
+    {
+      "cardId": 37,
+      "id": "toriares",
+      "name": "托里亚斯",
+      "keys": [
+        "托里亚斯",
+        "Toriares"
+      ],
+      "category": "machine",
+      "type": "轻型战斗/拦截机 (Light Fighter/Interceptor)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "火神炮 ×2"
+      ]
+    },
+    {
+      "cardId": 38,
+      "id": "fly-manta",
+      "name": "飞鳐",
+      "keys": [
+        "飞鳐",
+        "Fly Manta"
+      ],
+      "category": "machine",
+      "type": "量产型战斗轰炸机 (Mass-Production Fighter-Bomber)",
+      "year": 79,
+      "physics": {
+        "length": 17
+      },
+      "equipment": [
+        "三联装导弹发射器 ×2",
+        "机枪 ×2",
+        "重磅智能炸弹 ×2"
+      ]
+    },
+    {
+      "cardId": 39,
+      "id": "white-base",
+      "name": "白色基地",
+      "keys": [
+        "SCV-70",
+        "白色基地",
+        "白色木马",
+        "白色要塞",
+        "SCV-70 白色基地",
+        "White Base"
+      ],
+      "category": "machine",
+      "type": "飞马级两栖攻击舰 (Pegasus-class Amphibious Assault Ship)",
+      "year": 79,
+      "physics": {
+        "length": 262
+      },
+      "equipment": [
+        "580mm 双管主炮 ×1",
+        "双联装MEGA粒子炮 ×2",
+        "三联装对舰导弹发射器 ×8 及其他",
+        "双联装高射机枪 ×18"
+      ]
+    },
+    {
+      "cardId": 40,
+      "id": "big-tray",
+      "name": "大托盘级",
+      "keys": [
+        "大托盘级",
+        "Big Tray-class"
+      ],
+      "category": "machine",
+      "type": "量产型陆上战舰 (Mass-Production Land Battleship)",
+      "year": 79,
+      "physics": {
+        "length": 215
+      },
+      "equipment": [
+        "双联装大型加农炮 ×1 (部分后期型号换装为MEGA粒子炮)",
+        "三联装炮塔 ×3"
+      ]
+    },
+    {
+      "cardId": 41,
+      "id": "medea",
+      "name": "米迪亚",
+      "keys": [
+        "米迪亚",
+        "战术运输机",
+        "Medea"
+      ],
+      "category": "machine",
+      "type": "中型战术运输机 (Medium Tactical Transport Aircraft)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "双联装防空机炮 ×2"
+      ]
+    },
+    {
+      "cardId": 42,
+      "id": "columbus",
+      "name": "哥伦布级",
+      "keys": [
+        "哥伦布级",
+        "Columbus-class"
+      ],
+      "category": "machine",
+      "type": "宇宙运输/补给舰 (Space Transport/Supply Ship)",
+      "year": 79,
+      "physics": {
+        "length": 145
+      },
+      "equipment": [
+        "无 (基本非武装)。"
+      ]
+    },
+    {
+      "cardId": 43,
+      "id": "public",
+      "name": "共和国级",
+      "keys": [
+        "共和国级",
+        "Public-class"
+      ],
+      "category": "machine",
+      "type": "量产型宇宙突击艇 (Mass-Production Space Assault Boat)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "大型导弹 ×2",
+        "六联装导弹发射器 ×2",
+        "机枪 ×4"
+      ]
+    },
+    {
+      "cardId": 44,
+      "id": "gunperry",
+      "name": "钢贝利",
+      "keys": [
+        "钢贝利",
+        "Gunperry"
+      ],
+      "category": "machine",
+      "type": "垂直起降战术运输机 (VTOL Tactical Transport)",
+      "year": 79,
+      "physics": {
+        "massT": 185
+      },
+      "equipment": [
+        "导弹×6"
+      ]
+    },
+    {
+      "cardId": 45,
+      "id": "salamis",
+      "name": "萨拉米斯级",
+      "keys": [
+        "萨拉米斯级",
+        "Salamis-class"
+      ],
+      "category": "machine",
+      "type": "宇宙用轻型巡洋舰 (Space Light Cruiser)",
+      "year": 79,
+      "physics": {
+        "length": 212
+      },
+      "equipment": [
+        "单装203mm MEGA粒子炮 ×6",
+        "导弹及机关炮"
+      ]
+    },
+    {
+      "cardId": 47,
+      "id": "himalaya",
+      "name": "喜马拉雅级",
+      "keys": [
+        "喜马拉雅级",
+        "Himalaya-class"
+      ],
+      "category": "machine",
+      "type": "重型航空母舰 (Heavy Aircraft Carrier)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "双联装主炮 ×1",
+        "单装炮 ×1",
+        "机枪 ×6",
+        "对潜导弹发射器 ×2"
+      ]
+    },
+    {
+      "cardId": 48,
+      "id": "zaku-i",
+      "name": "扎古Ⅰ",
+      "keys": [
+        "MS-05B",
+        "扎古Ⅰ",
+        "MS-05B 扎古Ⅰ",
+        "Zaku I"
+      ],
+      "category": "machine",
+      "type": "泛用量产型机动战士 (Mass-Production General-Purpose Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 65,
+        "height": 17.5
+      },
+      "equipment": [
+        "105mm / 120mm 扎古机枪：标准实弹武器，使用弹鼓供弹。",
+        "280mm 扎古火箭筒：重型火力，早期型号可发射战术核弹头。",
+        "热能斧 (Heat Hawk)：标志性的近战格斗兵器。",
+        "肩盾 (Shoulder Shield)：固定在右肩的简易防御装备。"
+      ]
+    },
+    {
+      "cardId": 49,
+      "id": "zaku-ii",
+      "name": "扎古Ⅱ",
+      "keys": [
+        "MS-06F",
+        "扎古Ⅱ",
+        "MS-06F 扎古Ⅱ",
+        "Zaku II"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (Mass-Production General-Purpose Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 73.3,
+        "height": 17.5
+      },
+      "equipment": [
+        "120mm 扎古机枪：标志性的实弹连射武器，外号“扎古机关鼓”。",
+        "280mm 扎古火箭筒：用于对抗战舰或重装甲目标的强力武器。",
+        "热能斧 (Heat Hawk)：通过超高温斧刃进行切割的近战格斗武器。",
+        "腿部3联装导弹荚舱：可选挂载，提供额外的爆发火力。"
+      ]
+    },
+    {
+      "cardId": 50,
+      "id": "zaku-ii-j",
+      "name": "陆战型扎古Ⅱ",
+      "keys": [
+        "MS-06J",
+        "陆战型扎古Ⅱ",
+        "MS-06J 陆战型扎古Ⅱ",
+        "Zaku II Ground Type"
+      ],
+      "category": "machine",
+      "type": "陆战用量产型MS (Mass-Production Ground Combat Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 70.3,
+        "height": 17.5
+      },
+      "equipment": [
+        "120mm 扎古机枪",
+        "280mm 扎古火箭筒",
+        "热能斧 (Heat Hawk)",
+        "腿部3联装导弹荚舱：陆战型常用的可选挂载，提供额外的爆发火力。",
+        "175mm 无后坐力步枪 (Magella Top Cannon)：部分机体使用的对坦克/对MS重型火炮。"
+      ]
+    },
+    {
+      "cardId": 51,
+      "id": "zaku-ii-s",
+      "name": "指挥官用型扎古Ⅱ",
+      "keys": [
+        "MS-06S",
+        "指挥官用型扎古Ⅱ",
+        "MS-06S 指挥官用型扎古Ⅱ",
+        "Zaku II Commander Type"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (王牌驾驶员专用机)",
+      "year": 79,
+      "physics": {
+        "height": 17.5,
+        "thrustKg": 51600
+      },
+      "equipment": [
+        "与MS-06F 扎古Ⅱ通用，王牌驾驶员可根据任务和偏好，自由选择包括120mm机枪、280mm火箭筒、热能斧在内的各种标准武器。"
+      ]
+    },
+    {
+      "cardId": 52,
+      "id": "gouf",
+      "name": "古夫",
+      "keys": [
+        "YMS-07B",
+        "古夫",
+        "YMS-07B 古夫",
+        "Gouf"
+      ],
+      "category": "machine",
+      "type": "陆战用试作型MS (Prototype Ground Combat Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 75.4,
+        "height": 18.2
+      },
+      "equipment": [
+        "指部5连装75mm机关炮 (Finger Vulcan)：固定于左手的速射武器，用于中近距离的牵制和防空。",
+        "电热鞭 (Heat Rod)：收纳于右臂的鞭状武器，可通过高压电流破坏敌机电子设备或熔断其装甲。",
+        "热能剑 (Heat Sword)：收纳于盾牌内的大型军刀，是主要的格斗斩击武器。",
+        "专用盾牌：固定于手臂的大型实体盾，防御面积优于扎古的肩盾。"
+      ]
+    },
+    {
+      "cardId": 53,
+      "id": "gouf",
+      "name": "古夫",
+      "keys": [
+        "MS-07B",
+        "古夫",
+        "MS-07B 古夫",
+        "Gouf"
+      ],
+      "category": "machine",
+      "type": "陆战用量产型MS (Mass-Production Ground Combat Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 75.4,
+        "height": 18.2
+      },
+      "equipment": [
+        "指部5连装75mm机关炮 (Finger Vulcan)",
+        "电热鞭 (Heat Rod)",
+        "热能剑 (Heat Sword)",
+        "专用盾牌",
+        "除标准武装外，也可以使用扎古系的120mm机枪或360mm火箭筒等通用武器。"
+      ]
+    },
+    {
+      "cardId": 54,
+      "id": "dom",
+      "name": "大魔",
+      "keys": [
+        "MS-09",
+        "大魔",
+        "MS-09 大魔",
+        "Dom"
+      ],
+      "category": "machine",
+      "type": "陆战用量产型MS (Mass-Production Ground Combat Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 81.8,
+        "height": 18.6
+      },
+      "equipment": [
+        "360mm 巨型火箭筒：威力巨大的主武器，用于摧毁战舰或重装甲目标。",
+        "热能军刀 (Heat Saber)：大型化的热能格斗武器，通常收纳于背部。",
+        "胸部扩散光束炮：胸口搭载的内藏式光束武器，因技术限制威力较弱，主要用于牵制和迷惑敌人。"
+      ]
+    },
+    {
+      "cardId": 55,
+      "id": "rick-dom",
+      "name": "力克大魔",
+      "keys": [
+        "MS-09R",
+        "力克大魔",
+        "MS-09R 力克大魔",
+        "Rick Dom"
+      ],
+      "category": "machine",
+      "type": "宇宙战用量产型MS (Mass-Production Space Combat Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 78.6,
+        "height": 18.6
+      },
+      "equipment": [
+        "360mm 巨型火箭筒",
+        "热能军刀 (Heat Saber)",
+        "胸部扩散光束炮",
+        "光束火箭炮 (Beam Bazooka)：为部分机体测试性配备的实验性光束武器，威力巨大但充能时间长。"
+      ]
+    },
+    {
+      "cardId": 56,
+      "id": "gelgoog",
+      "name": "勇士",
+      "keys": [
+        "MS-14A",
+        "勇士",
+        "MS-14A 勇士",
+        "Gelgoog"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (Mass-Production General-Purpose Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 73.3,
+        "height": 19.2
+      },
+      "equipment": [
+        "光束步枪 (Beam Rifle)：吉翁第一款量产型光束步枪，威力与高达所使用的相当。",
+        "双头光束剑 (Twin Beam Sword)：独特的双刃光束武器，类似薙刀，拥有广阔的攻击范围。",
+        "专用盾牌 (Shield)：大型手持盾牌，提供优异的防御能力。"
+      ]
+    },
+    {
+      "cardId": 57,
+      "id": "gelgoog-s",
+      "name": "指挥官用型勇士",
+      "keys": [
+        "MS-14S",
+        "指挥官用型勇士",
+        "MS-14S 指挥官用型勇士",
+        "Gelgoog Commander Type"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (王牌驾驶员专用机)",
+      "year": 79,
+      "physics": {
+        "height": 19.2,
+        "thrustKg": 123000
+      },
+      "equipment": [
+        "与MS-14A 勇士通用，包括光束步枪、双头光束剑和专用盾牌。王牌驾驶员会根据个人习惯进行微调（例如夏亚机曾加装110mm机炮）。"
+      ]
+    },
+    {
+      "cardId": 58,
+      "id": "gyan",
+      "name": "强人",
+      "keys": [
+        "YMS-15",
+        "强人",
+        "YMS-15 强人",
+        "Gyan"
+      ],
+      "category": "machine",
+      "type": "泛用试作型MS (Prototype General-Purpose Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 68.6,
+        "height": 19.9
+      },
+      "equipment": [
+        "光束军刀 (Beam Saber)：西洋剑外形的高出力光束剑，专精于刺击。",
+        "专用盾牌 (Shield)：巨大的圆形手持盾，不仅用于防御，更内藏了两种暗器。",
+        "小型机雷爆弹 (Hide Bomb)：内藏于盾牌的浮游机雷，可在近距离散布形成爆炸陷阱。",
+        "针状导弹 (Needle Missile)：同样内藏于盾牌，可瞬间发射大量小型导弹进行饱和攻击。"
+      ]
+    },
+    {
+      "cardId": 59,
+      "id": "gogg",
+      "name": "战蟹",
+      "keys": [
+        "MSM-03",
+        "战蟹",
+        "MSM-03 战蟹",
+        "Gogg"
+      ],
+      "category": "machine",
+      "type": "水陆两用量产型MS (Mass-Production Amphibious Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 159.4,
+        "height": 18.3
+      },
+      "equipment": [
+        "腹部MEGA粒子炮 ×2",
+        "格斗用钢铁巨爪 (Iron Nail) ×2",
+        "背部鱼雷发射管 ×2"
+      ]
+    },
+    {
+      "cardId": 60,
+      "id": "acguy",
+      "name": "龟霸",
+      "keys": [
+        "MSM-04",
+        "龟霸",
+        "MSM-04 龟霸",
+        "Acguy"
+      ],
+      "category": "machine",
+      "type": "水陆两用量产型MS (Mass-Production Amphibious Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 129,
+        "height": 19.2
+      },
+      "equipment": [
+        "头部105mm火神炮 ×4",
+        "腕部6连装导弹发射器 ×1 (可替换)",
+        "腕部格斗用爪 (Iron Nail) ×2 (可伸缩)",
+        "手臂部件为模块化设计，导弹发射器可替换为机关炮或MEGA粒子炮等多种武装。"
+      ]
+    },
+    {
+      "cardId": 61,
+      "id": "zgok",
+      "name": "魔蟹",
+      "keys": [
+        "MSM-07",
+        "魔蟹",
+        "MSM-07 魔蟹",
+        "Z'Gok"
+      ],
+      "category": "machine",
+      "type": "水陆两用量产型MS (Mass-Production Amphibious Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 96.4,
+        "height": 18.4
+      },
+      "equipment": [
+        "头部240mm导弹发射器 ×6：用于中远程火力压制。",
+        "腕部MEGA粒子炮 ×2：内藏于机械爪掌心，易于瞄准，是其核心武器。",
+        "腕部格斗用爪 (Iron Nail) ×2：锋利的三根巨爪，用于近身格斗。"
+      ]
+    },
+    {
+      "cardId": 62,
+      "id": "zgok-s",
+      "name": "后期型魔蟹",
+      "keys": [
+        "MSM-07S",
+        "后期型魔蟹",
+        "MSM-07S 后期型魔蟹",
+        "Z'Gok Commander Type"
+      ],
+      "category": "machine",
+      "type": "水陆两用量产型MS (王牌驾驶员专用机)",
+      "year": 79,
+      "physics": {
+        "massT": 95.2,
+        "height": 18.4
+      },
+      "equipment": [
+        "与标准型MSM-07魔蟹完全相同，包括头部6联240mm导弹发射器、腕部MEGA粒子炮和腕部格斗用爪。"
+      ]
+    },
+    {
+      "cardId": 63,
+      "id": "zock",
+      "name": "双面魔蟹",
+      "keys": [
+        "MSM-10",
+        "双面魔蟹",
+        "MSM-10 双面魔蟹",
+        "Zock"
+      ],
+      "category": "machine",
+      "type": "水陆两用试作型重MS (Prototype Amphibious Heavy Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 229,
+        "height": 23.9
+      },
+      "equipment": [
+        "头部光子微波激射枪 (Phonon Maser) ×1",
+        "肩部MEGA粒子炮 ×8",
+        "腕部格斗用爪 (Iron Nail) ×2"
+      ]
+    },
+    {
+      "cardId": 64,
+      "id": "adham",
+      "name": "阿萨姆",
+      "keys": [
+        "MAX-03",
+        "阿萨姆",
+        "MAX-03 阿萨姆",
+        "Adzam"
+      ],
+      "category": "machine",
+      "type": "试作型机动炮座 / 机动堡垒 (Prototype Mobile Artillery / Mobile Armor)",
+      "year": 79,
+      "physics": {
+        "height": 25
+      },
+      "equipment": [
+        "双联装MEGA粒子炮 ×8",
+        "电磁枷锁 (Leader) ×3"
+      ]
+    },
+    {
+      "cardId": 65,
+      "id": "zakrello",
+      "name": "扎古莱罗",
+      "keys": [
+        "MA-04X",
+        "扎古莱罗",
+        "MA-04X 扎古莱罗",
+        "Zakrello"
+      ],
+      "category": "machine",
+      "type": "宇宙战用试作型MA (Prototype Space Combat Mobile Armor)",
+      "year": 79,
+      "physics": {
+        "massT": 185,
+        "height": 25
+      },
+      "equipment": [
+        "口部扩散MEGA粒子炮 ×1",
+        "腕部热能镰刀 (Heat Nata) ×2",
+        "侧部4连装导弹发射器 ×2"
+      ]
+    },
+    {
+      "cardId": 66,
+      "id": "bigro",
+      "name": "比格罗",
+      "keys": [
+        "MA-05",
+        "比格罗",
+        "MA-05 比格罗",
+        "Bigro"
+      ],
+      "category": "machine",
+      "type": "宇宙战用量产型MA (Mass-Production Space Combat Mobile Armor)",
+      "year": 79,
+      "physics": {
+        "massT": 229.8,
+        "length": 45.5
+      },
+      "equipment": [
+        "机首大型MEGA粒子炮 ×1",
+        "4连装导弹发射器 ×2",
+        "格斗战专用机械爪 ×2"
+      ]
+    },
+    {
+      "cardId": 67,
+      "id": "grublo",
+      "name": "格拉布罗",
+      "keys": [
+        "MAM-07",
+        "格拉布罗",
+        "MAM-07 格拉布罗",
+        "Grabro"
+      ],
+      "category": "machine",
+      "type": "水中战用试作型MA (Prototype Underwater Combat Mobile Armor)",
+      "year": 79,
+      "physics": {
+        "massT": 793.7,
+        "height": 40.2
+      },
+      "equipment": [
+        "前部7连装鱼雷发射管 ×2",
+        "上部对舰/对空导弹发射器 ×2",
+        "腕部格斗战用机械爪 ×2"
+      ]
+    },
+    {
+      "cardId": 68,
+      "id": "zeong",
+      "name": "吉翁号",
+      "keys": [
+        "MSN-02",
+        "吉翁号",
+        "MSN-02 吉翁号",
+        "Zeong"
+      ],
+      "category": "machine",
+      "type": "NT专用试作型重MS (Prototype Newtype-use Heavy Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 231.9,
+        "height": 17.3
+      },
+      "equipment": [
+        "腕部5连装有线制御式MEGA粒子炮 ×2 (共10门)",
+        "腹部MEGA粒子炮 ×2",
+        "口部MEGA粒子炮 ×1"
+      ]
+    },
+    {
+      "cardId": 69,
+      "id": "big-zam",
+      "name": "大扎姆",
+      "keys": [
+        "MA-08",
+        "大扎姆",
+        "MA-08 大扎姆",
+        "Big Zam"
+      ],
+      "category": "machine",
+      "type": "对舰对要塞战用试作型重MA (Prototype Anti-Ship/Fortress Heavy MA)",
+      "year": 79,
+      "physics": {
+        "massT": 1936,
+        "height": 59.6
+      },
+      "equipment": [
+        "大型MEGA粒子炮 ×1",
+        "对空MEGA粒子炮 ×28",
+        "多种对空导弹"
+      ]
+    },
+    {
+      "cardId": 70,
+      "id": "elmeth",
+      "name": "艾尔美斯",
+      "keys": [
+        "MAN-08",
+        "艾尔美斯",
+        "MAN-08 艾尔美斯",
+        "Elmeth"
+      ],
+      "category": "machine",
+      "type": "NT专用试作型MA (Prototype Newtype-use Mobile Armor)",
+      "year": 79,
+      "physics": {
+        "massT": 291.8,
+        "height": 85.4
+      },
+      "equipment": [
+        "Bit ×12",
+        "MEGA粒子炮 ×2"
+      ]
+    },
+    {
+      "cardId": 71,
+      "id": "braw-bro",
+      "name": "布劳·布罗",
+      "keys": [
+        "MAN-03",
+        "布劳·布罗",
+        "MAN-03 布劳·布罗",
+        "Braw Bro"
+      ],
+      "category": "machine",
+      "type": "NT专用试作型MA (Prototype Newtype-use Mobile Armor)",
+      "year": 79,
+      "physics": {
+        "massT": 2602.6,
+        "height": 62.4
+      },
+      "equipment": [
+        "有线制御式MEGA粒子炮 ×4"
+      ]
+    },
+    {
+      "cardId": 72,
+      "id": "jicco",
+      "name": "吉科级",
+      "keys": [
+        "吉科级",
+        "Jicco-class"
+      ],
+      "category": "machine",
+      "type": "量产型突击艇 (Mass-Production Assault Boat)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "七联装导弹发射器 ×1",
+        "机枪 ×4"
+      ]
+    },
+    {
+      "cardId": 73,
+      "id": "gaw",
+      "name": "加乌级",
+      "keys": [
+        "加乌级",
+        "Gaw-class"
+      ],
+      "category": "machine",
+      "type": "攻击型航空母舰 (Attack Aircraft Carrier)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "双联装MEGA粒子炮 ×3",
+        "大量炸弹",
+        "导弹及对空机炮"
+      ]
+    },
+    {
+      "cardId": 74,
+      "id": "fat-uncle",
+      "name": "胖叔叔",
+      "keys": [
+        "胖叔叔",
+        "Fat Uncle"
+      ],
+      "category": "machine",
+      "type": "空中运输机 (Air Transport)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "双联装机枪 ×3"
+      ]
+    },
+    {
+      "cardId": 75,
+      "id": "gallop",
+      "name": "盖洛普级",
+      "keys": [
+        "盖洛普级",
+        "Gallop-class"
+      ],
+      "category": "machine",
+      "type": "指挥官用陆战舰 / MS运输艇 (Commander's Land Ship / MS Carrier)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "双联装主炮 ×1",
+        "双联装防空炮 ×2"
+      ]
+    },
+    {
+      "cardId": 76,
+      "id": "dabude",
+      "name": "达布德级",
+      "keys": [
+        "达布德级",
+        "Dabude-class"
+      ],
+      "category": "machine",
+      "type": "指挥用陆战舰 (Command Land Battleship)",
+      "year": 79,
+      "physics": {
+        "length": 109
+      },
+      "equipment": [
+        "双联装主炮 ×2",
+        "双联装机炮 ×2"
+      ]
+    },
+    {
+      "cardId": 77,
+      "id": "papua",
+      "name": "巴布亚级",
+      "keys": [
+        "巴布亚级",
+        "Papua-class"
+      ],
+      "category": "machine",
+      "type": "量产型宇宙运输补给舰 (Mass-Production Space Supply Ship)",
+      "year": 79,
+      "physics": {
+        "length": 300
+      },
+      "equipment": [
+        "手动操作的双管机炮 ×数门"
+      ]
+    },
+    {
+      "cardId": 78,
+      "id": "pazock",
+      "name": "帕佐克级",
+      "keys": [
+        "帕佐克级",
+        "Pazock-class"
+      ],
+      "category": "machine",
+      "type": "量产型宇宙运输补给舰 (Mass-Production Space Supply Ship)",
+      "year": 79,
+      "physics": {
+        "length": 260
+      },
+      "equipment": [
+        "无 (为最大化运载空间而完全移除了武装)。"
+      ]
+    },
+    {
+      "cardId": 79,
+      "id": "yapp",
+      "name": "亚普级",
+      "keys": [
+        "亚普级",
+        "Yapp-class"
+      ],
+      "category": "machine",
+      "type": "太空运输舰 (Space Transport Ship)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "不明 (可能无武装或仅有极弱的自卫火力)。"
+      ]
+    },
+    {
+      "cardId": 80,
+      "id": "musai",
+      "name": "姆塞级",
+      "keys": [
+        "姆塞级",
+        "姆塞级轻型巡洋舰",
+        "Musai-class Light Cruiser"
+      ],
+      "category": "machine",
+      "type": "轻型巡洋舰 / MS母舰 (Light Cruiser / MS Carrier)",
+      "year": 79,
+      "physics": {
+        "length": 234
+      },
+      "equipment": [
+        "双联装MEGA粒子炮 ×3",
+        "大型导弹发射器 ×2",
+        "小型导弹发射器 ×10"
+      ]
+    },
+    {
+      "cardId": 81,
+      "id": "zanzibar",
+      "name": "桑吉巴尔级",
+      "keys": [
+        "桑吉巴尔级",
+        "Zanzibar-class"
+      ],
+      "category": "machine",
+      "type": "量产型指挥官用机动巡洋舰 (Mass-Production Commander-use Mobile Cruiser)",
+      "year": 79,
+      "physics": {
+        "length": 255
+      },
+      "equipment": [
+        "600mm双联装主炮 ×1",
+        "MEGA粒子加农炮 ×4",
+        "大型导弹发射器 ×2",
+        "双联装机炮 ×5"
+      ]
+    },
+    {
+      "cardId": 82,
+      "id": "chivvay",
+      "name": "契贝级",
+      "keys": [
+        "契贝级",
+        "Chivvay-class"
+      ],
+      "category": "machine",
+      "type": "量产型高速重巡洋舰 (Mass-Production High-Speed Heavy Cruiser)",
+      "year": 79,
+      "physics": {
+        "length": 235
+      },
+      "equipment": [
+        "三联装MEGA粒子加农炮 ×2 (或 ×3)",
+        "双联装机炮 ×18",
+        "导弹发射器 ×12"
+      ]
+    },
+    {
+      "cardId": 83,
+      "id": "doros",
+      "name": "多洛斯级",
+      "keys": [
+        "多洛斯级",
+        "Dolos-class"
+      ],
+      "category": "machine",
+      "type": "重型宇宙空母 (Heavy Space Carrier)",
+      "year": 79,
+      "physics": {
+        "length": 492
+      },
+      "equipment": [
+        "双联装MEGA粒子主炮 ×8",
+        "双联装机炮 ×2"
+      ]
+    },
+    {
+      "cardId": 84,
+      "id": "gwazine",
+      "name": "格瓦金级",
+      "keys": [
+        "格瓦金级",
+        "Gwazine-class"
+      ],
+      "category": "machine",
+      "type": "指挥官用宇宙战列舰 (Commander-use Space Battleship)",
+      "year": 79,
+      "physics": {
+        "length": 294
+      },
+      "equipment": [
+        "双联装大型MEGA粒子加农炮 ×3",
+        "双联装MEGA粒子加农炮/机炮 ×10"
+      ]
+    },
+    {
+      "cardId": 85,
+      "id": "jukon",
+      "name": "尤康级",
+      "keys": [
+        "尤康级",
+        "Jukon-class"
+      ],
+      "category": "machine",
+      "type": "水下攻击潜艇 / MS母舰 (Underwater Attack Submarine / MS Carrier)",
+      "year": 79,
+      "physics": {
+        "length": 248
+      },
+      "equipment": [
+        "三联装导弹发射器 ×3",
+        "鱼雷发射器 ×6"
+      ]
+    },
+    {
+      "cardId": 86,
+      "id": "mad-angler",
+      "name": "魔鮟级",
+      "keys": [
+        "魔鮟级",
+        "Mad Angler-class"
+      ],
+      "category": "machine",
+      "type": "大型运输水下潜艇 / 特殊任务母舰 (Large Transport Submarine / Special Operations Mothership)",
+      "year": 79,
+      "physics": {
+        "length": 300
+      },
+      "equipment": [
+        "地对地导弹发射器 ×10",
+        "鱼雷发射器 ×9"
+      ]
+    },
+    {
+      "cardId": 87,
+      "id": "prober",
+      "name": "普罗伯级",
+      "keys": [
+        "普罗伯级",
+        "Prober-class"
+      ],
+      "category": "machine",
+      "type": "侦察潜艇 (Reconnaissance Submarine)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装侦察潜艇)。"
+      ]
+    },
+    {
+      "cardId": 88,
+      "id": "wappa",
+      "name": "瓦帕",
+      "keys": [
+        "瓦帕",
+        "Wappa"
+      ],
+      "category": "machine",
+      "type": "量产型侦查用载人气垫机 (Mass-Production Reconnaissance Hovercraft)",
+      "year": 79,
+      "physics": {
+        "length": 5.5
+      },
+      "equipment": [
+        "MG74型机枪 ×1"
+      ]
+    },
+    {
+      "cardId": 89,
+      "id": "samson",
+      "name": "萨姆逊",
+      "keys": [
+        "萨姆逊",
+        "Samson"
+      ],
+      "category": "machine",
+      "type": "陆地运载卡车 (Land Transport Truck)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "双联装机枪 ×2"
+      ]
+    },
+    {
+      "cardId": 90,
+      "id": "heavy-lift-vehicle",
+      "name": "H.L.V.",
+      "keys": [
+        "H.L.V.",
+        "HLV",
+        "Heavy Lift Vehicle"
+      ],
+      "category": "machine",
+      "type": "重型升降火箭 (Heavy Lift Vehicle)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装运输载具)。"
+      ]
+    },
+    {
+      "cardId": 91,
+      "id": "komusai",
+      "name": "小姆塞",
+      "keys": [
+        "小姆塞",
+        "Komusai"
+      ],
+      "category": "machine",
+      "type": "太空运输穿梭机 / 大气层突入艇 (Space Transport Shuttle / Atmospheric Re-entry Vehicle)",
+      "year": 79,
+      "physics": {
+        "height": 26.4
+      },
+      "equipment": [
+        "60mm火神炮 ×2"
+      ]
+    },
+    {
+      "cardId": 92,
+      "id": "sodon",
+      "name": "佐冬",
+      "keys": [
+        "佐冬",
+        "Sodon"
+      ],
+      "category": "machine",
+      "type": "太空拖船 / MS支援艇 (Space Tug / MS Support Craft)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "60mm火神炮 ×2"
+      ]
+    },
+    {
+      "cardId": 93,
+      "id": "zeon-space-launch",
+      "name": "吉翁太空发射艇",
+      "keys": [
+        "吉翁太空发射艇",
+        "Zeon Space Launch"
+      ],
+      "category": "machine",
+      "type": "太空运输船 / 联络艇 (Space Transport / Liaison Craft)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装运输载具)。"
+      ]
+    },
+    {
+      "cardId": 94,
+      "id": "commu",
+      "name": "柯缪",
+      "keys": [
+        "柯缪",
+        "Commu"
+      ],
+      "category": "machine",
+      "type": "个人摆渡飞机 / 垂直起降机 (Personal Shuttle / VTOL Aircraft)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装载具)。"
+      ]
+    },
+    {
+      "cardId": 95,
+      "id": "luggun",
+      "name": "鲁艮",
+      "keys": [
+        "鲁艮",
+        "Luggun"
+      ],
+      "category": "machine",
+      "type": "侦察机 (Reconnaissance Aircraft)",
+      "year": 79,
+      "physics": {
+        "length": 12.4
+      },
+      "equipment": [
+        "20mm双联装机炮 ×2",
+        "导弹发射器 ×4",
+        "炸弹"
+      ]
+    },
+    {
+      "cardId": 96,
+      "id": "dopp",
+      "name": "多普",
+      "keys": [
+        "多普",
+        "Dopp"
+      ],
+      "category": "machine",
+      "type": "量产型战斗机 (Mass-Production Fighter Aircraft)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "30mm六联装导弹发射器 ×2",
+        "20mm火神炮 ×2"
+      ]
+    },
+    {
+      "cardId": 97,
+      "id": "gattle",
+      "name": "卡托尔",
+      "keys": [
+        "卡托尔",
+        "Gattle"
+      ],
+      "category": "machine",
+      "type": "量产型宇宙轰炸机 (Mass-Production Space Bomber)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "大型导弹 ×4",
+        "五联装导弹发射器 ×2",
+        "火神炮 ×4"
+      ]
+    },
+    {
+      "cardId": 98,
+      "id": "dodai",
+      "name": "德戴YS",
+      "keys": [
+        "德戴YS",
+        "Dodai YS"
+      ],
+      "category": "machine",
+      "type": "轰炸机 / 辅助飞行系统 (Bomber / Sub-Flight System)",
+      "year": 79,
+      "physics": {
+        "length": 20.3
+      },
+      "equipment": [
+        "导弹发射器 ×8"
+      ]
+    },
+    {
+      "cardId": 99,
+      "id": "cui",
+      "name": "丘伊",
+      "keys": [
+        "丘伊",
+        "Cui"
+      ],
+      "category": "machine",
+      "type": "两栖装甲运兵车 (Amphibious Armored Personnel Carrier)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "双联装30mm机炮 ×1"
+      ]
+    },
+    {
+      "cardId": 100,
+      "id": "magella-attack",
+      "name": "玛捷拉坦克",
+      "keys": [
+        "玛捷拉坦克",
+        "Magella Attack"
+      ],
+      "category": "machine",
+      "type": "量产型陆战用坦克 (Mass-Production Land Combat Tank)",
+      "year": 79,
+      "physics": {
+        "height": 6.8
+      },
+      "equipment": [
+        "175mm加农炮 ×1",
+        "三联装35mm机炮 ×1"
+      ]
+    },
+    {
+      "cardId": 101,
+      "id": "sealance",
+      "name": "海矛",
+      "keys": [
+        "海矛",
+        "Sealance"
+      ],
+      "category": "machine",
+      "type": "轻型高速艇 (Light High-Speed Boat)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装载具)。"
+      ]
+    },
+    {
+      "cardId": 102,
+      "id": "core-booster",
+      "name": "核心推进器",
+      "keys": [
+        "核心推进器",
+        "Core Booster"
+      ],
+      "category": "machine",
+      "type": "量产型支援机 / 高速突击战机 (Mass-Production Support Craft / High-Speed Attack Fighter)",
+      "year": 79,
+      "physics": {
+        "massT": 18.3
+      },
+      "equipment": [
+        "MEGA粒子加农炮 ×2",
+        "25mm火神炮 ×4",
+        "导弹发射器 ×4",
+        "炸弹 ×2"
+      ]
+    },
+    {
+      "cardId": 103,
+      "id": "g3-gundam",
+      "name": "G-3高达",
+      "keys": [
+        "RX-78-3",
+        "G-3高达",
+        "G3高达",
+        "RX-78-3 G-3高达",
+        "Gundam G3"
+      ],
+      "category": "machine",
+      "type": "泛用多目的试作型MS (General-Purpose Multirole Prototype MS)",
+      "year": 79,
+      "physics": {
+        "height": 18
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束军刀 ×2",
+        "专用光束步枪",
+        "超级火箭筒",
+        "专用盾牌"
+      ]
+    },
+    {
+      "cardId": 104,
+      "id": "thoroughbred",
+      "name": "纯血种马",
+      "keys": [
+        "SCVA-72",
+        "纯血种马",
+        "SCVA-72 纯血种马",
+        "Thoroughbred"
+      ],
+      "category": "machine",
+      "type": "飞马级两栖攻击舰 (Pegasus-class Amphibious Assault Ship)",
+      "year": 79,
+      "physics": {
+        "length": 262
+      },
+      "equipment": [
+        "双联装560mm主炮 ×1",
+        "双联装MEGA粒子加农炮 ×2",
+        "前段导弹发射器×26, 后段导弹发射器×6",
+        "双联装40mm防空炮 ×35"
+      ]
+    },
+    {
+      "cardId": 105,
+      "id": "trafalgar",
+      "name": "特拉法尔加级",
+      "keys": [
+        "特拉法尔加级",
+        "Trafalgar-class"
+      ],
+      "category": "machine",
+      "type": "量产型突击航母 (Mass-Production Assault Carrier)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "双联装MEGA粒子炮 ×1",
+        "双联装机炮 ×4",
+        "六联装导弹发射器 ×2"
+      ]
+    },
+    {
+      "cardId": 106,
+      "id": "rick-dom-char",
+      "name": "夏亚专用型力克大魔",
+      "keys": [
+        "MS-09RS",
+        "夏亚专用型力克大魔",
+        "MS-09RS 夏亚专用型力克大魔",
+        "Char's Rick Dom"
+      ],
+      "category": "machine",
+      "type": "宇宙战用个人特装型MS (Custom Ace Pilot-use Space Combat MS)",
+      "year": 79,
+      "physics": {
+        "height": 18.6
+      },
+      "equipment": [
+        "Ex-T2-2型光束火箭筒 (Beam Bazooka)",
+        "热能军刀 (Heat Saber)",
+        "胸部扩散光束炮",
+        "360mm巨型火箭筒",
+        "120mm机枪"
+      ]
+    },
+    {
+      "cardId": 108,
+      "id": "mk-ii",
+      "name": "高达Mk-Ⅱ",
+      "keys": [
+        "RX-178",
+        "高达Mk-Ⅱ",
+        "高达MkⅡ",
+        "RX-178 高达Mk-Ⅱ",
+        "Gundam Mk-Ⅱ"
+      ],
+      "category": "machine",
+      "type": "泰坦斯试作型MS (Titans Prototype MS)",
+      "year": 79,
+      "physics": {
+        "height": 18.5
+      },
+      "equipment": [
+        "光束军刀 ×2",
+        "头部60mm火神荚舱系统",
+        "专用光束步枪 (E-Pack式)",
+        "360mm超级火箭筒",
+        "专用盾牌",
+        "可与支援机“G-防卫者”合体，成为“超级高达”。"
+      ]
+    },
+    {
+      "cardId": 109,
+      "id": "super-gundam",
+      "name": "超级高达",
+      "keys": [
+        "超级高达",
+        "Super Gundam"
+      ],
+      "category": "machine",
+      "type": "追加支援战机试作型MS (Enhanced Support Fighter Prototype MS)",
+      "year": 79,
+      "physics": {
+        "massT": 94,
+        "thrustKg": 166000
+      },
+      "equipment": [
+        "长距离光束步枪 (Long-Range Beam Rifle)",
+        "14连装导弹发射器",
+        "光束军刀 ×2",
+        "头部60mm火神荚舱系统",
+        "专用光束步枪"
+      ]
+    },
+    {
+      "cardId": 110,
+      "id": "zeta",
+      "name": "Z高达",
+      "keys": [
+        "MSZ-006",
+        "Z高达",
+        "MSZ-006 Z高达",
+        "Zeta Gundam"
+      ],
+      "category": "machine",
+      "type": "攻击用试作型可变式MS (Prototype Attack-use Transformable Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "height": 19.85
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "腕部榴弹发射器 ×2",
+        "光束军刀 ×2 (可兼作光束炮)",
+        "专用光束步枪 (枪头可生成光束刃)",
+        "专用盾牌",
+        "超级MEGA发射器 (Hyper Mega Launcher)"
+      ]
+    },
+    {
+      "cardId": 111,
+      "id": "hyaku-shiki",
+      "name": "百式",
+      "keys": [
+        "MSN-00100",
+        "百式",
+        "MSN-00100 百式",
+        "Hyaku Shiki"
+      ],
+      "category": "machine",
+      "type": "攻击用试作型MS (Prototype Attack-use Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "height": 18.5
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束军刀 ×2",
+        "专用光束步枪",
+        "FHA-03M1型 超级MEGA粒子炮 (Mega Bazooka Launcher)"
+      ]
+    },
+    {
+      "cardId": 112,
+      "id": "rick-dias",
+      "name": "力克·迪亚斯",
+      "keys": [
+        "RMS-099",
+        "力克·迪亚斯",
+        "力克迪亚斯",
+        "RMS-099 力克·迪亚斯",
+        "Rick Dias"
+      ],
+      "category": "machine",
+      "type": "攻击用量产型MS (Attack-use Mass-Production Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "height": 18.7
+      },
+      "equipment": [
+        "光束剑 ×1",
+        "头部55mm双联火神炮",
+        "专用光束手枪 ×2",
+        "榴弹发射器 (Clay Bazooka)"
+      ]
+    },
+    {
+      "cardId": 113,
+      "id": "nemo",
+      "name": "雷姆",
+      "keys": [
+        "MSA-003",
+        "雷姆",
+        "MSA-003 雷姆",
+        "Nemo"
+      ],
+      "category": "machine",
+      "type": "迎击用量产型MS (Mass-Production Intercept-use Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 55.6,
+        "height": 18.5
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束剑 ×2",
+        "BOWA·BR-S-85-C2型光束步枪",
+        "专用伸缩式盾牌",
+        "黏土火箭筒"
+      ]
+    },
+    {
+      "cardId": 114,
+      "id": "dijeh",
+      "name": "迪杰",
+      "keys": [
+        "MSK-008",
+        "迪杰",
+        "MSK-008 迪杰",
+        "Dijeh"
+      ],
+      "category": "machine",
+      "type": "攻击用试作型MS (Prototype Attack-use Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 51.8,
+        "height": 18.4
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束长矛 (Beam Naginata)",
+        "BR-M-87型光束步枪 (百式同型号)",
+        "黏土火箭筒"
+      ]
+    },
+    {
+      "cardId": 115,
+      "id": "methuss",
+      "name": "梅塔斯",
+      "keys": [
+        "MSA-005",
+        "梅塔斯",
+        "MSA-005 梅塔斯",
+        "Methuss"
+      ],
+      "category": "machine",
+      "type": "攻击用试作型可变MS (Prototype Attack-use Transformable Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 52.4,
+        "height": 18.1
+      },
+      "equipment": [
+        "前臂光束枪 ×2",
+        "光束军刀 ×6"
+      ]
+    },
+    {
+      "cardId": 116,
+      "id": "junior-mobile-suit",
+      "name": "初级机动战士",
+      "keys": [
+        "初级机动战士",
+        "Junior Mobile Suit"
+      ],
+      "category": "machine",
+      "type": "量产型作业用MS (Mass-Production Work-use Mobile Suit)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "高能光束枪"
+      ]
+    },
+    {
+      "cardId": 117,
+      "id": "middle-mobile-suit",
+      "name": "中型机动战士",
+      "keys": [
+        "中型机动战士",
+        "Middle Mobile Suit"
+      ],
+      "category": "machine",
+      "type": "作业用机器人 (Work-use Robot)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "光束剑 (可通过手动插头使用)"
+      ]
+    },
+    {
+      "cardId": 118,
+      "id": "argama",
+      "name": "阿伽玛级",
+      "keys": [
+        "阿伽玛级",
+        "Argama-class"
+      ],
+      "category": "machine",
+      "type": "强袭机动巡洋舰 (Assault Mobile Cruiser)",
+      "year": 79,
+      "physics": {
+        "length": 323
+      },
+      "equipment": [
+        "主炮塔 ×4",
+        "MEGA粒子加农炮 ×2",
+        "高能MEGA粒子加农炮 ×1",
+        "导弹发射器"
+      ]
+    },
+    {
+      "cardId": 119,
+      "id": "irish",
+      "name": "爱尔兰级",
+      "keys": [
+        "爱尔兰级",
+        "Irish-class"
+      ],
+      "category": "machine",
+      "type": "宇宙战舰 (Space Battleship)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "双联装MEGA粒子炮 ×2",
+        "单管MEGA粒子炮 ×5 (舰身两侧各二，后方一门)"
+      ]
+    },
+    {
+      "cardId": 120,
+      "id": "temptation",
+      "name": "诱惑级",
+      "keys": [
+        "诱惑级",
+        "Temptation-class"
+      ],
+      "category": "machine",
+      "type": "小型太空梭 (Small Space Shuttle)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装载具)。"
+      ]
+    },
+    {
+      "cardId": 121,
+      "id": "la-vie-en-rose",
+      "name": "拉比安罗丝",
+      "keys": [
+        "拉比安罗丝",
+        "La Vie en Rose"
+      ],
+      "category": "machine",
+      "type": "大型船坞舰 / 移动补给基地 (Large Dock Ship / Mobile Supply Base)",
+      "year": 79,
+      "physics": {
+        "massT": 98535,
+        "length": 618
+      },
+      "equipment": [
+        "搭载了多种规格的MEGA粒子加农炮用于自卫。"
+      ]
+    },
+    {
+      "cardId": 122,
+      "id": "hohsenka",
+      "name": "霍森卡",
+      "keys": [
+        "霍森卡",
+        "Hohsenka"
+      ],
+      "category": "machine",
+      "type": "太空飞机 / 大气层突入艇 (Space Plane / Atmospheric Re-entry Vehicle)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装载具)。"
+      ]
+    },
+    {
+      "cardId": 123,
+      "id": "heavy-lift-launch-vehicle",
+      "name": "H.L.L.V.",
+      "keys": [
+        "H.L.L.V.",
+        "HLLV",
+        "Heavy Lift Launch Vehicle"
+      ],
+      "category": "machine",
+      "type": "重型运载火箭 (Heavy Lift Launch Vehicle)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装运载工具)。"
+      ]
+    },
+    {
+      "cardId": 124,
+      "id": "base-jabber",
+      "name": "航空踏板",
+      "keys": [
+        "航空踏板",
+        "Base Jabber"
+      ],
+      "category": "machine",
+      "type": "辅助飞行系统 (Sub-Flight System)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "MEGA粒子加农炮 ×1 (后期型号为增加运载量而移除)"
+      ]
+    },
+    {
+      "cardId": 125,
+      "id": "dodai-kai",
+      "name": "德戴改",
+      "keys": [
+        "德戴改",
+        "Dodai Kai"
+      ],
+      "category": "machine",
+      "type": "辅助飞行系统 (Sub-Flight System)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装或仅有极弱自卫火力)。"
+      ]
+    },
+    {
+      "cardId": 126,
+      "id": "shackles",
+      "name": "镣铐",
+      "keys": [
+        "镣铐",
+        "Shackles"
+      ],
+      "category": "machine",
+      "type": "辅助飞行系统 (Sub-Flight System)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装载具)。"
+      ]
+    },
+    {
+      "cardId": 127,
+      "id": "suit-carrier",
+      "name": "MS载具",
+      "keys": [
+        "MS载具",
+        "Suit Carrier"
+      ],
+      "category": "machine",
+      "type": "MS专用运输船 (MS Transport Ship)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "自卫用机炮塔"
+      ]
+    },
+    {
+      "cardId": 128,
+      "id": "flying-armor",
+      "name": "飞行装甲",
+      "keys": [
+        "飞行装甲",
+        "Flying Armor"
+      ],
+      "category": "machine",
+      "type": "辅助飞行系统 (Sub-Flight System)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装载具)。"
+      ]
+    },
+    {
+      "cardId": 129,
+      "id": "g-defenser",
+      "name": "G-防卫者",
+      "keys": [
+        "G-防卫者",
+        "G防卫者",
+        "G-Defenser"
+      ],
+      "category": "machine",
+      "type": "试作型支援战机 (Prototype Support Fighter)",
+      "year": 79,
+      "physics": {
+        "massT": 60.3
+      },
+      "equipment": [
+        "长距离光束步枪",
+        "十四联装导弹舱 ×2",
+        "迷你激光炮 ×2",
+        "火神炮 ×4"
+      ]
+    },
+    {
+      "cardId": 130,
+      "id": "zaku-ii-e",
+      "name": "强行侦察型扎古Ⅱ",
+      "keys": [
+        "MS-06E",
+        "强行侦察型扎古Ⅱ",
+        "MS-06E 强行侦察型扎古Ⅱ",
+        "Zaku Reconnaissance Type"
+      ],
+      "category": "machine",
+      "type": "侦察用量产型MS (Mass-Production Reconnaissance MS)",
+      "year": 79,
+      "physics": {
+        "massT": 76.2,
+        "height": 17.7
+      },
+      "equipment": [
+        "无 (基本非武装)",
+        "CE-16TX型摄像枪 (一种用于远距离拍摄和数据收集的装备)"
+      ]
+    },
+    {
+      "cardId": 131,
+      "id": "zaku-marine",
+      "name": "试作型水中用扎古",
+      "keys": [
+        "MS-06M",
+        "试作型水中用扎古",
+        "MS-06M 试作型水中用扎古",
+        "Zaku Marine Type"
+      ],
+      "category": "machine",
+      "type": "水陆两用试作型MS (Prototype Amphibious Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "height": 17.5
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "M6-G型240mm萨布洛克反潜导弹枪",
+        "M8型180mm四联装火箭夹舱"
+      ]
+    },
+    {
+      "cardId": 132,
+      "id": "hizack",
+      "name": "高扎古",
+      "keys": [
+        "RMS-106",
+        "高扎古",
+        "RMS-106 高扎古",
+        "Hizack"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (Mass-Production General-Purpose Mobile Suit)",
+      "year": 84,
+      "physics": {
+        "height": 18
+      },
+      "equipment": [
+        "专用光束步枪 + 热能斧",
+        "120mm扎古机枪改 + 光束军刀"
+      ]
+    },
+    {
+      "cardId": 133,
+      "id": "hizack-custom",
+      "name": "特装型高扎古",
+      "keys": [
+        "RMS-106CS",
+        "特装型高扎古",
+        "RMS-106CS 特装型高扎古",
+        "Hizack Custom"
+      ],
+      "category": "machine",
+      "type": "狙击用试作型MS (Prototype Sniper-use Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 60.7,
+        "height": 18
+      },
+      "equipment": [
+        "BR-87A狙击用大型光束步枪",
+        "光束军刀",
+        "热能斧"
+      ]
+    },
+    {
+      "cardId": 134,
+      "id": "marasai",
+      "name": "玛拉塞",
+      "keys": [
+        "RMS-108",
+        "玛拉塞",
+        "RMS-108 玛拉塞",
+        "Marasai"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (Mass-Production General-Purpose Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "height": 17.5
+      },
+      "equipment": [
+        "头部火神炮 ×2",
+        "光束军刀 ×2",
+        "BR-87A光束步枪",
+        "专用盾牌"
+      ]
+    },
+    {
+      "cardId": 135,
+      "id": "action-zaku",
+      "name": "机动扎古",
+      "keys": [
+        "MS-11",
+        "机动扎古",
+        "MS-11 机动扎古",
+        "Action Zaku"
+      ],
+      "category": "machine",
+      "type": "泛用试作型MS (Prototype General-Purpose Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "height": 18.2
+      },
+      "equipment": [
+        "MMP-80型90mm机枪",
+        "大型热能斧",
+        "BR-87A型光束步枪 (高扎古同款)",
+        "光束剑 ×2",
+        "大型热能斧"
+      ]
+    },
+    {
+      "cardId": 136,
+      "id": "galbaldy-beta",
+      "name": "加里波第β",
+      "keys": [
+        "RMS-117",
+        "加里波第β",
+        "RMS-117 加里波第β",
+        "Galbaldy β"
+      ],
+      "category": "machine",
+      "type": "局地战专用MS (Limited-Role Combat Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 56.9,
+        "height": 19
+      },
+      "equipment": [
+        "光束军刀 ×1",
+        "专用光束步枪",
+        "专用盾牌 (内藏导弹×2)"
+      ]
+    },
+    {
+      "cardId": 137,
+      "id": "barzam",
+      "name": "巴扎姆",
+      "keys": [
+        "RMS-154",
+        "巴扎姆",
+        "RMS-154 巴扎姆",
+        "Barzam"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (Mass-Production General-Purpose Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 62.2,
+        "height": 19.4
+      },
+      "equipment": [
+        "光束剑 ×2 (收纳于腕部)",
+        "头部60mm火神荚舱系统",
+        "专用光束步枪 (附带榴弹发射器)"
+      ]
+    },
+    {
+      "cardId": 138,
+      "id": "gm-sniper-custom",
+      "name": "特装狙击型吉姆",
+      "keys": [
+        "RGM-79SC",
+        "特装狙击型吉姆",
+        "RGM-79SC 特装狙击型吉姆",
+        "GM Sniper Custom"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (王牌驾驶员专用机)",
+      "year": 79,
+      "physics": {
+        "height": 17.7
+      },
+      "equipment": [
+        "BR-M79L-3 光束狙击步枪 (核心武装)",
+        "头部60mm火神炮 ×2",
+        "右腕固定式光束剑",
+        "光束手枪、90mm机关枪、火箭炮、多种专用盾牌"
+      ]
+    },
+    {
+      "cardId": 139,
+      "id": "gm-ii",
+      "name": "吉姆Ⅱ",
+      "keys": [
+        "RMS-179",
+        "吉姆Ⅱ",
+        "RMS-179 吉姆Ⅱ",
+        "GM Ⅱ"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (Mass-Production General-Purpose Mobile Suit)",
+      "year": 85,
+      "physics": {
+        "massT": 58.7,
+        "height": 18.1
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束剑 ×1",
+        "BOWA·BR-S-85-C2光束步枪",
+        "专用盾牌"
+      ]
+    },
+    {
+      "cardId": 140,
+      "id": "gabthley",
+      "name": "卡普斯利",
+      "keys": [
+        "RX-110",
+        "卡普斯利",
+        "RX-110 卡普斯利",
+        "Gabthley"
+      ],
+      "category": "machine",
+      "type": "可变试作型MS (Prototype Transformable Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 56.2,
+        "height": 18.5
+      },
+      "equipment": [
+        "光束剑 ×4",
+        "肩部MEGA粒子炮 ×2 (出力4.2MW)",
+        "后头部火神炮",
+        "脚部机械格斗爪 ×2",
+        "大型长管光束步枪 (出力6.6MW)"
+      ]
+    },
+    {
+      "cardId": 141,
+      "id": "hambrabi",
+      "name": "汉布拉比",
+      "keys": [
+        "RX-139",
+        "汉布拉比",
+        "RX-139 汉布拉比",
+        "Hambrabi"
+      ],
+      "category": "machine",
+      "type": "试作型可变MS (Prototype Transformable Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 56.9,
+        "height": 19.9
+      },
+      "equipment": [
+        "大型背负式光束枪 ×2",
+        "光束军刀 ×2",
+        "腕爪 ×2",
+        "海蛇 (Sea Serpent) - 用于发射电击攻击的线导武器。"
+      ]
+    },
+    {
+      "cardId": 142,
+      "id": "byarlant",
+      "name": "拜亚兰",
+      "keys": [
+        "RX-160",
+        "拜亚兰",
+        "RX-160 拜亚兰",
+        "Byarlant"
+      ],
+      "category": "machine",
+      "type": "局地战专用试作型MS (Prototype Limited-Role Combat Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 54.7,
+        "height": 18.6
+      },
+      "equipment": [
+        "光束军刀 ×2",
+        "掌部MEGA粒子炮 ×2"
+      ]
+    },
+    {
+      "cardId": 143,
+      "id": "asshimar",
+      "name": "亚希玛",
+      "keys": [
+        "NRX-044",
+        "亚希玛",
+        "NRX-044 亚希玛",
+        "Asshimar"
+      ],
+      "category": "machine",
+      "type": "泛用试作型可变MA (Prototype General-Purpose Transformable Mobile Armor)",
+      "year": 87,
+      "physics": {
+        "massT": 63.8,
+        "height": 19.3
+      },
+      "equipment": [
+        "专用大型光束步枪 (枪托部分可伸出光束刃，作为光束斧使用)"
+      ]
+    },
+    {
+      "cardId": 144,
+      "id": "baund-doc",
+      "name": "猎犬",
+      "keys": [
+        "NRX-055",
+        "猎犬",
+        "NRX-055 猎犬",
+        "Baund Doc"
+      ],
+      "category": "machine",
+      "type": "NT专用试作型可变MS (Prototype Newtype-use Transformable Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 129.4,
+        "height": 29.7
+      },
+      "equipment": [
+        "光束军刀",
+        "专用扩散MEGA粒子炮",
+        "右腕机械爪",
+        "专用光束步枪"
+      ]
+    },
+    {
+      "cardId": 145,
+      "id": "gaplant",
+      "name": "加普兰",
+      "keys": [
+        "ORX-005",
+        "加普兰",
+        "ORX-005 加普兰",
+        "Gaplant"
+      ],
+      "category": "machine",
+      "type": "试作型可变MA (Prototype Transformable Mobile Armor)",
+      "year": 87,
+      "physics": {
+        "massT": 94.2,
+        "height": 19.8
+      },
+      "equipment": [
+        "光束军刀 ×2",
+        "腕部光束步枪 ×2"
+      ]
+    },
+    {
+      "cardId": 146,
+      "id": "psycho-gundam",
+      "name": "精神感应高达",
+      "keys": [
+        "MRX-009",
+        "精神感应高达",
+        "MRX-009 精神感应高达",
+        "Psycho Gundam"
+      ],
+      "category": "machine",
+      "type": "试作型可变MA / NT专用机 (Prototype Transformable MA / Newtype-use Machine)",
+      "year": 87,
+      "physics": {
+        "massT": 388.6,
+        "height": 40
+      },
+      "equipment": [
+        "胸部3连装扩散MEGA粒子炮 ×1",
+        "指部光束炮 ×10",
+        "头部2连装小型MEGA光束炮 ×1",
+        "专用盾牌"
+      ]
+    },
+    {
+      "cardId": 147,
+      "id": "psycho-mk-ii",
+      "name": "精神感应高达Mk-Ⅱ",
+      "keys": [
+        "MRX-010",
+        "精神感应高达Mk-Ⅱ",
+        "MRX-010 精神感应高达Mk-Ⅱ",
+        "Psycho Gundam Mk-Ⅱ"
+      ],
+      "category": "machine",
+      "type": "NT专用可变MA (Newtype-use Transformable Mobile Armor)",
+      "year": 87,
+      "physics": {
+        "massT": 283.9,
+        "height": 39.98
+      },
+      "equipment": [
+        "胸部3连装扩散MEGA光束炮",
+        "指部光束炮 ×10",
+        "头部2连装MEGA光束炮",
+        "全身各部位光束炮 ×20",
+        "腕部有线制导光束剑 ×2",
+        "光束反射Bit ×20"
+      ]
+    },
+    {
+      "cardId": 148,
+      "id": "messala",
+      "name": "梅萨拉",
+      "keys": [
+        "PMX-000",
+        "梅萨拉",
+        "PMX-000 梅萨拉",
+        "Messala"
+      ],
+      "category": "machine",
+      "type": "泛用试作型可变MA (Prototype General-Purpose Transformable Mobile Armor)",
+      "year": 87,
+      "physics": {
+        "massT": 89.1,
+        "height": 23.1
+      },
+      "equipment": [
+        "光束剑 ×2",
+        "腕部榴弹发射器",
+        "肩部MEGA粒子炮 ×2",
+        "背部9连装导弹舱 ×2",
+        "腕部火神炮 ×4",
+        "脚部格斗用爪 ×2"
+      ]
+    },
+    {
+      "cardId": 149,
+      "id": "palace-athene",
+      "name": "帕拉斯·雅典娜",
+      "keys": [
+        "PMX-001",
+        "帕拉斯·雅典娜",
+        "PMX-001 帕拉斯·雅典娜",
+        "Pallas Athene"
+      ],
+      "category": "machine",
+      "type": "朱庇特利斯试作型MS (Jupitris Prototype Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 91.5,
+        "height": 27.4
+      },
+      "equipment": [
+        "腕部MEGA粒子炮 ×2",
+        "肩部2连装扩散光束炮",
+        "榴弹发射器",
+        "光束军刀",
+        "脚部格斗用爪 ×2",
+        "2连装MEGA光束枪",
+        "背部4连装对舰用大型导弹 ×2"
+      ]
+    },
+    {
+      "cardId": 150,
+      "id": "bolinoak",
+      "name": "波里诺克·萨曼",
+      "keys": [
+        "PMX-002",
+        "波里诺克·萨曼",
+        "PMX-002 波里诺克·萨曼",
+        "Bolinoak Sammahn"
+      ],
+      "category": "machine",
+      "type": "朱庇特利斯试作型MS / 强袭侦察用MS (Jupitris Prototype MS / Assault Reconnaissance MS)",
+      "year": 87,
+      "physics": {
+        "massT": 56.2,
+        "height": 19.9
+      },
+      "equipment": [
+        "3连装炸裂弹发射器 ×2",
+        "光束斧 (可兼作光束剑/光束炮) ×2",
+        "专用盾牌 (附螯钳)"
+      ]
+    },
+    {
+      "cardId": 151,
+      "id": "the-o",
+      "name": "铁奥",
+      "keys": [
+        "PMX-003",
+        "铁奥",
+        "PMX-003 铁奥",
+        "The·O"
+      ],
+      "category": "machine",
+      "type": "朱庇特利斯试作型MS / NT专用机 (Jupitris Prototype MS / Newtype-use Machine)",
+      "year": 87,
+      "physics": {
+        "massT": 86.3,
+        "height": 28.4
+      },
+      "equipment": [
+        "光束军刀 ×4 (两把由主手臂使用，两把由隐藏手臂使用)",
+        "专用大型光束步枪"
+      ]
+    },
+    {
+      "cardId": 152,
+      "id": "gm-cannon",
+      "name": "吉姆加农",
+      "keys": [
+        "RGC-80",
+        "吉姆加农",
+        "RGC-80 吉姆加农",
+        "GM Cannon"
+      ],
+      "category": "machine",
+      "type": "炮击战用量产型MS (Mass-Production Artillery Combat Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 65.3,
+        "height": 18
+      },
+      "equipment": [
+        "M79E-1型240mm加农炮",
+        "头部60mm火神炮 ×2",
+        "光束喷枪",
+        "专用盾牌"
+      ]
+    },
+    {
+      "cardId": 154,
+      "id": "guncannon-heavy",
+      "name": "重装型钢加农",
+      "keys": [
+        "RX-77-3",
+        "重装型钢加农",
+        "RX-77-3 重装型钢加农",
+        "Guncannon Heavy Arms Type"
+      ],
+      "category": "machine",
+      "type": "炮击战用试作型MS (Prototype Artillery Combat Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 79.1,
+        "height": 17.5
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "肩部240mm加农炮 ×2",
+        "光束步枪"
+      ]
+    },
+    {
+      "cardId": 155,
+      "id": "salamis-kai",
+      "name": "萨拉米斯级（改）",
+      "keys": [
+        "萨拉米斯级改",
+        "萨拉米斯级（改）",
+        "Salamis Kai"
+      ],
+      "category": "machine",
+      "type": "宇宙巡洋舰 (Space Cruiser)",
+      "year": 83,
+      "physics": {},
+      "equipment": [
+        "强化了的多座MEGA粒子炮塔、导弹发射器和近防系统。"
+      ]
+    },
+    {
+      "cardId": 156,
+      "id": "alexandria",
+      "name": "亚历山大级",
+      "keys": [
+        "亚历山大级",
+        "Alexandria-class"
+      ],
+      "category": "machine",
+      "type": "宇宙用重巡洋舰 (Space Heavy Cruiser)",
+      "year": 83,
+      "physics": {
+        "length": 354
+      },
+      "equipment": [
+        "双联装356mm MEGA粒子炮 ×4",
+        "单装356mm MEGA粒子炮 ×2",
+        "双联装100mm MEGA粒子炮 ×4",
+        "单装100mm MEGA粒子炮 ×4"
+      ]
+    },
+    {
+      "cardId": 157,
+      "id": "lombardia",
+      "name": "伦巴第级",
+      "keys": [
+        "伦巴第级",
+        "Lombardia-class"
+      ],
+      "category": "machine",
+      "type": "试作型太空轻型巡洋舰 (Prototype Space Light Cruiser)",
+      "year": 87,
+      "physics": {},
+      "equipment": [
+        "MEGA粒子加农炮 ×6",
+        "导弹发射器"
+      ]
+    },
+    {
+      "cardId": 158,
+      "id": "dogosse-giar",
+      "name": "多戈斯·基亚级",
+      "keys": [
+        "多戈斯·基亚级",
+        "Dogosse Giar-class"
+      ],
+      "category": "machine",
+      "type": "宇宙突击战舰 (Space Assault Battleship)",
+      "year": 87,
+      "physics": {},
+      "equipment": [
+        "长距离MEGA粒子炮 ×3",
+        "多种规格的双联和三联MEGA粒子炮塔及次炮塔",
+        "轨道导弹发射器 ×6"
+      ]
+    },
+    {
+      "cardId": 159,
+      "id": "garuda",
+      "name": "迦楼罗级",
+      "keys": [
+        "迦楼罗级",
+        "Garuda-class"
+      ],
+      "category": "machine",
+      "type": "大型航空运载母舰 (Super-Large Transport Carrier)",
+      "year": 87,
+      "physics": {
+        "length": 317
+      },
+      "equipment": [
+        "双联装激光炮塔 ×10",
+        "导弹发射器 ×数门"
+      ]
+    },
+    {
+      "cardId": 160,
+      "id": "jupitris",
+      "name": "朱庇特里斯级",
+      "keys": [
+        "朱庇特里斯级",
+        "Jupitris-class"
+      ],
+      "category": "machine",
+      "type": "超大型行星间氦3运输舰 (Super-Large Interplanetary Helium-3 Transport Ship)",
+      "year": 10,
+      "physics": {
+        "length": 2000
+      },
+      "equipment": [
+        "不明 (基本非武装，依赖搭载的MS进行防卫)。"
+      ]
+    },
+    {
+      "cardId": 161,
+      "id": "supply-transport-ship",
+      "name": "补给运输船",
+      "keys": [
+        "补给运输船",
+        "Supply Transport Ship"
+      ],
+      "category": "machine",
+      "type": "量产型太空运输船 (Mass-Production Space Transport Ship)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "粒子加农炮 ×1",
+        "防空炮 ×2"
+      ]
+    },
+    {
+      "cardId": 162,
+      "id": "gator",
+      "name": "加托尔",
+      "keys": [
+        "加托尔",
+        "Gator"
+      ],
+      "category": "machine",
+      "type": "辅助飞行系统 (Sub-Flight System)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装载具)。"
+      ]
+    },
+    {
+      "cardId": 163,
+      "id": "air-defense-combat-satellite",
+      "name": "防空作战卫星",
+      "keys": [
+        "防空作战卫星",
+        "Air-defense combat satellite"
+      ],
+      "category": "machine",
+      "type": "防空作战用卫星 (Automated Air-Defense Satellite)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "MEGA粒子加农炮 ×3",
+        "二十二联装导弹发射器 ×2"
+      ]
+    },
+    {
+      "cardId": 164,
+      "id": "gaza-c",
+      "name": "加撒C",
+      "keys": [
+        "AMX-003",
+        "加撒C",
+        "AMX-003 加撒C",
+        "Gaza-C"
+      ],
+      "category": "machine",
+      "type": "泛用量产型可变MS (Mass-Production General-Purpose Transformable Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 72.5,
+        "height": 18.3
+      },
+      "equipment": [
+        "破坏炮 (Knuckle Buster)",
+        "光束军刀 ×2",
+        "光束枪 ×2"
+      ]
+    },
+    {
+      "cardId": 165,
+      "id": "qubeley",
+      "name": "卡碧尼",
+      "keys": [
+        "AMX-004",
+        "卡碧尼",
+        "AMX-004 卡碧尼",
+        "Qubeley"
+      ],
+      "category": "machine",
+      "type": "NT专用试作型MS (Prototype Newtype-use Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 57.2,
+        "height": 18.4
+      },
+      "equipment": [
+        "浮游圆锥炮 ×10",
+        "光束军刀（可兼作光束枪） ×2"
+      ]
+    },
+    {
+      "cardId": 166,
+      "id": "zaku-cannon",
+      "name": "扎古加农",
+      "keys": [
+        "MS-06K",
+        "扎古加农",
+        "MS-06K 扎古加农",
+        "Zaku Cannon"
+      ],
+      "category": "machine",
+      "type": "炮击战用量产型MS (Mass-Production Artillery Combat Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 83.2,
+        "height": 17.7
+      },
+      "equipment": [
+        "180mm加榴炮",
+        "双联装“BIG GUN”导弹/火箭发射器 ×2",
+        "120mm扎古机枪",
+        "热能斧"
+      ]
+    },
+    {
+      "cardId": 167,
+      "id": "zaku-tank",
+      "name": "扎古坦克",
+      "keys": [
+        "MS-06V",
+        "扎古坦克",
+        "MS-06V 扎古坦克",
+        "Zaku Tank"
+      ],
+      "category": "machine",
+      "type": "作业用MS / 现地改装机 (Work-use MS / Field-Modified Machine)",
+      "year": 79,
+      "physics": {
+        "massT": 53.6,
+        "height": 14.7
+      },
+      "equipment": [
+        "作业用机械臂 ×2",
+        "车体3连装35mm机关炮"
+      ]
+    },
+    {
+      "cardId": 168,
+      "id": "gouf-flight-test",
+      "name": "飞行试验型古夫",
+      "keys": [
+        "MS-07H",
+        "飞行试验型古夫",
+        "MS-07H 飞行试验型古夫",
+        "Gouf Flight Test Type"
+      ],
+      "category": "machine",
+      "type": "陆战用试作型MS (Prototype Ground Combat Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 63.9,
+        "height": 18.4
+      },
+      "equipment": [
+        "指部5连装85mm机关炮 ×2",
+        "180mm火箭发射器 ×4",
+        "360mm超级火箭炮"
+      ]
+    },
+    {
+      "cardId": 169,
+      "id": "chivvay-kai",
+      "name": "契贝改级",
+      "keys": [
+        "契贝改级",
+        "Chivvay Kai-class"
+      ],
+      "category": "machine",
+      "type": "量产型高速重巡洋舰 (Mass-Production High-Speed Heavy Cruiser)",
+      "year": 80,
+      "physics": {
+        "length": 235
+      },
+      "equipment": [
+        "三联装主炮 ×2",
+        "次炮 ×4",
+        "防空炮 ×14",
+        "导弹发射器 ×14"
+      ]
+    },
+    {
+      "cardId": 170,
+      "id": "musai-kai",
+      "name": "姆塞改级",
+      "keys": [
+        "姆塞改级",
+        "Musai Kai-class"
+      ],
+      "category": "machine",
+      "type": "量产型宇宙轻型巡洋舰 (Mass-Production Space Light Cruiser)",
+      "year": 83,
+      "physics": {
+        "length": 234
+      },
+      "equipment": [
+        "双联装MEGA粒子炮 ×3",
+        "次炮 ×2",
+        "大型导弹发射器 ×2"
+      ]
+    },
+    {
+      "cardId": 171,
+      "id": "gwanban",
+      "name": "格瓦邦级",
+      "keys": [
+        "格瓦邦级",
+        "Gwanban-class"
+      ],
+      "category": "machine",
+      "type": "指挥官用大型宇宙战舰 (Commander-use Large Space Battleship)",
+      "year": 83,
+      "physics": {
+        "length": 415
+      },
+      "equipment": [
+        "MEGA主炮 ×5",
+        "MEGA粒子加农炮 ×3"
+      ]
+    },
+    {
+      "cardId": 172,
+      "id": "zeon-space-launch",
+      "name": "吉翁太空发射艇",
+      "keys": [
+        "吉翁太空发射艇",
+        "Zeon Space Launch"
+      ],
+      "category": "machine",
+      "type": "太空运输船 / 联络艇 (Space Transport / Liaison Craft)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "无 (本机为非武装运输载具)。"
+      ]
+    },
+    {
+      "cardId": 174,
+      "id": "zz",
+      "name": "ZZ高达",
+      "keys": [
+        "MSZ-010",
+        "ZZ高达",
+        "MSZ-010 ZZ高达",
+        "ZZ Gundam"
+      ],
+      "category": "machine",
+      "type": "泛用试作型可变MS (Prototype General-Purpose Transformable Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 68.4,
+        "height": 22.11
+      },
+      "equipment": [
+        "头部高能MEGA加农炮 (出力50MW)",
+        "双管光束步枪",
+        "2连装光束加农 / 高能光束军刀 ×2",
+        "21连装导弹发射器 ×2"
+      ]
+    },
+    {
+      "cardId": 175,
+      "id": "zz-enhanced",
+      "name": "强化型ZZ高达",
+      "keys": [
+        "MSZ-010S",
+        "强化型ZZ高达",
+        "MSZ-010S 强化型ZZ高达",
+        "Enhanced ZZ Gundam"
+      ],
+      "category": "machine",
+      "type": "泛用试作型可变MS (Prototype General-Purpose Transformable Mobile Suit)",
+      "year": 89,
+      "physics": {
+        "massT": 71.6,
+        "height": 19.86
+      },
+      "equipment": [
+        "高能MEGA加农炮 (出力50MW)",
+        "双管光束步枪",
+        "高能光束军刀 ×2",
+        "18连装导弹发射器 ×2",
+        "头部60mm火神炮 ×4"
+      ]
+    },
+    {
+      "cardId": 176,
+      "id": "zz-fullarmor",
+      "name": "全装甲ZZ高达",
+      "keys": [
+        "FA-010S",
+        "全装甲ZZ高达",
+        "FA-010S 全装甲ZZ高达",
+        "Full Armor ZZ Gundam"
+      ],
+      "category": "machine",
+      "type": "全装甲试作型MS (Full Armor Prototype Mobile Suit)",
+      "year": 89,
+      "physics": {
+        "massT": 87.2,
+        "height": 23.14
+      },
+      "equipment": [
+        "腹部高能MEGA加农炮",
+        "肩部、胸部、臂部附加导弹发射器",
+        "保留了头部高能MEGA加农炮、双管光束步枪、高能光束军刀和背包导弹等全部原有武装。"
+      ]
+    },
+    {
+      "cardId": 177,
+      "id": "gm-iii",
+      "name": "吉姆Ⅲ",
+      "keys": [
+        "RGM-86R",
+        "吉姆Ⅲ",
+        "RGM-86R 吉姆Ⅲ",
+        "GM Ⅲ"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (Mass-Production General-Purpose Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 56.2,
+        "height": 18
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束剑 ×2",
+        "光束步枪 (吉姆Ⅱ改良型)",
+        "肩部4连装中型导弹荚舱 ×2",
+        "肩部15连装小型导弹荚舱 ×2",
+        "腰部2连装大型导弹发射器 ×2"
+      ]
+    },
+    {
+      "cardId": 178,
+      "id": "nahel-argama",
+      "name": "拟·阿伽玛",
+      "keys": [
+        "拟·阿伽玛",
+        "Nahel Argama"
+      ],
+      "category": "machine",
+      "type": "定制型强袭机动巡洋舰 (Custom Assault Mobile Cruiser)",
+      "year": 88,
+      "physics": {
+        "length": 380
+      },
+      "equipment": [
+        "高能MEGA粒子加农炮",
+        "多种规格的双联和单装光束/MEGA粒子加农炮",
+        "大量对空机枪和导弹 (改修后)"
+      ]
+    },
+    {
+      "cardId": 179,
+      "id": "new-core",
+      "name": "新核心战机",
+      "keys": [
+        "FXA-07GB",
+        "FXA-07GB 新核心战机",
+        "Neo Core Fighter"
+      ],
+      "category": "machine",
+      "type": "MS支援装备用核心战机 (Core Fighter for MS Support Equipment)",
+      "year": 88,
+      "physics": {
+        "massT": 11.8,
+        "length": 11.62
+      },
+      "equipment": [
+        "火神炮 ×2",
+        "导弹发射器 ×2 (发射AMA-09S小型导弹)",
+        "救援用粘弹发射器"
+      ]
+    },
+    {
+      "cardId": 180,
+      "id": "mega-rider",
+      "name": "米加骑士",
+      "keys": [
+        "FXA-08R",
+        "米加骑士",
+        "FXA-08R 米加骑士",
+        "Mega Rider"
+      ],
+      "category": "machine",
+      "type": "火力搭载型载具 / 辅助飞行系统 (Firepower-carrying Vehicle / Sub-Flight System)",
+      "year": 88,
+      "physics": {},
+      "equipment": [
+        "MEGA粒子加农炮",
+        "光束枪 ×2"
+      ]
+    },
+    {
+      "cardId": 181,
+      "id": "geymalk",
+      "name": "盖马克",
+      "keys": [
+        "AMX-015",
+        "盖马克",
+        "AMX-015 盖马克",
+        "Geymalk"
+      ],
+      "category": "machine",
+      "type": "NT专用量产型重MS (Newtype-use Mass-Production Heavy Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 78.7,
+        "height": 25.5
+      },
+      "equipment": [
+        "母浮游圆锥炮×2；子浮游圆锥炮×28",
+        "胸部、腰部、肩部、指部、胫部等全身各处搭载了总计超过14门MEGA粒子炮和光束炮。"
+      ]
+    },
+    {
+      "cardId": 182,
+      "id": "doven-wolf",
+      "name": "飙狼",
+      "keys": [
+        "AMX-014",
+        "飙狼",
+        "AMX-014 飙狼",
+        "Doven Wolf"
+      ],
+      "category": "machine",
+      "type": "准塞克缪搭载型MS (Quasi-Psycommu equipped Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 74.5,
+        "height": 22
+      },
+      "equipment": [
+        "背部Incom ×2",
+        "有线制御式光束炮臂 ×2",
+        "腹部3连装MEGA粒子炮",
+        "后部光束加农炮 ×2",
+        "大量导弹发射器",
+        "MEGA粒子发射器 (可兼作光束步枪)"
+      ]
+    },
+    {
+      "cardId": 183,
+      "id": "qubeley",
+      "name": "卡碧尼",
+      "keys": [
+        "AMX-004",
+        "卡碧尼",
+        "AMX-004 卡碧尼",
+        "Qubeley"
+      ],
+      "category": "machine",
+      "type": "NT专用试作型MS (Prototype Newtype-use Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 57.2,
+        "height": 18.4
+      },
+      "equipment": [
+        "浮游圆锥炮 ×10",
+        "光束军刀（可兼作光束枪） ×2"
+      ]
+    },
+    {
+      "cardId": 184,
+      "id": "zaku-iii-custom",
+      "name": "扎古Ⅲ改",
+      "keys": [
+        "AMX-011S",
+        "扎古Ⅲ改",
+        "AMX-011S 扎古Ⅲ改",
+        "Zaku III Custom"
+      ],
+      "category": "machine",
+      "type": "泛用试作型MS (Prototype General-Purpose Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 71.4,
+        "height": 21
+      },
+      "equipment": [
+        "头部30mm火神炮 ×2",
+        "前腰部光束炮 (可兼作光束军刀) ×2",
+        "专用光束步枪",
+        "机雷散布器"
+      ]
+    },
+    {
+      "cardId": 185,
+      "id": "zaku-iii",
+      "name": "扎古Ⅲ",
+      "keys": [
+        "AMX-011",
+        "扎古Ⅲ",
+        "AMX-011 扎古Ⅲ",
+        "Zaku III"
+      ],
+      "category": "machine",
+      "type": "泛用试作型MS (Prototype General-Purpose Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 68.3,
+        "height": 21
+      },
+      "equipment": [
+        "口部MEGA粒子炮",
+        "前腰部光束炮 (可兼作光束军刀) ×2",
+        "专用光束步枪",
+        "专用盾牌"
+      ]
+    },
+    {
+      "cardId": 186,
+      "id": "dreissen",
+      "name": "德莱森",
+      "keys": [
+        "AMX-009",
+        "德莱森",
+        "AMX-009 德莱森",
+        "Dreissen"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (Mass-Production General-Purpose Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 66.8,
+        "height": 22
+      },
+      "equipment": [
+        "3连装光束炮 ×2",
+        "光束斧",
+        "光束长枪",
+        "飞行旋刃 (Tri-Blade) ×3"
+      ]
+    },
+    {
+      "cardId": 187,
+      "id": "bawoo",
+      "name": "龙飞",
+      "keys": [
+        "AMX-107",
+        "龙飞",
+        "AMX-107 龙飞",
+        "Bawoo"
+      ],
+      "category": "machine",
+      "type": "泛用试作型可变MS (Prototype General-Purpose Transformable Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 67.5,
+        "height": 18.5
+      },
+      "equipment": [
+        "4连装榴弹发射器 ×2",
+        "翼部3连装导弹 ×2",
+        "光束军刀 ×2",
+        "专用光束步枪",
+        "专用盾牌 (内藏5连装MEGA粒子炮)"
+      ]
+    },
+    {
+      "cardId": 188,
+      "id": "hamma-hamma",
+      "name": "悍马·悍马",
+      "keys": [
+        "AMX-103",
+        "悍马·悍马",
+        "AMX-103 悍马·悍马",
+        "Hamma Hamma"
+      ],
+      "category": "machine",
+      "type": "骑士专用试作型MS (Prototype Knight-use Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 79.4,
+        "height": 21.5
+      },
+      "equipment": [
+        "掌部有线式3连装光束炮 ×2",
+        "专用盾牌 (内藏3连装MEGA粒子炮及光束军刀)"
+      ]
+    },
+    {
+      "cardId": 189,
+      "id": "r-jarja",
+      "name": "R·贾贾",
+      "keys": [
+        "AMX-104",
+        "R·贾贾",
+        "AMX-104 R·贾贾",
+        "R-Jarja"
+      ],
+      "category": "machine",
+      "type": "骑士专用试作型MS (Prototype Knight-use Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 67.5,
+        "height": 20
+      },
+      "equipment": [
+        "光束军刀",
+        "肩部3连装导弹荚舱 ×2",
+        "专用光束步枪 (附带热能刺刀)",
+        "肩部可动盾 ×2 (兼作推进器)"
+      ]
+    },
+    {
+      "cardId": 190,
+      "id": "gaza-c",
+      "name": "加撒C",
+      "keys": [
+        "AMX-003",
+        "加撒C",
+        "AMX-003 加撒C",
+        "Gaza-C"
+      ],
+      "category": "machine",
+      "type": "泛用量产型可变MS (Mass-Production General-Purpose Transformable Mobile Suit)",
+      "year": 87,
+      "physics": {
+        "massT": 72.5,
+        "height": 18.3
+      },
+      "equipment": [
+        "破坏炮 (Knuckle Buster)",
+        "光束军刀 ×2",
+        "光束枪 ×2",
+        "脚部格斗用机械爪 ×2"
+      ]
+    },
+    {
+      "cardId": 191,
+      "id": "gaza-d",
+      "name": "加撒D",
+      "keys": [
+        "AMX-006",
+        "加撒D",
+        "AMX-006 加撒D",
+        "Gaza-D"
+      ],
+      "category": "machine",
+      "type": "泛用量产型可变MS (Mass-Production General-Purpose Transformable Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 68.4,
+        "height": 17
+      },
+      "equipment": [
+        "大型破坏炮 (Knuckle Buster)",
+        "光束军刀 ×2",
+        "背部光束枪 ×2",
+        "14连装导弹发射器 ×2",
+        "4连装导弹发射器 ×2"
+      ]
+    },
+    {
+      "cardId": 192,
+      "id": "ga-zowm",
+      "name": "加佐姆",
+      "keys": [
+        "AMX-008",
+        "加佐姆",
+        "AMX-008 加佐姆",
+        "Ga-Zowm"
+      ],
+      "category": "machine",
+      "type": "泛用量产型可变MS (Mass-Production General-Purpose Transformable Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 58.2,
+        "height": 18
+      },
+      "equipment": [
+        "破坏炮 (Knuckle Buster)",
+        "9连装导弹发射器 ×2",
+        "光束炮 (可兼作光束军刀) ×2",
+        "80mm火神炮 ×2"
+      ]
+    },
+    {
+      "cardId": 193,
+      "id": "regelgu",
+      "name": "改修型勇士",
+      "keys": [
+        "MS-14J",
+        "改修型勇士",
+        "MS-14J 改修型勇士",
+        "ReGelg"
+      ],
+      "category": "machine",
+      "type": "泛用改良型MS (General-Purpose Refined Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 82.6,
+        "height": 21
+      },
+      "equipment": [
+        "背部8连装导弹荚舱",
+        "腕部榴弹发射器 ×2",
+        "光束长矛 ×2",
+        "光束步枪 (附带榴弹)"
+      ]
+    },
+    {
+      "cardId": 194,
+      "id": "galluss-j",
+      "name": "卡尔斯J",
+      "keys": [
+        "AMX-101",
+        "卡尔斯J",
+        "AMX-101 卡尔斯J",
+        "Galluss-J"
+      ],
+      "category": "machine",
+      "type": "局地战用试作型MS (Prototype Limited-Role Combat Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 78.3,
+        "height": 19.5
+      },
+      "equipment": [
+        "光束军刀",
+        "左指部5连装机关炮",
+        "双联装导弹荚舱 ×2",
+        "能源枪 (附带4连装导弹荚舱)"
+      ]
+    },
+    {
+      "cardId": 195,
+      "id": "zssa",
+      "name": "兹萨",
+      "keys": [
+        "AMX-102",
+        "兹萨",
+        "AMX-102 兹萨",
+        "Zssa"
+      ],
+      "category": "machine",
+      "type": "炮击战用试作型MS (Prototype Artillery Combat Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 40,
+        "height": 15
+      },
+      "equipment": [
+        "全身各处搭载了总计7个、合计40门以上的导弹发射管。",
+        "襟部30mm火神炮 ×2",
+        "光束军刀 ×4",
+        "胸部扩散光束炮",
+        "大型助推器背包自身也搭载了大量导弹。"
+      ]
+    },
+    {
+      "cardId": 196,
+      "id": "gazu-l",
+      "name": "卡斯L",
+      "keys": [
+        "AMX-117L",
+        "卡斯L",
+        "AMX-117L 卡斯L",
+        "Gazu-L"
+      ],
+      "category": "machine",
+      "type": "泛用试作型MS / 亲卫队专用机 (Prototype General-Purpose MS / Royal Guard Custom)",
+      "year": 88,
+      "physics": {
+        "massT": 70.8,
+        "height": 19
+      },
+      "equipment": [
+        "高能光束军刀 (可兼作光束加农炮) ×2",
+        "光束军刀 ×2",
+        "热弹",
+        "专用热能长矛",
+        "专用光束步枪"
+      ]
+    },
+    {
+      "cardId": 197,
+      "id": "gazu-r",
+      "name": "卡斯R",
+      "keys": [
+        "AMX-117R",
+        "卡斯R",
+        "AMX-117R 卡斯R",
+        "Gazu-R"
+      ],
+      "category": "machine",
+      "type": "泛用试作型MS / 亲卫队专用机 (Prototype General-Purpose MS / Royal Guard Custom)",
+      "year": 88,
+      "physics": {
+        "massT": 70.8,
+        "height": 19
+      },
+      "equipment": [
+        "高能光束军刀 (可兼作光束加农炮) ×2",
+        "光束军刀 ×2",
+        "专用热能长矛",
+        "专用光束步枪"
+      ]
+    },
+    {
+      "cardId": 198,
+      "id": "jamru-fin",
+      "name": "杰姆鲁·芬",
+      "keys": [
+        "AMA-01X",
+        "杰姆鲁·芬",
+        "AMA-01X 杰姆鲁·芬",
+        "Jamru Fin"
+      ],
+      "category": "machine",
+      "type": "宇宙战用试作型MA (Prototype Space Combat Mobile Armor)",
+      "year": 88,
+      "physics": {
+        "massT": 58.5,
+        "height": 15
+      },
+      "equipment": [
+        "胸部超级MEGA粒子炮",
+        "3连装导弹发射器 ×2",
+        "掌部MEGA粒子炮 ×2 (可兼作光束军刀)"
+      ]
+    },
+    {
+      "cardId": 199,
+      "id": "schuzrum-dias",
+      "name": "疾风迪亚斯",
+      "keys": [
+        "RMS-099B",
+        "疾风迪亚斯",
+        "RMS-099B 疾风迪亚斯",
+        "Sturm Dias"
+      ],
+      "category": "machine",
+      "type": "攻击用改良型MS (Attack-use Refined Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 61.3,
+        "height": 18
+      },
+      "equipment": [
+        "背部MEGA粒子炮 ×2",
+        "头部55mm双联火神炮",
+        "光束军刀",
+        "光束手枪 ×2",
+        "格雷火箭炮"
+      ]
+    },
+    {
+      "cardId": 200,
+      "id": "capule",
+      "name": "卡普尔",
+      "keys": [
+        "AMX-109",
+        "卡普尔",
+        "AMX-109 卡普尔",
+        "Capule"
+      ],
+      "category": "machine",
+      "type": "水中用试作型MS (Prototype Underwater-use Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 57.5,
+        "height": 16.5
+      },
+      "equipment": [
+        "腕部格斗用机械爪 ×2",
+        "胸部导弹 ×8",
+        "镭射炮",
+        "音速爆弹"
+      ]
+    },
+    {
+      "cardId": 201,
+      "id": "zaku-mariner",
+      "name": "水手扎古",
+      "keys": [
+        "RMS-192M",
+        "水手扎古",
+        "RMS-192M 水手扎古",
+        "Zaku Mariner"
+      ],
+      "category": "machine",
+      "type": "水中用量产型MS (Mass-Production Underwater-use Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 68.3,
+        "height": 17.5
+      },
+      "equipment": [
+        "左腕部磁力锤",
+        "肩部3连装Subroc火箭发射器 ×2",
+        "背部4连装水下导弹发射器 ×2",
+        "4联装240mm反潜导弹枪"
+      ]
+    },
+    {
+      "cardId": 202,
+      "id": "ewac-zack-eye-zack",
+      "name": "侦察型扎古",
+      "keys": [
+        "RMS-119",
+        "侦察型扎古",
+        "RMS-119 侦察型扎古",
+        "EWAC Zack 'Eye-Zack'"
+      ],
+      "category": "machine",
+      "type": "侦察用量产型MS (Mass-Production Reconnaissance Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 73.5,
+        "height": 18
+      },
+      "equipment": [
+        "无 (通常非武装)",
+        "120mm机关炮改型",
+        "光束剑"
+      ]
+    },
+    {
+      "cardId": 203,
+      "id": "sadalahn",
+      "name": "萨达朗级",
+      "keys": [
+        "萨达朗级",
+        "Sadalahn-class"
+      ],
+      "category": "machine",
+      "type": "指挥官专用机动战舰 (Commander-use Mobile Battleship)",
+      "year": 88,
+      "physics": {
+        "length": 415
+      },
+      "equipment": [
+        "二联装主炮 ×6",
+        "MEGA粒子加农炮 ×2",
+        "激光炮 ×31",
+        "导弹发射器 ×6"
+      ]
+    },
+    {
+      "cardId": 204,
+      "id": "endra",
+      "name": "恩多拉级",
+      "keys": [
+        "恩多拉级",
+        "Endra-class"
+      ],
+      "category": "machine",
+      "type": "轻型巡洋舰 (Light Cruiser)",
+      "year": 87,
+      "physics": {
+        "length": 410
+      },
+      "equipment": [
+        "MEGA粒子主炮 ×5",
+        "二联装副炮 ×1",
+        "MEGA粒子加农炮 ×2",
+        "导弹发射器"
+      ]
+    },
+    {
+      "cardId": 205,
+      "id": "zaku-tanker",
+      "name": "扎古运输车",
+      "keys": [
+        "扎古运输车",
+        "Zaku Tanker"
+      ],
+      "category": "machine",
+      "type": "沙漠突击运输车辆 (Desert Assault Transport Vehicle)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "光束加农炮",
+        "九联装导弹舱",
+        "双联装加农炮"
+      ]
+    },
+    {
+      "cardId": 206,
+      "id": "queen-mansa",
+      "name": "昆曼沙",
+      "keys": [
+        "NZ-000",
+        "昆曼沙",
+        "NZ-000 昆曼沙",
+        "Quin Mantha"
+      ],
+      "category": "machine",
+      "type": "NT专用量产型重MS (Newtype-use Mass-Production Heavy Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 264.7,
+        "height": 39.2
+      },
+      "equipment": [
+        "浮游炮 ×30",
+        "头部、胸部、手部、背部等全身各处搭载了总计9门高能MEGA粒子炮。",
+        "大型光束军刀 ×2"
+      ]
+    },
+    {
+      "cardId": 207,
+      "id": "qubeley-mk2",
+      "name": "卡碧尼MK-Ⅱ",
+      "keys": [
+        "AMX-004-2",
+        "卡碧尼MK-Ⅱ",
+        "AMX-004-2 卡碧尼MK-Ⅱ",
+        "Qubeley Mark-Ⅱ"
+      ],
+      "category": "machine",
+      "type": "NT专用试作型MS (Prototype Newtype-use Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 57.2,
+        "height": 18.4
+      },
+      "equipment": [
+        "浮游圆锥炮 ×12",
+        "三向扇式光束军刀 ×2",
+        "腕部光束炮 ×2"
+      ]
+    },
+    {
+      "cardId": 208,
+      "id": "qubeley-mk2",
+      "name": "卡碧尼MK-Ⅱ",
+      "keys": [
+        "AMX-004-3",
+        "卡碧尼MK-Ⅱ",
+        "AMX-004-3 卡碧尼MK-Ⅱ",
+        "Qubeley Mk-II, Ple Two Custom"
+      ],
+      "category": "machine",
+      "type": "NT专用试作型MS (Prototype Newtype-use Mobile Suit)",
+      "year": 88,
+      "physics": {
+        "massT": 57.2,
+        "height": 18.4
+      },
+      "equipment": [
+        "浮游圆锥炮 ×12",
+        "三向扇式光束军刀 (可兼作光束炮) ×2"
+      ]
+    },
+    {
+      "cardId": 209,
+      "id": "qubeley-mass",
+      "name": "量产型卡碧尼",
+      "keys": [
+        "AMX-004G",
+        "量产型卡碧尼",
+        "AMX-004G 量产型卡碧尼",
+        "Qubeley Mass Production Type"
+      ],
+      "category": "machine",
+      "type": "NT专用量产型MS (Newtype-use Mass-Production Mobile Suit)",
+      "year": 89,
+      "physics": {
+        "massT": 62.1,
+        "height": 18.4
+      },
+      "equipment": [
+        "浮游圆锥炮 ×30",
+        "光束军刀 (可兼作光束炮) ×2",
+        "背部可动式加农炮 ×2"
+      ]
+    },
+    {
+      "cardId": 210,
+      "id": "zaku-desert",
+      "name": "沙漠扎古",
+      "keys": [
+        "MS-06D",
+        "沙漠扎古",
+        "MS-06D 沙漠扎古",
+        "Desert Zaku"
+      ],
+      "category": "machine",
+      "type": "沙漠战用量产型MS / 现地改装机 (Desert Combat Mass-Production MS / Field-Modified Machine)",
+      "year": 88,
+      "physics": {
+        "massT": 69.5,
+        "height": 18.5
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "290mm火箭发射器",
+        "热能战斧",
+        "三连装火箭发射器"
+      ]
+    },
+    {
+      "cardId": 211,
+      "id": "dowadge",
+      "name": "多瓦吉",
+      "keys": [
+        "MS-09G 多瓦吉",
+        "Dwadge"
+      ],
+      "category": "machine",
+      "type": "陆战用量产型MS (Mass-Production Ground Combat Mobile Suit)",
+      "year": 79,
+      "physics": {
+        "massT": 81.7,
+        "height": 18.2
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "扩散光束炮",
+        "热能军刀",
+        "360mm巨型火箭筒"
+      ]
+    },
+    {
+      "cardId": 212,
+      "id": "dowadge-kai",
+      "name": "多瓦吉改",
+      "keys": [
+        "MS-09H",
+        "多瓦吉改",
+        "MS-09H 多瓦吉改",
+        "Dowadge Kai"
+      ],
+      "category": "machine",
+      "type": "陆战用试作型MS / 指挥官专用机 (Prototype Ground Combat MS / Commander Custom)",
+      "year": 88,
+      "physics": {
+        "massT": 87.4,
+        "height": 18.2
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "胸部扩散光束炮",
+        "热能军刀",
+        "光束加农",
+        "360mm火箭筒"
+      ]
+    },
+    {
+      "cardId": 213,
+      "id": "petite-mobile-suit",
+      "name": "小型机动战士",
+      "keys": [
+        "PM-03",
+        "小型机动战士",
+        "PM-03 小型机动战士",
+        "Petite Mobile Suit"
+      ],
+      "category": "machine",
+      "type": "殖民地建设作业用MS (Colony Construction Work MS)",
+      "year": 88,
+      "physics": {
+        "height": 3
+      },
+      "equipment": []
+    },
+    {
+      "cardId": 214,
+      "id": "geze",
+      "name": "古泽",
+      "keys": [
+        "古泽",
+        "Geze"
+      ],
+      "category": "machine",
+      "type": "改造型工作用MS (Modified Work MS)",
+      "year": 88,
+      "physics": {},
+      "equipment": [
+        "特殊合金制电磁棒"
+      ]
+    },
+    {
+      "cardId": 215,
+      "id": "gatol",
+      "name": "卡图",
+      "keys": [
+        "卡图",
+        "Catl"
+      ],
+      "category": "machine",
+      "type": "量产型殖民地建造用机动工兵 (Mass-Produced Colony Construction Mobile Worker)",
+      "year": 30,
+      "physics": {
+        "height": 30
+      },
+      "equipment": [
+        "火炬枪"
+      ]
+    },
+    {
+      "cardId": 216,
+      "id": "agguguy",
+      "name": "阿格盖",
+      "keys": [
+        "MSM-04N",
+        "阿格盖",
+        "MSM-04N 阿格盖",
+        "Agguguy"
+      ],
+      "category": "machine",
+      "type": "水陆两用试作型MS (Prototype Amphibious MS)",
+      "year": 79,
+      "physics": {
+        "massT": 171.6,
+        "power": 2010,
+        "height": 19,
+        "thrustKg": 109000
+      },
+      "equipment": [
+        "头部火神炮 ×2",
+        "腕部2连装热能鞭 ×2",
+        "格斗用机械爪 ×2"
+      ]
+    },
+    {
+      "cardId": 217,
+      "id": "zogok",
+      "name": "佐寇克",
+      "keys": [
+        "MSM-08",
+        "佐寇克",
+        "MSM-08 佐寇克",
+        "Zogok"
+      ],
+      "category": "machine",
+      "type": "水陆两用试作型MS (Prototype Amphibious MS)",
+      "year": 79,
+      "physics": {
+        "massT": 107.3,
+        "power": 1688,
+        "height": 18.2,
+        "thrustKg": 97400
+      },
+      "equipment": [
+        "头部5连装钳刀 ×2",
+        "冲击前臂 ×2",
+        "βⅣ型热能剑",
+        "铁拳火箭炮 ×2",
+        "360mm巨型火箭筒",
+        "BR-87A型光束步枪",
+        "格斗用机械爪"
+      ]
+    },
+    {
+      "cardId": 218,
+      "id": "ground-gundam",
+      "name": "陆战型高达",
+      "keys": [
+        "RX-79【G】",
+        "RX-79G",
+        "陆战型高达",
+        "RX-79【G】 陆战型高达",
+        "Gundam Ground Type"
+      ],
+      "category": "machine",
+      "type": "陆战用先行量产型MS (Ground Combat Pre-Production MS)",
+      "year": 79,
+      "physics": {
+        "massT": 73,
+        "power": 1350,
+        "height": 18
+      },
+      "equipment": [
+        "胸部60mm火神炮 ×2",
+        "光束军刀 ×2",
+        "胸部多用途发射器",
+        "光束步枪 (XBR-M-79E)",
+        "100mm机枪",
+        "180mm加农炮",
+        "火箭筒",
+        "6连装火箭发射器",
+        "捕网枪",
+        "高达流星锤",
+        "光束狙击步枪"
+      ]
+    },
+    {
+      "cardId": 219,
+      "id": "ez8",
+      "name": "RX-79【G】Ez-8 Ez8高达",
+      "keys": [
+        "Ez-8",
+        "Ez8",
+        "RX-79【G】Ez-8 Ez8高达",
+        "Gundam Ez8"
+      ],
+      "category": "machine",
+      "type": "陆战用试作型MS (Prototype Ground Combat MS)",
+      "year": 79,
+      "physics": {
+        "massT": 71.3,
+        "power": 1380,
+        "height": 18,
+        "thrustKg": 52000
+      },
+      "equipment": [
+        "头部35mm机枪 ×2",
+        "胸部12.7mm回旋式机枪",
+        "光束军刀 ×2",
+        "专用盾牌",
+        "100mm机枪",
+        "光束步枪",
+        "180mm加农炮",
+        "6连装火箭发射器"
+      ]
+    },
+    {
+      "cardId": 220,
+      "id": "gm-early",
+      "name": "初期型吉姆",
+      "keys": [
+        "RGM-79E",
+        "初期型吉姆",
+        "RGM-79【E】 初期型吉姆",
+        "GM Early Type"
+      ],
+      "category": "machine",
+      "type": "宇宙战用量产试作型MS (Space Combat Pre-Production MS)",
+      "year": 79,
+      "physics": {
+        "power": 1250,
+        "height": 18
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束军刀 ×1",
+        "90mm机枪"
+      ]
+    },
+    {
+      "cardId": 221,
+      "id": "gm-ground",
+      "name": "陆战型吉姆",
+      "keys": [
+        "RGM-79【G】",
+        "RGM-79G",
+        "陆战型吉姆",
+        "RGM-79【G】 陆战型吉姆",
+        "GM Ground Type"
+      ],
+      "category": "machine",
+      "type": "陆战用量产型MS (Mass-Production Ground Combat MS)",
+      "year": 79,
+      "physics": {
+        "massT": 66,
+        "power": 1150,
+        "height": 18,
+        "thrustKg": 49000
+      },
+      "equipment": [
+        "光束军刀 ×2",
+        "专用盾牌",
+        "高达流星锤",
+        "100mm机枪",
+        "火箭发射器",
+        "6连装导弹发射器",
+        "光束步枪"
+      ]
+    },
+    {
+      "cardId": 222,
+      "id": "gm-ground-sniper",
+      "name": "狙击型吉姆",
+      "keys": [
+        "RGM-79【G】",
+        "RGM-79G",
+        "狙击型吉姆",
+        "RGM-79【G】 狙击型吉姆",
+        "GM Sniper"
+      ],
+      "category": "machine",
+      "type": "陆战用狙击型量产MS (Mass-Production Ground Combat Sniper MS)",
+      "year": 79,
+      "physics": {
+        "massT": 66,
+        "power": 1150,
+        "height": 18,
+        "thrustKg": 49000
+      },
+      "equipment": [
+        "光束军刀 ×2",
+        "专用盾牌",
+        "长距离光束步枪",
+        "100mm机枪"
+      ]
+    },
+    {
+      "cardId": 223,
+      "id": "guntank-early",
+      "name": "先行量产型钢坦克",
+      "keys": [
+        "RX-75",
+        "先行量产型钢坦克",
+        "RX-75 先行量产型钢坦克",
+        "Guntank Mass Production Type"
+      ],
+      "category": "machine",
+      "type": "炮击战用长距离支援型MS (Artillery Long-Range Support MS)",
+      "year": 79,
+      "physics": {
+        "massT": 80,
+        "height": 15
+      },
+      "equipment": [
+        "肩部120mm低后座力加农炮 ×2",
+        "腕部4连装榴弹发射器 ×2",
+        "吊臂"
+      ]
+    },
+    {
+      "cardId": 224,
+      "id": "guntank-repair",
+      "name": "抢修型钢坦克",
+      "keys": [
+        "RX-75",
+        "抢修型钢坦克",
+        "RX-75 抢修型钢坦克",
+        "Berge Guntank"
+      ],
+      "category": "machine",
+      "type": "改装型陆战作业用MS (Modified Ground Combat Work MS)",
+      "year": 79,
+      "physics": {
+        "massT": 80,
+        "power": 878,
+        "height": 15
+      },
+      "equipment": [
+        "右腕部四连装机枪",
+        "左腕部机械臂",
+        "重型起重臂",
+        "绞车",
+        "推土铲"
+      ]
+    },
+    {
+      "cardId": 225,
+      "id": "type-74-hover-truck",
+      "name": "74式气垫卡车",
+      "keys": [
+        "74式气垫卡车",
+        "Type 74 Hover Truck"
+      ],
+      "category": "machine",
+      "type": "支援用装甲运兵车 (Support Armored Personnel Carrier)",
+      "year": 74,
+      "physics": {
+        "height": 3.3,
+        "length": 9.4
+      },
+      "equipment": [
+        "20mm火神炮 ×1",
+        "光束加农炮"
+      ]
+    },
+    {
+      "cardId": 226,
+      "id": "type-61-a5",
+      "name": "61式坦克5型",
+      "keys": [
+        "M61A5",
+        "61式坦克5型",
+        "M61A5 61式坦克5型",
+        "MBT"
+      ],
+      "category": "machine",
+      "type": "量产型主战战车 (Mass-Produced Main Battle Tank)",
+      "year": 79,
+      "physics": {
+        "height": 3.9,
+        "length": 11.6
+      },
+      "equipment": [
+        "155mm滑膛炮 ×2",
+        "7.62mm同轴机枪 ×2",
+        "M60型13.2mm重机枪",
+        "M299型5.56mm机枪"
+      ]
+    },
+    {
+      "cardId": 227,
+      "id": "tin-cod",
+      "name": "听鳕",
+      "keys": [
+        "FF-6",
+        "听鳕",
+        "FF-6 听鳕",
+        "TIN Cod"
+      ],
+      "category": "machine",
+      "type": "量产型短途歼击机 (Mass-Produced Short-Range Interceptor)",
+      "year": 62,
+      "physics": {},
+      "equipment": [
+        "25mm机枪 ×4",
+        "对空导弹 ×2"
+      ]
+    },
+    {
+      "cardId": 228,
+      "id": "jet-core-booster",
+      "name": "FFB-7Bst 喷射核心推进器",
+      "keys": [
+        "FFB-7Bst",
+        "喷射核心推进器",
+        "FFB-7Bst 喷射核心推进器",
+        "Jet Core Booster"
+      ],
+      "category": "machine",
+      "type": "量产型战斗机 (Mass-Produced Fighter)",
+      "year": 79,
+      "physics": {
+        "massT": 18.3,
+        "height": 6.75
+      },
+      "equipment": [
+        "25mm机枪 ×4",
+        "MEGA粒子加农炮",
+        "导弹发射器 ×2",
+        "炸弹"
+      ]
+    },
+    {
+      "cardId": 229,
+      "id": "magella-attack",
+      "name": "玛捷拉坦克",
+      "keys": [
+        "HT-01B",
+        "玛捷拉坦克",
+        "HT-01B 玛捷拉坦克",
+        "Magella Attack"
+      ],
+      "category": "machine",
+      "type": "量产型陆战用坦克 (Mass-Produced Ground Combat Tank)",
+      "year": 79,
+      "physics": {
+        "height": 6.8
+      },
+      "equipment": [
+        "175mm加农炮 ×1",
+        "三联装35mm机炮 ×1"
+      ]
+    },
+    {
+      "cardId": 230,
+      "id": "dodai-ii",
+      "name": "德戴Ⅱ",
+      "keys": [
+        "德戴Ⅱ",
+        "DodaiⅡ"
+      ],
+      "category": "machine",
+      "type": "辅助飞行系统 (Sub-Flight System)",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 231,
+      "id": "dora",
+      "name": "多拉",
+      "keys": [
+        "多拉",
+        "Dora"
+      ],
+      "category": "machine",
+      "type": "运输机 (Transport Aircraft)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "二联装机枪 ×1"
+      ]
+    },
+    {
+      "cardId": 232,
+      "id": "gunship-heli",
+      "name": "战斗直升机",
+      "keys": [
+        "战斗直升机",
+        "Gunship Heli"
+      ],
+      "category": "machine",
+      "type": "武装直升机 (Armed Helicopter)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "火神炮 ×1",
+        "线控导弹 ×8"
+      ]
+    },
+    {
+      "cardId": 233,
+      "id": "zaku-rd4",
+      "name": "宇宙用高机动试验型扎古",
+      "keys": [
+        "MS-06RD-4",
+        "宇宙用高机动试验型扎古",
+        "MS-06RD-4 宇宙用高机动试验型扎古",
+        "ZakuⅡ Prototype"
+      ],
+      "category": "machine",
+      "type": "宇宙战用试作型MS (Prototype Space Combat MS)",
+      "year": 79,
+      "physics": {
+        "massT": 77.5,
+        "power": 986,
+        "height": 17.5
+      },
+      "equipment": [
+        "热能斧",
+        "ZMP-50D型120mm机关炮",
+        "H&L-SB25K/280mmA-P扎古火箭筒"
+      ]
+    },
+    {
+      "cardId": 234,
+      "id": "gouf-custom",
+      "name": "特装型古夫",
+      "keys": [
+        "MS-07B-3",
+        "特装型古夫",
+        "MS-07B-3 特装型古夫",
+        "Gouf Custom"
+      ],
+      "category": "machine",
+      "type": "量产陆战型MS (Mass-Produced Ground Combat MS)",
+      "year": 79,
+      "physics": {
+        "massT": 77.6,
+        "power": 1034,
+        "height": 18.2,
+        "thrustKg": 40700
+      },
+      "equipment": [
+        "电热鞭 (安装于右腕)",
+        "格林盾 (内藏75mm格林机关炮、DⅢ型电热剑)",
+        "3连装35mm机关炮 (安装于左腕)",
+        "三联装导弹发射器",
+        "热能指节",
+        "90mm突击步枪",
+        "120mm机枪",
+        "热能锤",
+        "MIP-B6裂解手榴弹"
+      ]
+    },
+    {
+      "cardId": 235,
+      "id": "gouf-flight",
+      "name": "飞行型古夫",
+      "keys": [
+        "MS-07H-8",
+        "飞行型古夫",
+        "MS-07H-8 飞行型古夫",
+        "Gouf Flight Type"
+      ],
+      "category": "machine",
+      "type": "陆战用试作型MS (Prototype Ground Combat MS)",
+      "year": 79,
+      "physics": {
+        "massT": 77.6,
+        "power": 1130,
+        "height": 18.2,
+        "thrustKg": 118400
+      },
+      "equipment": [
+        "格林盾 (内藏75mm格林机关炮、DⅢ型热能剑)",
+        "3连装35mm机关炮 (安装于左腕)"
+      ]
+    },
+    {
+      "cardId": 236,
+      "id": "apsalus-i",
+      "name": "阿普撒拉斯Ⅰ",
+      "keys": [
+        "阿普撒拉斯Ⅰ",
+        "ApsalusⅠ"
+      ],
+      "category": "machine",
+      "type": "试作型MA (Prototype MA)",
+      "year": 79,
+      "physics": {
+        "power": 1400
+      },
+      "equipment": []
+    },
+    {
+      "cardId": 237,
+      "id": "apsalus",
+      "name": "阿普撒拉斯Ⅱ",
+      "keys": [
+        "阿普撒拉斯Ⅱ",
+        "ApsalusⅡ"
+      ],
+      "category": "machine",
+      "type": "攻击试作型MA (Prototype Attack MA)",
+      "year": 79,
+      "physics": {
+        "power": 1400
+      },
+      "equipment": [
+        "中央部大口径MEGA粒子炮"
+      ]
+    },
+    {
+      "cardId": 238,
+      "id": "apsalus-iii",
+      "name": "阿普撒拉斯Ⅲ",
+      "keys": [
+        "阿普撒拉斯Ⅲ",
+        "ApsalusⅢ"
+      ],
+      "category": "machine",
+      "type": "攻击用试作型MA (Prototype Attack MA)",
+      "year": 79,
+      "physics": {
+        "power": 3660
+      },
+      "equipment": [
+        "中央部大口径MEGA粒子炮"
+      ]
+    },
+    {
+      "cardId": 239,
+      "id": "med",
+      "name": "梅德",
+      "keys": [
+        "梅德",
+        "Med"
+      ],
+      "category": "machine",
+      "type": "机动作业机器人 (Mobile Work Robot)",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 240,
+      "id": "zuck",
+      "name": "扎克",
+      "keys": [
+        "扎克",
+        "Zuck"
+      ],
+      "category": "machine",
+      "type": "小型MS (Small-Sized MS)",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 241,
+      "id": "jegan",
+      "name": "杰刚",
+      "keys": [
+        "RGM-89",
+        "杰刚",
+        "RGM-89 杰刚",
+        "Jegan"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (General-Purpose Mass-Production MS)",
+      "year": 89,
+      "physics": {
+        "massT": 47.3,
+        "power": 1870,
+        "height": 19,
+        "thrustKg": 61400
+      },
+      "equipment": [
+        "光束军刀 ×1",
+        "腰部3连装手榴弹 ×1",
+        "专用光束步枪 (BR-S-85-C2)",
+        "专用盾牌 (内藏2连装小型导弹发射器)",
+        "头部火神荚舱系统"
+      ]
+    },
+    {
+      "cardId": 242,
+      "id": "re-gz",
+      "name": "灵格斯",
+      "keys": [
+        "RGZ-91",
+        "灵格斯",
+        "RGZ-91 灵格斯",
+        "Re-GZ"
+      ],
+      "category": "machine",
+      "type": "攻击型MS (Assault MS)",
+      "year": 92,
+      "physics": {
+        "massT": 55.2,
+        "power": 2550,
+        "height": 20.5,
+        "thrustKg": 67600
+      },
+      "equipment": [
+        "头部火神炮 ×2",
+        "前臂二连装榴弹发射器 ×2",
+        "侧裙甲二连装榴弹发射器 ×2",
+        "三连装手榴弹夹 (收于防护盾内)",
+        "光束军刀",
+        "光束步枪",
+        "背部武器系统B.W.S. (含大型MEGA粒子炮；光束加农炮×2；导弹发射器)"
+      ]
+    },
+    {
+      "cardId": 243,
+      "id": "nu",
+      "name": "ν高达",
+      "keys": [
+        "RX-93",
+        "ν高达",
+        "RX-93 ν高达"
+      ],
+      "category": "machine",
+      "type": "阿姆罗·雷定制型NT专用MS (Amuro Ray Custom Newtype-Use MS)",
+      "year": 93,
+      "physics": {
+        "massT": 63,
+        "power": 2980,
+        "height": 22,
+        "thrustKg": 97800
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束军刀 ×1 (收于左臂内)",
+        "备用光束军刀 ×1 (收于背包内)",
+        "专用盾牌 (内藏光束加农炮和导弹)",
+        "光束步枪 (XBR-M92)",
+        "新型超级火箭筒 (H-BAZ-92A·E/Ver.023)",
+        "飞翼浮游炮 ×6",
+        "超级MEGA火箭发射器"
+      ]
+    },
+    {
+      "cardId": 244,
+      "id": "tien-lu",
+      "name": "天路",
+      "keys": [
+        "天路",
+        "Tien Lu"
+      ],
+      "category": "machine",
+      "type": "民用航天飞机 (Civilian Space Shuttle)",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 245,
+      "id": "clop",
+      "name": "克拉普级",
+      "keys": [
+        "克拉普级",
+        "Clop-class"
+      ],
+      "category": "machine",
+      "type": "量产型轻型巡洋舰 (Mass-Produced Light Cruiser)",
+      "year": 93,
+      "physics": {
+        "length": 292
+      },
+      "equipment": [
+        "二联装光束炮塔 ×2",
+        "单装机铳 ×12",
+        "导弹发射管 ×6",
+        "2联装机铳 ×2",
+        "8联装导弹发射器"
+      ]
+    },
+    {
+      "cardId": 246,
+      "id": "ra-cailum",
+      "name": "拉·凯拉姆级",
+      "keys": [
+        "拉·凯拉姆级",
+        "拉凯拉姆级",
+        "Ra Cailum-class"
+      ],
+      "category": "machine",
+      "type": "机动战舰/战斗巡洋舰 (Mobile Battleship/Battle Cruiser)",
+      "year": 92,
+      "physics": {
+        "length": 487
+      },
+      "equipment": [
+        "2连装MEGA粒子炮 ×4",
+        "防空炮塔 ×22",
+        "大型多用途飞弹发射器 ×6",
+        "光束盾 (圣女贞德号)"
+      ]
+    },
+    {
+      "cardId": 247,
+      "id": "gelgoog-s",
+      "name": "指挥官用型勇士",
+      "keys": [
+        "MS-14S",
+        "指挥官用型勇士",
+        "MS-14S 指挥官用型勇士",
+        "Gelgoog Commander Type"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (General-Purpose Mass-Production MS)",
+      "year": 79,
+      "physics": {
+        "power": 1440,
+        "height": 19.2,
+        "thrustKg": 123000
+      },
+      "equipment": [
+        "双头光束剑 ×1",
+        "110mm机炮 (修改后)",
+        "专用光束步枪",
+        "专用盾牌"
+      ]
+    },
+    {
+      "cardId": 248,
+      "id": "hobby-hizack",
+      "name": "民用型高扎古",
+      "keys": [
+        "RMS-116H",
+        "民用型高扎古",
+        "RMS-116H 民用型高扎古",
+        "Hobby Hi-Zack"
+      ],
+      "category": "machine",
+      "type": "民用型MS (Civilian-Use MS)",
+      "year": 93,
+      "physics": {
+        "height": 18.5
+      },
+      "equipment": []
+    },
+    {
+      "cardId": 249,
+      "id": "geara-doga",
+      "name": "基拉·多加",
+      "keys": [
+        "AMS-119",
+        "基拉·多加",
+        "AMS-119 基拉·多加",
+        "Geara Doga"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (General-Purpose Mass-Production MS)",
+      "year": 92,
+      "physics": {
+        "massT": 50.8,
+        "power": 2160,
+        "height": 20,
+        "thrustKg": 54000
+      },
+      "equipment": [
+        "光束军刀/斧 (Beam Saber/Axe)",
+        "光束机枪 (Beam Machinegun)",
+        "手持式装甲护盾",
+        "4连装榴弹发射器"
+      ]
+    },
+    {
+      "cardId": 250,
+      "id": "jagd-doga",
+      "name": "乍得·多加",
+      "keys": [
+        "MSN-03",
+        "乍得·多加",
+        "MSN-03 乍得·多加",
+        "Jagd Doga"
+      ],
+      "category": "machine",
+      "type": "NT专用试验型MS (Newtype-Use Prototype MS)",
+      "year": 90,
+      "physics": {
+        "massT": 64.6,
+        "power": 3340,
+        "height": 21,
+        "thrustKg": 82000
+      },
+      "equipment": [
+        "浮游炮舱荚盾 (含浮游炮×3)",
+        "光束剑 (含热能匕首)",
+        "光束突击步枪 (含榴弹发射器)",
+        "MGEA加特林机枪",
+        "导向飞弹"
+      ]
+    },
+    {
+      "cardId": 251,
+      "id": "alpha-azieru",
+      "name": "α·瓦索龙",
+      "keys": [
+        "NZ-333",
+        "α·瓦索龙",
+        "瓦索龙",
+        "NZ-333 α·瓦索龙",
+        "Alpha Azieru"
+      ],
+      "category": "machine",
+      "type": "NT专用试作型MA (Prototype Newtype-Use MA)",
+      "year": 93,
+      "physics": {
+        "massT": 267.4,
+        "power": 19830,
+        "height": 108.26,
+        "thrustKg": 10617500
+      },
+      "equipment": [
+        "头部有线式2连装火神炮 ×2",
+        "头部MEGA粒子炮 ×1",
+        "有线式塞可缪控制机械臂 ×2 (各装备小型粒子炮×5)",
+        "I力场发生器",
+        "浮游感应炮 ×9"
+      ]
+    },
+    {
+      "cardId": 252,
+      "id": "sazabi",
+      "name": "沙扎比",
+      "keys": [
+        "MSN-04",
+        "沙扎比",
+        "MSN-04 沙扎比",
+        "Sazabi"
+      ],
+      "category": "machine",
+      "type": "NT专用试作型重MS (Prototype Newtype-Use Heavy MS)",
+      "year": 93,
+      "physics": {
+        "massT": 71.2,
+        "power": 3960,
+        "height": 23,
+        "thrustKg": 133000
+      },
+      "equipment": [
+        "头部火神炮 ×2",
+        "光束剑 ×2 (收于前臂内)",
+        "MEGA粒子炮 (置于腰部前方)",
+        "手持式装甲护盾 (含小型飞弹×3；光束战斧)",
+        "光束短步枪",
+        "长距离光束步枪",
+        "浮游感应炮 ×6 (置于背部上方)"
+      ]
+    },
+    {
+      "cardId": 253,
+      "id": "rewloola",
+      "name": "略留拉级",
+      "keys": [
+        "略留拉级",
+        "Rewloola-class"
+      ],
+      "category": "machine",
+      "type": "指挥官用大型宇宙战舰 (Commander-Type Large Space Battleship)",
+      "year": 90,
+      "physics": {
+        "length": 250
+      },
+      "equipment": [
+        "二联装MEGA粒子光束加农炮 ×5",
+        "二联装光束次炮 ×2",
+        "三联装防空机炮 ×20",
+        "导弹发射器 ×6"
+      ]
+    },
+    {
+      "cardId": 254,
+      "id": "musaka",
+      "name": "穆沙卡级",
+      "keys": [
+        "穆沙卡级",
+        "Musaka-class"
+      ],
+      "category": "machine",
+      "type": "量产型宇宙轻型巡洋舰 (Mass-Produced Space Light Cruiser)",
+      "year": 79,
+      "physics": {
+        "length": 160
+      },
+      "equipment": [
+        "二联装高能光束加农炮 ×4",
+        "二联装防卫机炮 ×12",
+        "三联装防卫机炮 ×12",
+        "导弹发射器 ×6"
+      ]
+    },
+    {
+      "cardId": 255,
+      "id": "alex",
+      "name": "阿历克斯",
+      "keys": [
+        "RX-78NT-1",
+        "阿历克斯",
+        "RX-78NT-1 阿历克斯",
+        "Alex"
+      ],
+      "category": "machine",
+      "type": "NT专用试作型MS (Prototype Newtype-Use MS)",
+      "year": 79,
+      "physics": {
+        "massT": 72.5,
+        "power": 1420,
+        "height": 18,
+        "thrustKg": 132000
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束军刀 ×2",
+        "腕部90mm加特林炮 ×2",
+        "光束步枪",
+        "超级火箭筒",
+        "专用盾牌"
+      ]
+    },
+    {
+      "cardId": 256,
+      "id": "alex-chobham",
+      "name": "全装甲高达NT-1",
+      "keys": [
+        "RX-78NT1-FA",
+        "全装甲高达NT-1",
+        "RX-78NT1-FA 全装甲高达NT-1",
+        "Gundam NT-1 Full Armor"
+      ],
+      "category": "machine",
+      "type": "泛用增加装甲装备型试作MS (General-Purpose Full Armor Prototype MS)",
+      "year": 79,
+      "physics": {
+        "massT": 95,
+        "power": 1420,
+        "height": 18,
+        "thrustKg": 146000
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束军刀 ×2",
+        "腕部90mm加特林炮 ×2 (无法使用)",
+        "专用盾牌",
+        "专用光束步枪",
+        "火箭筒",
+        "头部三联装火箭发射器"
+      ]
+    },
+    {
+      "cardId": 257,
+      "id": "guncannon-mass",
+      "name": "量产型钢加农",
+      "keys": [
+        "RX-77D",
+        "量产型钢加农",
+        "RX-77D 量产型钢加农",
+        "Guncannon Mass Production Type"
+      ],
+      "category": "machine",
+      "type": "中距离支援用量产型MS (Mid-Range Support Mass-Production MS)",
+      "year": 79,
+      "physics": {
+        "massT": 70.2,
+        "power": 1410,
+        "height": 17.5,
+        "thrustKg": 93500
+      },
+      "equipment": [
+        "光束剑 ×2",
+        "头部60mm火神炮 ×2",
+        "肩部240mm加农炮 ×2",
+        "90mm机枪"
+      ]
+    },
+    {
+      "cardId": 258,
+      "id": "gm-cold",
+      "name": "吉姆寒冷地带型",
+      "keys": [
+        "RGM-79D",
+        "吉姆寒冷地带型",
+        "RGM-79D 吉姆寒冷地带型",
+        "GM Cold Climate Type"
+      ],
+      "category": "machine",
+      "type": "寒冷地战用量产型MS (Cold Climate Mass-Production MS)",
+      "year": 79,
+      "physics": {
+        "massT": 58.7,
+        "power": 1250,
+        "height": 18,
+        "thrustKg": 60000
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束军刀 ×1",
+        "专用90mm机关枪",
+        "专用盾牌"
+      ]
+    },
+    {
+      "cardId": 259,
+      "id": "gm-command-ground",
+      "name": "吉姆指挥官",
+      "keys": [
+        "RGM-79G",
+        "吉姆指挥官",
+        "RGM-79G 吉姆指挥官",
+        "GM Command"
+      ],
+      "category": "machine",
+      "type": "殖民卫星防卫用量产型MS (Colony Defense Mass-Production MS)",
+      "year": 79,
+      "physics": {
+        "massT": 56.4,
+        "power": 1330,
+        "height": 18,
+        "thrustKg": 67000
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束军刀 ×2",
+        "NFHI RGM-M-Sh-AGD盾牌",
+        "HWF GMG·MG79-90mm无托式机枪",
+        "NF·GMG-Type.37/100mm机枪",
+        "BOWA BG-M-79F-3A光束枪",
+        "BLASH HB-L-03/N-STD高能火箭炮",
+        "NFHI·GMCa-type.09/180mm加农炮",
+        "NFHI*EPHB-type.Doc-04/380mm高能火箭炮"
+      ]
+    },
+    {
+      "cardId": 260,
+      "id": "gm-command",
+      "name": "吉姆指挥官（宇宙仕样）",
+      "keys": [
+        "RGM-79GS",
+        "吉姆指挥官（宇宙仕样）",
+        "RGM-79GS 吉姆指挥官（宇宙仕样）",
+        "GM Command Space Type"
+      ],
+      "category": "machine",
+      "type": "宇宙战用量产型MS (Space Combat Mass-Production MS)",
+      "year": 79,
+      "physics": {
+        "massT": 76.5,
+        "power": 1390,
+        "height": 18,
+        "thrustKg": 74000
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束军刀 ×2",
+        "NFHI RGM-M-Sh-AGD盾牌",
+        "HWF GMG·MG79-90mm无托式机枪",
+        "BOWA BG-M-79F-3A光束枪",
+        "BLASH HB-L-03/N-STD高能火箭炮"
+      ]
+    },
+    {
+      "cardId": 261,
+      "id": "gm-sniper",
+      "name": "狙击型吉姆Ⅱ",
+      "keys": [
+        "RGM-79SP",
+        "狙击型吉姆Ⅱ",
+        "RGM-79SP 狙击型吉姆Ⅱ",
+        "GM Sniper Ⅱ"
+      ],
+      "category": "machine",
+      "type": "狙击用试作型MS (Prototype Sniper-Use MS)",
+      "year": 79,
+      "physics": {
+        "massT": 61,
+        "power": 1390,
+        "height": 18,
+        "thrustKg": 102000
+      },
+      "equipment": [
+        "光束剑 ×2",
+        "头部60mm火神炮 ×2",
+        "NFHI·RGM-M-Sh-AGD防盾",
+        "Franz·EF-KAR98K型75mm半自动狙击步枪",
+        "HWF·GMG·MG79型90mm无托式机关枪",
+        "中型防盾",
+        "YH·YF-MG100型100mm机枪",
+        "P.B.R-0079/A12·S-000011型光束步枪",
+        "BLASH·XBR-X-79YK型长距离光束步枪",
+        "HWF·GR·MLR79型90mm长距离步枪",
+        "NFHI*EPHB-type.Doc-04型380mm高能火箭筒",
+        "头部火神荚舱"
+      ]
+    },
+    {
+      "cardId": 262,
+      "id": "galaxy",
+      "name": "银河",
+      "keys": [
+        "63STS",
+        "银河",
+        "63 STS 银河"
+      ],
+      "category": "machine",
+      "type": "太空运输飞船 (Space Transport Ship)",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 263,
+      "id": "medea-kai",
+      "name": "米迪亚改",
+      "keys": [
+        "C-88",
+        "米迪亚改",
+        "C-88 米迪亚改",
+        "Medea"
+      ],
+      "category": "machine",
+      "type": "运输机 (Transport Aircraft)",
+      "year": 79,
+      "physics": {
+        "massT": 245,
+        "length": 45
+      },
+      "equipment": []
+    },
+    {
+      "cardId": 264,
+      "id": "gray-phantom",
+      "name": "灰色幽灵",
+      "keys": [
+        "LMSD-76",
+        "灰色幽灵",
+        "LMSD-76 灰色幽灵",
+        "Gray Phantom"
+      ],
+      "category": "machine",
+      "type": "飞马级两栖攻击舰 (Pegasus-class Amphibious Assault Ship)",
+      "year": 79,
+      "physics": {
+        "length": 305
+      },
+      "equipment": [
+        "二联装主炮",
+        "二联装MEGA粒子炮 ×2",
+        "导弹发射器"
+      ]
+    },
+    {
+      "cardId": 265,
+      "id": "armored-personnel-carrier",
+      "name": "APC兵员输送车",
+      "keys": [
+        "APC兵员输送车",
+        "Armored Personnel Carrier"
+      ],
+      "category": "machine",
+      "type": "装甲运输车 (Armored Personnel Carrier)",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 266,
+      "id": "cold-climate-use-a-p-c-type-a",
+      "name": "寒地用装甲运兵车A型",
+      "keys": [
+        "寒地用装甲运兵车A型",
+        "Cold Climate use A.P.C. (Type A"
+      ],
+      "category": "machine",
+      "type": "装甲运输车 (Armored Personnel Carrier)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "机枪"
+      ]
+    },
+    {
+      "cardId": 267,
+      "id": "cold-climate-use-a-p-c-type-b",
+      "name": "寒地用装甲运兵车B型",
+      "keys": [
+        "寒地用装甲运兵车B型",
+        "Cold Climate use A.P.C. (Type B"
+      ],
+      "category": "machine",
+      "type": "装甲运输车 (Armored Personnel Carrier)",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 268,
+      "id": "zaku-ii-fz",
+      "name": "扎古Ⅱ改",
+      "keys": [
+        "MS-06FZ",
+        "扎古Ⅱ改",
+        "MS-06FZ 扎古Ⅱ改",
+        "ZakuⅡ Kai"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (General-Purpose Mass-Production MS)",
+      "year": 79,
+      "physics": {
+        "massT": 74.5,
+        "power": 976,
+        "height": 17.5,
+        "thrustKg": 79500
+      },
+      "equipment": [
+        "肩盾",
+        "MIP长柄手榴弹 ×3",
+        "电热斧",
+        "MMP-80型90mm机枪",
+        "H&L-SB25K/280mmA-P型扎古火箭筒",
+        "铁拳火箭炮",
+        "βⅣ型热能剑",
+        "盾牌"
+      ]
+    },
+    {
+      "cardId": 269,
+      "id": "gelgoog-jager",
+      "name": "狙击型勇士",
+      "keys": [
+        "MS-14JG",
+        "狙击型勇士",
+        "MS-14JG 狙击型勇士",
+        "Gelgoog Jager"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (General-Purpose Mass-Production MS)",
+      "year": 79,
+      "physics": {
+        "massT": 80.3,
+        "power": 1490,
+        "height": 19.2,
+        "thrustKg": 178500
+      },
+      "equipment": [
+        "腕部110mm速射炮 ×2",
+        "光束剑 ×1",
+        "火神炮 ×2",
+        "大口径光束机枪",
+        "专用光束步枪",
+        "盾牌"
+      ]
+    },
+    {
+      "cardId": 270,
+      "id": "kampfer",
+      "name": "京宝梵",
+      "keys": [
+        "MS-18E",
+        "京宝梵",
+        "MS-18E 京宝梵",
+        "Kämpfer"
+      ],
+      "category": "machine",
+      "type": "强袭用试作型重MS (Prototype Heavy Assault MS)",
+      "year": 79,
+      "physics": {
+        "massT": 78.5,
+        "power": 1550,
+        "height": 17.7,
+        "thrustKg": 159000
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束剑 ×2",
+        "360mm巨型火箭筒Ⅱ ×2",
+        "铁拳火箭弹 ×2",
+        "ZUX-197型霰弹枪 ×2",
+        "投掷链状机雷",
+        "试作型大型光束步枪",
+        "热能斧"
+      ]
+    },
+    {
+      "cardId": 271,
+      "id": "hygogg",
+      "name": "高战蟹",
+      "keys": [
+        "MSM-03C",
+        "高战蟹",
+        "MSM-03C 高战蟹",
+        "Hygogg"
+      ],
+      "category": "machine",
+      "type": "水陆两用量产型MS (Amphibious Mass-Production MS)",
+      "year": 79,
+      "physics": {
+        "massT": 79.2,
+        "power": 2735,
+        "height": 15.4,
+        "thrustKg": 86000
+      },
+      "equipment": [
+        "腕部格斗用爪 ×2",
+        "腕部光束加农炮 ×2",
+        "掌部内藏式MEGA粒子炮 ×2",
+        "胸部鱼雷发射管 ×4",
+        "120mm机炮 ×2",
+        "手持式导弹发射器 ×2",
+        "加特林机枪 ×2"
+      ]
+    },
+    {
+      "cardId": 272,
+      "id": "zgok-e",
+      "name": "E型魔蟹",
+      "keys": [
+        "MSM-07E",
+        "E型魔蟹",
+        "MSM-07E E型魔蟹",
+        "Z'Gok-E"
+      ],
+      "category": "machine",
+      "type": "水陆两用量产型MS (Amphibious Mass-Production MS)",
+      "year": 79,
+      "physics": {
+        "massT": 88.9,
+        "power": 2570,
+        "height": 18.4,
+        "thrustKg": 112000
+      },
+      "equipment": [
+        "头部2400mm导弹发射器 ×6",
+        "腕部内藏式MEGA粒子炮 ×2",
+        "腕部格斗用爪 ×2"
+      ]
+    },
+    {
+      "cardId": 273,
+      "id": "tivvay",
+      "name": "提贝级",
+      "keys": [
+        "提贝级",
+        "Tivvay-class"
+      ],
+      "category": "machine",
+      "type": "快速重型宇宙巡洋舰 (Fast Heavy Space Cruiser)",
+      "year": 79,
+      "physics": {
+        "length": 250
+      },
+      "equipment": [
+        "三联装主炮塔 ×2",
+        "导弹发射器 ×4",
+        "二联装机炮 ×18",
+        "核弹"
+      ]
+    },
+    {
+      "cardId": 274,
+      "id": "riah-35-draken-e",
+      "name": "莱亚35·德莱克-E",
+      "keys": [
+        "RH-35E",
+        "莱亚35·德莱克-E",
+        "RH-35E 莱亚35·德莱克-E",
+        "Riah 35 Draken-E"
+      ],
+      "category": "machine",
+      "type": "中型MS (Medium-Sized MS)",
+      "year": 79,
+      "physics": {
+        "height": 4.921
+      },
+      "equipment": [
+        "光束剑 ×1",
+        "短程导弹 ×2"
+      ]
+    },
+    {
+      "cardId": 275,
+      "id": "xi",
+      "name": "Ξ高达",
+      "keys": [
+        "RX-105",
+        "Ξ高达",
+        "RX-105 Ξ高达"
+      ],
+      "category": "machine",
+      "type": "米诺夫斯基飞行系统搭载型MS (Minovsky Flight System Equipped MS)",
+      "year": 105,
+      "physics": {
+        "massT": 80,
+        "power": 3980,
+        "height": 26,
+        "thrustKg": 160000
+      },
+      "equipment": [
+        "头部60mm火神炮 ×2",
+        "光束军刀 ×2",
+        "MEGA粒子炮 ×2",
+        "肩部浮游导弹发射器 ×2",
+        "后裙甲浮游导弹发射器 ×2",
+        "腕部三联装对舰导弹发射器 ×2",
+        "膝部三联装对舰导弹发射器 ×2",
+        "专用光束步枪",
+        "专用盾牌 (内藏MEGA粒子炮)",
+        "腰部导弹集装箱",
+        "浮游导弹"
+      ]
+    },
+    {
+      "cardId": 276,
+      "id": "messer",
+      "name": "Me02R-F01 梅萨F01型",
+      "keys": [
+        "Me02R-F01",
+        "梅萨F01型",
+        "Me02R-F01 梅萨F01型",
+        "Messer Type-F01"
+      ],
+      "category": "machine",
+      "type": "量产型重MS (Mass-Produced Heavy MS)",
+      "year": 105,
+      "physics": {
+        "power": 3340,
+        "height": 23,
+        "thrustKg": 80000
+      },
+      "equipment": [
+        "火神炮 ×6",
+        "光束剑 ×1",
+        "长距离光束步枪",
+        "大型盾牌"
+      ]
+    },
+    {
+      "cardId": 277,
+      "id": "messer-f02",
+      "name": "Me02R-F02 梅萨F02型",
+      "keys": [
+        "Me02R-F02",
+        "梅萨F02型",
+        "Me02R-F02 梅萨F02型",
+        "Messer Type-F02"
+      ],
+      "category": "machine",
+      "type": "量产型重MS (Mass-Produced Heavy MS)",
+      "year": 105,
+      "physics": {
+        "power": 3340,
+        "height": 23,
+        "thrustKg": 80000
+      },
+      "equipment": [
+        "火神炮 ×6",
+        "光束剑 ×1",
+        "长距离光束步枪",
+        "大型盾牌",
+        "布雷装备 ×4"
+      ]
+    },
+    {
+      "cardId": 278,
+      "id": "messer-naked",
+      "name": "Me02R-Fc 梅萨F型Naked（指挥官机式样）",
+      "keys": [
+        "Me02R-Fc",
+        "梅萨F型Naked（指挥官机式样）",
+        "Me02R-Fc 梅萨F型Naked（指挥官机式样）",
+        "Messer Type-F Naked (Commander Type"
+      ],
+      "category": "machine",
+      "type": "指挥官用重MS (Commander-Type Heavy MS)",
+      "year": 105,
+      "physics": {},
+      "equipment": [
+        "火神炮 ×6",
+        "光束剑 ×1",
+        "长距离光束步枪",
+        "大型盾牌"
+      ]
+    },
+    {
+      "cardId": 279,
+      "id": "galcezon",
+      "name": "加尔松宗",
+      "keys": [
+        "加尔松宗",
+        "Galcezon"
+      ],
+      "category": "machine",
+      "type": "量产型辅助飞行系统 (Mass-Produced Sub-Flight System)",
+      "year": 105,
+      "physics": {},
+      "equipment": [
+        "MEGA粒子加农炮 (小说版)",
+        "导弹 (剧场版)",
+        "光束炮 ×3 (剧场版)"
+      ]
+    },
+    {
+      "cardId": 280,
+      "id": "penelope",
+      "name": "佩涅罗佩",
+      "keys": [
+        "RX-104FF",
+        "佩涅罗佩",
+        "RX-104FF 佩涅罗佩",
+        "Penelope"
+      ],
+      "category": "machine",
+      "type": "米诺夫斯基飞行系统搭载型MS (Minovsky Flight System Equipped MS)",
+      "year": 105,
+      "physics": {
+        "massT": 112,
+        "power": 4050,
+        "height": 26,
+        "thrustKg": 168000
+      },
+      "equipment": [
+        "机首火神炮 ×4",
+        "MEGA粒子加农炮 ×2",
+        "前裙甲浮游导弹发射器 ×2",
+        "肩部浮游导弹发射器 ×2",
+        "专用光束步枪",
+        "复合兵装盾 ×2 (可兼做光束军刀、MEGA粒子炮、多连装常规导弹发射器)",
+        "浮游导弹 ×34"
+      ]
+    },
+    {
+      "cardId": 281,
+      "id": "kessaria",
+      "name": "凯撒利亚",
+      "keys": [
+        "BJ-K232",
+        "凯撒利亚",
+        "BJ-K232 凯撒利亚",
+        "Kessaria"
+      ],
+      "category": "machine",
+      "type": "辅助飞行系统 (Sub-Flight System)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "多管火箭发射系统",
+        "光束炮 ×2"
+      ]
+    },
+    {
+      "cardId": 282,
+      "id": "jegan-hunter",
+      "name": "RGM-89Gmh 杰刚陆战A型（猎人式样）",
+      "keys": [
+        "RGM-89Gmh",
+        "杰刚陆战A型（猎人式样）",
+        "RGM-89Gmh 杰刚陆战A型（猎人式样）",
+        "Jegan Ground Type-A (Man Hunter"
+      ],
+      "category": "machine",
+      "type": "量产陆战用MS (Mass-Production Ground Combat MS)",
+      "year": 105,
+      "physics": {
+        "massT": 44.8,
+        "power": 1870,
+        "height": 19,
+        "thrustKg": 61400
+      },
+      "equipment": [
+        "火神炮舱荚系统",
+        "50口径机枪 ×1"
+      ]
+    },
+    {
+      "cardId": 283,
+      "id": "gustav-karl",
+      "name": "古斯塔夫·卡尔00型",
+      "keys": [
+        "FD-03-00",
+        "古斯塔夫·卡尔00型",
+        "FD-03-00 古斯塔夫·卡尔00型",
+        "Gustav Karl Type-00"
+      ],
+      "category": "machine",
+      "type": "泛用量产型MS (General-Purpose Mass-Production MS)",
+      "year": 105,
+      "physics": {
+        "massT": 60,
+        "power": 3425,
+        "height": 22,
+        "thrustKg": 79500
+      },
+      "equipment": [
+        "火神炮 ×2",
+        "二连装榴弹发射器 ×2",
+        "光束军刀 ×2",
+        "光束步枪",
+        "火箭筒",
+        "大型盾牌"
+      ]
+    },
+    {
+      "cardId": 284,
+      "id": "haunzen-flight-356",
+      "name": "豪泽恩号356航班",
+      "keys": [
+        "豪泽恩号356航班",
+        "豪森号",
+        "豪泽恩号/豪森号",
+        "Haunzen Flight 356"
+      ],
+      "category": "machine",
+      "type": "穿梭机 (Shuttle)",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 285,
+      "id": "gaplant",
+      "name": "加普兰",
+      "keys": [
+        "ORX-005",
+        "加普兰",
+        "ORX-005 加普兰",
+        "Gaplant"
+      ],
+      "category": "machine",
+      "type": "试作型可变MA (Prototype Transformable MA)",
+      "year": 87,
+      "physics": {
+        "massT": 94.2,
+        "power": 3040,
+        "height": 19.8,
+        "length": 20.3,
+        "thrustKg": 60600
+      },
+      "equipment": [
+        "光束军刀 ×2",
+        "腕部光束步枪 ×2",
+        "可动式盾牌翼 ×2"
+      ]
+    },
+    {
+      "cardId": 286,
+      "id": "amuro",
+      "name": "阿姆罗·雷",
+      "keys": [
+        "阿姆罗",
+        "Amuro Ray"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 287,
+      "id": "bright",
+      "name": "布莱度·诺亚",
+      "keys": [
+        "布莱度",
+        "布莱德",
+        "Bright Noa"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 288,
+      "id": "fraw",
+      "name": "芙劳·波",
+      "keys": [
+        "芙劳",
+        "Fraw Bow"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 289,
+      "id": "hayato",
+      "name": "小林隼人",
+      "keys": [
+        "小林",
+        "隼人",
+        "Hayato Kobayashi"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 290,
+      "id": "ryu",
+      "name": "龙·何西",
+      "keys": [
+        "龙·何西",
+        "龙",
+        "何西",
+        "Ryu Jose"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 292,
+      "id": "mirai",
+      "name": "米莱·八洲",
+      "keys": [
+        "米莱·八洲",
+        "米莱",
+        "Mirai Yashima"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 293,
+      "id": "kai",
+      "name": "凯·西汀",
+      "keys": [
+        "凯",
+        "西汀",
+        "Kai Shiden"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 295,
+      "id": "masaki",
+      "name": "雅纪",
+      "keys": [
+        "雅纪",
+        "Masaki"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 296,
+      "id": "matilda",
+      "name": "玛蒂尔达·阿贾恩",
+      "keys": [
+        "玛蒂尔达",
+        "阿贾恩",
+        "Matilda Ajan"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 298,
+      "id": "gihren",
+      "name": "基连·扎比",
+      "keys": [
+        "基连·扎比",
+        "基连",
+        "Gihren Zabi"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 299,
+      "id": "kycilia",
+      "name": "基西莉亚·扎比",
+      "keys": [
+        "基西莉亚·扎比",
+        "基西莉亚",
+        "Kycilia Zabi"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 300,
+      "id": "dozle",
+      "name": "多兹鲁·扎比",
+      "keys": [
+        "多兹鲁·扎比",
+        "多兹鲁",
+        "Dozle Zabi"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 301,
+      "id": "garma",
+      "name": "卡尔马·扎比",
+      "keys": [
+        "卡尔马·扎比",
+        "卡尔马",
+        "Garma Zabi"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 302,
+      "id": "mineva",
+      "name": "米涅瓦·拉欧·扎比",
+      "keys": [
+        "米涅瓦·拉欧·扎比",
+        "米涅瓦",
+        "奥黛莉·伯恩",
+        "奥黛莉",
+        "Mineva Lao Zabi"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 303,
+      "id": "lalah",
+      "name": "拉拉·辛",
+      "keys": [
+        "拉拉·辛",
+        "拉拉",
+        "Lalah Sune"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 304,
+      "id": "ramba-ral",
+      "name": "兰巴·拉尔",
+      "keys": [
+        "兰巴·拉尔",
+        "兰巴",
+        "Ramba Ral"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 305,
+      "id": "hamon",
+      "name": "克劳莉·哈蒙",
+      "keys": [
+        "克劳莉",
+        "哈蒙",
+        "Crowley Hamon"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 306,
+      "id": "mquve",
+      "name": "马·克贝",
+      "keys": [
+        "马·克贝",
+        "马克贝",
+        "M'Quve"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 307,
+      "id": "gaia",
+      "name": "米盖尔·盖亚",
+      "keys": [
+        "米盖尔·盖亚",
+        "黑色三连星",
+        "Miguel Gaia"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 308,
+      "id": "ortega",
+      "name": "奥尔迪加",
+      "keys": [
+        "黑色三连星",
+        "奥尔迪加",
+        "Ortega"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 309,
+      "id": "mash",
+      "name": "马修",
+      "keys": [
+        "马修",
+        "黑色三连星",
+        "Mash"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 310,
+      "id": "miharu",
+      "name": "米哈露·拉托基亚",
+      "keys": [
+        "米哈露·拉托基亚",
+        "米哈露",
+        "拉托基亚",
+        "Miharu Ratokie"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 311,
+      "id": "cecilia-irene",
+      "name": "塞西莉娅·艾琳",
+      "keys": [
+        "塞西莉娅·艾琳",
+        "塞西莉娅",
+        "艾琳",
+        "Cecilia Irene"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 312,
+      "id": "simus",
+      "name": "希姆斯·阿尔·巴哈洛夫",
+      "keys": [
+        "希姆斯·阿尔·巴哈洛夫",
+        "希姆斯",
+        "Simus Al Bakharov"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 313,
+      "id": "zenna",
+      "name": "瑟娜·扎比",
+      "keys": [
+        "瑟娜·扎比",
+        "瑟娜",
+        "Zenna Zabi"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 314,
+      "id": "eschenbach",
+      "name": "艾丝琳娜·艾申巴哈",
+      "keys": [
+        "艾丝琳娜·艾申巴哈",
+        "艾丝琳娜",
+        "Icelina Eschonbach"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 315,
+      "id": "rolland-chuan",
+      "name": "罗兰·杜恩",
+      "keys": [
+        "罗兰·杜恩",
+        "罗兰",
+        "Rolland Chuan"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 317,
+      "id": "kamille",
+      "name": "卡缪·维丹",
+      "keys": [
+        "卡缪·维丹",
+        "卡缪",
+        "Kamille Bidan"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 318,
+      "id": "fa",
+      "name": "花·园丽",
+      "keys": [
+        "花·园丽",
+        "花园丽",
+        "园丽",
+        "Fa Yuiry"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 319,
+      "id": "emma",
+      "name": "爱玛·辛",
+      "keys": [
+        "爱玛·辛",
+        "爱玛",
+        "Emma Sheen"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 320,
+      "id": "beltorchika",
+      "name": "贝托蒂嘉·伊露玛",
+      "keys": [
+        "贝托蒂嘉·伊露玛",
+        "贝托蒂嘉",
+        "伊露玛",
+        "Beltorchika Irma"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 321,
+      "id": "scirocco",
+      "name": "帕普迪马斯·西洛克",
+      "keys": [
+        "帕普迪马斯·西洛克",
+        "帕普迪马斯",
+        "西洛克",
+        "Paptimus Scirocco"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 322,
+      "id": "yazan",
+      "name": "亚赞·盖博",
+      "keys": [
+        "亚赞·盖博",
+        "亚赞",
+        "Yazan Gable"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 323,
+      "id": "jerid",
+      "name": "捷利特·梅萨",
+      "keys": [
+        "捷利特·梅萨",
+        "捷利特",
+        "Jerid Messa"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 324,
+      "id": "sarah",
+      "name": "萨拉·萨比罗夫",
+      "keys": [
+        "萨拉·萨比罗夫",
+        "萨拉",
+        "Sarah Zabiarov"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 325,
+      "id": "reccoa",
+      "name": "蕾柯亚·朗特",
+      "keys": [
+        "蕾柯亚·朗特",
+        "蕾柯亚",
+        "Reccoa Londe"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 326,
+      "id": "rosamia",
+      "name": "罗莎米娅·巴达姆",
+      "keys": [
+        "罗莎米娅·巴达姆",
+        "罗莎米娅",
+        "Rosamia Badam"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 327,
+      "id": "bask",
+      "name": "巴斯克·奥姆",
+      "keys": [
+        "巴斯克·奥姆",
+        "巴斯克",
+        "奥姆",
+        "Bask Om"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 328,
+      "id": "four",
+      "name": "村雨·凤",
+      "keys": [
+        "村雨·凤",
+        "村雨凤",
+        "Four Murasame"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 329,
+      "id": "mouar",
+      "name": "马雅·法拉奥",
+      "keys": [
+        "马雅·法拉奥",
+        "马雅",
+        "Mouar Pharaoh"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 330,
+      "id": "haman",
+      "name": "哈曼·卡恩",
+      "keys": [
+        "哈曼·卡恩",
+        "哈曼",
+        "Haman Karn"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 331,
+      "id": "hathaway",
+      "name": "哈撒维·诺亚",
+      "keys": [
+        "哈撒维·诺亚",
+        "哈撒维",
+        "哈萨维",
+        "Hathaway Noa"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 332,
+      "id": "judau",
+      "name": "捷多·亚西塔",
+      "keys": [
+        "捷多·亚西塔",
+        "捷多",
+        "Judau Ashta"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 333,
+      "id": "roux",
+      "name": "露·卢卡",
+      "keys": [
+        "露·卢卡",
+        "露卢卡",
+        "Roux Louka"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 335,
+      "id": "ple",
+      "name": "爱罗比·普露",
+      "keys": [
+        "爱罗比·普露",
+        "爱罗比",
+        "普露",
+        "Elpeo Ple"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 336,
+      "id": "elle",
+      "name": "艾露·比安诺",
+      "keys": [
+        "艾露·比安诺",
+        "艾露",
+        "Elle Vianno"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 338,
+      "id": "glemy",
+      "name": "葛雷米·托托",
+      "keys": [
+        "葛雷米·托托",
+        "葛雷米",
+        "托托",
+        "Glemmy Toto"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 339,
+      "id": "ple-two",
+      "name": "璞露兹",
+      "keys": [
+        "璞露兹",
+        "Ple Two"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 340,
+      "id": "cecilia-granada",
+      "name": "塞西莉亚",
+      "keys": [
+        "塞西莉亚",
+        "Cecilia"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 341,
+      "id": "shiro",
+      "name": "天田士郎",
+      "keys": [
+        "天田士郎",
+        "Shiro Amada"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 343,
+      "id": "aina",
+      "name": "爱娜·萨哈林",
+      "keys": [
+        "爱娜·萨哈林",
+        "爱娜",
+        "Aina Sahalin"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 345,
+      "id": "bernie",
+      "name": "巴纳德·瓦兹曼",
+      "keys": [
+        "巴纳德·瓦兹曼",
+        "巴纳德",
+        "巴尼",
+        "Bernard Wiseman"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 346,
+      "id": "christina",
+      "name": "克里斯蒂娜·麦肯吉",
+      "keys": [
+        "克里斯蒂娜·麦肯吉",
+        "克里斯蒂娜",
+        "麦肯吉",
+        "Christina Mackenzie"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 347,
+      "id": "chan",
+      "name": "珍·吉",
+      "keys": [
+        "珍·吉",
+        "珍吉"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 348,
+      "id": "nanai",
+      "name": "娜娜伊·米格尔",
+      "keys": [
+        "娜娜伊·米格尔",
+        "娜娜伊",
+        "米格尔",
+        "Nanai Miguel"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 349,
+      "id": "quess",
+      "name": "珂丝·帕拉雅",
+      "keys": [
+        "珂丝·帕拉雅",
+        "珂丝",
+        "葵丝",
+        "葵司",
+        "珂司",
+        "奎斯",
+        "Quess Paraya"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 351,
+      "id": "gyunei",
+      "name": "邱尼·卡斯",
+      "keys": [
+        "邱尼·卡斯",
+        "邱尼",
+        "Gyunei Guss"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 352,
+      "id": "kenneth",
+      "name": "凯奈斯·斯雷格",
+      "keys": [
+        "凯奈斯·斯雷格",
+        "凯奈斯",
+        "Kenneth Sleg"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 353,
+      "id": "lane",
+      "name": "雷恩·艾姆",
+      "keys": [
+        "雷恩·艾姆",
+        "雷恩",
+        "Lane Aime"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 354,
+      "id": "gigi",
+      "name": "琪琪·安达露西亚",
+      "keys": [
+        "琪琪·安达露西亚",
+        "琪琪",
+        "Gigi Andalucia"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 153,
+      "id": "guntank-ii",
+      "name": "RMV-1 钢坦克Ⅱ",
+      "keys": [
+        "RMV-1",
+        "钢坦克Ⅱ",
+        "Guntank Ⅱ"
+      ],
+      "category": "machine",
+      "type": "炮击战用量产型MS / 装甲火炮系统 (Mass-Production Artillery MS / Armored Gun System)",
+      "year": 79,
+      "physics": {},
+      "equipment": [
+        "头部120mm步枪炮 ×2",
+        "左臂3连装导弹发射器",
+        "右臂4连装火箭弹荚舱",
+        "车体80mm机关炮",
+        "双联装烟雾弹 ×2"
+      ]
+    },
+    {
+      "cardId": 294,
+      "id": "sleggar",
+      "name": "史雷卡·罗",
+      "keys": [
+        "史雷卡·罗",
+        "史雷卡",
+        "Sleggar Law"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 334,
+      "id": "leina",
+      "name": "莉娜·亚西塔",
+      "keys": [
+        "莉娜·亚西塔",
+        "莉娜",
+        "Leina Ashta"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 291,
+      "id": "sayla",
+      "name": "塞拉·玛斯",
+      "keys": [
+        "塞拉",
+        "玛斯",
+        "阿尔黛西亚",
+        "塞拉·马斯",
+        "Sayla Mass",
+        "阿尔黛西亚·戴肯"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 297,
+      "id": "char",
+      "name": "夏亚·阿兹纳布尔",
+      "keys": [
+        "夏亚",
+        "阿兹纳布尔",
+        "柯瓦特罗",
+        "巴吉纳",
+        "斯罗兹",
+        "卡斯巴尔",
+        "夏亚·阿兹纳布尔",
+        "Char Aznable",
+        "柯瓦特罗·巴吉纳",
+        "库瓦特罗·巴吉纳",
+        "卡斯巴尔·雷姆·戴肯"
+      ],
+      "category": "pilot",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    },
+    {
+      "cardId": 46,
+      "id": "magellan",
+      "name": "麦哲伦级",
+      "keys": [
+        "麦哲伦级",
+        "Magellan-class"
+      ],
+      "category": "machine",
+      "type": "",
+      "year": 79,
+      "physics": {},
+      "equipment": []
+    }
+  ]
+}

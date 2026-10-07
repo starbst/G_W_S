@@ -266,6 +266,12 @@ export class BattleRenderer {
    const exhaust=1.3+0.25*Math.sin(t*43);
    if(!u.powerCut&&(u.energy??1)>0&&(u.totalEnergy??1)>0)this.plume(pt(0,0,-.8),mul(f,-1),color,t,.4+Math.min(.6,Math.abs(u.speedRate||0)/400),exhaust);
   }
+  if(u.alive&&this.remoteBarrierOwners?.has(u.id))this.polygon([pt(0,3.2,0),pt(-3,-1.5,.4),pt(3,-1.5,.4)],'#98e6ff12','#b4eaff48');
+  if(u.alive&&u.renderProfile?.ucStyle){const style=u.renderProfile.ucStyle;
+   if(style==='binders')for(const x of [-1,1])for(const y of [-1,1]){this.polygon([pt(x*.65,y*.4,-.25),pt(x*1.8,y*1.25,-.7),pt(x*2.15,y*.45,-1.2),pt(x*1.1,y*.05,-1.1)],'#637b69',color+'65');}
+   if(style==='psycho-frame'&&u.activeSkills?.some(s=>['uc-skill-ntd','uc-skill-resolve'].includes(s.id))){const glow=u.activeSkills.some(s=>s.id==='uc-skill-resolve')?'#8affe0':'#ff7486';for(const x of [-1,1]){this.line(pt(x*.25,.5,.3),pt(x*.6,-.35,.05),glow+'62',4);this.line(pt(x*.65,-.4,-.1),pt(x*.7,-1.15,-.65),glow+'62',3);this.line(pt(x*.25,.5,.3),pt(x*.6,-.35,.05),glow+'ba',1);}}
+   if(style==='wing-of-light'&&!u.powerCut&&u.energy>0&&length(u.velocity)>150){const pulse=1+Math.sin(t*20)*.07,alpha=Math.round(20+Math.min(28,length(u.velocity)/25)).toString(16).padStart(2,'0');for(const x of [-1,1])this.polygon([pt(x*.3,.15,-.6),pt(x*3.1,.8,-2.3*pulse),pt(x*1.8,-.25,-2.1*pulse)],'#8ccaff'+alpha,'#bce8ff35');}
+  }
   this.arrow(center,add(center,mul(f,Math.max(95,size*4))),color+'60');
   if(length(u.velocity)>1)this.arrow(center,add(center,mul(norm(u.velocity),Math.max(120,size*5))),'#c9d5e540');
   this.line(center,[center[0],0,center[2]],'#bcd3dc22',1,[3,7]);
@@ -444,6 +450,7 @@ export class BattleRenderer {
   for(let i=1;i<units.length;i++){const pa=this.project(units[i-1].position),pb=this.project(units[i].position);if(pa&&pb&&Math.abs(pa.x-pb.x)<175&&Math.abs(pa.y-pb.y)<90)units[i].labelShift=66;}
   const live=(snapshot.effects||[]).filter(e=>e.t<=snapshot.t&&e.t+e.life>=snapshot.t);
   this.saberActions=new Set(live.filter(e=>e.type==='slash'||e.type==='clash').flatMap(e=>[e.actor,e.opponent]));
+  this.remoteBarrierOwners=new Set((snapshot.drones||[]).filter(d=>d.phase==='barrier').map(d=>d.owner));
   units.sort((a,b)=>length(sub(b.position,this.eye))-length(sub(a.position,this.eye)));units.forEach(u=>this.mesh(u,snapshot.t));
   const notices=new Map();
   const contacts=new Set(live.filter(e=>['clash','jettison'].includes(e.type)||e.counterThrust).flatMap(e=>[e.actor,e.opponent]));
