@@ -1,5 +1,5 @@
 import {weaponVisual} from './weapon-semantics.js';
-import {estimateMeleeClash,meleeContest,meleeEngagementWindow} from './melee-exchange.js';
+import {estimateMeleeClash,meleeContest,meleeEngagementWindow,readMeleeRisk} from './melee-exchange.js';
 import {captureFireHeld} from './capture-coordination.js';
 import { add, sub, mul, dot, length, norm, clamp, bodyBasis, rotateToward, segmentSphere, arcSolution, bodyVector, interceptPoint } from "./math.js";
 
@@ -163,6 +163,25 @@ export function updateDrones(b, dt) {
             if (length(delta) < 70) {d.dead = true;state.droneBatteries[d.batteryIndex]=d.energy;}
         } else if (target) {
             const delta = sub(target.position, d.position), distance = length(delta);
+                        const remoteMode=state.definition.remoteControl?.attackMode;
+            const ram=remoteMode==='ram'||remoteMode==='hybrid'&&distance<250;
+            if(ram&&d.phase!=='return'&&b.t>=d.nextAt){
+                if(distance<1600&&b.canSee(d.position,target.position)){
+                    if(!d.aim||b.t>d.aim.at+.3){const tti=Math.max(.1,distance/Math.max(1,s.droneSpeedMps));d.aim={at:b.t+tti,position:[...target.position]};b.warn(target,owner,{...state.definition,kind:'funnel'},'windup',norm(sub(target.position,d.position)),{cueDroneId:d.id,position:[...d.position],tti});}
+                }
+                const lead=Math.min(.7,distance/Math.max(1,s.droneSpeedMps)),point=d.strikePoint||add(target.position,mul(target.velocity,lead)),desired=mul(norm(sub(point,d.position)),s.droneSpeedMps),force=sub(desired,d.velocity);
+                d.velocity=add(d.velocity,mul(force,Math.min(1,s.droneAcceleration*dt/Math.max(1,length(force)))));
+                if(!d.strikePoint&&distance<600)d.strikePoint=add(target.position,mul(target.velocity,Math.min(.35,distance/Math.max(1,s.droneSpeedMps))));
+                const next=add(d.position,mul(d.velocity,dt)),contact=segmentSphere(sub(d.position,target.position),sub(next,target.position),target.machine.sim.radiusM+3);
+                if(contact&&target.alive&&b.t>=d.nextAt&&d.energy>=(s.droneShotCost??s.energyCost)&&b.canSee(d.position,target.position)){
+                    d.energy-=s.droneShotCost??s.energyCost;d.shots++;d.nextAt=b.t+(s.droneFireIntervalS??1.1);state.shots++;owner.shots++;
+                    const toward=norm(sub(target.position,d.position));
+                    b.damage(target,{owner:owner.id,target:target.id,weaponId:state.definition.id,kind:'melee',weapon:{...s,damage:s.damage*.65},velocity:mul(toward,s.droneSpeedMps),order:'funnel-control'});
+                    b.emit('shot',owner.id,owner.machine.name+' '+state.definition.name+' 刺击',{weapon:state.definition.id,kind:'melee',target:target.id,remote:true});
+                    d.aim=null;d.strikePoint=null;d.phase='reposition';d.position=add(target.position,mul(toward,target.machine.sim.radiusM+80));d.velocity=mul(toward,s.droneSpeedMps*.6);
+                }
+                d.position=add(d.position,mul(d.velocity,dt));d.forward=norm(d.velocity);if(d.strikePoint&&dot(sub(d.strikePoint,d.position),d.velocity)<0){d.strikePoint=null;d.nextAt=Math.max(d.nextAt,b.t+.45);d.phase='reposition';d.aim=null;}continue;
+            }
             const basis = bodyBasis(norm(sub(target.position, owner.position))), phase = d.lane / Math.max(1, s.droneCount) * Math.PI * 2+d.shots*.9;
             let attackPoint = add(target.position, add(mul(basis.right, Math.cos(phase) * s.droneAttackRangeM * .65), add(mul(basis.up, Math.sin(phase) * s.droneAttackRangeM * .65), mul(basis.forward, (d.lane % 3 - 1) * s.droneAttackRangeM * .35))));
             if(wire&&length(sub(attackPoint,owner.position))>wire)attackPoint=add(owner.position,mul(norm(sub(attackPoint,owner.position)),wire*.9));
@@ -175,7 +194,7 @@ export function updateDrones(b, dt) {
                 d.aim = null;
                 d.phase = "outbound";
             }
-            if (distance < s.droneAttackRangeM && length(sub(attackPoint, d.position)) < 400 && owner.stability >= (assisted?.1:.22) && !defending && (assisted||b.t >= owner.evadeUntil) && b.canSee(d.position, target.position) && b.t >= d.nextAt && d.energy >= (s.droneShotCost??s.energyCost)) {
+            if (remoteMode!=='ram' && distance < s.droneAttackRangeM && length(sub(attackPoint, d.position)) < 400 && owner.stability >= (assisted?.1:.22) && !defending && (assisted||b.t >= owner.evadeUntil) && b.canSee(d.position, target.position) && b.t >= d.nextAt && d.energy >= (s.droneShotCost??s.energyCost)) {
                 if (!d.aim) {
                     const delay=remoteDelay(owner,state.definition),leadTime = delay + distance / s.projectileSpeedMps;
                     const estimate = add(add(target.position, mul(target.velocity, leadTime)), mul(target.acceleration || [ 0, 0, 0 ], .5 * leadTime * leadTime * owner.pilotState.sim.tracking));
@@ -251,7 +270,8 @@ export function predictCounterThrust(b, u, target) {
     if (time > u.pilotState.tactics.counterThrustLeadS + p.reactionS) return;
     // The estimate must come from an imminent observed blade contact, not a future scripted clash.
         const incomingBlade = target.weapons.find(w => w.definition.kind === "melee" && !w.disabled);
-    if (!incomingBlade || !u.visible || u.stability > estimateClash(u, target, closing, b.t, true).lossA + .12 || u.stability < .12 || !(target.order === "melee" || target.swing || incomingBlade.attack)) return;
+    const contact=u.contacts.get(target.id);
+    if (!incomingBlade || !u.visible || !contact || b.t-contact.observedAt>.8 || u.stability > readMeleeRisk(b,u,target,closing).loss + .15 || u.stability < .12 || !(contact.bladeDrawn||contact.threatTargetIds?.includes(u.id))) return;
     if (u.counterPlan && u.counterPlan.until > b.t) return;
     const reactAt = b.t + p.reactionS;
     if (time < p.reactionS) return;
@@ -268,6 +288,19 @@ export function predictCounterThrust(b, u, target) {
     });
 }
 
+// A successful contact can invite another cut, but never clears weapon cooldown,
+// restores stability, or grants immunity. Pressure is bounded to a short exchange.
+export function considerMeleeFollowup(b,u,target,weapon,{closing=0,lateral=0}={}){
+ const seen=u.contacts.get(target.id),cost=weapon.sim.powerSource==='ammo'||weapon.sim.powerSource==='none'?0:weapon.sim.energyCost;
+ if(!u.alive||!target.alive||!seen||b.t-seen.observedAt>.8||u.withdrawing||u.controller==='simple'||u.stability<.26||b.t<(u.meleeBreakUntil||0)||u.energy<cost+Math.max(u.machine.sim.dodgeEnergyCost??5,u.machine.sim.energyCapacity*.12)||closing>650||lateral>220)return false;
+ if(u.commandAssignment?.source==='player'&&['withdraw','move','hold'].includes(u.commandAssignment.type))return false;
+ const chain=b.t-(u.bladeFollowUp?.createdAt??-100)<2.5?(u.bladeFollowUp.count||0):0;if(chain>=3)return false;
+ const ability=Math.min(1,u.pilotState.sim.melee??u.pilotState.sim.maneuver),chance=clamp((.24+.3*ability+(u.pilotState.traits.returnSlash?.16:0)+(u.pilotState.tags?.includes('blade-specialist')?.12:0))*(u.controller==='survive'?.45:1)*(1-chain*.22)*(1-(u.meleeStrain||0)*.6),.05,.85);
+ if(b.randomFor(u.id,'blade-follow')()>chance)return false;
+ const state=u.weapons.find(w=>w.definition.id===weapon.id),until=b.t+Math.max(1.2,Math.min(3,(state?.readyAt??b.t)-b.t+weapon.sim.windupS+u.pilotState.sim.reactionS+.8));
+ u.bladeFollowUp={targetId:target.id,createdAt:b.t,until,count:chain+1};u.separationUntil=0;u.nextDecision=b.t;
+ b.emit('melee-follow-up',u.id,u.machine.name+' 保持近战压力，准备追斩',{target:target.id,weapon:weapon.id,until,count:chain+1});return true;
+}
 export function resolveBladeV5(b,u,target,w,contactDelta,window){
     window=window||meleeEngagementWindow(b,u,target,w);
     if(!window)return;
@@ -291,11 +324,14 @@ export function resolveBladeV5(b,u,target,w,contactDelta,window){
         const graze=hitRoll>hitChance*.78,factor=contest.damageFactor*(graze?.4:1)*(moduleEvasion?.55:1);
         report(graze?'擦斩命中':guarding?'破开格挡命中':'斩击命中',{damageFactor:factor});
         b.damage(target,{owner:u.id,weaponId:w.id,weapon:{...w.sim,damage:w.sim.damage*factor*(u.bladeBoostUntil>b.t?1.8:1)},velocity:mul(n,Math.max(1,closing)),kind:'melee',order:'melee'});
+        considerMeleeFollowup(b,u,target,w,window);
         return;
     }
-    if (!(target.bladeBoostUntil > b.t)) prepareMaximumOutput(b, target, counter);
+    const yielding=target.guardMode==='deflect'&&target.guardUntil>b.t&&!target.swing;
+    if (!yielding&&!(target.bladeBoostUntil > b.t)) prepareMaximumOutput(b, target, counter);
     const estimate = estimateMeleeClash(u,target,closing,b.t,false,w,counter.definition), {ma: ma, mb: mb, momentum: momentum, pa: pa, pb: pb} = estimate;
-    const contestNoise=.94+random()*.12;let la=estimate.lossA*contestNoise,lb=estimate.lossB/contestNoise;
+    const contestNoise=.86+random()*.28;let la=estimate.lossA*contestNoise,lb=estimate.lossB/contestNoise;
+    if(yielding){la*=.3;lb*=.55;}
     const negate = (x, loss, incoming) => {
         const plan = x.counterPlan;
         if (!plan || plan.at > b.t || plan.until < b.t || plan.targetId !== (x === u ? target.id : u.id) || dot(plan.direction, incoming) < .8) return loss;
@@ -334,17 +370,18 @@ export function resolveBladeV5(b,u,target,w,contactDelta,window){
     if (!target.swing) b.spend(target, counter.definition.sim.energyCost);
     target.swing = null;
     u.swing = null;
-    const slip=window.lateral,advantage=estimate.pressureA/estimate.pressureB,deflect=target.stability>.3&&advantage<.62;
-    const outcome=u.stability<.12&&target.stability<.12?'双双破稳':u.stability<.12?'进攻方破稳':target.stability<.12?'防守方破稳':deflect?'拨刀反击':slip>80?'交错飞过':Math.max(advantage,1/advantage)>1.5?'压刀击退':'刀刃相持后分离';
+    const slip=window.lateral,advantage=estimate.pressureA/estimate.pressureB*contestNoise*contestNoise,deflect=target.stability>.3&&advantage<.62;
+    const binding=!yielding&&slip<80&&closing<600&&u.stability>.12&&target.stability>.12&&random()<.5;
+    const outcome=binding?'刀刃相持':yielding&&target.stability>.12?'卸力格挡后分离':u.stability<.12&&target.stability<.12?'双双破稳':u.stability<.12?'进攻方破稳':target.stability<.12?'防守方破稳':deflect?'拨刀反击':slip>80?'交错飞过':Math.max(advantage,1/advantage)>1.5?'压刀击退':'刀刃相持后分离';
     report(outcome,{lossA:la,lossB:lb,powerA:pa,powerB:pb,outputRatio:advantage});
-    const impulse=momentum*.4+Math.min(pa,pb)*.05;
+    const impulse=momentum*(binding?.95:.4)+Math.min(pa,pb)*.05;
     u.velocity = sub(u.velocity, mul(n, impulse / ma));
     target.velocity = add(target.velocity, mul(n, impulse / mb));
     const lateral = bodyBasis(n).right;
-    u.velocity = add(u.velocity, mul(lateral, Math.min(240,Math.max(25,slip*.35))));
-    target.velocity = add(target.velocity, mul(lateral, -Math.min(240,Math.max(25,slip*.35))));
+    u.velocity = add(u.velocity, mul(lateral, Math.min(240,slip*.35)));
+    target.velocity = add(target.velocity, mul(lateral, -Math.min(240,slip*.35)));
     for (const x of [ u, target ]) {
-        x.separationUntil = b.t + .6;
+        x.separationUntil = b.t + (closing>350||slip>100?.6:.25);
         const loss = x === u ? la : lb;
         x.meleeContactUntil = b.t + .5;
         x.nextDecision = b.t;
@@ -418,6 +455,9 @@ export function resolveBladeV5(b,u,target,w,contactDelta,window){
             target: target.id
         });
     }
+    // Do not grant every neutral exchange an automatic clean escape.
+    if(u.stability>.26)considerMeleeFollowup(b,u,target,w,window);
+    if(target.stability>.26)considerMeleeFollowup(b,target,u,counter.definition,window);
     if(deflect&&target.alive&&u.alive&&target.stability>.12){
         exploit(target,u);target.openingUntil=b.t+.55;target.separationUntil=0;
         if(target.pilotState.traits.returnSlash)counter.readyAt=Math.min(counter.readyAt,b.t+Math.max(.08,target.pilotState.sim.reactionS));

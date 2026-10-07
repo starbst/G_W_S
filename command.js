@@ -1,3 +1,4 @@
+import {perceivedValue} from './pilot-judgment.js';
 import {mayEngage} from './target-policy.js';
 import {shipWeaponRole} from './ship-weapons.js';
 import {add,sub,mul,norm,length,dot,clamp,arcSolution,insideArc} from './math.js';
@@ -215,7 +216,7 @@ export function updateCommand(b){
     const opportunity=u.controller==='objective'&&ownGoal?.alive&&worthwhile&&!leaving?6:0,stay=u.commandAssignment?.allyId===request.ally.id?1.5:0;
     const interruption=engagementOpportunity(b,u,request.targetId);
      const selfRisk=u.controller==='survive'?(1-u.structure/u.machine.sim.structure)*8+(u.pendingReaction?5:0):0;
-     const value=request.urgency*u.pilotState.strategies['cover-ally']-arrival*.7-opportunity-interruption-selfRisk+stay;
+     const value=perceivedValue(b,u,'support:'+request.allyId,request.urgency*u.pilotState.strategies['cover-ally']-arrival*.7-opportunity-interruption-selfRisk+stay,{step:1,relative:.06});
     if(value>bid&&value>2){best=u;bid=value;}
    }
    if(best){assigned.set(best.id,{source:'ai',type:'escort',targetId:request.targetId,allyId:request.ally.id,reason:'比较任务收益、集中火力和真实援护可达时间',deadline:request.deadline,urgency:request.urgency});used.add(best.id);}
@@ -238,7 +239,7 @@ export function updateCommand(b){
      else if(goal)order={source:'ai',type:'withdraw',point:[...goal.point],reason:'继续完成任务航路'};
     else{let target=null,value=-Infinity;for(const[id,c]of views){if(!fresh(b,u,id))continue;const foe=b.unitById.get(id);if(!mayEngage(b,u,foe))continue;const d=length(sub(c.position,u.position));
      const goalValue=id===primary?.id?(b.mission.priorities[side].primaryValue||8)*(u.controller==='objective'?1:.3):0;
-     const score=goalValue+(id===u.targetId?2:0)-d/5000-(allocations.get(id)||0)*4+(foe.entityType!=='ship'?2:0);
+     const score=perceivedValue(b,u,'command-target:'+id,goalValue+(id===u.targetId?2:0)-d/5000-(allocations.get(id)||0)*4+(foe.entityType!=='ship'?2:0),{step:1,relative:.06});
      if(score>value){target=foe;value=score;}}
      order={source:'ai',type:u.controller==='screen'?'screen':'attack',targetId:target?.id||null,reason:'按任务和已知目标分摊作战压力'};
      if(target)allocations.set(target.id,(allocations.get(target.id)||0)+1);

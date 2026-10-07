@@ -34,7 +34,7 @@ export function validateV5Catalog(c) {
     if(c.rules.commandIntervalS!==undefined)num(c.rules.commandIntervalS,.25,5,"指挥更新间隔");
     for (const [key, a, z] of [ [ "clashStrainCap", 0, .7 ], [ "clashStrainGain", 0, 1 ], [ "clashStrainRecoveryS", 1, 120 ] ]) if (c.rules[key] !== undefined) num(c.rules[key], a, z, key);
     for (const m of c.machines) {
-        keys(m, "kind entityType id name aliases selection tags mobility weapons facts sim renderProfile bladeOutput attachments unloadedSpeedFactor componentDefs carrier combatant powerSystem defenses stealth forms moduleSystem moduleSupply workSystem loadoutSystem loadoutSupply grappleSystem selfDestructSystem".split(" "), "实体模板");
+        keys(m, "kind entityType id name aliases note selection tags mobility weapons facts sim renderProfile bladeOutput attachments unloadedSpeedFactor componentDefs carrier combatant powerSystem defenses stealth forms moduleSystem moduleSupply workSystem loadoutSystem loadoutSupply grappleSystem selfDestructSystem".split(" "), "实体模板");
         if(m.selection){keys(m.selection,["familyId","familyName","variantName"],"机体选择分组");for(const key of ["familyId","familyName","variantName"])if(typeof m.selection[key]!=="string"||!m.selection[key].length||m.selection[key].length>100)throw Error("机体选择分组字段错误");}
         keys(m.sim, machineSim, "实体数值");
         for(const [key,min,max] of [["groundSpeedMps",0,m.sim.maxSpeedMps],["groundAccelerationFactor",.05,1.5],["groundTurnFactor",.25,3],["sandTractionFactor",.1,1.5],["jumpHeightM",0,500],["jumpEnergyCost",0,10000]])if(m.sim[key]!==undefined&&(!Number.isFinite(m.sim[key])||m.sim[key]<min||m.sim[key]>max))throw Error("地面运动参数越界 "+key);

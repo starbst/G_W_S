@@ -1,4 +1,4 @@
-// 高达战争模拟器 v1.0 · 酒馆助手全局脚本。启用挂载唯一魔法棒入口；停用同时关闭悬浮入口。
+// 高达战争模拟器 · 酒馆助手全局脚本。启用挂载唯一魔法棒入口；停用同时关闭悬浮入口。
 const host=window.parent,doc=host.document,owner=crypto.randomUUID();
 let mountedApi=null;
 function mount(){
@@ -14,10 +14,10 @@ function mount(){
   item.append(button);menu.append(item);
  }
  item.dataset.owner=owner;const wand=doc.getElementById('extensionsMenuButton');if(wand)wand.style.display='flex';
- if(mountedApi!==api){mountedApi=api;api.setEnabled(true);api.setLauncherVisible(true);}
+ if(mountedApi!==api){mountedApi=api;api.setEnabled(true);}
 }
 mount();const timer=setInterval(mount,500);
 window.addEventListener('pagehide',()=>{
  clearInterval(timer);const item=doc.getElementById('gws-wand-entry');if(item?.dataset.owner!==owner)return;
- item.remove();host.GundamWarSimulator?.setEnabled(false);host.GundamWarSimulator?.setLauncherVisible(false);
+ item.remove();host.GundamWarSimulator?.setEnabled(false);
 });

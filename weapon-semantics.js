@@ -1,5 +1,5 @@
 // Mount location is not a threat class: a head/body mount can carry a heavy cannon.
-export function isLightAutomatic(w){return w.kind==='ballistic'&&w.sim.damage<=8&&w.sim.windupS<=.1&&(w.mount==='head'||w.tags?.includes('burst-defense')||w.template==='head-vulcan');}
+export function isLightAutomatic(w){return (w.kind==='ballistic'||w.tags?.includes('light-automatic'))&&w.sim.damage<=8&&w.sim.windupS<=.1&&(w.mount==='head'||w.tags?.includes('burst-defense')||w.template==='head-vulcan');}
 // Light automatic fire chips intact armor; unarmored contacts remain vulnerable.
 // This is a gameplay calibration shared by damage and utility, not a canon statistic.
 export function weaponDamageScale(w,target){return isLightAutomatic(w)?(target?.armor>0?.04:.32):1;}
@@ -12,6 +12,7 @@ export function weaponVisual(w,kind=w.kind){
  const t=w.template||w.id;
  if(kind==='melee')return ['seed-knife','seed-claw'].includes(t)?'thrust':'slash';
  if(['missile','funnel-missile'].includes(kind))return ['seed-bazooka','rocket-launcher'].includes(t)?'rocket':'missile';
+ if(kind==='beam'&&w.tags?.includes('light-automatic'))return 'gn-tracer';
  if(kind==='beam')return w.sim.beamClass==='large'?'large-beam':(w.remoteControl||kind!==w.kind)?'remote-beam':['seed-rifle','beam-rifle'].includes(t)||w.tags?.includes('beam-rifle')?'rifle-beam':'beam';
  if(kind==='funnel')return 'remote-beam';
  if(t==='seed-boomerang')return 'boomerang';if(t==='seed-anchor')return 'anchor';

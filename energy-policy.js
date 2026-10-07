@@ -1,7 +1,7 @@
 // A numeric reservoir placeholder keeps saved JSON finite; this flag governs consumption.
 export function hasUnlimitedEnergy(unitOrMachine){
  const m=unitOrMachine.machine||unitOrMachine;
- return m.sim.unlimitedEnergy??(m.entityType==='ship'||['nuclear','hyper-deuterion','fusion'].includes(m.powerSystem?.type));
+ return m.sim.unlimitedEnergy??(m.entityType==='ship'||['nuclear','hyper-deuterion','fusion','gn-drive'].includes(m.powerSystem?.type));
 }
 
 // Driver skill is output utilization, not extra machine thrust. High skill reaches

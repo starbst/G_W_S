@@ -1,3 +1,4 @@
+import {perceivedValue} from './pilot-judgment.js';
 import {isLightAutomatic,isTacticalThreat} from './weapon-semantics.js';
 import {motionSpeedLimit,meleeInterceptCourse} from './locomotion.js';
 import {mayEngage} from './target-policy.js';
@@ -10,6 +11,7 @@ import {withdrawalOption} from './missions.js';
 import {canObserve,environmentAt,searchWaypoint,meleeAltitudeReachable} from './battlefield.js';
 import {concealedFrom,bodyguardCourse,remotePermission,mountedRemote,predictedProtectionCost} from './seed-systems.js';
 import {choosePilotStrategy,funnelVelocity,bladeTrade,safePilotCourse} from './pilot-strategies.js';
+import {observedMeleeCondition} from './melee-exchange.js';
 import { add, sub, mul, dot, length, norm, cross, clamp, arcSolution, bodyBasis, rotateToward } from "./math.js";
 
 import { missionPriority, navigationGoal, captureObjective } from "./missions.js";
@@ -103,6 +105,7 @@ export function assignTargets(b) {
             if(support?.id===x.id)value+=18*(u.pilotState.strategies['cover-ally']||0);
             if(contact&&dot(contact.velocity,norm(sub(contact.position,u.position)))>Math.max(40,x.machine.sim.maxSpeedMps*.3)&&support)value-=missionPriority(b,u,x)*u.pilotState.tactics.missionValue/9;
             value+=commandTargetBonus(b,u,x);
+            value=perceivedValue(b,u,'target:'+x.id,value,{step:1,relative:.08});
             values.set(x.id,value);
             if (value > score) {
                 score = value;
@@ -206,7 +209,7 @@ export function coordinateEngagements(b){
     const exchange=b.exchangeState(u,target.id),badExchange=exchange.rangedLoss-exchange.rangedGain+exchange.rangedMisses*.025>u.pilotState.tactics.exchangeDisadvantage;
     const energy=u.energy/u.machine.sim.energyCapacity,melee=u.pilotState.capabilities?.melee??u.pilotState.sim.maneuver;
     const pressureReady=!!blade&&u.controller!=='survive'&&energy>.3;
-    const assault=pressureReady&&!!course?.feasible&&u.stability>.25&&(power<12||badExchange||u.pilotState.tags?.includes('blade-specialist')||target.stability<.25);
+    const assault=pressureReady&&!!course?.feasible&&u.stability>.25&&(power<12||badExchange||u.pilotState.tags?.includes('blade-specialist')||observedMeleeCondition(b,u,target)==='broken');
     return {u,distance,blade,course,power,pressurePower,badExchange,pressureReady,assault,pressureScore:melee*2+u.stability+energy-distance/4000,score:course?.feasible?melee*3+u.stability+energy-course.time*.35:-Infinity};
    });
    const leads=options.filter(o=>o.assault).sort((a,z)=>z.score-a.score||a.u.id.localeCompare(z.u.id)),lead=leads[0];
@@ -250,7 +253,7 @@ export function updateContacts(b) {
                 // A direct observation is read-only. Share one frozen-in-time pose per
                 // target and tick; delayed radio reports keep their own copied pose.
                 let contact=observations[xi];
-                if(!contact){contact={position:[...x.position],velocity:[...x.velocity],forward:[...x.forward],observedAt:b.t,shared:false,entityType:x.entityType,aimTargetIds:[...new Set(x.weapons.filter(w=>!w.disabled&&!w.formDisabled&&(w.attack||w.salvo)).map(w=>w.attack?.targetId||w.salvo?.targetId))],threatTargetIds:[...new Set(x.weapons.filter(w=>!w.disabled&&!w.formDisabled&&(w.attack||w.salvo)&&isTacticalThreat(w.definition,b.unitById.get(w.attack?.targetId||w.salvo?.targetId),b.rules.damageMultiplier)).map(w=>w.attack?.targetId||w.salvo?.targetId))],...(x.machine.defenses?.some(d=>["ps","tp","vps"].includes(d.type))?{phaseArmorActive:x.defenseActive!==false}:{}),propulsionDisabled:x.components.engine<=.05};observations[xi]=contact;}
+                if(!contact){contact={position:[...x.position],velocity:[...x.velocity],forward:[...x.forward],observedAt:b.t,shared:false,entityType:x.entityType,aimTargetIds:[...new Set(x.weapons.filter(w=>!w.disabled&&!w.formDisabled&&(w.attack||w.salvo)).map(w=>w.attack?.targetId||w.salvo?.targetId))],threatTargetIds:[...new Set(x.weapons.filter(w=>!w.disabled&&!w.formDisabled&&(w.attack||w.salvo)&&isTacticalThreat(w.definition,b.unitById.get(w.attack?.targetId||w.salvo?.targetId),b.rules.damageMultiplier)).map(w=>w.attack?.targetId||w.salvo?.targetId))],...(x.machine.defenses?.some(d=>["ps","tp","vps"].includes(d.type))?{phaseArmorActive:x.defenseActive!==false}:{}),bladeDrawn:x.weapons.some(w=>w.definition.kind==='melee'&&!w.disabled&&!w.formDisabled&&x.slotSelected[w.definition.slot||'slot1']===w.definition.id),posture:x.stability<.12||b.t<(x.meleeBreakUntil||0)?'broken':x.stability<.4?'shaken':'steady',propulsionDisabled:x.components.engine<=.05};observations[xi]=contact;}
                 const previous=u.contacts.get(x.id);if(contact.phaseArmorActive===false&&previous?.phaseArmorActive!==false&&(u.pilotState.strategies?.["capture-disabled"]??0)>0)u.nextDecision=b.t;
                 u.contacts.set(x.id,contact);refreshed++;
             }
@@ -390,7 +393,7 @@ export function decideV5(b, u, target) {
         const duelPreferred=bladeReachable&&chaseFeasible&&knifeReason&&!resetRemote&&u.components.engine>.15&&u.energy>blade.definition.sim.energyCost+m.energyCapacity*.12&&(distance<4500||committed&&closingBudget<c.maxRushSeconds)&&!screenHelp;
         u.meleeIntent=duelPreferred?{targetId:target.id,reason:u.jettisoned?'ranged-exhausted':'blade-output-window'}:null;
         const recovery = u.stability < .16 || b.t < (u.meleeBreakUntil || 0), funnelBusy = b.drones.some(d => d.owner === u.id && d.phase !== "return");
-        if (b.t < (u.openingUntil || 0) && bladeReachable && target.stability < .2) {
+        if (b.t < (u.openingUntil || 0) && bladeReachable && observedMeleeCondition(b,u,target)==='broken') {
             order = "melee";
             heading = toward;
             desired = meleeVelocity(u, seen || target, delta, blade.definition.sim.rangeM, target,b);
@@ -399,7 +402,7 @@ export function decideV5(b, u, target) {
         } else if (b.t < (u.separationUntil || 0)) {
             order = "extend";
             heading = length(u.velocity) > 20 ? norm(u.velocity) : u.forward;
-            desired = mul(heading, m.maxSpeedMps);
+            desired = [...u.velocity];
         } else if (recovery) {
             order = "recover";
             // A blade engagement needs one completed turn and recovery, not
@@ -483,7 +486,11 @@ export function decideV5(b, u, target) {
 export function meleeVelocity(u, contact, delta, reach, target, b=null) {
     const distance = length(delta), axis = norm(delta), relative = sub(u.velocity, contact.velocity), lateral = sub(relative, mul(axis, dot(relative, axis)));
     const braking = u.machine.sim.thrustN / u.machine.sim.massKg * 10 * u.machine.mobility.brakeMultiplier;
-    const close = clamp(Math.sqrt(2 * braking * Math.max(0, distance - reach * .65)), 250, u.machine.sim.maxSpeedMps * .8);
+    const limit=b?motionSpeedLimit(b,u):u.machine.sim.maxSpeedMps;
+    let close = clamp(Math.sqrt(2 * braking * Math.max(0, distance - reach * .65)), Math.min(35,limit*.2), limit * .8);
+    // An already closing opponent needs a controlled contact, not another rush.
+    // Actual braking authority still determines whether slowing down succeeds.
+    if(distance<reach*2.5&&dot(contact.velocity,axis)<-60&&u.energy>u.machine.sim.energyCapacity*.15)close=Math.min(close,Math.max(65,limit*.2));
     const intercept=meleeInterceptCourse(b,u,{position:add(u.position,delta),velocity:contact.velocity},reach);
     let desired;
     if(intercept.feasible&&distance>reach*1.5){

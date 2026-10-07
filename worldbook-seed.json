@@ -1,5 +1,5 @@
 {
-  "name": "高达战争模拟器 v1.0",
+  "name": "高达战争模拟器",
   "entries": {
     "0": {
       "uid": 0,
@@ -36,7 +36,7 @@
       "key": [],
       "keysecondary": [],
       "comment": "[GWS] 精英驾驶员",
-      "content": "<GWS_DATA>\n{\n  \"kind\": \"pilot-template\",\n  \"id\": \"elite\",\n  \"name\": \"精英驾驶员\",\n  \"tags\": [\n    \"elite\"\n  ],\n  \"sim\": {\n    \"reactionS\": 0.15,\n    \"aim\": 0.82,\n    \"tracking\": 0.84,\n    \"maneuver\": 0.86,\n    \"composure\": 0.8\n  },\n  \"traits\": {\n    \"driftShot\": true,\n    \"returnSlash\": true\n  },\n  \"weights\": {\n    \"aim\": 0.25,\n    \"flank\": 0.2\n  },\n  \"tactics\": {\n    \"turnMultiplier\": 2.15,\n    \"turnStabilityCost\": 0.58,\n    \"driftMinSpeed\": 210,\n    \"driftWindowS\": 2.1,\n    \"driftCooldownS\": 3,\n    \"singleStability\": 0.55,\n    \"burstStability\": 0.24,\n    \"boostSeconds\": 1.1,\n    \"planHoldS\": 1.8,\n    \"planSwitchMargin\": 1.3,\n    \"strategyLookaheadS\": 1.8,\n    \"beamGuardChance\": 0.85,\n    \"beamGuardReduction\": 0.35,\n    \"shieldGuardBonus\": 0.3,\n    \"guardStabilityReduction\": 0.55\n  },\n  \"note\": \"预判转向、惯性漂移抢射；普通光束临界闪避失败后有85%概率格挡。\",\n  \"strategies\": {\n    \"gun-close\": 1.15,\n    \"crossfire-exit\": 1.2,\n    \"cover-ally\": 1.2,\n    \"formation-spacing\": 1.2,\n    \"tail-break\": 1.2,\n    \"pursuit-cutoff\": 1.15,\n    \"drift-window\": 1.2,\n    \"return-slash\": 1.1,\n    \"blade-denial\": 1.2,\n    \"pressure-jink\": 1.2,\n    \"pursuit-fire\": 1.15,\n    \"team-crossfire\": 1\n  }\n}\n</GWS_DATA>",
+      "content": "<GWS_DATA>\n{\n  \"kind\": \"pilot-template\",\n  \"id\": \"elite\",\n  \"name\": \"精英驾驶员\",\n  \"tags\": [\n    \"elite\"\n  ],\n  \"sim\": {\n    \"reactionS\": 0.15,\n    \"aim\": 0.82,\n    \"tracking\": 0.84,\n    \"maneuver\": 0.86,\n    \"composure\": 0.8\n  },\n  \"traits\": {\n    \"driftShot\": true,\n    \"returnSlash\": true\n  },\n  \"weights\": {\n    \"aim\": 0.25,\n    \"flank\": 0.2\n  },\n  \"tactics\": {\n    \"turnMultiplier\": 2.15,\n    \"turnStabilityCost\": 0.58,\n    \"driftMinSpeed\": 210,\n    \"driftWindowS\": 2.1,\n    \"driftCooldownS\": 3,\n    \"singleStability\": 0.55,\n    \"burstStability\": 0.24,\n    \"boostSeconds\": 1.1,\n    \"planHoldS\": 2,\n    \"planSwitchMargin\": 1.5,\n    \"strategyLookaheadS\": 1.8,\n    \"beamGuardChance\": 0.85,\n    \"beamGuardReduction\": 0.35,\n    \"shieldGuardBonus\": 0.3,\n    \"guardStabilityReduction\": 0.55\n  },\n  \"note\": \"射击专注与接敌节奏有冷却；临界闪避失败时倾向格挡。\",\n  \"strategies\": {\n    \"gun-close\": 1.15,\n    \"crossfire-exit\": 1.2,\n    \"cover-ally\": 1.2,\n    \"formation-spacing\": 1.2,\n    \"tail-break\": 1.2,\n    \"pursuit-cutoff\": 1.15,\n    \"drift-window\": 1.2,\n    \"return-slash\": 1.1,\n    \"blade-denial\": 1.2,\n    \"pressure-jink\": 1.2,\n    \"pursuit-fire\": 1.15,\n    \"team-crossfire\": 1\n  },\n  \"skills\": {\n    \"elite-fire-discipline\": true,\n    \"elite-blade-tempo\": true\n  }\n}\n</GWS_DATA>",
       "constant": false,
       "selective": false,
       "order": 4,
@@ -141,7 +141,7 @@
       "key": [],
       "keysecondary": [],
       "comment": "[GWS] 王牌驾驶员",
-      "content": "<GWS_DATA>\n{\n  \"kind\": \"pilot-template\",\n  \"id\": \"ace\",\n  \"name\": \"王牌驾驶员\",\n  \"templates\": [\n    \"elite\",\n    \"rational\"\n  ],\n  \"sim\": {\n    \"reactionS\": 0.12,\n    \"aim\": 0.95,\n    \"tracking\": 0.96,\n    \"maneuver\": 0.96,\n    \"composure\": 0.95\n  },\n  \"traits\": {\n    \"antiFunnel\": true,\n    \"jettison\": true,\n    \"maximumOutput\": true,\n    \"counterThrust\": true\n  },\n  \"tactics\": {\n    \"maneuverRecovery\": 3.2,\n    \"clashRecoveryS\": 8,\n    \"meleeClashCost\": 0.45,\n    \"meleeCommitM\": 1600,\n    \"impactRecoveryFactor\": 0.05,\n    \"dodgeThrustMultiplier\": 70,\n    \"reactionDodgeChance\": 1,\n    \"predictiveDodgeChance\": 1,\n    \"meleeSwingCost\": 0.06,\n    \"planHoldS\": 2.2,\n    \"planSwitchMargin\": 1.5,\n    \"strategyLookaheadS\": 2.4,\n    \"defenseForwardFraction\": 0.75,\n    \"maxRushSeconds\": 30,\n    \"beamGuardChance\": 1,\n    \"beamGuardReduction\": 0.5,\n    \"shieldGuardBonus\": 0.32,\n    \"guardStabilityReduction\": 0.7\n  },\n  \"strategies\": {\n    \"combat-recovery\": 1.2,\n    \"funnel-rush\": 1.35,\n    \"decoy-breakthrough\": 1.25,\n    \"recovery-window\": 1.3,\n    \"cooldown-counter\": 1.25,\n    \"crossfire-exit\": 1.25,\n    \"drift-window\": 1.3,\n    \"return-slash\": 1.25,\n    \"low-speed-barrage\": 1.2,\n    \"funnel-recall\": 1.2,\n    \"disengage-reset\": 1.1,\n    \"blade-denial\": 1.2,\n    \"pressure-jink\": 1.2,\n    \"pursuit-fire\": 1.15,\n    \"team-crossfire\": 1\n  },\n  \"note\": \"普通光束临界闪避失败后必定格挡；盾牌增强减伤。\"\n}\n</GWS_DATA>",
+      "content": "<GWS_DATA>\n{\n  \"kind\": \"pilot-template\",\n  \"id\": \"ace\",\n  \"name\": \"王牌驾驶员\",\n  \"templates\": [\n    \"elite\",\n    \"rational\"\n  ],\n  \"sim\": {\n    \"reactionS\": 0.12,\n    \"aim\": 0.95,\n    \"tracking\": 0.96,\n    \"maneuver\": 0.96,\n    \"composure\": 0.95\n  },\n  \"traits\": {\n    \"antiFunnel\": true,\n    \"jettison\": true,\n    \"maximumOutput\": true,\n    \"counterThrust\": true\n  },\n  \"tactics\": {\n    \"maneuverRecovery\": 3.2,\n    \"clashRecoveryS\": 8,\n    \"meleeClashCost\": 0.45,\n    \"meleeCommitM\": 1600,\n    \"impactRecoveryFactor\": 0.05,\n    \"dodgeThrustMultiplier\": 70,\n    \"reactionDodgeChance\": 1,\n    \"predictiveDodgeChance\": 1,\n    \"meleeSwingCost\": 0.06,\n    \"planHoldS\": 2.5,\n    \"planSwitchMargin\": 1.8,\n    \"strategyLookaheadS\": 2.4,\n    \"defenseForwardFraction\": 0.75,\n    \"maxRushSeconds\": 30,\n    \"beamGuardChance\": 1,\n    \"beamGuardReduction\": 0.5,\n    \"shieldGuardBonus\": 0.32,\n    \"guardStabilityReduction\": 0.7\n  },\n  \"strategies\": {\n    \"combat-recovery\": 1.2,\n    \"funnel-rush\": 1.35,\n    \"decoy-breakthrough\": 1.25,\n    \"recovery-window\": 1.3,\n    \"cooldown-counter\": 1.25,\n    \"crossfire-exit\": 1.25,\n    \"drift-window\": 1.3,\n    \"return-slash\": 1.25,\n    \"low-speed-barrage\": 1.2,\n    \"funnel-recall\": 1.2,\n    \"disengage-reset\": 1.1,\n    \"blade-denial\": 1.2,\n    \"pressure-jink\": 1.2,\n    \"pursuit-fire\": 1.15,\n    \"team-crossfire\": 1\n  },\n  \"note\": \"射击窗口与连续压刀强化短时能力；紧急防御优先。\",\n  \"skills\": {\n    \"ace-fire-window\": true,\n    \"ace-blade-pressure\": true,\n    \"elite-fire-discipline\": false,\n    \"elite-blade-tempo\": false\n  }\n}\n</GWS_DATA>",
       "constant": false,
       "selective": false,
       "order": 16,
@@ -474,7 +474,7 @@
         "GWS_BATTLE"
       ],
       "comment": "[GWS] 控制器",
-      "content": "高达战争模拟器 v1.0：聊天可提出结构化战斗方案与待确认资料，战斗完全由本地算法运行。方案及资料由玩家确认后采用；不预先指定战果。",
+      "content": "高达战争模拟器：聊天可提出结构化战斗方案与待确认资料，战斗完全由本地算法运行。方案及资料由玩家确认后采用；不预先指定战果。",
       "constant": true,
       "disable": false,
       "position": 0,
@@ -9098,10 +9098,13 @@
     },
     "1288": {
       "uid": 1288,
-      "comment": "SEED专注",
-      "key": [],
+      "comment": "[GWS] SEED觉醒",
+      "key": [
+        "SEED觉醒",
+        "SEED爆种"
+      ],
       "keysecondary": [],
-      "content": "<GWS_DATA>\n{\n  \"id\": \"seed-focus\",\n  \"name\": \"SEED专注\",\n  \"activation\": \"pressure\",\n  \"modifiers\": {\n    \"reaction\": 0.3,\n    \"aim\": 1.18,\n    \"tracking\": 1.25,\n    \"maneuver\": 1.25,\n    \"thrust\": 2.9,\n    \"turn\": 2.2,\n    \"speed\": 1.6,\n    \"recovery\": 2.4,\n    \"recharge\": 3\n  },\n  \"pressureThreshold\": 0.85,\n  \"durationS\": 120,\n  \"energyCost\": 20,\n  \"oncePerBattle\": true,\n  \"description\": \"高强度实战压力下激活；反应、机动、回稳与回气倍率为模拟改编，不是官方物理测量。保留总能源、受击及环境限制。\",\n  \"kind\": \"pilot-skill\"\n}\n</GWS_DATA>",
+      "content": "<GWS_DATA>\n{\n  \"id\": \"seed-focus\",\n  \"name\": \"SEED觉醒\",\n  \"activation\": \"pressure\",\n  \"modifiers\": {\n    \"reaction\": 0.3,\n    \"aim\": 1.18,\n    \"tracking\": 1.25,\n    \"maneuver\": 1.25,\n    \"thrust\": 2.9,\n    \"turn\": 2.2,\n    \"speed\": 1.6,\n    \"recovery\": 2.4,\n    \"recharge\": 3\n  },\n  \"pressureThreshold\": 0.85,\n  \"durationS\": 120,\n  \"energyCost\": 20,\n  \"oncePerBattle\": true,\n  \"description\": \"实战压力触发，持续提升反应、火控、机动、回稳与回气；保留能源消耗和受击惩罚。\",\n  \"kind\": \"pilot-skill\"\n}\n</GWS_DATA>",
       "constant": false,
       "disable": false,
       "order": 100,
@@ -9847,6 +9850,74 @@
       "preventRecursion": true,
       "excludeRecursion": true,
       "content": "<GWS_DATA>\n{\n  \"kind\": \"battlefield\",\n  \"id\": \"seed-land-base\",\n  \"name\": \"陆地基地与空域\",\n  \"radiusM\": 60000,\n  \"defaultEnvironmentId\": \"land\",\n  \"regions\": [],\n  \"obstacles\": [],\n  \"airAboveM\": 80\n}\n</GWS_DATA>"
+    },
+    "1340": {
+      "uid": 1340,
+      "key": [
+        "精英·射击专注"
+      ],
+      "keysecondary": [],
+      "comment": "[GWS] 精英·射击专注",
+      "constant": false,
+      "disable": false,
+      "position": 7,
+      "outletName": "gws-data",
+      "order": 100,
+      "probability": 100,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "content": "<GWS_DATA>\n{\n  \"kind\": \"pilot-skill\",\n  \"id\": \"elite-fire-discipline\",\n  \"name\": \"精英·射击专注\",\n  \"description\": \"有效射程内完成火控后，短时提升跟瞄与回稳。\",\n  \"activation\": \"pressure\",\n  \"activationGate\": \"ranged-window\",\n  \"pressureThreshold\": 0,\n  \"modifiers\": {\n    \"aim\": 1.1,\n    \"tracking\": 1.12,\n    \"recovery\": 1.08\n  },\n  \"durationS\": 1.5,\n  \"recoveryS\": 4.5,\n  \"energyCost\": 2,\n  \"oncePerBattle\": false\n}\n</GWS_DATA>"
+    },
+    "1341": {
+      "uid": 1341,
+      "key": [
+        "精英·近战节奏"
+      ],
+      "keysecondary": [],
+      "comment": "[GWS] 精英·近战节奏",
+      "constant": false,
+      "disable": false,
+      "position": 7,
+      "outletName": "gws-data",
+      "order": 100,
+      "probability": 100,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "content": "<GWS_DATA>\n{\n  \"kind\": \"pilot-skill\",\n  \"id\": \"elite-blade-tempo\",\n  \"name\": \"精英·近战节奏\",\n  \"description\": \"接敌刀战窗口内，提高出刀反应、近战能力和回稳。\",\n  \"activation\": \"pressure\",\n  \"activationGate\": \"melee-window\",\n  \"pressureThreshold\": 0,\n  \"modifiers\": {\n    \"melee\": 1.12,\n    \"reaction\": 0.94,\n    \"recovery\": 1.15\n  },\n  \"durationS\": 2,\n  \"recoveryS\": 5,\n  \"energyCost\": 4,\n  \"oncePerBattle\": false\n}\n</GWS_DATA>"
+    },
+    "1342": {
+      "uid": 1342,
+      "key": [
+        "王牌·射击窗口"
+      ],
+      "keysecondary": [],
+      "comment": "[GWS] 王牌·射击窗口",
+      "constant": false,
+      "disable": false,
+      "position": 7,
+      "outletName": "gws-data",
+      "order": 100,
+      "probability": 100,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "content": "<GWS_DATA>\n{\n  \"kind\": \"pilot-skill\",\n  \"id\": \"ace-fire-window\",\n  \"name\": \"王牌·射击窗口\",\n  \"description\": \"完成火控后短时强化跟瞄与微操，抓紧真实射击窗口。\",\n  \"activation\": \"pressure\",\n  \"activationGate\": \"ranged-window\",\n  \"pressureThreshold\": 0,\n  \"modifiers\": {\n    \"aim\": 1.2,\n    \"tracking\": 1.18,\n    \"reaction\": 0.92,\n    \"recovery\": 1.12\n  },\n  \"durationS\": 1.8,\n  \"recoveryS\": 5,\n  \"energyCost\": 3,\n  \"oncePerBattle\": false\n}\n</GWS_DATA>"
+    },
+    "1343": {
+      "uid": 1343,
+      "key": [
+        "王牌·连续压刀"
+      ],
+      "keysecondary": [],
+      "comment": "[GWS] 王牌·连续压刀",
+      "constant": false,
+      "disable": false,
+      "position": 7,
+      "outletName": "gws-data",
+      "order": 100,
+      "probability": 100,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "content": "<GWS_DATA>\n{\n  \"kind\": \"pilot-skill\",\n  \"id\": \"ace-blade-pressure\",\n  \"name\": \"王牌·连续压刀\",\n  \"description\": \"近战接敌时强化出刀与回稳；仍需承担拼刀损伤和能源消耗。\",\n  \"activation\": \"pressure\",\n  \"activationGate\": \"melee-window\",\n  \"pressureThreshold\": 0,\n  \"modifiers\": {\n    \"melee\": 1.22,\n    \"reaction\": 0.88,\n    \"turn\": 1.1,\n    \"recovery\": 1.22\n  },\n  \"durationS\": 2.5,\n  \"recoveryS\": 6,\n  \"energyCost\": 6,\n  \"oncePerBattle\": false\n}\n</GWS_DATA>"
     }
   },
   "gwsSchemaVersion": 5

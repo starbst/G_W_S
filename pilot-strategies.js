@@ -1,5 +1,7 @@
-import {contactDamageFactor} from './projectile-policy.js';
-import {isLightAutomatic,isTacticalThreat,weaponDamageScale} from './weapon-semantics.js';
+import {arbitrateStrategy} from './decision-arbiter.js';
+import {gradeStrategyChoices,perceivedValue,observedProtection,perceivedContactDamage} from './pilot-judgment.js';
+import {weaponPotential,meaningfulThreat} from './weapon-choice.js';
+import {isLightAutomatic,isTacticalThreat} from './weapon-semantics.js';
 import {groundLimited,motionSpeedLimit} from './locomotion.js';
 import {contactMotor} from './entities.js';
 import {meleeInterceptCourse} from './locomotion.js';
@@ -9,7 +11,7 @@ import {grappleApproach,capturePosition,desperateCapture} from './grapples.js';
 import {affordableManeuver,maneuverEnergyCost,weaponEnergyCost,pilotControlAuthority,emergencyPulseSeconds} from './energy-policy.js';
 import {remoteOpportunities,remotePermission,mountedRemote,predictedProtectionCost} from './seed-systems.js';
 import {navigationGoal,withdrawalOption} from './missions.js';
-import {estimateClash} from './combat.js';
+import {readMeleeRisk,observedMeleeCondition} from './melee-exchange.js';
 import { add, sub, mul, dot, cross, norm, length, clamp, bodyBasis, arcSolution, insideArc } from "./math.js";
 
 // Closed local policy vocabulary. Conditions and movement are code; the worldbook
@@ -33,7 +35,7 @@ export const STRATEGY_LABELS = Object.freeze({
     "mission-withdraw": ["脱离后归队", "护航目标已经脱离时评估安全归队航向；近距追击未解除则先处理拦截者"],
     "pursuit-boost": ["回身射后重新推进", "短时朝后反击结束或追击逼近时重新面向脱离航向加速，避免长时间背向出力被追上"],
     "pursuit-fire": ["惯性回身反击", "被持续追击但仍有远射窗口时保留脱离惯性，短时朝后射击；攻击窗口结束即转回推进，不硬拼低稳定刀战"],
-    "blade-denial": ["劣势避刀横切", "预计刀刃接触且拼刀可能破稳时先横切或急刹离开接触路径，有能源也不强行格挡"],
+    "blade-denial": ["劣势避刀横切", "自身明显失稳或装备压制时尝试横切避刀；粗略判断而非精确预知胜负，能卸力则可继续接敌"],
     "pressure-jink": ["受压主动变线", "连续受击或多方向快速火控使临射急闪来不及时，优先改变航迹，避免原地回稳挨打"],
     "reserve-counter": ["回气间隙反击", "缓冲不足但存在廉价或弹药类攻击窗口时，维持惯性回气并有限反击，保留下一次急闪预算"],
     "pursuit-counter": ["摆脱失败转反击", "连续拉开无收益且仍被有效追射时建立射击窗口或侧切，避免无限尾追"],
@@ -57,6 +59,7 @@ export const STRATEGY_LABELS = Object.freeze({
     "lateral-flank": [ "侧翼改轴接敌", "己方远射交换无收益时改变射线而非持续同轴对射" ],
     "pursuit-cutoff": [ "预测拦截航迹", "对方远离时按观测速度和自身推力预测交汇，不只追当前位置" ],
     "melee-reset": [ "刀战劣势重建射线", "刀战交换失利且还有远射能力时脱离接触" ],
+    "melee-followthrough": ["近战追斩", "接触后仍有姿态与能源余量时维持压力，预判追截；冷却与威胁反应仍可打断"],
     "post-clash-escape": [ "拼刀后保速脱离", "破稳时优先保速离开刀刃范围，未恢复格挡能力不硬拼" ],
     "return-slash": [ "回身再斩", "拼刀后自身姿态不劣且实际能够及时回身才再次斩击" ],
     "drift-window": [ "高速预判抢射", "高速且有效射程内快转确有回稳射击收益才漂移抢射" ],
@@ -81,13 +84,20 @@ export const DEFAULT_STRATEGIES = Object.freeze(Object.fromEntries(Object.keys(S
 
 const rangedReady = (b, u, w) => !w.disabled && !w.formDisabled && w.ammo !== 0 && !isLightAutomatic(w.definition) && w.definition.kind !== "melee" && (w.definition.kind!=="funnel"||remotePermission(b,u,w.definition)||mountedRemote(b,u,w.definition)) && (w.definition.sim.powerSource !== "reactor" || u.energy >= w.definition.sim.energyCost);
 
-const gunPower = (b, u, distance, opponent) => u.weapons.filter(w => rangedReady(b, u, w) && distance < w.definition.sim.rangeM).reduce((n, w) => {
-    const s = w.definition.sim,remote=w.definition.kind==="funnel"&&remotePermission(b,u,w.definition);
-    const modern=(u.pilotState.strategies?.["parallel-fire"]??0)>0,cycles=modern?(remote?Math.min(s.droneCount||1,w.definition.remoteControl?.channels??24)/Math.max(.3,s.droneFireIntervalS??1.1):s.burst/Math.max(.3,s.cooldownS||1)):1/Math.max(.3,s.cooldownS||s.cooldown||1)*(remote?Math.sqrt(s.droneCount||1):1);
-    const damage=predictedProtectionCost(opponent,w.definition,s.damage*weaponDamageScale(w.definition,opponent),norm(sub(u.position,opponent.position)),distance).remainingDamage;
-    return n+damage*contactDamageFactor(b,w.definition,opponent)*cycles*clamp(1-distance/s.rangeM,.1,1);
-}, 0);
+const gunPower = (b,u,distance,opponent) => u.weapons.filter(w=>rangedReady(b,u,w)).reduce((n,w)=>{
+ const remote=w.definition.kind==='funnel'&&remotePermission(b,u,w.definition);
+ if(remote){const s=w.definition.sim,damage=observedProtection(b,u,opponent,w.definition,s.damage,distance).remainingDamage;return n+(distance<=s.rangeM?damage*perceivedContactDamage(b,u,opponent,w.definition)*Math.min(s.droneCount||1,w.definition.remoteControl?.channels??24)/Math.max(.3,s.droneFireIntervalS??1.1):0);}
+ return n+weaponPotential(b,u,w,opponent,{distance});
+},0);
 
+// Enemy firepower is a rough loadout/range estimate. It cannot read their current
+// aim skill, energy buffer, readiness timer or precisely predicted hit chance.
+const observedGunPower=(target,distance)=>{
+ let power=0;for(const state of target.weapons){const w=state.definition,s=w.sim;if(w.kind==='melee'||isLightAutomatic(w)||state.formDisabled||distance<s.minRangeM||distance>s.rangeM)continue;
+ const cycle=w.kind==='funnel'?Math.max(.3,s.droneFireIntervalS??1.1):Math.max(.3,s.cooldownS+s.windupS);
+ power+=s.damage*(w.kind==='funnel'?Math.min(s.droneCount||1,w.remoteControl?.channels??24):(s.burst||1))/cycle*clamp(1-distance/s.rangeM,.2,1)*.35;
+ }return Math.round(power/10)*10;
+};
 // One perception pass for all policies, bounded to four closest contacts and
 // twelve remote threats. It uses last seen contacts, never an invisible true pose.
 export function assessPilotSituation(b, u, target) {
@@ -98,7 +108,7 @@ export function assessPilotSituation(b, u, target) {
     if(age>1.2&&!u.machine.tags.includes('water-combat')&&!u.machine.tags.includes('all-domain')&&environmentAt(b,position).medium==='water')position[1]=Math.max(b.rules.minimumAltitudeM+30,u.machine.sim.radiusM*2);
     const delta = sub(position, u.position), distance = length(delta), toward = norm(delta), basis = bodyBasis(toward), side = basis.right;
     const velocity = seen?.velocity || [ 0, 0, 0 ], relative = sub(velocity, u.velocity), closing = -dot(relative, toward), speed = length(u.velocity), blade = b.bestBlade(u,target), funnel = u.weapons.find(w => w.definition.kind === "funnel" && !w.disabled && !w.formDisabled&&remotePermission(b,u,w.definition));
-    const direct = u.weapons.filter(w => rangedReady(b, u, w) && w.definition.kind!=="melee"&&(w.definition.kind!=="funnel"||mountedRemote(b,u,w.definition)) && distance < w.definition.sim.rangeM), ownPower = gunPower(b, u, distance, target), enemyPower = age < .8 ? gunPower(b, target, distance, u) : 0;
+    const direct = u.weapons.filter(w => rangedReady(b, u, w) && w.definition.kind!=="melee"&&(w.definition.kind!=="funnel"||mountedRemote(b,u,w.definition)) && distance >= w.definition.sim.minRangeM && distance < w.definition.sim.rangeM && weaponPotential(b,u,w,target,{distance})>.05), ownPower = gunPower(b, u, distance, target), enemyPower = age < .8 ? perceivedValue(b,u,'firepower:'+target.id,observedGunPower(target,distance),{step:4,relative:.12}) : 0;
     const contacts = [];
     for (const foe of b.enemies(u) || []) {
         const observation = u.contacts.get(foe.id);
@@ -108,7 +118,7 @@ export function assessPilotSituation(b, u, target) {
         // Policies consume only the same nearest four dangerous contacts. Once
         // full, a farther candidate cannot change that result; skip its gun arcs.
         if(farthest&&(d>farthest.d||d===farthest.d&&foe.id.localeCompare(farthest.foe.id)>=0))continue;
-        const weapon = foe.weapons.find(w => !w.disabled && !w.formDisabled && w.ammo !== 0 && w.definition.kind !== "melee" && isTacticalThreat(w.definition,u,b.rules.damageMultiplier) && d < w.definition.sim.rangeM && insideArc(observation.forward, offset, w.definition.sim));
+        const weapon = foe.weapons.find(w => !w.disabled && !w.formDisabled && w.ammo !== 0 && w.definition.kind !== "melee" && isTacticalThreat(w.definition,u,b.rules.damageMultiplier) && meaningfulThreat(b,foe,w.definition,u,d,norm(mul(offset,-1))) && d < w.definition.sim.rangeM && insideArc(observation.forward, offset, w.definition.sim));
         if (weapon) {
             contacts.push({
                 foe: foe,
@@ -190,16 +200,17 @@ export function isPursuitContact(u,target,s,range){
 }
 
 export function bladeTrade(b,u,target,closing=0){
- const estimate=estimateClash(u,target,Math.max(250,closing),b.t,true);
- const opposingBlade=target.weapons.some(w=>w.definition.kind==='melee'&&!w.disabled&&!w.formDisabled&&w.ammo!==0);
- if(!opposingBlade){estimate.lossA=0;estimate.lossB=0;}
+ const read=readMeleeRisk(b,u,target,closing),opposingBlade=read.opposing;
  const modularPossible=u.pilotState.traits.modularEvasion&&u.machine.moduleSystem&&u.pilotState.strategies?.['modular-counter']>0&&b.t>=(u.moduleReadyAt||0)&&u.energy>=u.machine.moduleSystem.energyCost+20;
  const counterPossible=modularPossible||u.pilotState.traits.counterThrust&&u.machine.tags.includes('multi-axis-thrusters')&&b.t>=(u.counterReadyAt||0)&&u.energy>=u.pilotState.tactics.counterThrustCost;
- const ownAfter=u.stability-estimate.lossA,enemyAfter=target.stability-estimate.lossB;
- const unsafe=ownAfter<.12&&!counterPossible;
- const blade=b.bestBlade(u,target),cutDamage=blade?.definition.sim.damage||0;
- const ranged=u.weapons.some(w=>predictedProtectionCost(target,w.definition,w.definition.sim.damage).remainingDamage>=cutDamage*.15&&!w.disabled&&!w.formDisabled&&w.ammo!==0&&w.definition.kind!=='melee'&&(w.definition.kind!=='funnel'||remotePermission(b,u,w.definition)||mountedRemote(b,u,w.definition))&&u.energy>=w.definition.sim.energyCost&&(w.definition.kind==='funnel'||w.definition.sim.damage>=cutDamage*.15));
- return {estimate,ownAfter,enemyAfter,counterPossible,unsafe,ranged,advantage:estimate.lossB-estimate.lossA,finishWindow:(!opposingBlade||enemyAfter<.12)&&!unsafe};
+ // Contested is a risk worth considering, not an exact forecast of a broken guard.
+ // Retreat needs an obvious disadvantage plus a feasible escape, evaluated by the policy.
+ const unsafe=read.fresh&&opposingBlade&&!counterPossible&&(u.stability<.22||read.ratio>1.6&&u.stability<.5);
+ const blade=b.bestBlade(u,target),parryLoss=read.loss*.5,canParry=!!blade&&b.available(u,blade)&&b.t>=(u.meleeBreakUntil||0)&&u.stability>Math.max(.18,parryLoss*.7);
+ const range=length(sub(b.observed(u,target),u.position)),meleeValue=blade?weaponPotential(b,u,blade,target,{distance:blade.definition.sim.preferredRangeM,approachS:Math.max(0,range-blade.definition.sim.rangeM)/Math.max(30,motionSpeedLimit(b,u))}):0;
+ const ranged=u.weapons.some(w=>!isLightAutomatic(w.definition)&&w.definition.kind!=='melee'&&(w.definition.kind!=='funnel'||remotePermission(b,u,w.definition)||mountedRemote(b,u,w.definition))&&(w.definition.kind==='funnel'&&b.available(u,w)||weaponPotential(b,u,w,target)>Math.max(.5,meleeValue*.35)));
+ const advantage=read.ratio<.7?.2:read.ratio>1.6?-.2:0;
+ return {estimate:{momentum:read.momentum,lossA:read.loss},counterPossible,unsafe,canParry,parryLoss,ranged,advantage,posture:read.posture,finishWindow:(!opposingBlade||read.posture==='broken')&&!unsafe};
 }
 export function funnelVelocity(u, contact, delta, weapon, deployed) {
     const distance=length(delta), toward=norm(delta), side=bodyBasis(toward).right;
@@ -237,7 +248,7 @@ export function safePilotCourse(b,u,preferred,goal=null){
    const ray=x.ray;
    risk+=inside*(large?3:ray?1.1:.35)*clamp(x.power/40,.4,2)+(large&&near<now?inside*.8:0);
   }
-  return alignment*.9+inertia*.2-risk;
+  return perceivedValue(b,u,'route:'+heading.map(x=>Math.round(x*4)).join(','),alignment*.9+inertia*.2-risk,{step:.25,relative:.06});
  };
  // Detours toward a destination must still make progress. A previously safe
  // coasting axis pointing away from the exit cannot become a permanent route.
@@ -258,9 +269,9 @@ export function defenseWindow(b,u,target){
  const acceleration=m.thrustN/m.massKg*budget.multiplier*pilotControlAuthority(u)*u.components.engine*clamp(u.energy/12)*u.machine.mobility.accel.lateral;
  const dodgeCost=m.dodgeEnergyCost??5,clearance=m.radiusM+5,moveS=Math.sqrt(2*clearance/Math.max(1,acceleration));
  const energyReady=u.energy>=dodgeCost&&budget.multiplier>10,beams=target.weapons.filter(w=>!w.disabled&&!w.formDisabled&&w.ammo!==0&&w.definition.kind==='beam'&&distance<w.definition.sim.rangeM&&insideArc(w.definition.turret?(w.turretForward||seen.forward):seen.forward,mul(delta,-1),w.definition.sim)&&predictedProtectionCost(u,w.definition,w.definition.sim.damage*(b.rules.damageMultiplier||1),axis).remainingDamage>Math.max(8,u.structure*.04));
- const exposure=beams.some(w=>{const until=w.attack?Math.max(0,w.attack.at-b.t):Math.max(0,w.readyAt-b.t)+w.definition.sim.windupS;return until+distance/Math.max(1,w.definition.sim.projectileSpeedMps)<reaction+moveS+b.rules.stepSeconds;});
+ const exposure=seen.aimTargetIds?.includes(u.id)&&beams.some(w=>{const until=0;return until+distance/Math.max(1,w.definition.sim.projectileSpeedMps)<reaction+moveS+b.rules.stepSeconds;});
  const blade=target.weapons.find(w=>!w.disabled&&!w.formDisabled&&w.ammo!==0&&w.definition.kind==='melee'),contact=blade?Math.max(0,(distance-blade.definition.sim.rangeM)/Math.max(1,closing)):Infinity;
- const bladeRisk=!!blade&&(target.order==='melee'||blade.attack||target.swing)&&contact<reaction+moveS+.65;
+ const bladeRisk=!!blade&&(seen.bladeDrawn||seen.threatTargetIds?.includes(u.id)||dot(seen.forward,mul(axis,-1))>.75&&closing>80)&&contact<reaction+moveS+.65;
  const proactiveBudget=affordableManeuver(u,Math.min(c.dodgeThrustMultiplier,Math.max(c.tailThrustMultiplier,40)),.65,b.environment.medium);
  return {axis,distance,closing,reaction,moveS,dodgeCost,energyReady,proactiveBudget,proactiveReady:proactiveBudget.multiplier>=10,exposure,bladeRisk,contact,budget};
 }
@@ -315,6 +326,10 @@ export function bladeSupportCourse(b,u,target){
 
 function path(s, mode) {
     const {u: u, m: m, toward: toward, side: side, velocity: velocity, delta: delta, distance: distance} = s, carry = s.speed > 60 ? norm(u.velocity) : u.forward;
+    if(mode==='follow'){
+      const reach=s.blade.definition.sim.rangeM,lead=add(delta,mul(velocity,.2)),closure=clamp((distance-reach*.8)*1.6,-60,Math.min(240,m.maxSpeedMps*.5));
+      return {order:'melee',heading:norm(lead),desired:add(velocity,add(mul(toward,closure),mul(side,u.orbit*Math.min(50,m.maxSpeedMps*.06)))),flightMode:'normal'};
+    }
     if(mode==='capture')return s.capturePlan;
     if(mode==='blade-support')return s.bladeSupportPlan;
     if(mode==='support')return s.supportPlan;
@@ -490,7 +505,7 @@ function path(s, mode) {
     }
     if (mode === "gun") {
         if(groundLimited(s.b,u))return groundGunCourse(s,false);
-         const w = s.direct.reduce((a, w) => !a || w.definition.sim.damage > a.definition.sim.damage ? w : a, null), best = w?.definition.sim.preferredRangeM || 1800;
+         const w = s.direct.reduce((a,w)=>!a||weaponPotential(s.b,u,w,s.target)>weaponPotential(s.b,u,a,s.target)?w:a,null), best = w?.definition.sim.preferredRangeM || 1800;
         return {
             order: "aim",
             heading: dot(u.forward, toward) > .98 ? u.forward : toward,
@@ -509,7 +524,7 @@ function path(s, mode) {
 // A hand-held weapon keeps facing the observed target. No unit or story IDs here.
 export function groundGunCourse(s,defensive=false){
  const {b,u,m,distance,toward,side,velocity}=s,limit=motionSpeedLimit(b,u),guns=s.direct;
- const state=guns.reduce((best,w)=>!best||w.definition.sim.damage>best.definition.sim.damage?w:best,null);
+ const state=guns.reduce((best,w)=>!best||weaponPotential(b,u,w,s.target)>weaponPotential(b,u,best,s.target)?w:best,null);
  const weapon=state?.definition.sim,bestRange=Math.min(weapon?.preferredRangeM||1800,(weapon?.effectiveRangeM||2400)*.8);
  const radial=clamp((distance-bestRange)*.35,-limit*.55,limit*.6);
  const lateral=limit*(defensive?.8:.35)*u.orbit;
@@ -540,10 +555,11 @@ export function choosePilotStrategy(b, u, target, base) {
     }
     u.strategyFailures??={};
     const expired=u.operationalPlan;
-    if(expired&&b.t>=expired.until){
+    if(expired&&b.t>=expired.until&&b.t>=(expired.reviewedAt??expired.until)){
         const gain=expired.mode==='rush'?expired.distance-distance:expired.mode==='escape'?distance-expired.distance:0;
         if(['rush','escape'].includes(expired.mode))u.strategyFailures[expired.id]=gain>Math.max(60,expired.distance*.05)?0:Math.min(3,(u.strategyFailures[expired.id]||0)+1);
-        u.operationalPlan=null;
+        // Preserve the previous candidate for hysteresis; validity is checked below.
+        expired.reviewedAt=b.t+c.planHoldS;
     }
     const weights = u.pilotState.strategies || DEFAULT_STRATEGIES,survival=u.controller==='survive'&&u.commandAssignment?.source!=='player';
     const addChoice = (id, valid, score, mode, reason, extra = {}) => {
@@ -618,7 +634,7 @@ export function choosePilotStrategy(b, u, target, base) {
     const missile=u.missileThreat;
     if(missile&&missile.tti>u.pilotState.sim.reactionS&&missile.tti<=c.missileWarningS){s.missileBudget=affordableManeuver(u,Math.min(c.dodgeThrustMultiplier,50),.5,b.environment.medium,false);if(s.missileBudget.multiplier>=10)s.missileAxis=b.chooseEscape(u,b.unitById.get(missile.owner)||target,'missile',missile.direction,missile,Math.min(.38,missile.tti-u.pilotState.sim.reactionS));}
     addChoice('missile-drag',!!s.missileAxis&&!contactSoon,28,'missile-drag','已观察的导弹群仍能追上当前航迹，提前持续横切再保留末段急闪',{priority:u.withdrawing?5:s.energy>.12?2:0});
-    addChoice('blade-denial',defense?.bladeRisk&&s.trade.unsafe&&defense.proactiveReady,30,'avoid-blade','预测拼刀会破稳，趁接触前离开刀刃路径',{priority:2});
+    addChoice('blade-denial',defense?.bladeRisk&&s.trade.unsafe&&!s.trade.canParry&&defense.proactiveReady,30,'avoid-blade','姿态或装备明显不利且无法卸力，尝试横切避刀',{priority:2});
     addChoice('remote-intercept',caps.spatialAwareness>.75&&remoteOpportunities(b,u).length>0&&u.stability>.35&&s.energy>c.energyReserveFraction&&!contactSoon,rushGain?6:13,'remote','可见遥控终端进入可达拦截窗口，比较拦截收益与突入收益');
     const ambushShot=s.age<.5&&s.direct.some(w=>w.definition.kind!=='funnel'&&distance<=Math.min(4000,w.definition.sim.effectiveRangeM*.85)&&b.t>=w.readyAt)&&dot(s.seen.forward||target.forward,mul(s.toward,-1))<.75;
     addChoice('ambush-angle',u.stealthActive&&s.energy>.3&&!contactSoon,9,ambushShot?'gun':'flank',ambushShot?'已到侧翼有效射程，结束绕行转向形成真实射击窗口':'利用隐身改变接敌轴线');
@@ -661,7 +677,7 @@ export function choosePilotStrategy(b, u, target, base) {
     const bladeStyle=u.pilotState.tags?.includes('blade-specialist'),shortArms=s.direct.every(w=>w.definition.sim.damage<12),poorRanged=s.ownPower<Math.max(12,(s.blade?.definition.sim.damage||0)*.1),cutWindow=s.age<.6&&canPush&&!broken&&!recovering&&!s.trade.unsafe&&distance<Math.min(c.rushDistanceM,m.maxSpeedMps*4)&&s.closingSeconds<4&&(safeWindow||shortArms||poorRanged||bladeStyle&&s.trade.advantage>-.05||s.rangeLoss>c.exchangeDisadvantage)&&u.controller!=='escort'&&!s.supportPlan;
     const activeDash=u.breakaway?.meleeDash&&u.breakaway.target===target.id&&b.t<u.breakaway.until;
     const dashWindow=activeDash||!recovering&&!broken&&!snapThreat&&s.crossfire<c.crossfireTolerance&&!s.supportPlan&&!goal&&!u.withdrawing&&u.controller!=='escort'&&b.meleeDashPlan(u,target,s.blade);
-    addChoice('melee-dash',!!dashWindow,(activeDash?26:18)+(bladeStyle?4:0)+(poorRanged?3:0)+(target.stability<.3?4:0),'rush','短促出力可真实接触，提前切刀并用冲刺争取近战收益');
+    addChoice('melee-dash',!!dashWindow,(activeDash?26:18)+(bladeStyle?4:0)+(poorRanged?3:0)+(s.trade.posture==='broken'?4:0),'rush','短促出力可真实接触，提前切刀并用冲刺争取近战收益');
     addChoice('blade-entry',cutWindow,12+(shortArms?8:poorRanged?6:bladeStyle?4:0)+Math.max(0,s.trade.advantage)*6,'rush','可达近战窗口与装备/驾驶员优势足以抵偿突入风险');
     addChoice("melee-pressure", s.age < .8 && !snapThreat && base.order === "melee" && !broken && canPush && (!s.trade.unsafe||!s.trade.ranged), 20, "rush", "已有近战截击可行，继续向接触窗口施压");
     addChoice("safe-recovery", recovering && !threat, 18, "recover", "没有有效来袭射线，保持惯性回稳");
@@ -677,15 +693,17 @@ export function choosePilotStrategy(b, u, target, base) {
     addChoice("crossfire-exit", (s.crossfire >= c.crossfireTolerance || weights["parallel-fire"]>0&&s.contacts.length>=3&&s.ownPower<s.enemyPower*1.5) && !contactSoon, 15 + s.crossfire, "crossfire", "多方向射线重叠，先离开交叉火力", {
         priority: 1
     });
-    addChoice("recovery-window", s.age < .6 && canPush && !broken && target.stability < .2 && s.closingSeconds < 2 && u.stability > .2, 17, "rush", "敌方失稳且能够在恢复前接敌");
+    addChoice("recovery-window", s.age < .6 && canPush && !broken && s.trade.posture==='broken' && s.closingSeconds < 2 && u.stability > .2, 17, "rush", "敌方失稳且能够在恢复前接敌");
     addChoice("cooldown-counter", s.age < .6 && u.observedCooldownUntil > b.t + u.pilotState.sim.reactionS + .15 && s.direct.length > 0 && u.stability > .3, 8, "gun", "利用已经观测到的射后空档");
     addChoice("lateral-flank", s.rangeLoss > c.exchangeDisadvantage && s.direct.length > 0 && !canPush && s.energy > .35, 7, "flank", "交换无收益，改变射线轴向");
     addChoice("pursuit-cutoff", canPush && s.closing < 30 && distance > 1200 && dot(s.velocity,s.toward)>30 && !ownWindow && !s.funnel, 8, "intercept", "按观测速度预判截击而不是慢速尾随");
     addChoice("melee-reset", s.trade.ranged && canPush && (base.order==='melee'||s.meleeLoss>c.exchangeDisadvantage||defense?.contact<2) && (!escapeFailed||resetNeeded) && (s.trade.unsafe || s.meleeLoss > c.exchangeDisadvantage && !s.trade.finishWindow && s.trade.advantage < .08 && !s.trade.counterPossible) && distance < 3000 && !contactSoon, 24, "escape", "下一次拼刀有破稳风险且仍有远射收益，先脱离接触");
+    const follow=u.bladeFollowUp?.targetId===target.id&&b.t<u.bladeFollowUp.until;
+    addChoice('melee-followthrough',follow&&s.age<.8&&(canPush||s.blade&&distance<s.blade.definition.sim.rangeM*1.6)&&!broken&&!recovering&&!u.withdrawing&&!routeActive&&s.energy>.15&&s.crossfire<c.crossfireTolerance,27,'follow','接触后仍可继续施压，按可见航迹追斩而非自动放走对手');
     addChoice("post-clash-escape", broken && distance < 600, 19, "escape", "失去格挡能力，先脱离刀刃覆盖", {
         priority: 2
     });
-    addChoice("return-slash", s.age < .6 && u.pilotState.traits.returnSlash && u.returnSlashTarget === target.id && b.t < u.returnSlashUntil && canPush && !broken && u.stability >= target.stability + .08 && u.stability > .38 && distance < 300, 18, "rush", "拼刀后己方姿态占优，及时回身再斩");
+    addChoice("return-slash", s.age < .6 && u.pilotState.traits.returnSlash && u.returnSlashTarget === target.id && b.t < u.returnSlashUntil && canPush && !broken && s.trade.posture!=='unknown' && u.stability > .38 && distance < 300, 18, "rush", "拼刀后己方姿态占优，及时回身再斩");
     addChoice("low-speed-barrage", s.direct.length > 1 && length(s.velocity) < c.allOutMaxSpeed && u.stability > .3 && s.age < .6 && !contactSoon, 7, "gun", "敌方低速暴露，用独立槽集中火力");
     addChoice("funnel-standoff", s.funnel && !s.duel && s.age < 1 && !contactSoon && distance > 1e3, 7, "funnel", "发挥浮游远射优势并保留机动空间");
     addChoice("decoy-breakthrough", u.jettisoned && canPush && !contactSoon, 10, "rush", "已减重，利用掩护保持近战突入");
@@ -702,13 +720,8 @@ export function choosePilotStrategy(b, u, target, base) {
     // Established fire/screen/mission courses remain valid unless a better tactical
     // alternative has a concrete payoff. Basic candidates document the decision
     // without replacing a proven motion controller unnecessarily.
-        choices.sort((a, z) => z.priority - a.priority || z.score - a.score);
-    const previous = u.operationalPlan;
-    let best = choices[0], same = previous && choices.find(x => x.id === previous.id);
-    if (previous && same && b.t < previous.until && same.priority >= best.priority && same.score + c.planSwitchMargin >= best.score) best = same; else {
-        const near = choices.filter(x => x.priority === best.priority && x.score >= best.score - c.strategyTieMargin);
-        if (near.length > 1) best = near[Math.min(near.length - 1, Math.floor(b.random() * near.length))];
-    }
+        gradeStrategyChoices(b,u,choices);
+    let best = arbitrateStrategy(b,u,choices,c);
     if(best.id==='mission-retreat')u.withdrawing=true;
     best = {
         ...best,
@@ -726,7 +739,7 @@ export function choosePilotStrategy(b, u, target, base) {
     }
     // Translational thrusters cross the ray without repeatedly spinning the
     // hull. Keep aim attitude for one short pulse, then re-evaluate normally.
-    if(['lock-denial','pressure-jink'].includes(best.id)&&u.breakaway&&b.t<u.breakaway.until)best.heading=s.age<.6&&s.direct.length>0&&!defense?.bladeRisk?s.toward:[...u.forward];
+    if(['lock-denial','pressure-jink'].includes(best.id)&&!routeActive&&u.breakaway&&b.t<u.breakaway.until)best.heading=s.age<.6&&s.direct.length>0&&!defense?.bladeRisk?s.toward:[...u.forward];
     if(best.id==='pursuit-fire'&&(!u.pursuitFireUntil||b.t>=(u.pursuitBoostUntil||0))){u.pursuitFireUntil=b.t+Math.min(1.2,c.planHoldS);u.pursuitBoostUntil=u.pursuitFireUntil+.7;}
     if (best.id === "tail-break") {
         const maneuver = b.proactiveBreakaway(u, target, safeWindow);
@@ -752,14 +765,17 @@ export function choosePilotStrategy(b, u, target, base) {
     const changed = u.lastStrategyId !== best.id;
     u.lastStrategyId = best.id;
     u.strategySuspended = false;
-    u.pressuredAdvance = [ "gun-close", "funnel-rush", "decoy-breakthrough", "pursuit-cutoff", "combat-recovery", "melee-pressure", "blade-entry" ].includes(best.id) && threat > 0;
-    if (!u.operationalPlan || u.operationalPlan.id !== best.id) {
+    u.pressuredAdvance = [ "gun-close", "funnel-rush", "decoy-breakthrough", "pursuit-cutoff", "combat-recovery", "melee-pressure", "blade-entry", "melee-followthrough" ].includes(best.id) && threat > 0;
+    // Short defensive pulses execute as overlays; the valid offensive intent
+    // remains available after the threat expires instead of being redrawn.
+    const defensiveOverlay=["lock-denial","pressure-jink","blade-denial","missile-drag"].includes(best.id);
+    if (!defensiveOverlay && (!u.operationalPlan || u.operationalPlan.id !== best.id || b.t>=u.operationalPlan.until)) {
         u.operationalPlan = {
             id: best.id,
             target: target.id,
             until: b.t + c.planHoldS,
             distance: distance,
-            mode: [ "gun-close", "funnel-rush", "decoy-breakthrough", "recovery-window", "return-slash", "melee-pressure", "blade-entry" ].includes(best.id) ? "rush" : best.order === "disengage" ? "escape" : "other"
+            mode: [ "gun-close", "funnel-rush", "decoy-breakthrough", "recovery-window", "return-slash", "melee-pressure", "blade-entry", "melee-followthrough" ].includes(best.id) ? "rush" : best.order === "disengage" ? "escape" : "other"
         };
     }
     if (changed && b.t >= (u.strategyLogAt || 0)) {

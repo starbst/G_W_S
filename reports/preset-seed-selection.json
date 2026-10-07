@@ -1,0 +1,5320 @@
+{
+  "hashes": {
+    "runtime": "f6850798c77aa423f60ef3ca6f7017631361ec9d0ddf8866d83fc86a94deeedf",
+    "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
+    "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
+    "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
+  },
+  "presets": 24,
+  "battles": 168,
+  "coreVerified": 17,
+  "rows": [
+    {
+      "id": "ce-heliopolis-ginn",
+      "name": "01 · SEED · 殖民地初战",
+      "best": {
+        "seed": 107446084,
+        "t": 49.650000000000006,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 49.650000000000006,
+          "mission": "ce-local-duel"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "ps-paid": true,
+          "os-adaptation": true,
+          "knife-after-os": true,
+          "knife-finishes": true,
+          "strike-survives": true,
+          "ginn-defeated": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "184c7430e6ca5c58da0e33e95338b69057202669c2ec3e26609112089cb949f4",
+        "finalStateDigest": "9f3eb086bc09205932611db91b5afab5037efe04d65bd75a559424c5062c8cb0",
+        "simulationMs": 1224.8823999999995,
+        "steps": 993,
+        "shots": 450,
+        "bladeShots": 14,
+        "skills": 17,
+        "strategyChanges": 50
+      },
+      "samples": [
+        {
+          "seed": 107446084,
+          "t": 49.650000000000006,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 49.650000000000006,
+            "mission": "ce-local-duel"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "ps-paid": true,
+            "os-adaptation": true,
+            "knife-after-os": true,
+            "knife-finishes": true,
+            "strike-survives": true,
+            "ginn-defeated": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "184c7430e6ca5c58da0e33e95338b69057202669c2ec3e26609112089cb949f4",
+          "finalStateDigest": "9f3eb086bc09205932611db91b5afab5037efe04d65bd75a559424c5062c8cb0",
+          "simulationMs": 1224.8823999999995,
+          "steps": 993,
+          "shots": 450,
+          "bladeShots": 14,
+          "skills": 17,
+          "strategyChanges": 50
+        },
+        {
+          "seed": 2802124229,
+          "t": 77.25,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 77.25,
+            "mission": "ce-local-duel"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "ps-paid": true,
+            "os-adaptation": true,
+            "knife-after-os": true,
+            "knife-finishes": true,
+            "strike-survives": true,
+            "ginn-defeated": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "e41f7792f31cddc3eb180baf15d9050cf85a617cd6deb76e80483affff99a47d",
+          "finalStateDigest": "f1f2ebec9672071720e98e2e985acd924d6912415e6269a1f8dd63abbc008a97",
+          "simulationMs": 2249.9578,
+          "steps": 1545,
+          "shots": 578,
+          "bladeShots": 16,
+          "skills": 17,
+          "strategyChanges": 57
+        },
+        {
+          "seed": 2994699561,
+          "t": 64.35000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 64.35000000000001,
+            "mission": "ce-local-duel"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "ps-paid": true,
+            "os-adaptation": true,
+            "knife-after-os": true,
+            "knife-finishes": false,
+            "strike-survives": true,
+            "ginn-defeated": true,
+            "mission": true
+          },
+          "failed": [
+            "knife-finishes"
+          ],
+          "weight": 7,
+          "eventDigest": "b7ea62e3a419a6f6728a05ca8112bbff2f097c25827b3fab2b187b176ffacf67",
+          "finalStateDigest": "bd42d125f52f73a6fe3a11dcbad8036e8deb685f01985bb5715544eace960e98",
+          "simulationMs": 1464.812100000001,
+          "steps": 1287,
+          "shots": 544,
+          "bladeShots": 14,
+          "skills": 19,
+          "strategyChanges": 70
+        },
+        {
+          "seed": 618840566,
+          "t": 96.30000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 96.30000000000001,
+            "mission": "ce-local-duel"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "ps-paid": true,
+            "os-adaptation": true,
+            "knife-after-os": true,
+            "knife-finishes": false,
+            "strike-survives": true,
+            "ginn-defeated": true,
+            "mission": true
+          },
+          "failed": [
+            "knife-finishes"
+          ],
+          "weight": 7,
+          "eventDigest": "178bf086d8c9f69bc3e00904d8a28b80288cd73c3ac833cec6a207821c849b32",
+          "finalStateDigest": "748f2afdbbac829e0b8c2d54bd240612d8fb7a6ceb53553c407a3b300dc596cc",
+          "simulationMs": 2609.5421,
+          "steps": 1926,
+          "shots": 861,
+          "bladeShots": 23,
+          "skills": 26,
+          "strategyChanges": 97
+        },
+        {
+          "seed": 146554604,
+          "t": 109.65,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 109.65,
+            "mission": "ce-local-duel"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "ps-paid": true,
+            "os-adaptation": true,
+            "knife-after-os": true,
+            "knife-finishes": false,
+            "strike-survives": true,
+            "ginn-defeated": true,
+            "mission": true
+          },
+          "failed": [
+            "knife-finishes"
+          ],
+          "weight": 7,
+          "eventDigest": "e52fc362e367f76ead7882e6f96b32ec50a7e6a0aa25eca876d29bcd41f192c1",
+          "finalStateDigest": "5bbac81345c1903bd97af22edc2028af668b35b186755e7a8d820aca568cdec4",
+          "simulationMs": 2674.783800000001,
+          "steps": 2193,
+          "shots": 902,
+          "bladeShots": 27,
+          "skills": 31,
+          "strategyChanges": 114
+        },
+        {
+          "seed": 376968519,
+          "t": 139.75,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 139.75,
+            "mission": "ce-local-duel"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "ps-paid": true,
+            "os-adaptation": true,
+            "knife-after-os": false,
+            "knife-finishes": false,
+            "strike-survives": true,
+            "ginn-defeated": true,
+            "mission": true
+          },
+          "failed": [
+            "knife-after-os",
+            "knife-finishes"
+          ],
+          "weight": 6,
+          "eventDigest": "2dcca289a55c80d60aefed61d19a14eae765f2a6a697528bfd58720689f47b8b",
+          "finalStateDigest": "cc976186f1da9bd2f2d7fb0b87fb73ee99054fbca09019ab7004212b6f987f9d",
+          "simulationMs": 3382.9295999999995,
+          "steps": 2795,
+          "shots": 1078,
+          "bladeShots": 32,
+          "skills": 39,
+          "strategyChanges": 152
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-orbital-interception",
+      "name": "02 · SEED · 宇宙夹击与PS危机",
+      "best": {
+        "seed": 3364519814,
+        "t": 65.8,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 65.8,
+          "mission": "ce-orbital-route"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "covering-gundams-fire": true,
+          "aegis-engages-strike": true,
+          "phase-energy-crisis": true,
+          "mu-forces-vessel-out": true,
+          "strike-alive": true,
+          "escape": true
+        },
+        "failed": [],
+        "weight": 7,
+        "eventDigest": "73197e1e71593e6562c90bae18f1cc016471097df4428155d8a5776a597686af",
+        "finalStateDigest": "1180cd594b49139fb36063f5c275077c6c05dbcfbe4ed560c8311650a7fc3a78",
+        "simulationMs": 4942.3393,
+        "steps": 1316,
+        "shots": 350,
+        "bladeShots": 0,
+        "skills": 14,
+        "strategyChanges": 68
+      },
+      "samples": [
+        {
+          "seed": 3364519814,
+          "t": 65.8,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 65.8,
+            "mission": "ce-orbital-route"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "covering-gundams-fire": true,
+            "aegis-engages-strike": true,
+            "phase-energy-crisis": true,
+            "mu-forces-vessel-out": true,
+            "strike-alive": true,
+            "escape": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "73197e1e71593e6562c90bae18f1cc016471097df4428155d8a5776a597686af",
+          "finalStateDigest": "1180cd594b49139fb36063f5c275077c6c05dbcfbe4ed560c8311650a7fc3a78",
+          "simulationMs": 4942.3393,
+          "steps": 1316,
+          "shots": 350,
+          "bladeShots": 0,
+          "skills": 14,
+          "strategyChanges": 68
+        },
+        {
+          "seed": 2906363365,
+          "t": 67.7,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 67.7,
+            "mission": "ce-orbital-route"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "covering-gundams-fire": true,
+            "aegis-engages-strike": true,
+            "phase-energy-crisis": true,
+            "mu-forces-vessel-out": true,
+            "strike-alive": true,
+            "escape": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "8b40f999c0f52f4d18011216a33aa0255144709832b7834a060d75202c6b7255",
+          "finalStateDigest": "51ddc413993eee6ceed096a1f4bf45573235bfb7bbcff64f6f159a6a3d10b862",
+          "simulationMs": 4336.317799999997,
+          "steps": 1354,
+          "shots": 481,
+          "bladeShots": 3,
+          "skills": 21,
+          "strategyChanges": 58
+        },
+        {
+          "seed": 1420976593,
+          "t": 68,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 68,
+            "mission": "ce-orbital-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "covering-gundams-fire": true,
+            "aegis-engages-strike": true,
+            "phase-energy-crisis": true,
+            "mu-forces-vessel-out": true,
+            "strike-alive": false,
+            "escape": true
+          },
+          "failed": [
+            "strike-alive"
+          ],
+          "weight": 6,
+          "eventDigest": "a0385cc44917e9db4c40c9248a82c693947a52ef5c1c20be0214190288210555",
+          "finalStateDigest": "35a72e5892ca048a26cd9ee85237c37a78dc430779e083c2533fca84d993d4f5",
+          "simulationMs": 4552.889300000001,
+          "steps": 1360,
+          "shots": 366,
+          "bladeShots": 1,
+          "skills": 17,
+          "strategyChanges": 59
+        },
+        {
+          "seed": 992812835,
+          "t": 49.150000000000006,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 49.150000000000006,
+            "mission": "ce-orbital-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "covering-gundams-fire": true,
+            "aegis-engages-strike": true,
+            "phase-energy-crisis": true,
+            "mu-forces-vessel-out": true,
+            "strike-alive": true,
+            "escape": false
+          },
+          "failed": [
+            "escape"
+          ],
+          "weight": 5,
+          "eventDigest": "a0594951404b9900ebcc8194e073453051207561fe96cb025194a1e5e823959d",
+          "finalStateDigest": "6945404918cf838f5ab867361b0c2e434d50a3577790d6271a4354f1ad78dbe7",
+          "simulationMs": 2922.5858000000007,
+          "steps": 983,
+          "shots": 494,
+          "bladeShots": 2,
+          "skills": 20,
+          "strategyChanges": 52
+        },
+        {
+          "seed": 943876983,
+          "t": 49.900000000000006,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 49.900000000000006,
+            "mission": "ce-orbital-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "covering-gundams-fire": true,
+            "aegis-engages-strike": true,
+            "phase-energy-crisis": true,
+            "mu-forces-vessel-out": true,
+            "strike-alive": true,
+            "escape": false
+          },
+          "failed": [
+            "escape"
+          ],
+          "weight": 5,
+          "eventDigest": "8ce6adbd51357296f7d17cf40ede63f92d2361ec1cab6e5543e02b22e4078293",
+          "finalStateDigest": "98bb4573c26a4cd1dd3c455835cec3895dc78b9fc5926d2665e7f8fcf9462f43",
+          "simulationMs": 3423.3341999999993,
+          "steps": 998,
+          "shots": 512,
+          "bladeShots": 7,
+          "skills": 20,
+          "strategyChanges": 51
+        },
+        {
+          "seed": 2185464015,
+          "t": 57.150000000000006,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 57.150000000000006,
+            "mission": "ce-orbital-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "covering-gundams-fire": true,
+            "aegis-engages-strike": true,
+            "phase-energy-crisis": true,
+            "mu-forces-vessel-out": true,
+            "strike-alive": true,
+            "escape": false
+          },
+          "failed": [
+            "escape"
+          ],
+          "weight": 5,
+          "eventDigest": "abee2998a2049d62b0e7ac20cb7c53c657ef8523cd930d24eaeeb86b7d435149",
+          "finalStateDigest": "9dbb084970d50c53dddc36f50ff9fd6ed642bdbe861872d1e4207331d6843107",
+          "simulationMs": 3543.852399999998,
+          "steps": 1143,
+          "shots": 482,
+          "bladeShots": 2,
+          "skills": 20,
+          "strategyChanges": 44
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-awakening-defense",
+      "name": "03 · SEED · 三机突袭与首次觉醒",
+      "best": {
+        "seed": 2657896752,
+        "t": 71.45,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 71.45,
+          "mission": "ce-awakening-route"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "blitz-breakthrough": true,
+          "pressure-seed-duel-retreat": true,
+          "three-withdraw": true,
+          "friendlies-survive": true,
+          "duel-repelled-not-destroyed": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "ad124d98925ebc776cf8f5f55a6ab854d099b133f3b3b16e21c15a0518a602f8",
+        "finalStateDigest": "5ea25a145567aee106179a369207aab675fa13cd966a89c1afe3cb377e5a8da7",
+        "simulationMs": 4117.374,
+        "steps": 1429,
+        "shots": 385,
+        "bladeShots": 0,
+        "skills": 22,
+        "strategyChanges": 148
+      },
+      "samples": [
+        {
+          "seed": 2657896752,
+          "t": 71.45,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 71.45,
+            "mission": "ce-awakening-route"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "blitz-breakthrough": true,
+            "pressure-seed-duel-retreat": true,
+            "three-withdraw": true,
+            "friendlies-survive": true,
+            "duel-repelled-not-destroyed": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "ad124d98925ebc776cf8f5f55a6ab854d099b133f3b3b16e21c15a0518a602f8",
+          "finalStateDigest": "5ea25a145567aee106179a369207aab675fa13cd966a89c1afe3cb377e5a8da7",
+          "simulationMs": 4117.374,
+          "steps": 1429,
+          "shots": 385,
+          "bladeShots": 0,
+          "skills": 22,
+          "strategyChanges": 148
+        },
+        {
+          "seed": 1851299695,
+          "t": 89.85000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 89.85000000000001,
+            "mission": "ce-awakening-route"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "blitz-breakthrough": true,
+            "pressure-seed-duel-retreat": true,
+            "three-withdraw": true,
+            "friendlies-survive": true,
+            "duel-repelled-not-destroyed": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "163f918b69e14a82a820b6ff1abf136c0ca5a729c03b0d35fe20622cb22d097c",
+          "finalStateDigest": "3059366bc78a87bfbe08b0040b0d53e12e8cb769bb19dfc6fa6beaea2ae001e6",
+          "simulationMs": 5667.575699999994,
+          "steps": 1797,
+          "shots": 519,
+          "bladeShots": 2,
+          "skills": 38,
+          "strategyChanges": 188
+        },
+        {
+          "seed": 427294535,
+          "t": 111.25,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 111.25,
+            "mission": "ce-awakening-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "blitz-breakthrough": true,
+            "pressure-seed-duel-retreat": false,
+            "three-withdraw": false,
+            "friendlies-survive": false,
+            "duel-repelled-not-destroyed": false,
+            "mission": false
+          },
+          "failed": [
+            "pressure-seed-duel-retreat",
+            "three-withdraw",
+            "friendlies-survive",
+            "duel-repelled-not-destroyed",
+            "mission"
+          ],
+          "weight": 1,
+          "eventDigest": "3ce9deaab95a8cb9355fc8acaab4005a151b40a0606f3bb21635f781bb2d89ab",
+          "finalStateDigest": "b14736fa9c7efca3a0dca583fc1d8f3003845de2473636dcaa9be4a8ed8e2f89",
+          "simulationMs": 5011.702399999998,
+          "steps": 2225,
+          "shots": 747,
+          "bladeShots": 16,
+          "skills": 34,
+          "strategyChanges": 149
+        },
+        {
+          "seed": 2184241597,
+          "t": 216.75,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 216.75,
+            "mission": "ce-awakening-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "blitz-breakthrough": true,
+            "pressure-seed-duel-retreat": false,
+            "three-withdraw": false,
+            "friendlies-survive": false,
+            "duel-repelled-not-destroyed": false,
+            "mission": false
+          },
+          "failed": [
+            "pressure-seed-duel-retreat",
+            "three-withdraw",
+            "friendlies-survive",
+            "duel-repelled-not-destroyed",
+            "mission"
+          ],
+          "weight": 1,
+          "eventDigest": "062987125a1ce867b689e25b59f0260952b80520c83ccfcd79cc6c372624f2a8",
+          "finalStateDigest": "51632dd9ea8c1603769ebcfc4eb5937ee4d5921227e05b6db91fc59dcae71f82",
+          "simulationMs": 8228.262899999998,
+          "steps": 4335,
+          "shots": 989,
+          "bladeShots": 24,
+          "skills": 39,
+          "strategyChanges": 177
+        },
+        {
+          "seed": 2317934841,
+          "t": 245.60000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 245.60000000000002,
+            "mission": "ce-awakening-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "blitz-breakthrough": true,
+            "pressure-seed-duel-retreat": false,
+            "three-withdraw": false,
+            "friendlies-survive": false,
+            "duel-repelled-not-destroyed": false,
+            "mission": false
+          },
+          "failed": [
+            "pressure-seed-duel-retreat",
+            "three-withdraw",
+            "friendlies-survive",
+            "duel-repelled-not-destroyed",
+            "mission"
+          ],
+          "weight": 1,
+          "eventDigest": "14d0a69ac185d79be9541ed791c56bd37cf12994fd70feda881b8a4caf968bd8",
+          "finalStateDigest": "da118acaddcbe2423cd653ea19c735666382b3d055edeec35cbce79c33679c71",
+          "simulationMs": 8298.355599999995,
+          "steps": 4912,
+          "shots": 971,
+          "bladeShots": 26,
+          "skills": 22,
+          "strategyChanges": 174
+        },
+        {
+          "seed": 3909591813,
+          "t": 245.85000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 245.85000000000002,
+            "mission": "ce-awakening-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "blitz-breakthrough": true,
+            "pressure-seed-duel-retreat": false,
+            "three-withdraw": false,
+            "friendlies-survive": false,
+            "duel-repelled-not-destroyed": false,
+            "mission": false
+          },
+          "failed": [
+            "pressure-seed-duel-retreat",
+            "three-withdraw",
+            "friendlies-survive",
+            "duel-repelled-not-destroyed",
+            "mission"
+          ],
+          "weight": 1,
+          "eventDigest": "ec2844db1c032f0891f3d9df25361c24f89160a5acb1ebd81d40af4181c5aa70",
+          "finalStateDigest": "a540f50124c08b11f84ae6538e52b93d119011c8f1ad2cf39bf6103c0a235e7d",
+          "simulationMs": 8813.042700000005,
+          "steps": 4917,
+          "shots": 910,
+          "bladeShots": 32,
+          "skills": 21,
+          "strategyChanges": 132
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-eighth-fleet-reentry",
+      "name": "04 · SEED · 第八舰队断后降落",
+      "best": {
+        "seed": 3126302103,
+        "t": 50.7,
+        "result": {
+          "reason": "objective",
+          "winner": "b",
+          "t": 50.7,
+          "mission": "ce-eighth-fleet-route"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "four-gundams-engage": true,
+          "duel-pursues-strike": true,
+          "menelaos-gamow-physical-contact": true,
+          "rear-guard-loss": true,
+          "archangel-strike-reentry": false,
+          "main-units-survive": false,
+          "mission": false,
+          "duel-remains-active": true,
+          "shuttle-loss-after-fleet-collision": true,
+          "screen-fleet-loss": true
+        },
+        "failed": [
+          "archangel-strike-reentry",
+          "main-units-survive",
+          "mission"
+        ],
+        "weight": 10,
+        "eventDigest": "315121be463479a974655d88fa58aba725dd8134a7032e7084c83fa37cfe1af5",
+        "finalStateDigest": "f2e6f3f17911da6554a15dd09c6e4fee34a1dbeede8632200a4196002bef1c63",
+        "simulationMs": 6988.121400000004,
+        "steps": 1014,
+        "shots": 854,
+        "bladeShots": 0,
+        "skills": 22,
+        "strategyChanges": 164
+      },
+      "samples": [
+        {
+          "seed": 3126302103,
+          "t": 50.7,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 50.7,
+            "mission": "ce-eighth-fleet-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-gundams-engage": true,
+            "duel-pursues-strike": true,
+            "menelaos-gamow-physical-contact": true,
+            "rear-guard-loss": true,
+            "archangel-strike-reentry": false,
+            "main-units-survive": false,
+            "mission": false,
+            "duel-remains-active": true,
+            "shuttle-loss-after-fleet-collision": true,
+            "screen-fleet-loss": true
+          },
+          "failed": [
+            "archangel-strike-reentry",
+            "main-units-survive",
+            "mission"
+          ],
+          "weight": 10,
+          "eventDigest": "315121be463479a974655d88fa58aba725dd8134a7032e7084c83fa37cfe1af5",
+          "finalStateDigest": "f2e6f3f17911da6554a15dd09c6e4fee34a1dbeede8632200a4196002bef1c63",
+          "simulationMs": 6988.121400000004,
+          "steps": 1014,
+          "shots": 854,
+          "bladeShots": 0,
+          "skills": 22,
+          "strategyChanges": 164
+        },
+        {
+          "seed": 810682531,
+          "t": 52.550000000000004,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 52.550000000000004,
+            "mission": "ce-eighth-fleet-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-gundams-engage": true,
+            "duel-pursues-strike": true,
+            "menelaos-gamow-physical-contact": true,
+            "rear-guard-loss": true,
+            "archangel-strike-reentry": true,
+            "main-units-survive": false,
+            "mission": false,
+            "duel-remains-active": true,
+            "shuttle-loss-after-fleet-collision": false,
+            "screen-fleet-loss": true
+          },
+          "failed": [
+            "main-units-survive",
+            "mission",
+            "shuttle-loss-after-fleet-collision"
+          ],
+          "weight": 10,
+          "eventDigest": "158fd6311340ac07db93df2ffb9e86fe48cff26544379e8813e88ae4307b38a1",
+          "finalStateDigest": "7a9c79bc271e342cef9eddf4eeeb01c42724b0c5fb8019133a7b49e36fbd09af",
+          "simulationMs": 6314.251199999999,
+          "steps": 1051,
+          "shots": 998,
+          "bladeShots": 0,
+          "skills": 29,
+          "strategyChanges": 176
+        },
+        {
+          "seed": 3254571272,
+          "t": 53.25,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 53.25,
+            "mission": "ce-eighth-fleet-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-gundams-engage": true,
+            "duel-pursues-strike": true,
+            "menelaos-gamow-physical-contact": true,
+            "rear-guard-loss": true,
+            "archangel-strike-reentry": false,
+            "main-units-survive": false,
+            "mission": false,
+            "duel-remains-active": true,
+            "shuttle-loss-after-fleet-collision": true,
+            "screen-fleet-loss": true
+          },
+          "failed": [
+            "archangel-strike-reentry",
+            "main-units-survive",
+            "mission"
+          ],
+          "weight": 10,
+          "eventDigest": "6da562a5cc079295aae2a0e51af3acec1893cbe281592624e758592fb88cd0f2",
+          "finalStateDigest": "10cb34973747bcbed4a7392829b1be05c4c2299b0355c4a2b639a1cc251fa54a",
+          "simulationMs": 8180.041000000005,
+          "steps": 1065,
+          "shots": 937,
+          "bladeShots": 0,
+          "skills": 28,
+          "strategyChanges": 193
+        },
+        {
+          "seed": 3945213514,
+          "t": 58.5,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 58.5,
+            "mission": "ce-eighth-fleet-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-gundams-engage": true,
+            "duel-pursues-strike": true,
+            "menelaos-gamow-physical-contact": true,
+            "rear-guard-loss": true,
+            "archangel-strike-reentry": true,
+            "main-units-survive": false,
+            "mission": false,
+            "duel-remains-active": true,
+            "shuttle-loss-after-fleet-collision": false,
+            "screen-fleet-loss": true
+          },
+          "failed": [
+            "main-units-survive",
+            "mission",
+            "shuttle-loss-after-fleet-collision"
+          ],
+          "weight": 10,
+          "eventDigest": "5a43acd7070f1e1f0a12356677b9e70044b90ecb2299ab2fe99d3748c15bbb6d",
+          "finalStateDigest": "98027b0f2870f961a5d6d5cb4a6071c677ce5d5ccd12673656510085acca3986",
+          "simulationMs": 7820.5769999999975,
+          "steps": 1170,
+          "shots": 960,
+          "bladeShots": 5,
+          "skills": 29,
+          "strategyChanges": 183
+        },
+        {
+          "seed": 786902832,
+          "t": 61.85,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 61.85,
+            "mission": "ce-eighth-fleet-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-gundams-engage": true,
+            "duel-pursues-strike": true,
+            "menelaos-gamow-physical-contact": true,
+            "rear-guard-loss": true,
+            "archangel-strike-reentry": true,
+            "main-units-survive": false,
+            "mission": false,
+            "duel-remains-active": true,
+            "shuttle-loss-after-fleet-collision": false,
+            "screen-fleet-loss": true
+          },
+          "failed": [
+            "main-units-survive",
+            "mission",
+            "shuttle-loss-after-fleet-collision"
+          ],
+          "weight": 10,
+          "eventDigest": "45feef5d0e27375bc312b71dc45c26f81b73cdbbc5409ce6d753d16efd9ec10e",
+          "finalStateDigest": "54454aa99a181490d867aa80bce331519735148733d892bd3d206b5998809b11",
+          "simulationMs": 7677.451500000003,
+          "steps": 1237,
+          "shots": 920,
+          "bladeShots": 0,
+          "skills": 32,
+          "strategyChanges": 161
+        },
+        {
+          "seed": 4031158564,
+          "t": 79.7,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 79.7,
+            "mission": "ce-eighth-fleet-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-gundams-engage": true,
+            "duel-pursues-strike": true,
+            "menelaos-gamow-physical-contact": true,
+            "rear-guard-loss": true,
+            "archangel-strike-reentry": false,
+            "main-units-survive": false,
+            "mission": false,
+            "duel-remains-active": true,
+            "shuttle-loss-after-fleet-collision": false,
+            "screen-fleet-loss": true
+          },
+          "failed": [
+            "archangel-strike-reentry",
+            "main-units-survive",
+            "mission",
+            "shuttle-loss-after-fleet-collision"
+          ],
+          "weight": 9,
+          "eventDigest": "db22268e9495694ca7b4a45a8f6ef24450abb183a7c3b781ca19907a9a38d4b5",
+          "finalStateDigest": "358d00bb22a7daff57736e37187b575ee65967646f398d40ad97f0a71a0c82eb",
+          "simulationMs": 8491.262900000002,
+          "steps": 1594,
+          "shots": 1072,
+          "bladeShots": 0,
+          "skills": 38,
+          "strategyChanges": 219
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-desert-lagowe",
+      "name": "05 · SEED · 沙漠虎最终决斗",
+      "best": {
+        "seed": 3491764948,
+        "t": 12.5,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 12.5,
+          "mission": "annihilation"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "lagowe-beam-pressure": true,
+          "real-beam-threat": true,
+          "seed-after-pressure": true,
+          "knife-finish": true,
+          "lagowe-out": true,
+          "strike-survives": true,
+          "friendly-win": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "2a8bcd5555dedc0be369d833bcdc1b599653d6b4a1a1bb41e0be48570fc082f4",
+        "finalStateDigest": "207a04814d744f733093fcd92dec46b8ee90945b182cfd7d9ea5b952a5695ce8",
+        "simulationMs": 621.7292000000016,
+        "steps": 250,
+        "shots": 81,
+        "bladeShots": 5,
+        "skills": 6,
+        "strategyChanges": 20
+      },
+      "samples": [
+        {
+          "seed": 3491764948,
+          "t": 12.5,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 12.5,
+            "mission": "annihilation"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "lagowe-beam-pressure": true,
+            "real-beam-threat": true,
+            "seed-after-pressure": true,
+            "knife-finish": true,
+            "lagowe-out": true,
+            "strike-survives": true,
+            "friendly-win": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "2a8bcd5555dedc0be369d833bcdc1b599653d6b4a1a1bb41e0be48570fc082f4",
+          "finalStateDigest": "207a04814d744f733093fcd92dec46b8ee90945b182cfd7d9ea5b952a5695ce8",
+          "simulationMs": 621.7292000000016,
+          "steps": 250,
+          "shots": 81,
+          "bladeShots": 5,
+          "skills": 6,
+          "strategyChanges": 20
+        },
+        {
+          "seed": 1957051319,
+          "t": 30.650000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 30.650000000000002,
+            "mission": "annihilation"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "lagowe-beam-pressure": true,
+            "real-beam-threat": true,
+            "seed-after-pressure": true,
+            "knife-finish": true,
+            "lagowe-out": true,
+            "strike-survives": true,
+            "friendly-win": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "e718f3ea3db16972773ccddec50ec8a7e3b4edc4d097280d9ad319698d1d4996",
+          "finalStateDigest": "9695dbc80072c5dcec94e3eb6edeae5b9cd6c572d3ecf196e50cd41afc51ef1e",
+          "simulationMs": 994.4497999999876,
+          "steps": 613,
+          "shots": 184,
+          "bladeShots": 10,
+          "skills": 10,
+          "strategyChanges": 56
+        },
+        {
+          "seed": 4135678629,
+          "t": 32.300000000000004,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 32.300000000000004,
+            "mission": "annihilation"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "lagowe-beam-pressure": true,
+            "real-beam-threat": true,
+            "seed-after-pressure": true,
+            "knife-finish": true,
+            "lagowe-out": true,
+            "strike-survives": true,
+            "friendly-win": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "af94a322ab230d8646d991885e608a25d949532cb5e1b55c3778e397337c3f14",
+          "finalStateDigest": "75d3d909df3a1e82ee9b8e87dde49fda6646f494fbb5e547332c0f9b8833cd0b",
+          "simulationMs": 1332.0772999999972,
+          "steps": 646,
+          "shots": 198,
+          "bladeShots": 9,
+          "skills": 10,
+          "strategyChanges": 55
+        },
+        {
+          "seed": 255737996,
+          "t": 43,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 43,
+            "mission": "annihilation"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "lagowe-beam-pressure": true,
+            "real-beam-threat": true,
+            "seed-after-pressure": true,
+            "knife-finish": true,
+            "lagowe-out": true,
+            "strike-survives": true,
+            "friendly-win": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "8c81382d35829af3afb0e8e6bdfaa3473263f128d2b2b5f8775b16e5d62cd25a",
+          "finalStateDigest": "15ae83efbb4b24b0cd5110da1bb8ab4d92be2f13206f6d09ae408dc1c5961235",
+          "simulationMs": 1708.3701,
+          "steps": 860,
+          "shots": 208,
+          "bladeShots": 10,
+          "skills": 14,
+          "strategyChanges": 80
+        },
+        {
+          "seed": 2560892115,
+          "t": 116.7,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 116.7,
+            "mission": "annihilation"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "lagowe-beam-pressure": true,
+            "real-beam-threat": true,
+            "seed-after-pressure": true,
+            "knife-finish": false,
+            "lagowe-out": false,
+            "strike-survives": false,
+            "friendly-win": false
+          },
+          "failed": [
+            "knife-finish",
+            "lagowe-out",
+            "strike-survives",
+            "friendly-win"
+          ],
+          "weight": 3,
+          "eventDigest": "8420643e50b387c6760f6dca9a06552c1942b2954fbad699e8556826ede19c0f",
+          "finalStateDigest": "a715c9bf2a88c994bc7c0c3ea8f5cb5b31d11eec313e201e513c72ff86ea25ae",
+          "simulationMs": 3062.2602999999945,
+          "steps": 2334,
+          "shots": 327,
+          "bladeShots": 11,
+          "skills": 25,
+          "strategyChanges": 102
+        },
+        {
+          "seed": 1786763610,
+          "t": 139.8,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 139.8,
+            "mission": "annihilation"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "lagowe-beam-pressure": true,
+            "real-beam-threat": true,
+            "seed-after-pressure": true,
+            "knife-finish": false,
+            "lagowe-out": false,
+            "strike-survives": false,
+            "friendly-win": false
+          },
+          "failed": [
+            "knife-finish",
+            "lagowe-out",
+            "strike-survives",
+            "friendly-win"
+          ],
+          "weight": 3,
+          "eventDigest": "ca40a7272d343613f75a510e2ce79c8c3d780deb46d44cc55a656a5e8e97259a",
+          "finalStateDigest": "91059eeb67a3ef53a6ca927284a0fc7ab2cd302b118bb9407848d86fed5d48bc",
+          "simulationMs": 3106.238000000012,
+          "steps": 2796,
+          "shots": 332,
+          "bladeShots": 14,
+          "skills": 27,
+          "strategyChanges": 100
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-orb-departure",
+      "name": "06 · SEED · 奥布出港与迅雷救援",
+      "best": {
+        "seed": 739084988,
+        "t": 15.3,
+        "result": {
+          "reason": "objective",
+          "winner": "b",
+          "t": 15.3,
+          "mission": "ce-orb-departure-duel"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "four-enemies-engage": true,
+          "aircraft-engage": true,
+          "strike-engages-aegis": true,
+          "blitz-stealth": true,
+          "blitz-covers-aegis": true,
+          "blade-finishes-blitz": false,
+          "blitz-out": false,
+          "core-survivors": false
+        },
+        "failed": [
+          "blade-finishes-blitz",
+          "blitz-out",
+          "core-survivors"
+        ],
+        "weight": 5,
+        "eventDigest": "68cf3f69c2e0773c30589017e583f6287cf7a4f3f40bac174ef18146451fe94c",
+        "finalStateDigest": "21938306197b1b1373bdd8789f4a78869a3d6b7c624e5683c64a4455fbc283e8",
+        "simulationMs": 2346.2335999999923,
+        "steps": 306,
+        "shots": 325,
+        "bladeShots": 0,
+        "skills": 16,
+        "strategyChanges": 90
+      },
+      "samples": [
+        {
+          "seed": 739084988,
+          "t": 15.3,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 15.3,
+            "mission": "ce-orb-departure-duel"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-enemies-engage": true,
+            "aircraft-engage": true,
+            "strike-engages-aegis": true,
+            "blitz-stealth": true,
+            "blitz-covers-aegis": true,
+            "blade-finishes-blitz": false,
+            "blitz-out": false,
+            "core-survivors": false
+          },
+          "failed": [
+            "blade-finishes-blitz",
+            "blitz-out",
+            "core-survivors"
+          ],
+          "weight": 5,
+          "eventDigest": "68cf3f69c2e0773c30589017e583f6287cf7a4f3f40bac174ef18146451fe94c",
+          "finalStateDigest": "21938306197b1b1373bdd8789f4a78869a3d6b7c624e5683c64a4455fbc283e8",
+          "simulationMs": 2346.2335999999923,
+          "steps": 306,
+          "shots": 325,
+          "bladeShots": 0,
+          "skills": 16,
+          "strategyChanges": 90
+        },
+        {
+          "seed": 2809272528,
+          "t": 21.05,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 21.05,
+            "mission": "ce-orb-departure-duel"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-enemies-engage": true,
+            "aircraft-engage": true,
+            "strike-engages-aegis": true,
+            "blitz-stealth": true,
+            "blitz-covers-aegis": false,
+            "blade-finishes-blitz": false,
+            "blitz-out": false,
+            "core-survivors": false
+          },
+          "failed": [
+            "blitz-covers-aegis",
+            "blade-finishes-blitz",
+            "blitz-out",
+            "core-survivors"
+          ],
+          "weight": 4,
+          "eventDigest": "b9c9eee54d4c1b81a5646cc71130b95505d17d01dababa11b9b258d4a98b61f5",
+          "finalStateDigest": "30f47e368394452eeea89ca92d32d2111e2b2a4c8ede0d6349fa429ba4bcffce",
+          "simulationMs": 2043.0068000000028,
+          "steps": 421,
+          "shots": 433,
+          "bladeShots": 0,
+          "skills": 18,
+          "strategyChanges": 85
+        },
+        {
+          "seed": 3712966702,
+          "t": 21.05,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 21.05,
+            "mission": "ce-orb-departure-duel"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-enemies-engage": true,
+            "aircraft-engage": true,
+            "strike-engages-aegis": true,
+            "blitz-stealth": true,
+            "blitz-covers-aegis": false,
+            "blade-finishes-blitz": false,
+            "blitz-out": false,
+            "core-survivors": false
+          },
+          "failed": [
+            "blitz-covers-aegis",
+            "blade-finishes-blitz",
+            "blitz-out",
+            "core-survivors"
+          ],
+          "weight": 4,
+          "eventDigest": "008ec8376eecdad417ac05a54b72c98cd4b6993a86bd04be0f38ea172d56e84f",
+          "finalStateDigest": "bfbe52521a239c8015ce2ac1ea680a270519797d5b80827919a72785b9a52cc8",
+          "simulationMs": 1854.861899999989,
+          "steps": 421,
+          "shots": 387,
+          "bladeShots": 1,
+          "skills": 22,
+          "strategyChanges": 82
+        },
+        {
+          "seed": 2584778429,
+          "t": 21.5,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 21.5,
+            "mission": "ce-orb-departure-duel"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-enemies-engage": true,
+            "aircraft-engage": true,
+            "strike-engages-aegis": true,
+            "blitz-stealth": true,
+            "blitz-covers-aegis": false,
+            "blade-finishes-blitz": false,
+            "blitz-out": false,
+            "core-survivors": false
+          },
+          "failed": [
+            "blitz-covers-aegis",
+            "blade-finishes-blitz",
+            "blitz-out",
+            "core-survivors"
+          ],
+          "weight": 4,
+          "eventDigest": "d8cd0aeaabc6c8a292e887959a46c7b373dff1f4af46cb9b25a4708449334bf8",
+          "finalStateDigest": "bf4019868beeda64a39daf525157041361ec913ae814ede3fb23063a9cce020b",
+          "simulationMs": 2551.545299999998,
+          "steps": 430,
+          "shots": 433,
+          "bladeShots": 0,
+          "skills": 20,
+          "strategyChanges": 96
+        },
+        {
+          "seed": 1919240087,
+          "t": 47.550000000000004,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 47.550000000000004,
+            "mission": "ce-orb-departure-duel"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-enemies-engage": true,
+            "aircraft-engage": true,
+            "strike-engages-aegis": true,
+            "blitz-stealth": true,
+            "blitz-covers-aegis": false,
+            "blade-finishes-blitz": false,
+            "blitz-out": false,
+            "core-survivors": false
+          },
+          "failed": [
+            "blitz-covers-aegis",
+            "blade-finishes-blitz",
+            "blitz-out",
+            "core-survivors"
+          ],
+          "weight": 4,
+          "eventDigest": "36ddf67f01c0a265b2b1c000bcb8d9c02d9f81e6fbf69d252750880269955fd9",
+          "finalStateDigest": "b26a26d82f570790b84036ae5118b83398ebf0a6b3c6513fc3832387bc002844",
+          "simulationMs": 5258.792699999991,
+          "steps": 951,
+          "shots": 736,
+          "bladeShots": 0,
+          "skills": 34,
+          "strategyChanges": 154
+        },
+        {
+          "seed": 4262857613,
+          "t": 57.5,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 57.5,
+            "mission": "ce-orb-departure-duel"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-enemies-engage": true,
+            "aircraft-engage": true,
+            "strike-engages-aegis": true,
+            "blitz-stealth": true,
+            "blitz-covers-aegis": false,
+            "blade-finishes-blitz": false,
+            "blitz-out": false,
+            "core-survivors": false
+          },
+          "failed": [
+            "blitz-covers-aegis",
+            "blade-finishes-blitz",
+            "blitz-out",
+            "core-survivors"
+          ],
+          "weight": 4,
+          "eventDigest": "80bc7c3fa087aa9bd5fd59166b2690361be3e941064595bd3f60c5a831b7cdaa",
+          "finalStateDigest": "45e8144bebac209aab326b982d689213b3a33bf4f3fc26d62c859d7524b2ed49",
+          "simulationMs": 4591.665500000003,
+          "steps": 1150,
+          "shots": 744,
+          "bladeShots": 0,
+          "skills": 32,
+          "strategyChanges": 105
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-island-duel",
+      "name": "07 · SEED · 群岛追逐与圣盾自爆",
+      "best": {
+        "seed": 3407440573,
+        "t": 206.70000000000002,
+        "result": {
+          "reason": "mutual-objective",
+          "winner": null,
+          "t": 206.70000000000002,
+          "mission": "ce-island-encounter"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "aegis-strike-engage": true,
+          "ship-receives-beam": true,
+          "buster-out": false,
+          "tolle-supports": true,
+          "aegis-finishes-tolle": false,
+          "tolle-out": true,
+          "strike-slashes-aegis": false,
+          "physical-capture-before-blast": true,
+          "duel-mutual-loss": true,
+          "core-other-survivors": false
+        },
+        "failed": [
+          "buster-out",
+          "aegis-finishes-tolle",
+          "strike-slashes-aegis",
+          "core-other-survivors"
+        ],
+        "weight": 8,
+        "eventDigest": "797d014a8f17d044a5bff5ab69105f495ab3bbb172ae8fcf2ddeaf4a7a658f06",
+        "finalStateDigest": "be9a454bd2cf9dd0cec026c5c0edfdf49450c1340567012db9b7bbc0a84d1464",
+        "simulationMs": 8961.314700000003,
+        "steps": 4134,
+        "shots": 526,
+        "bladeShots": 2,
+        "skills": 26,
+        "strategyChanges": 150
+      },
+      "samples": [
+        {
+          "seed": 3407440573,
+          "t": 206.70000000000002,
+          "result": {
+            "reason": "mutual-objective",
+            "winner": null,
+            "t": 206.70000000000002,
+            "mission": "ce-island-encounter"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "aegis-strike-engage": true,
+            "ship-receives-beam": true,
+            "buster-out": false,
+            "tolle-supports": true,
+            "aegis-finishes-tolle": false,
+            "tolle-out": true,
+            "strike-slashes-aegis": false,
+            "physical-capture-before-blast": true,
+            "duel-mutual-loss": true,
+            "core-other-survivors": false
+          },
+          "failed": [
+            "buster-out",
+            "aegis-finishes-tolle",
+            "strike-slashes-aegis",
+            "core-other-survivors"
+          ],
+          "weight": 8,
+          "eventDigest": "797d014a8f17d044a5bff5ab69105f495ab3bbb172ae8fcf2ddeaf4a7a658f06",
+          "finalStateDigest": "be9a454bd2cf9dd0cec026c5c0edfdf49450c1340567012db9b7bbc0a84d1464",
+          "simulationMs": 8961.314700000003,
+          "steps": 4134,
+          "shots": 526,
+          "bladeShots": 2,
+          "skills": 26,
+          "strategyChanges": 150
+        },
+        {
+          "seed": 1473722672,
+          "t": 360,
+          "result": null,
+          "allCriteria": false,
+          "criteria": {
+            "aegis-strike-engage": true,
+            "ship-receives-beam": true,
+            "buster-out": true,
+            "tolle-supports": true,
+            "aegis-finishes-tolle": false,
+            "tolle-out": true,
+            "strike-slashes-aegis": false,
+            "physical-capture-before-blast": false,
+            "duel-mutual-loss": false,
+            "core-other-survivors": false
+          },
+          "failed": [
+            "aegis-finishes-tolle",
+            "strike-slashes-aegis",
+            "physical-capture-before-blast",
+            "duel-mutual-loss",
+            "core-other-survivors"
+          ],
+          "weight": 7,
+          "eventDigest": "835eff20369d562a4d841812e011925252c1add5eda047ee8236522f9a5b9e9f",
+          "finalStateDigest": "fca90c9cf183798696257f2eb931064750dc1d75db2eea939343b26b1b4292e5",
+          "simulationMs": 9009.772899999996,
+          "steps": 7200,
+          "shots": 797,
+          "bladeShots": 0,
+          "skills": 29,
+          "strategyChanges": 154
+        },
+        {
+          "seed": 2707040711,
+          "t": 360,
+          "result": null,
+          "allCriteria": false,
+          "criteria": {
+            "aegis-strike-engage": true,
+            "ship-receives-beam": true,
+            "buster-out": false,
+            "tolle-supports": true,
+            "aegis-finishes-tolle": false,
+            "tolle-out": true,
+            "strike-slashes-aegis": false,
+            "physical-capture-before-blast": false,
+            "duel-mutual-loss": false,
+            "core-other-survivors": false
+          },
+          "failed": [
+            "buster-out",
+            "aegis-finishes-tolle",
+            "strike-slashes-aegis",
+            "physical-capture-before-blast",
+            "duel-mutual-loss",
+            "core-other-survivors"
+          ],
+          "weight": 5,
+          "eventDigest": "ad3c5d308abc13333d9e8994f2da61fb4a599e7bf8fcb62dab52ac7980d1ea02",
+          "finalStateDigest": "73972c3939eaf8cdf3b5dd9dc5b4bbc869d3bdc83af2295aab561f91c356ec85",
+          "simulationMs": 9725.3704,
+          "steps": 7200,
+          "shots": 522,
+          "bladeShots": 0,
+          "skills": 34,
+          "strategyChanges": 134
+        },
+        {
+          "seed": 895140235,
+          "t": 360,
+          "result": null,
+          "allCriteria": false,
+          "criteria": {
+            "aegis-strike-engage": true,
+            "ship-receives-beam": true,
+            "buster-out": false,
+            "tolle-supports": true,
+            "aegis-finishes-tolle": false,
+            "tolle-out": true,
+            "strike-slashes-aegis": false,
+            "physical-capture-before-blast": false,
+            "duel-mutual-loss": false,
+            "core-other-survivors": false
+          },
+          "failed": [
+            "buster-out",
+            "aegis-finishes-tolle",
+            "strike-slashes-aegis",
+            "physical-capture-before-blast",
+            "duel-mutual-loss",
+            "core-other-survivors"
+          ],
+          "weight": 5,
+          "eventDigest": "c533f87b6d32e2e959eac353f5d2aa021a65a1c4dee938af3ae44636fb5e4c89",
+          "finalStateDigest": "0aac1c7994f02d56df13b2d80f3bd67f16324df5a3b842aa5636595b8dd4ed39",
+          "simulationMs": 9751.26449999999,
+          "steps": 7200,
+          "shots": 631,
+          "bladeShots": 0,
+          "skills": 38,
+          "strategyChanges": 195
+        },
+        {
+          "seed": 635640985,
+          "t": 360,
+          "result": null,
+          "allCriteria": false,
+          "criteria": {
+            "aegis-strike-engage": true,
+            "ship-receives-beam": true,
+            "buster-out": false,
+            "tolle-supports": true,
+            "aegis-finishes-tolle": false,
+            "tolle-out": true,
+            "strike-slashes-aegis": false,
+            "physical-capture-before-blast": false,
+            "duel-mutual-loss": false,
+            "core-other-survivors": false
+          },
+          "failed": [
+            "buster-out",
+            "aegis-finishes-tolle",
+            "strike-slashes-aegis",
+            "physical-capture-before-blast",
+            "duel-mutual-loss",
+            "core-other-survivors"
+          ],
+          "weight": 5,
+          "eventDigest": "65c234216fe3c61221c1185e8965278c8ec83331ed7d064dac996640dfcadd96",
+          "finalStateDigest": "082c90a2008944104a8b71eb2ba6fa4a547c58c555ff12763c9dab973cc3d9f5",
+          "simulationMs": 8445.131200000003,
+          "steps": 7200,
+          "shots": 525,
+          "bladeShots": 0,
+          "skills": 33,
+          "strategyChanges": 172
+        },
+        {
+          "seed": 2997100241,
+          "t": 360,
+          "result": null,
+          "allCriteria": false,
+          "criteria": {
+            "aegis-strike-engage": true,
+            "ship-receives-beam": true,
+            "buster-out": false,
+            "tolle-supports": false,
+            "aegis-finishes-tolle": false,
+            "tolle-out": true,
+            "strike-slashes-aegis": false,
+            "physical-capture-before-blast": false,
+            "duel-mutual-loss": false,
+            "core-other-survivors": false
+          },
+          "failed": [
+            "buster-out",
+            "tolle-supports",
+            "aegis-finishes-tolle",
+            "strike-slashes-aegis",
+            "physical-capture-before-blast",
+            "duel-mutual-loss",
+            "core-other-survivors"
+          ],
+          "weight": 4,
+          "eventDigest": "d3ec42aecc4bf96d519c520c01a000aeb0a0234ad553d9a5ca0f21aab4ae796f",
+          "finalStateDigest": "b5c3f1d2137404d1c21eb82a45986754f80f63e4bd0db127db00be6584134f9a",
+          "simulationMs": 9469.739099999992,
+          "steps": 7200,
+          "shots": 538,
+          "bladeShots": 0,
+          "skills": 31,
+          "strategyChanges": 124
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-alaska-escape",
+      "name": "08 · SEED · 阿拉斯加包围突围",
+      "best": {
+        "seed": 3604658960,
+        "t": 65.10000000000001,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 65.10000000000001,
+          "mission": "local-alaska"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "freedom-engages": true,
+          "multi-weapon-fire": true,
+          "carrier-freedom-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 6,
+        "eventDigest": "4a5b55e78094f96fe5980f2a77db45e336ea15cf1d3ac2513188c45f0b7070ef",
+        "finalStateDigest": "930914deb6e29f1816ec649bb2345d044d264eee3704ee39eb39f33eea315fd1",
+        "simulationMs": 2280.146999999997,
+        "steps": 1302,
+        "shots": 503,
+        "bladeShots": 1,
+        "skills": 24,
+        "strategyChanges": 67
+      },
+      "samples": [
+        {
+          "seed": 3604658960,
+          "t": 65.10000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 65.10000000000001,
+            "mission": "local-alaska"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-engages": true,
+            "multi-weapon-fire": true,
+            "carrier-freedom-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "4a5b55e78094f96fe5980f2a77db45e336ea15cf1d3ac2513188c45f0b7070ef",
+          "finalStateDigest": "930914deb6e29f1816ec649bb2345d044d264eee3704ee39eb39f33eea315fd1",
+          "simulationMs": 2280.146999999997,
+          "steps": 1302,
+          "shots": 503,
+          "bladeShots": 1,
+          "skills": 24,
+          "strategyChanges": 67
+        },
+        {
+          "seed": 1046528666,
+          "t": 65.15,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 65.15,
+            "mission": "local-alaska"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-engages": true,
+            "multi-weapon-fire": true,
+            "carrier-freedom-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "0e120962f513a18ff20b488c75ce8d39a280e50bc540b950e3ab73dae2384848",
+          "finalStateDigest": "35e854030e4b166c92176309772c1e9f555b69a4ace41f5696b8e22a7565b260",
+          "simulationMs": 1686.3462,
+          "steps": 1303,
+          "shots": 320,
+          "bladeShots": 3,
+          "skills": 19,
+          "strategyChanges": 57
+        },
+        {
+          "seed": 189919859,
+          "t": 65.15,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 65.15,
+            "mission": "local-alaska"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-engages": true,
+            "multi-weapon-fire": true,
+            "carrier-freedom-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "5985b53ac48a1f5ac72b481d7dde55f99c02b1316f2ce97e2a139d725b15c5fb",
+          "finalStateDigest": "2c53810a6a74c53e10345365de6ad51ffa636251e33dcb9cfe78d70047cc91db",
+          "simulationMs": 982.0840999999928,
+          "steps": 1303,
+          "shots": 170,
+          "bladeShots": 3,
+          "skills": 11,
+          "strategyChanges": 35
+        },
+        {
+          "seed": 2566081480,
+          "t": 65.2,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 65.2,
+            "mission": "local-alaska"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-engages": true,
+            "multi-weapon-fire": true,
+            "carrier-freedom-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "12ff6eb41e8d828db7d100e1a2b33422808ffa0175c7f6e2a5f0a889a7795fef",
+          "finalStateDigest": "693514b72f44502cfc699ce45d84c2ae7192dfe72c3a4393f7abd1f3b42d14ed",
+          "simulationMs": 1477.8061000000016,
+          "steps": 1304,
+          "shots": 329,
+          "bladeShots": 2,
+          "skills": 17,
+          "strategyChanges": 63
+        },
+        {
+          "seed": 2263689437,
+          "t": 65.2,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 65.2,
+            "mission": "local-alaska"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-engages": true,
+            "multi-weapon-fire": true,
+            "carrier-freedom-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "cde0fd3c2a0946d945e67e6d96050331627b6839b75c84c3dab9216fc600fae8",
+          "finalStateDigest": "5cd6dbdf684762e77f7cfa49c0ea9c3b44f781ba13aa7ff68600403885f2271d",
+          "simulationMs": 1322.000199999995,
+          "steps": 1304,
+          "shots": 269,
+          "bladeShots": 3,
+          "skills": 13,
+          "strategyChanges": 44
+        },
+        {
+          "seed": 736457901,
+          "t": 65.25,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 65.25,
+            "mission": "local-alaska"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-engages": true,
+            "multi-weapon-fire": true,
+            "carrier-freedom-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "44c6fadc8cc816bc0525506f2d8f2f22f630f1d5d43db650b8ce75abb03fff56",
+          "finalStateDigest": "f4bdd5acd9862cf71073527a1099f24ad177cf68bfc18b13f5f8db9a895709a7",
+          "simulationMs": 1444.0378000000055,
+          "steps": 1305,
+          "shots": 316,
+          "bladeShots": 1,
+          "skills": 15,
+          "strategyChanges": 53
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-orb-cooperation",
+      "name": "09 · SEED · 奥布首日双机协防",
+      "best": {
+        "seed": 1610631936,
+        "t": 22.200000000000003,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 22.200000000000003,
+          "mission": "ce-orb-cooperative-defense"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "kira-fire": true,
+          "athrun-fights": true,
+          "two-survivors": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 6,
+        "eventDigest": "db505a604237d62d6a4b9bd1d307d8cb60e944a11d251317134f74f20b7ef287",
+        "finalStateDigest": "92fd7ac75a2a9b69b0976fed39cd1c110546cb0dbebeec77659f6980e7dcc02b",
+        "simulationMs": 970.2223999999987,
+        "steps": 444,
+        "shots": 179,
+        "bladeShots": 1,
+        "skills": 20,
+        "strategyChanges": 37
+      },
+      "samples": [
+        {
+          "seed": 1610631936,
+          "t": 22.200000000000003,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 22.200000000000003,
+            "mission": "ce-orb-cooperative-defense"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-fights": true,
+            "two-survivors": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "db505a604237d62d6a4b9bd1d307d8cb60e944a11d251317134f74f20b7ef287",
+          "finalStateDigest": "92fd7ac75a2a9b69b0976fed39cd1c110546cb0dbebeec77659f6980e7dcc02b",
+          "simulationMs": 970.2223999999987,
+          "steps": 444,
+          "shots": 179,
+          "bladeShots": 1,
+          "skills": 20,
+          "strategyChanges": 37
+        },
+        {
+          "seed": 2339362443,
+          "t": 31.150000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 31.150000000000002,
+            "mission": "ce-orb-cooperative-defense"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-fights": true,
+            "two-survivors": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "d859013a1e6a76a3eb5df679308816f9fb56554220f93a9c040d7c0098b6aab5",
+          "finalStateDigest": "72f187227e1cc12af0bf3109af51e1fca906b5fe1260971ecd152e6ed7740d30",
+          "simulationMs": 1784.5957000000053,
+          "steps": 623,
+          "shots": 334,
+          "bladeShots": 2,
+          "skills": 24,
+          "strategyChanges": 46
+        },
+        {
+          "seed": 3833986768,
+          "t": 38.6,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 38.6,
+            "mission": "ce-orb-cooperative-defense"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-fights": true,
+            "two-survivors": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "5508259b561447a9b53c213e99dd2bda80787de64fb9dd91a55b9d7f77dcdb4e",
+          "finalStateDigest": "e24b4bb9bb61fde60c0ea82ac093ba27764575bfcc05f352e1cbc819ecf5bdf5",
+          "simulationMs": 1764.0627999999997,
+          "steps": 772,
+          "shots": 305,
+          "bladeShots": 2,
+          "skills": 25,
+          "strategyChanges": 48
+        },
+        {
+          "seed": 2780172918,
+          "t": 43.6,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 43.6,
+            "mission": "ce-orb-cooperative-defense"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-fights": true,
+            "two-survivors": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "616421cbaa0459628b71d4a208f3d19a6656f2d7e9b46a9ead27258fcd6aff70",
+          "finalStateDigest": "947c4348761ec55a49ca389288a58c0248f45c5812d1ae2bff1a4e9d1f535f65",
+          "simulationMs": 1798.0187000000005,
+          "steps": 872,
+          "shots": 278,
+          "bladeShots": 1,
+          "skills": 32,
+          "strategyChanges": 93
+        },
+        {
+          "seed": 2311117053,
+          "t": 53.650000000000006,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 53.650000000000006,
+            "mission": "ce-orb-cooperative-defense"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-fights": true,
+            "two-survivors": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "08520968c42f173d3aff816c8bc8c696f46404bb7cbe5931b3541bd3cd645915",
+          "finalStateDigest": "6a0dbc8a70efaea8d06388198545bc57002af3e73f5b23a545f7cd255446b356",
+          "simulationMs": 2174.9445000000123,
+          "steps": 1073,
+          "shots": 452,
+          "bladeShots": 2,
+          "skills": 33,
+          "strategyChanges": 90
+        },
+        {
+          "seed": 3484407452,
+          "t": 69.3,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 69.3,
+            "mission": "ce-orb-cooperative-defense"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-fights": true,
+            "two-survivors": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "c08acfd300c8c65292fdd1e328c6058c0df1da95c97d315cee58f5175bd7c2f1",
+          "finalStateDigest": "39ce6d1055f1100029413995144dd963d7b99aa54fb5e1fb619e4aa94ca06cd0",
+          "simulationMs": 3331.131699999998,
+          "steps": 1386,
+          "shots": 591,
+          "bladeShots": 6,
+          "skills": 38,
+          "strategyChanges": 93
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-meteor-interception",
+      "name": "10 · SEED · 流星核弹拦截",
+      "best": {
+        "seed": 1512152121,
+        "t": 21.200000000000003,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 21.200000000000003,
+          "mission": "local-nuclear"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "freedom-intercepts": true,
+          "justice-intercepts": true,
+          "all-warheads-intercepted": true,
+          "both-meteor-active": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "91ba4f1e5901f675e8e62e4165594528d2e79f52f29a312ade001397e910a68c",
+        "finalStateDigest": "0d91d7f3fbc1ee07e9ca14dc05af501e0417211f14cd5dba80b09d4913866445",
+        "simulationMs": 1247.9330000000045,
+        "steps": 424,
+        "shots": 122,
+        "bladeShots": 0,
+        "skills": 6,
+        "strategyChanges": 5
+      },
+      "samples": [
+        {
+          "seed": 1512152121,
+          "t": 21.200000000000003,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 21.200000000000003,
+            "mission": "local-nuclear"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-intercepts": true,
+            "justice-intercepts": true,
+            "all-warheads-intercepted": true,
+            "both-meteor-active": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "91ba4f1e5901f675e8e62e4165594528d2e79f52f29a312ade001397e910a68c",
+          "finalStateDigest": "0d91d7f3fbc1ee07e9ca14dc05af501e0417211f14cd5dba80b09d4913866445",
+          "simulationMs": 1247.9330000000045,
+          "steps": 424,
+          "shots": 122,
+          "bladeShots": 0,
+          "skills": 6,
+          "strategyChanges": 5
+        },
+        {
+          "seed": 2129867187,
+          "t": 21.35,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 21.35,
+            "mission": "local-nuclear"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-intercepts": true,
+            "justice-intercepts": true,
+            "all-warheads-intercepted": true,
+            "both-meteor-active": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "5749f1f6b58d203b4e24a670a8876158e1e763484ab116956edc680dc3241f09",
+          "finalStateDigest": "a358cfbfa0ab98de33b6ebd1989a3aa127b536cd5b496314df7be65699a0a874",
+          "simulationMs": 814.8681999999972,
+          "steps": 427,
+          "shots": 133,
+          "bladeShots": 0,
+          "skills": 5,
+          "strategyChanges": 10
+        },
+        {
+          "seed": 1167836815,
+          "t": 21.75,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 21.75,
+            "mission": "local-nuclear"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-intercepts": true,
+            "justice-intercepts": true,
+            "all-warheads-intercepted": true,
+            "both-meteor-active": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "7c93b0fbff09cf126a0f6b147a3f1d0dff01457ca2077a74179552b5fe8440d8",
+          "finalStateDigest": "e07e40925010ceb8976ad201095c2c6e3677f01e80c82d0a6ab971ead25c8ec9",
+          "simulationMs": 1173.642399999997,
+          "steps": 435,
+          "shots": 122,
+          "bladeShots": 0,
+          "skills": 7,
+          "strategyChanges": 11
+        },
+        {
+          "seed": 1636036413,
+          "t": 21.75,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 21.75,
+            "mission": "local-nuclear"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-intercepts": true,
+            "justice-intercepts": true,
+            "all-warheads-intercepted": true,
+            "both-meteor-active": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "ce8dc6b348e741bd52d6aa2f8b794c7d96f01363be0c5d4ef427865132d3d8fd",
+          "finalStateDigest": "f78922a66f3af94637d0b4fa01500ac56fee4296ded2bcd29f0a558783e0950e",
+          "simulationMs": 741.7589999999909,
+          "steps": 435,
+          "shots": 144,
+          "bladeShots": 0,
+          "skills": 7,
+          "strategyChanges": 9
+        },
+        {
+          "seed": 2540322309,
+          "t": 29,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 29,
+            "mission": "local-nuclear"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-intercepts": true,
+            "justice-intercepts": true,
+            "all-warheads-intercepted": true,
+            "both-meteor-active": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "a8787295010e2d7adcdf1884d080e532ef9457c0c6e979533d9b0df1ce0b1a72",
+          "finalStateDigest": "fc1c5fb30b4b7bf9cc05e202f447a111b121129e1e12449793c919aa61b991ec",
+          "simulationMs": 1172.2572999999975,
+          "steps": 580,
+          "shots": 200,
+          "bladeShots": 0,
+          "skills": 7,
+          "strategyChanges": 10
+        },
+        {
+          "seed": 3910069178,
+          "t": 35.85,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 35.85,
+            "mission": "local-nuclear"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-intercepts": true,
+            "justice-intercepts": true,
+            "all-warheads-intercepted": true,
+            "both-meteor-active": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "90ee51adeecf8e59bb7bff7584e02e7348f8379fca796e90fc35ecb6ba887656",
+          "finalStateDigest": "d67fca4fe68784516112db30f121e484c39aee1450529c7c2adddfd5599eaf21",
+          "simulationMs": 1480.9867999999988,
+          "steps": 717,
+          "shots": 222,
+          "bladeShots": 0,
+          "skills": 10,
+          "strategyChanges": 16
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-archangel-dominion",
+      "name": "11 · SEED · 大天使号终末炮战",
+      "best": {
+        "seed": 2845003353,
+        "t": 201.45000000000002,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 201.45000000000002,
+          "mission": "seed-final-fleet"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "archangel-main": true,
+          "dominion-main": true,
+          "strike-hit": true,
+          "archangel-survives": true,
+          "dominion-out": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 9,
+        "eventDigest": "910c855fb53a2fa608cf5cfe479e920969ab92900493b6a196de9b59ea74042d",
+        "finalStateDigest": "61bbaf05e5a58d025b8e455b85a6d3cdac3212e5b6c60209deffc248c41a8730",
+        "simulationMs": 2953.5194000000047,
+        "steps": 4029,
+        "shots": 482,
+        "bladeShots": 0,
+        "skills": 1,
+        "strategyChanges": 4
+      },
+      "samples": [
+        {
+          "seed": 2845003353,
+          "t": 201.45000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 201.45000000000002,
+            "mission": "seed-final-fleet"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "archangel-main": true,
+            "dominion-main": true,
+            "strike-hit": true,
+            "archangel-survives": true,
+            "dominion-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "910c855fb53a2fa608cf5cfe479e920969ab92900493b6a196de9b59ea74042d",
+          "finalStateDigest": "61bbaf05e5a58d025b8e455b85a6d3cdac3212e5b6c60209deffc248c41a8730",
+          "simulationMs": 2953.5194000000047,
+          "steps": 4029,
+          "shots": 482,
+          "bladeShots": 0,
+          "skills": 1,
+          "strategyChanges": 4
+        },
+        {
+          "seed": 281946030,
+          "t": 206.85000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 206.85000000000002,
+            "mission": "seed-final-fleet"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "archangel-main": true,
+            "dominion-main": true,
+            "strike-hit": true,
+            "archangel-survives": true,
+            "dominion-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "644604cda0edd16f0a0e8e1c9d90a52f2432041dbc6dc06021d780f9e39e6ba9",
+          "finalStateDigest": "8a0ad0903ae8362860a280a230bf604dd590bde939335fccdf1889f3cd643f99",
+          "simulationMs": 3371.5567000000156,
+          "steps": 4137,
+          "shots": 497,
+          "bladeShots": 0,
+          "skills": 1,
+          "strategyChanges": 4
+        },
+        {
+          "seed": 2539531875,
+          "t": 209.3,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 209.3,
+            "mission": "seed-final-fleet"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "archangel-main": true,
+            "dominion-main": true,
+            "strike-hit": true,
+            "archangel-survives": true,
+            "dominion-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "f5f96e04b677d0ec1f479c8d92828ed93a57eace2515d948fe34cb656f805867",
+          "finalStateDigest": "93de48128803cbd6b4d3a52ab925091300dbd838ebe13f8f75b0356d9e4108ae",
+          "simulationMs": 2830.9054999999935,
+          "steps": 4186,
+          "shots": 483,
+          "bladeShots": 0,
+          "skills": 1,
+          "strategyChanges": 4
+        },
+        {
+          "seed": 646797611,
+          "t": 223.45000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 223.45000000000002,
+            "mission": "seed-final-fleet"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "archangel-main": true,
+            "dominion-main": true,
+            "strike-hit": true,
+            "archangel-survives": true,
+            "dominion-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "b80320c40b0926afa1f1c83c9be8f5488ff63007583ca15c1701eba36125f498",
+          "finalStateDigest": "972bc4f19b62dddf0fd531d4d4bf230c3f72999e4b8fd356579f5c56f4a4e1da",
+          "simulationMs": 4801.843900000007,
+          "steps": 4469,
+          "shots": 512,
+          "bladeShots": 0,
+          "skills": 1,
+          "strategyChanges": 3
+        },
+        {
+          "seed": 2958138315,
+          "t": 196.65,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 196.65,
+            "mission": "seed-final-fleet"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "archangel-main": true,
+            "dominion-main": true,
+            "strike-hit": true,
+            "archangel-survives": false,
+            "dominion-out": false,
+            "mission": false
+          },
+          "failed": [
+            "archangel-survives",
+            "dominion-out",
+            "mission"
+          ],
+          "weight": 3,
+          "eventDigest": "74828e6eb0dfceea7e48e2592694a135cfa9a4973598b4c3078fe95b3e6aab32",
+          "finalStateDigest": "a14b0722e2254b78c746da86c05ac846dd57acda97f58781c3c78774069d5a90",
+          "simulationMs": 2705.824000000008,
+          "steps": 3933,
+          "shots": 459,
+          "bladeShots": 0,
+          "skills": 1,
+          "strategyChanges": 4
+        },
+        {
+          "seed": 3354156336,
+          "t": 195.45000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 195.45000000000002,
+            "mission": "seed-final-fleet"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "archangel-main": true,
+            "dominion-main": true,
+            "strike-hit": false,
+            "archangel-survives": false,
+            "dominion-out": false,
+            "mission": false
+          },
+          "failed": [
+            "strike-hit",
+            "archangel-survives",
+            "dominion-out",
+            "mission"
+          ],
+          "weight": 2,
+          "eventDigest": "6f81ac74f9899a0e900b7e93be2456f0b756aa4ea76fba3cb2a1efdb48ea06dc",
+          "finalStateDigest": "3e425a697172a2fd8643e5581f2ec296a19fbb7bddb7d77290df429ac79a0028",
+          "simulationMs": 3890.6382999999914,
+          "steps": 3909,
+          "shots": 441,
+          "bladeShots": 0,
+          "skills": 1,
+          "strategyChanges": 4
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-freedom-providence",
+      "name": "12 · SEED · 自由与神意最终决斗",
+      "best": {
+        "seed": 20713843,
+        "t": 305.45,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 305.45,
+          "mission": "annihilation"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "dragoon-launched": true,
+          "dragoon-real-rays": true,
+          "freedom-real-injury": true,
+          "blade-finish": false,
+          "freedom-heavily-damaged-survivor": true,
+          "providence-out": true,
+          "friendly-win": true
+        },
+        "failed": [
+          "blade-finish"
+        ],
+        "weight": 7,
+        "eventDigest": "98fb29738d4992b53a408b17bec7c5aa43cb2de47d22a5220333fc3322443624",
+        "finalStateDigest": "e8e6d389c14d53ae535bfec56e058c5674fa7397edb01e87244e677c0a0a0a56",
+        "simulationMs": 6757.190799999982,
+        "steps": 6109,
+        "shots": 1055,
+        "bladeShots": 0,
+        "skills": 55,
+        "strategyChanges": 432
+      },
+      "samples": [
+        {
+          "seed": 20713843,
+          "t": 305.45,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 305.45,
+            "mission": "annihilation"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "dragoon-launched": true,
+            "dragoon-real-rays": true,
+            "freedom-real-injury": true,
+            "blade-finish": false,
+            "freedom-heavily-damaged-survivor": true,
+            "providence-out": true,
+            "friendly-win": true
+          },
+          "failed": [
+            "blade-finish"
+          ],
+          "weight": 7,
+          "eventDigest": "98fb29738d4992b53a408b17bec7c5aa43cb2de47d22a5220333fc3322443624",
+          "finalStateDigest": "e8e6d389c14d53ae535bfec56e058c5674fa7397edb01e87244e677c0a0a0a56",
+          "simulationMs": 6757.190799999982,
+          "steps": 6109,
+          "shots": 1055,
+          "bladeShots": 0,
+          "skills": 55,
+          "strategyChanges": 432
+        },
+        {
+          "seed": 799924290,
+          "t": 110.75,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 110.75,
+            "mission": "annihilation"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "dragoon-launched": true,
+            "dragoon-real-rays": true,
+            "freedom-real-injury": true,
+            "blade-finish": false,
+            "freedom-heavily-damaged-survivor": false,
+            "providence-out": true,
+            "friendly-win": true
+          },
+          "failed": [
+            "blade-finish",
+            "freedom-heavily-damaged-survivor"
+          ],
+          "weight": 6,
+          "eventDigest": "64cfcfee79fabd23ebb8b20e96df571d8df91246b4e0bc1dc0b93095317e064b",
+          "finalStateDigest": "25f59004e1ae9086559167333bb9c0e6f24357799ee0895666ef0997629003cd",
+          "simulationMs": 2557.434500000003,
+          "steps": 2215,
+          "shots": 562,
+          "bladeShots": 3,
+          "skills": 29,
+          "strategyChanges": 161
+        },
+        {
+          "seed": 2990499155,
+          "t": 177.20000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 177.20000000000002,
+            "mission": "annihilation"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "dragoon-launched": true,
+            "dragoon-real-rays": true,
+            "freedom-real-injury": true,
+            "blade-finish": false,
+            "freedom-heavily-damaged-survivor": false,
+            "providence-out": true,
+            "friendly-win": true
+          },
+          "failed": [
+            "blade-finish",
+            "freedom-heavily-damaged-survivor"
+          ],
+          "weight": 6,
+          "eventDigest": "cdbe9d0ac34e86ef5cefdfbc6feee6753476403629bd8601dc953c476008b344",
+          "finalStateDigest": "6f48a21de9d8a12e0e7072af7bf8b44a634d96b9679d76c1babcaabe7601e030",
+          "simulationMs": 3569.5832999999984,
+          "steps": 3544,
+          "shots": 757,
+          "bladeShots": 0,
+          "skills": 41,
+          "strategyChanges": 244
+        },
+        {
+          "seed": 513153375,
+          "t": 342.85,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 342.85,
+            "mission": "annihilation"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "dragoon-launched": true,
+            "dragoon-real-rays": true,
+            "freedom-real-injury": true,
+            "blade-finish": false,
+            "freedom-heavily-damaged-survivor": false,
+            "providence-out": true,
+            "friendly-win": true
+          },
+          "failed": [
+            "blade-finish",
+            "freedom-heavily-damaged-survivor"
+          ],
+          "weight": 6,
+          "eventDigest": "d571f97e11420d71a16f86a5e05470bb1a59d0186c271f6e7484067073495f4c",
+          "finalStateDigest": "92f8a12db36143a08df1f5901f930aa5c5c54acc11410890a4c618dd3aa37269",
+          "simulationMs": 6553.6630000000005,
+          "steps": 6857,
+          "shots": 1054,
+          "bladeShots": 0,
+          "skills": 66,
+          "strategyChanges": 463
+        },
+        {
+          "seed": 2530799458,
+          "t": 391.1,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 391.1,
+            "mission": "annihilation"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "dragoon-launched": true,
+            "dragoon-real-rays": true,
+            "freedom-real-injury": true,
+            "blade-finish": false,
+            "freedom-heavily-damaged-survivor": false,
+            "providence-out": true,
+            "friendly-win": true
+          },
+          "failed": [
+            "blade-finish",
+            "freedom-heavily-damaged-survivor"
+          ],
+          "weight": 6,
+          "eventDigest": "fcb01c621409640e122a521bd85bacd301b25307dd1b0495d880bc8dcf12eeb9",
+          "finalStateDigest": "d7463d364c8e61f7dd4fa830ceffe9ca6a119326a5d0f30f7518ae4f3d3bb2e8",
+          "simulationMs": 6422.675799999997,
+          "steps": 7822,
+          "shots": 894,
+          "bladeShots": 3,
+          "skills": 67,
+          "strategyChanges": 529
+        },
+        {
+          "seed": 3681251234,
+          "t": 203.65,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 203.65,
+            "mission": "annihilation"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "dragoon-launched": true,
+            "dragoon-real-rays": true,
+            "freedom-real-injury": true,
+            "blade-finish": false,
+            "freedom-heavily-damaged-survivor": false,
+            "providence-out": false,
+            "friendly-win": false
+          },
+          "failed": [
+            "blade-finish",
+            "freedom-heavily-damaged-survivor",
+            "providence-out",
+            "friendly-win"
+          ],
+          "weight": 3,
+          "eventDigest": "8a095ce6f0cb3065dd9183893f66d21d95412495bf321968235b424ec551f7bf",
+          "finalStateDigest": "74ae09b280d2578d5d86df4c3ed1589a0b97f66fde06e7382b489cc18a2f474e",
+          "simulationMs": 4603.662600000011,
+          "steps": 4073,
+          "shots": 894,
+          "bladeShots": 1,
+          "skills": 48,
+          "strategyChanges": 305
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-genesis-interior",
+      "name": "13 · SEED · 创世纪内部破坏",
+      "best": {
+        "seed": 2201330993,
+        "t": 11.8,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 11.8,
+          "mission": "local-genesis"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "justice-attacks-core": true,
+          "core-out": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 5,
+        "eventDigest": "a82f6a051a31fba8fd21680ef2f6769ae12e90958ed9f722431a85fa08579505",
+        "finalStateDigest": "e25d023fc56f1f41a9aee7a1008166379f3a246b050c9f35998cc5a8bd71c115",
+        "simulationMs": 263.53900000001886,
+        "steps": 236,
+        "shots": 13,
+        "bladeShots": 0,
+        "skills": 3,
+        "strategyChanges": 4
+      },
+      "samples": [
+        {
+          "seed": 2201330993,
+          "t": 11.8,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 11.8,
+            "mission": "local-genesis"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "justice-attacks-core": true,
+            "core-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 5,
+          "eventDigest": "a82f6a051a31fba8fd21680ef2f6769ae12e90958ed9f722431a85fa08579505",
+          "finalStateDigest": "e25d023fc56f1f41a9aee7a1008166379f3a246b050c9f35998cc5a8bd71c115",
+          "simulationMs": 263.53900000001886,
+          "steps": 236,
+          "shots": 13,
+          "bladeShots": 0,
+          "skills": 3,
+          "strategyChanges": 4
+        },
+        {
+          "seed": 3577050042,
+          "t": 11.8,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 11.8,
+            "mission": "local-genesis"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "justice-attacks-core": true,
+            "core-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 5,
+          "eventDigest": "f62e3f8cd20fd71e34e467c6c77590cdd44d8b3b791fbb29d7cb7a9ad3608159",
+          "finalStateDigest": "2463c43d364ac186d37bd0763e200a9b0e9aa2955fa79ee3feae2f7bc26380a4",
+          "simulationMs": 171.0046999999904,
+          "steps": 236,
+          "shots": 13,
+          "bladeShots": 0,
+          "skills": 3,
+          "strategyChanges": 4
+        },
+        {
+          "seed": 1504650057,
+          "t": 12.25,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 12.25,
+            "mission": "local-genesis"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "justice-attacks-core": true,
+            "core-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 5,
+          "eventDigest": "22265a417fe2fb847f9743469cea88d4de567d2384d182b6c4ee3b3d676ed9d5",
+          "finalStateDigest": "c73fd6ae7b5db15cfef0cbec574092ae0688eba95310560668adacf61966d770",
+          "simulationMs": 217.8851999999897,
+          "steps": 245,
+          "shots": 14,
+          "bladeShots": 0,
+          "skills": 3,
+          "strategyChanges": 4
+        },
+        {
+          "seed": 4130168354,
+          "t": 13.05,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 13.05,
+            "mission": "local-genesis"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "justice-attacks-core": true,
+            "core-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 5,
+          "eventDigest": "2146a7ebdbfe20417db1034dd047b75b137d039810d390d41ea43893e5f454c5",
+          "finalStateDigest": "92b41e0bdb1e8706578c059b52455e321d3fa82ca78ef12691744e8c7435719e",
+          "simulationMs": 194.14479999998002,
+          "steps": 261,
+          "shots": 17,
+          "bladeShots": 0,
+          "skills": 3,
+          "strategyChanges": 4
+        },
+        {
+          "seed": 1938689578,
+          "t": 13.05,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 13.05,
+            "mission": "local-genesis"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "justice-attacks-core": true,
+            "core-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 5,
+          "eventDigest": "05e7b69c2d15f85f38372bc601f02198195f9463be2a44aafe203c9f3b501f8c",
+          "finalStateDigest": "f3d5c1a03d95dc82a84101b4a2a0a56a220daca407236e3f8725c63faacd629a",
+          "simulationMs": 193.312900000019,
+          "steps": 261,
+          "shots": 17,
+          "bladeShots": 0,
+          "skills": 3,
+          "strategyChanges": 4
+        },
+        {
+          "seed": 2174869179,
+          "t": 13.200000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 13.200000000000001,
+            "mission": "local-genesis"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "justice-attacks-core": true,
+            "core-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 5,
+          "eventDigest": "d7f932f6f18f66519c7611535afd73c865b674a6134b6047737b4bec6a5e31c4",
+          "finalStateDigest": "ace20fc94d1cbadce75c534e414d1cca755b760bbc37c0c36ee9dba934ee1837",
+          "simulationMs": 250.863400000002,
+          "steps": 264,
+          "shots": 17,
+          "bladeShots": 0,
+          "skills": 3,
+          "strategyChanges": 4
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-armory-ground",
+      "name": "14 · SEED DESTINY · 军械库夺机迎击",
+      "best": {
+        "seed": 763888481,
+        "t": 9.65,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 9.65,
+          "mission": "ce-armory-withdrawal"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "impulse-engages": true,
+          "stolen-unit-1-reaches-exit": false,
+          "stolen-unit-2-reaches-exit": false,
+          "stolen-unit-3-reaches-exit": false,
+          "main-survivors": false,
+          "mission": false
+        },
+        "failed": [
+          "stolen-unit-1-reaches-exit",
+          "stolen-unit-2-reaches-exit",
+          "stolen-unit-3-reaches-exit",
+          "main-survivors",
+          "mission"
+        ],
+        "weight": 1,
+        "eventDigest": "eea9ddbe8901f17622d7b0aad0dc7781d999aad5212d47297515515ce456d9af",
+        "finalStateDigest": "33cb0836a1d2fc27fb2cb1a36631d998da1871c666bb08959b1abaae5720a265",
+        "simulationMs": 531.6736999999848,
+        "steps": 193,
+        "shots": 57,
+        "bladeShots": 0,
+        "skills": 10,
+        "strategyChanges": 20
+      },
+      "samples": [
+        {
+          "seed": 763888481,
+          "t": 9.65,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 9.65,
+            "mission": "ce-armory-withdrawal"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-engages": true,
+            "stolen-unit-1-reaches-exit": false,
+            "stolen-unit-2-reaches-exit": false,
+            "stolen-unit-3-reaches-exit": false,
+            "main-survivors": false,
+            "mission": false
+          },
+          "failed": [
+            "stolen-unit-1-reaches-exit",
+            "stolen-unit-2-reaches-exit",
+            "stolen-unit-3-reaches-exit",
+            "main-survivors",
+            "mission"
+          ],
+          "weight": 1,
+          "eventDigest": "eea9ddbe8901f17622d7b0aad0dc7781d999aad5212d47297515515ce456d9af",
+          "finalStateDigest": "33cb0836a1d2fc27fb2cb1a36631d998da1871c666bb08959b1abaae5720a265",
+          "simulationMs": 531.6736999999848,
+          "steps": 193,
+          "shots": 57,
+          "bladeShots": 0,
+          "skills": 10,
+          "strategyChanges": 20
+        },
+        {
+          "seed": 3669304170,
+          "t": 13.4,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 13.4,
+            "mission": "ce-armory-withdrawal"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-engages": true,
+            "stolen-unit-1-reaches-exit": false,
+            "stolen-unit-2-reaches-exit": false,
+            "stolen-unit-3-reaches-exit": false,
+            "main-survivors": false,
+            "mission": false
+          },
+          "failed": [
+            "stolen-unit-1-reaches-exit",
+            "stolen-unit-2-reaches-exit",
+            "stolen-unit-3-reaches-exit",
+            "main-survivors",
+            "mission"
+          ],
+          "weight": 1,
+          "eventDigest": "fbe86f9e9febf886700368b502bca4cbd1c17c673c081950c1f5ed2923ed10a2",
+          "finalStateDigest": "522e16414347ed72d9496a4f7a4ac079ddc573583d6876e1dac8681b41369259",
+          "simulationMs": 616.6676999999909,
+          "steps": 268,
+          "shots": 95,
+          "bladeShots": 0,
+          "skills": 11,
+          "strategyChanges": 37
+        },
+        {
+          "seed": 602285864,
+          "t": 13.55,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 13.55,
+            "mission": "ce-armory-withdrawal"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-engages": true,
+            "stolen-unit-1-reaches-exit": false,
+            "stolen-unit-2-reaches-exit": false,
+            "stolen-unit-3-reaches-exit": false,
+            "main-survivors": false,
+            "mission": false
+          },
+          "failed": [
+            "stolen-unit-1-reaches-exit",
+            "stolen-unit-2-reaches-exit",
+            "stolen-unit-3-reaches-exit",
+            "main-survivors",
+            "mission"
+          ],
+          "weight": 1,
+          "eventDigest": "68d3475e4b2161e19a33abce775d963109104f8781de8692db5bc0df8bf145a7",
+          "finalStateDigest": "cd036a10b6d94c190f7b62148242a2c8e202e65d4ccc6f315942163d24b1e810",
+          "simulationMs": 671.312900000019,
+          "steps": 271,
+          "shots": 98,
+          "bladeShots": 0,
+          "skills": 11,
+          "strategyChanges": 36
+        },
+        {
+          "seed": 3615354376,
+          "t": 15.9,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 15.9,
+            "mission": "ce-armory-withdrawal"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-engages": true,
+            "stolen-unit-1-reaches-exit": false,
+            "stolen-unit-2-reaches-exit": false,
+            "stolen-unit-3-reaches-exit": false,
+            "main-survivors": false,
+            "mission": false
+          },
+          "failed": [
+            "stolen-unit-1-reaches-exit",
+            "stolen-unit-2-reaches-exit",
+            "stolen-unit-3-reaches-exit",
+            "main-survivors",
+            "mission"
+          ],
+          "weight": 1,
+          "eventDigest": "d623651e91f79e37238af00c2dd3aa0876a28f14488f9e2dc7205c315a3b89cc",
+          "finalStateDigest": "09e65ddd336db68552308a2c5b3da9af3828dbf89c767b8f04267db1d56a4edd",
+          "simulationMs": 769.8536000000022,
+          "steps": 318,
+          "shots": 103,
+          "bladeShots": 0,
+          "skills": 12,
+          "strategyChanges": 31
+        },
+        {
+          "seed": 962571156,
+          "t": 17.6,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 17.6,
+            "mission": "ce-armory-withdrawal"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-engages": true,
+            "stolen-unit-1-reaches-exit": false,
+            "stolen-unit-2-reaches-exit": false,
+            "stolen-unit-3-reaches-exit": false,
+            "main-survivors": false,
+            "mission": false
+          },
+          "failed": [
+            "stolen-unit-1-reaches-exit",
+            "stolen-unit-2-reaches-exit",
+            "stolen-unit-3-reaches-exit",
+            "main-survivors",
+            "mission"
+          ],
+          "weight": 1,
+          "eventDigest": "6a29c44dabe33b640c41ad83d30593bf7d8a3a7f030f4ef77cee9bd22c6e7a6a",
+          "finalStateDigest": "b28dcd089da28a35fbd558ac5a0bea632bd07fb37fc947e46c34f385a763331b",
+          "simulationMs": 818.8410000000149,
+          "steps": 352,
+          "shots": 113,
+          "bladeShots": 0,
+          "skills": 13,
+          "strategyChanges": 38
+        },
+        {
+          "seed": 1654694174,
+          "t": 20.85,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 20.85,
+            "mission": "ce-armory-withdrawal"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-engages": true,
+            "stolen-unit-1-reaches-exit": false,
+            "stolen-unit-2-reaches-exit": false,
+            "stolen-unit-3-reaches-exit": false,
+            "main-survivors": false,
+            "mission": false
+          },
+          "failed": [
+            "stolen-unit-1-reaches-exit",
+            "stolen-unit-2-reaches-exit",
+            "stolen-unit-3-reaches-exit",
+            "main-survivors",
+            "mission"
+          ],
+          "weight": 1,
+          "eventDigest": "9e810c5b9ea3b52475693f322e7ab553472c477da2b78b2de3d3fb8c1927a116",
+          "finalStateDigest": "66de9e2cd1a0943083771dc3231be4823880b6297ccf50ac5e044bb0ed4b5d5a",
+          "simulationMs": 1133.47570000001,
+          "steps": 417,
+          "shots": 142,
+          "bladeShots": 0,
+          "skills": 15,
+          "strategyChanges": 60
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-u7-demolition",
+      "name": "15 · SEED DESTINY · 尤尼乌斯七破拆护卫",
+      "best": {
+        "seed": 1222423081,
+        "t": 180,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 180,
+          "mission": "seed-work-protection"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "work-completes": true,
+          "defender-engages": true,
+          "saboteur-engages": true,
+          "worker-survives": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 7,
+        "eventDigest": "7cbba5282cbde0385a83ad24e76b0db70db75bd4ffb78f6d669616c49772f2e2",
+        "finalStateDigest": "509f2e1ceaefb6868bf8c1e9f1718daad985076a5a0ec695f172eaf5e299e1da",
+        "simulationMs": 4314.369699999981,
+        "steps": 3600,
+        "shots": 345,
+        "bladeShots": 0,
+        "skills": 23,
+        "strategyChanges": 105
+      },
+      "samples": [
+        {
+          "seed": 1222423081,
+          "t": 180,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 180,
+            "mission": "seed-work-protection"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "work-completes": true,
+            "defender-engages": true,
+            "saboteur-engages": true,
+            "worker-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "7cbba5282cbde0385a83ad24e76b0db70db75bd4ffb78f6d669616c49772f2e2",
+          "finalStateDigest": "509f2e1ceaefb6868bf8c1e9f1718daad985076a5a0ec695f172eaf5e299e1da",
+          "simulationMs": 4314.369699999981,
+          "steps": 3600,
+          "shots": 345,
+          "bladeShots": 0,
+          "skills": 23,
+          "strategyChanges": 105
+        },
+        {
+          "seed": 2402344027,
+          "t": 180,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 180,
+            "mission": "seed-work-protection"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "work-completes": true,
+            "defender-engages": true,
+            "saboteur-engages": true,
+            "worker-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "6d02baa51c743088460139807093eca14a17b84474566965e3cf61242af4b458",
+          "finalStateDigest": "cf267461cb73f6259f8ff77d9699ee6fae11fa07c42fd8c29ebb4850e70f618d",
+          "simulationMs": 3604.954999999987,
+          "steps": 3600,
+          "shots": 229,
+          "bladeShots": 0,
+          "skills": 17,
+          "strategyChanges": 68
+        },
+        {
+          "seed": 650232438,
+          "t": 180,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 180,
+            "mission": "seed-work-protection"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "work-completes": true,
+            "defender-engages": true,
+            "saboteur-engages": true,
+            "worker-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "71d7bb40d6467e5c678471830a7a556b658ee992860a2289f742985e6a809528",
+          "finalStateDigest": "dc05af717ba2e66b99682a3ec00a1f1c2a6caeb0cd0aed0bfb318b3c840105f8",
+          "simulationMs": 3224.850000000006,
+          "steps": 3600,
+          "shots": 189,
+          "bladeShots": 1,
+          "skills": 16,
+          "strategyChanges": 81
+        },
+        {
+          "seed": 3966079128,
+          "t": 180,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 180,
+            "mission": "seed-work-protection"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "work-completes": true,
+            "defender-engages": true,
+            "saboteur-engages": true,
+            "worker-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "23144013f90ffb98b5b3292f23a776f94525b9af8e94281fb623f401026c623f",
+          "finalStateDigest": "76dfd00087c1d85a155e5dd871161bc7475ab13961083c0ddfcf31a00afe5f18",
+          "simulationMs": 2776.7407999999996,
+          "steps": 3600,
+          "shots": 155,
+          "bladeShots": 0,
+          "skills": 11,
+          "strategyChanges": 63
+        },
+        {
+          "seed": 666173644,
+          "t": 180,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 180,
+            "mission": "seed-work-protection"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "work-completes": true,
+            "defender-engages": true,
+            "saboteur-engages": true,
+            "worker-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "91b60f40d757d169f58f7b0f14329a27a111f1cc77ae84d1536a2132ea2f89bd",
+          "finalStateDigest": "165f1698948b71bfa0c34d489837c7020450c3fa940dd15d3468d982f1a92b32",
+          "simulationMs": 3189.011599999998,
+          "steps": 3600,
+          "shots": 281,
+          "bladeShots": 1,
+          "skills": 19,
+          "strategyChanges": 76
+        },
+        {
+          "seed": 2894414210,
+          "t": 180,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 180,
+            "mission": "seed-work-protection"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "work-completes": true,
+            "defender-engages": true,
+            "saboteur-engages": true,
+            "worker-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "4c537cbc48eff0b74f12a326f0ab4cc28c32021dfaba0b9bf0d3ebc40e9a1f8e",
+          "finalStateDigest": "0f01b843dbcedd1d3a6f889b697f55f87fecc0bb018fbf660fe065275a44c746",
+          "simulationMs": 3221.0125000000116,
+          "steps": 3600,
+          "shots": 234,
+          "bladeShots": 1,
+          "skills": 19,
+          "strategyChanges": 89
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-minerva-breakout",
+      "name": "16 · SEED DESTINY · 密涅瓦外海突破",
+      "best": {
+        "seed": 2096549867,
+        "t": 146.95000000000002,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 146.95000000000002,
+          "mission": "seed-sea-breakout"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "shinn-seed": true,
+          "ma-out": true,
+          "ship-impulse-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 7,
+        "eventDigest": "ebcea35eaf2ac1b9e8abef75e0733921e7d8f04651a9f39643b489cb4a058c32",
+        "finalStateDigest": "7377b05f042b78e5fa9b061e7c7b7aa722edf2fd154dabf4c98a0f17bf869d4c",
+        "simulationMs": 8897.467100000009,
+        "steps": 2939,
+        "shots": 912,
+        "bladeShots": 4,
+        "skills": 18,
+        "strategyChanges": 141
+      },
+      "samples": [
+        {
+          "seed": 2096549867,
+          "t": 146.95000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 146.95000000000002,
+            "mission": "seed-sea-breakout"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "shinn-seed": true,
+            "ma-out": true,
+            "ship-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "ebcea35eaf2ac1b9e8abef75e0733921e7d8f04651a9f39643b489cb4a058c32",
+          "finalStateDigest": "7377b05f042b78e5fa9b061e7c7b7aa722edf2fd154dabf4c98a0f17bf869d4c",
+          "simulationMs": 8897.467100000009,
+          "steps": 2939,
+          "shots": 912,
+          "bladeShots": 4,
+          "skills": 18,
+          "strategyChanges": 141
+        },
+        {
+          "seed": 3067382218,
+          "t": 146.95000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 146.95000000000002,
+            "mission": "seed-sea-breakout"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "shinn-seed": true,
+            "ma-out": true,
+            "ship-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "3215490c5ba688a314fbf91ff2be4709d7bedee7e72c9d9a875faaa448429a23",
+          "finalStateDigest": "c841165c9ffa04e26ed6cc616fbd3960d874d57703e51793e5ed6402ac8b1666",
+          "simulationMs": 7143.334299999988,
+          "steps": 2939,
+          "shots": 1243,
+          "bladeShots": 1,
+          "skills": 15,
+          "strategyChanges": 195
+        },
+        {
+          "seed": 4143169866,
+          "t": 146.95000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 146.95000000000002,
+            "mission": "seed-sea-breakout"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "shinn-seed": true,
+            "ma-out": true,
+            "ship-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "ab2d0890379661742451c08c8fe64cc26badebb200d1d0cdd271b0f27e466d69",
+          "finalStateDigest": "adaf73c37505bc21ae810ca36c940d7a23bb00b90f9dd912ed744dea7796422e",
+          "simulationMs": 7884.032099999982,
+          "steps": 2939,
+          "shots": 1369,
+          "bladeShots": 5,
+          "skills": 19,
+          "strategyChanges": 156
+        },
+        {
+          "seed": 3867678226,
+          "t": 146.95000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 146.95000000000002,
+            "mission": "seed-sea-breakout"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "shinn-seed": true,
+            "ma-out": true,
+            "ship-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "64c403eb458e606ff6466cf4fd636abb9c5adeb73a9e0b31db18418be9a59ddc",
+          "finalStateDigest": "2c229f9ed16f03fa4f33b30ea71d0a803b6a2041dabd96c461bc91965b08478a",
+          "simulationMs": 6962.791499999992,
+          "steps": 2939,
+          "shots": 1221,
+          "bladeShots": 9,
+          "skills": 19,
+          "strategyChanges": 134
+        },
+        {
+          "seed": 643055178,
+          "t": 147,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 147,
+            "mission": "seed-sea-breakout"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "shinn-seed": true,
+            "ma-out": true,
+            "ship-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "37100a189835091295cce64e140911c6ffa2d925e58a6e7a1570cf74727eda35",
+          "finalStateDigest": "2ab4f7dede415db32811a4c18c921018723801af3f0083783a455cf8b76fc31e",
+          "simulationMs": 6546.564199999993,
+          "steps": 2940,
+          "shots": 1113,
+          "bladeShots": 10,
+          "skills": 19,
+          "strategyChanges": 123
+        },
+        {
+          "seed": 1718947058,
+          "t": 147.05,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 147.05,
+            "mission": "seed-sea-breakout"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "shinn-seed": true,
+            "ma-out": true,
+            "ship-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "559113d7887151582c37156e08de886e89149f7d98f4ad5e390ced6ee2c25221",
+          "finalStateDigest": "cc0388b005d75b4c56ddd636fc9df09a9f621f7358a411f743403bc49a8f4fcd",
+          "simulationMs": 6211.622899999988,
+          "steps": 2941,
+          "shots": 906,
+          "bladeShots": 2,
+          "skills": 17,
+          "strategyChanges": 122
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-lohengrin-gate",
+      "name": "17 · SEED DESTINY · 阳电子炮侧翼突破",
+      "best": {
+        "seed": 489104896,
+        "t": 9.15,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 9.15,
+          "mission": "local-gate"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "decoy-fire": true,
+          "impulse-hits-emplacement": true,
+          "emplacement-out": true,
+          "impulse-survives": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "ca4c91ed05bbd1ce4d72ab2bd620a018dd423baea520fac4b85fa24917161efc",
+        "finalStateDigest": "23505eb059ce5ac671cb7c7fcf7a3b15d8341c79f93c394392a30ec6d9925ca7",
+        "simulationMs": 488.4398999999976,
+        "steps": 183,
+        "shots": 65,
+        "bladeShots": 0,
+        "skills": 9,
+        "strategyChanges": 28
+      },
+      "samples": [
+        {
+          "seed": 489104896,
+          "t": 9.15,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 9.15,
+            "mission": "local-gate"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "decoy-fire": true,
+            "impulse-hits-emplacement": true,
+            "emplacement-out": true,
+            "impulse-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "ca4c91ed05bbd1ce4d72ab2bd620a018dd423baea520fac4b85fa24917161efc",
+          "finalStateDigest": "23505eb059ce5ac671cb7c7fcf7a3b15d8341c79f93c394392a30ec6d9925ca7",
+          "simulationMs": 488.4398999999976,
+          "steps": 183,
+          "shots": 65,
+          "bladeShots": 0,
+          "skills": 9,
+          "strategyChanges": 28
+        },
+        {
+          "seed": 2896921290,
+          "t": 9.200000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 9.200000000000001,
+            "mission": "local-gate"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "decoy-fire": true,
+            "impulse-hits-emplacement": true,
+            "emplacement-out": true,
+            "impulse-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "3f22e7d0d1f921101c76950a381445b125acefc015c2ff7af9e456ec6640ad5e",
+          "finalStateDigest": "d0cf456e0ebd5def876c122502246d4743cfa5168e859d1bcfdbe9619764f055",
+          "simulationMs": 872.0711999999767,
+          "steps": 184,
+          "shots": 65,
+          "bladeShots": 0,
+          "skills": 10,
+          "strategyChanges": 29
+        },
+        {
+          "seed": 1058651226,
+          "t": 9.25,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 9.25,
+            "mission": "local-gate"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "decoy-fire": true,
+            "impulse-hits-emplacement": true,
+            "emplacement-out": true,
+            "impulse-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "f472817c7341a88d1c984b5f54044330c908418568032be1f8859f459c7bffc7",
+          "finalStateDigest": "86601c0d07252cab229fb492393e5b313bddb71132447854ca7960408e5ad94d",
+          "simulationMs": 398.44800000000396,
+          "steps": 185,
+          "shots": 63,
+          "bladeShots": 0,
+          "skills": 9,
+          "strategyChanges": 27
+        },
+        {
+          "seed": 1277899070,
+          "t": 10.15,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 10.15,
+            "mission": "local-gate"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "decoy-fire": true,
+            "impulse-hits-emplacement": true,
+            "emplacement-out": true,
+            "impulse-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "afb01d867a4d4b11f2fc1a0e12e8744ba702b18ed78305d69139b4eb4ecfc552",
+          "finalStateDigest": "4fdb247345ccb98ee0a1d8fc4a0cd808fabe139dad70254497a7e344c9419a47",
+          "simulationMs": 717.8305999999866,
+          "steps": 203,
+          "shots": 98,
+          "bladeShots": 3,
+          "skills": 8,
+          "strategyChanges": 29
+        },
+        {
+          "seed": 2234378470,
+          "t": 11.350000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 11.350000000000001,
+            "mission": "local-gate"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "decoy-fire": true,
+            "impulse-hits-emplacement": true,
+            "emplacement-out": true,
+            "impulse-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "49031df278a395f695b36e6f9172be247a0b314aaefea00a8e422cdeb7898ecc",
+          "finalStateDigest": "ebe7b71ce9a07f5d62b0f4a5d9f2095b246d86ee8da7da65da0d10fc86ced837",
+          "simulationMs": 573.3777999999875,
+          "steps": 227,
+          "shots": 87,
+          "bladeShots": 1,
+          "skills": 9,
+          "strategyChanges": 35
+        },
+        {
+          "seed": 1872323335,
+          "t": 13.05,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 13.05,
+            "mission": "local-gate"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "decoy-fire": true,
+            "impulse-hits-emplacement": true,
+            "emplacement-out": true,
+            "impulse-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "2448972c46b63725a64a801a7f350a045d5a1aee0ae80f9f992e24d1d5ca4cc0",
+          "finalStateDigest": "6d364b0e71188c8075c3e598fc0a30a5962204018cd9c0f6f272149c2d7e5278",
+          "simulationMs": 894.731300000014,
+          "steps": 261,
+          "shots": 123,
+          "bladeShots": 1,
+          "skills": 10,
+          "strategyChanges": 42
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-dardanelles",
+      "name": "18 · SEED DESTINY · 达达尼尔三方交锋",
+      "best": {
+        "seed": 1070858284,
+        "t": 79.25,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 79.25,
+          "mission": "seed-threeway-breakout"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "freedom-intervenes": true,
+          "impulse-engages": true,
+          "minerva-survives": true,
+          "heine-out": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "f63167a68236642bac531f81f24bb7c3e1d13471eedaca1bf42ca6baf485c7ce",
+        "finalStateDigest": "d04e797bf76af0dde71d2b32567f1f728885ae8a7a98ecbc6c97fd61a5da29dd",
+        "simulationMs": 13628.555699999997,
+        "steps": 1585,
+        "shots": 1219,
+        "bladeShots": 0,
+        "skills": 58,
+        "strategyChanges": 349
+      },
+      "samples": [
+        {
+          "seed": 1070858284,
+          "t": 79.25,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 79.25,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-intervenes": true,
+            "impulse-engages": true,
+            "minerva-survives": true,
+            "heine-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "f63167a68236642bac531f81f24bb7c3e1d13471eedaca1bf42ca6baf485c7ce",
+          "finalStateDigest": "d04e797bf76af0dde71d2b32567f1f728885ae8a7a98ecbc6c97fd61a5da29dd",
+          "simulationMs": 13628.555699999997,
+          "steps": 1585,
+          "shots": 1219,
+          "bladeShots": 0,
+          "skills": 58,
+          "strategyChanges": 349
+        },
+        {
+          "seed": 570804531,
+          "t": 79.25,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 79.25,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-intervenes": true,
+            "impulse-engages": true,
+            "minerva-survives": true,
+            "heine-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "8c52179725d1f0a8f8e82a21c0cdcd09ca81db5c3c4062e415115da2e7109a83",
+          "finalStateDigest": "3fd4ec59c0894ce648e81738443a298a4a8131e3233920fedae16921e49a1779",
+          "simulationMs": 13803.186099999992,
+          "steps": 1585,
+          "shots": 1418,
+          "bladeShots": 0,
+          "skills": 53,
+          "strategyChanges": 337
+        },
+        {
+          "seed": 1916726738,
+          "t": 79.2,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 79.2,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "freedom-intervenes": true,
+            "impulse-engages": true,
+            "minerva-survives": true,
+            "heine-out": false,
+            "mission": true
+          },
+          "failed": [
+            "heine-out"
+          ],
+          "weight": 6,
+          "eventDigest": "30b2a922fdafea649e7a76111640f91231a8f1237ac1d984035ebf70cab542db",
+          "finalStateDigest": "9ea22e1dd8f57a460dd2f40ad7ca024fb053ca4bfba44abd587d6b315513aead",
+          "simulationMs": 13299.6207,
+          "steps": 1584,
+          "shots": 1505,
+          "bladeShots": 0,
+          "skills": 51,
+          "strategyChanges": 354
+        },
+        {
+          "seed": 1481198836,
+          "t": 80.45,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 80.45,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "freedom-intervenes": true,
+            "impulse-engages": true,
+            "minerva-survives": true,
+            "heine-out": false,
+            "mission": true
+          },
+          "failed": [
+            "heine-out"
+          ],
+          "weight": 6,
+          "eventDigest": "32832364b0252534f0f4ab6583124309bf6bf0aeeb0111e3d3d70326c7cac4be",
+          "finalStateDigest": "3c1a32eaa998fb17f5c0ad0587755551604790109ce17ddfceea769063407990",
+          "simulationMs": 13313.547900000005,
+          "steps": 1609,
+          "shots": 1275,
+          "bladeShots": 0,
+          "skills": 64,
+          "strategyChanges": 443
+        },
+        {
+          "seed": 3280357552,
+          "t": 85.10000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 85.10000000000001,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "freedom-intervenes": true,
+            "impulse-engages": true,
+            "minerva-survives": true,
+            "heine-out": false,
+            "mission": true
+          },
+          "failed": [
+            "heine-out"
+          ],
+          "weight": 6,
+          "eventDigest": "bfefa0884937599f278d40ea01727007ffcbb0a56ee90179d9f680f484554a69",
+          "finalStateDigest": "655dc68f7f9ed2c7ab8a30e2abde3c69625d3dda0f727f966d7043c617e6c9bb",
+          "simulationMs": 14205.0098,
+          "steps": 1702,
+          "shots": 1684,
+          "bladeShots": 3,
+          "skills": 66,
+          "strategyChanges": 333
+        },
+        {
+          "seed": 3838607577,
+          "t": 68.3,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 68.3,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "freedom-intervenes": true,
+            "impulse-engages": true,
+            "minerva-survives": false,
+            "heine-out": false,
+            "mission": false
+          },
+          "failed": [
+            "minerva-survives",
+            "heine-out",
+            "mission"
+          ],
+          "weight": 2,
+          "eventDigest": "94be6b5a97c0d09028ce6c2651921cb9ee050a779ee41124e93075dac9ba99ae",
+          "finalStateDigest": "d9cfe5f0f6f58d85d91807b7fdd22dff908e61963349b863a8f1196f9d8931f0",
+          "simulationMs": 10481.348999999987,
+          "steps": 1366,
+          "shots": 1141,
+          "bladeShots": 1,
+          "skills": 51,
+          "strategyChanges": 301
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-crete",
+      "name": "19 · SEED DESTINY · 克里特三方突围",
+      "best": {
+        "seed": 301533304,
+        "t": 76.25,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 76.25,
+          "mission": "seed-threeway-breakout"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "freedom-intervenes": true,
+          "abyss-out": false,
+          "orb-carrier-out": false,
+          "minerva-survives": true,
+          "mission": true
+        },
+        "failed": [
+          "abyss-out",
+          "orb-carrier-out"
+        ],
+        "weight": 5,
+        "eventDigest": "68e2c0ea113969a16e5d2d15ab0f16cbf83600e6628075050834e8e24c06e3c4",
+        "finalStateDigest": "9aad5c0241c981d1f45dbd50b6712a4600fdfb083210032620f619848e0b8479",
+        "simulationMs": 12126.717399999994,
+        "steps": 1525,
+        "shots": 1199,
+        "bladeShots": 2,
+        "skills": 61,
+        "strategyChanges": 309
+      },
+      "samples": [
+        {
+          "seed": 301533304,
+          "t": 76.25,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 76.25,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "freedom-intervenes": true,
+            "abyss-out": false,
+            "orb-carrier-out": false,
+            "minerva-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "abyss-out",
+            "orb-carrier-out"
+          ],
+          "weight": 5,
+          "eventDigest": "68e2c0ea113969a16e5d2d15ab0f16cbf83600e6628075050834e8e24c06e3c4",
+          "finalStateDigest": "9aad5c0241c981d1f45dbd50b6712a4600fdfb083210032620f619848e0b8479",
+          "simulationMs": 12126.717399999994,
+          "steps": 1525,
+          "shots": 1199,
+          "bladeShots": 2,
+          "skills": 61,
+          "strategyChanges": 309
+        },
+        {
+          "seed": 433682909,
+          "t": 76.25,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 76.25,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "freedom-intervenes": true,
+            "abyss-out": false,
+            "orb-carrier-out": false,
+            "minerva-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "abyss-out",
+            "orb-carrier-out"
+          ],
+          "weight": 5,
+          "eventDigest": "8ac3b36ebbb321bf9fe5518f2509788fd7febd86d3200e3da927ab855877115c",
+          "finalStateDigest": "4d03d9c443b2c759e1eb8f66f4f4e6ef0c56f7bc4a51ab78e901b9365b8c3431",
+          "simulationMs": 11026.46649999998,
+          "steps": 1525,
+          "shots": 1381,
+          "bladeShots": 1,
+          "skills": 74,
+          "strategyChanges": 423
+        },
+        {
+          "seed": 573080714,
+          "t": 76.3,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 76.3,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "freedom-intervenes": true,
+            "abyss-out": false,
+            "orb-carrier-out": false,
+            "minerva-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "abyss-out",
+            "orb-carrier-out"
+          ],
+          "weight": 5,
+          "eventDigest": "3bcbd236845a538a36386f6b9846a1b0a40ed4de656ee5a4cffa11e631785a58",
+          "finalStateDigest": "0eee893effdade80adeacd6df98db09739a66ad9df8ccafac649d2a28cf1241f",
+          "simulationMs": 11526.228300000017,
+          "steps": 1526,
+          "shots": 1187,
+          "bladeShots": 0,
+          "skills": 71,
+          "strategyChanges": 460
+        },
+        {
+          "seed": 2888562453,
+          "t": 76.35000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 76.35000000000001,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "freedom-intervenes": true,
+            "abyss-out": false,
+            "orb-carrier-out": false,
+            "minerva-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "abyss-out",
+            "orb-carrier-out"
+          ],
+          "weight": 5,
+          "eventDigest": "fb23f1a23b2ec8ce5fec23a8fb1aeef7b4eceeb23383d721c5ce8fd20f35f99d",
+          "finalStateDigest": "28f8952be40f1e2d78a3383e9a58f2804b3d6950bf8f39d61587a549c8009532",
+          "simulationMs": 11278.094000000012,
+          "steps": 1527,
+          "shots": 1185,
+          "bladeShots": 0,
+          "skills": 61,
+          "strategyChanges": 420
+        },
+        {
+          "seed": 979927372,
+          "t": 76.35000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 76.35000000000001,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "freedom-intervenes": true,
+            "abyss-out": false,
+            "orb-carrier-out": false,
+            "minerva-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "abyss-out",
+            "orb-carrier-out"
+          ],
+          "weight": 5,
+          "eventDigest": "b127f2053ef585ab44e9a80cb84a3aed96ea2370df4ca125fff7f6c4858853a8",
+          "finalStateDigest": "a99c4c59db283388ed056c3a8abb4ee5373207aae5c925a84e721e3b03db6cb9",
+          "simulationMs": 12011.338599999988,
+          "steps": 1527,
+          "shots": 1214,
+          "bladeShots": 0,
+          "skills": 74,
+          "strategyChanges": 473
+        },
+        {
+          "seed": 437553154,
+          "t": 85.60000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 85.60000000000001,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "freedom-intervenes": true,
+            "abyss-out": false,
+            "orb-carrier-out": false,
+            "minerva-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "abyss-out",
+            "orb-carrier-out"
+          ],
+          "weight": 5,
+          "eventDigest": "d3c0a097a787d761ff5e46749af9ac64a92db473a4c45586195adc7635cc98f2",
+          "finalStateDigest": "b587d1fa97b5ae4f5fa1fe23797c342a4090f4f0c46cd5d9ec2bd99dc949c82a",
+          "simulationMs": 12346.166700000002,
+          "steps": 1712,
+          "shots": 1326,
+          "bladeShots": 0,
+          "skills": 77,
+          "strategyChanges": 471
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-berlin",
+      "name": "20 · SEED DESTINY · 柏林毁灭阻击",
+      "best": {
+        "seed": 1160153093,
+        "t": 10.450000000000001,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 10.450000000000001,
+          "mission": "local-berlin"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "impulse-engages": true,
+          "murasame-engages": true,
+          "freedom-finishes-destroy": true,
+          "destroy-out": true,
+          "freedom-impulse-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 9,
+        "eventDigest": "0b2bc48bf1dfd7f11064f1dcaa635a23300bc7c131f0892a7bcb8a363b9b8636",
+        "finalStateDigest": "a274013bcbd379e38a33ab39f56a25f236c06ce11627b427e249330aa7e4aed6",
+        "simulationMs": 1464.0558999999776,
+        "steps": 209,
+        "shots": 155,
+        "bladeShots": 0,
+        "skills": 21,
+        "strategyChanges": 71
+      },
+      "samples": [
+        {
+          "seed": 1160153093,
+          "t": 10.450000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 10.450000000000001,
+            "mission": "local-berlin"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "impulse-engages": true,
+            "murasame-engages": true,
+            "freedom-finishes-destroy": true,
+            "destroy-out": true,
+            "freedom-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "0b2bc48bf1dfd7f11064f1dcaa635a23300bc7c131f0892a7bcb8a363b9b8636",
+          "finalStateDigest": "a274013bcbd379e38a33ab39f56a25f236c06ce11627b427e249330aa7e4aed6",
+          "simulationMs": 1464.0558999999776,
+          "steps": 209,
+          "shots": 155,
+          "bladeShots": 0,
+          "skills": 21,
+          "strategyChanges": 71
+        },
+        {
+          "seed": 4050931978,
+          "t": 14.950000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 14.950000000000001,
+            "mission": "local-berlin"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "impulse-engages": true,
+            "murasame-engages": true,
+            "freedom-finishes-destroy": true,
+            "destroy-out": true,
+            "freedom-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "b850c18de72bcc0c72b81de7da69514cbe5bb2a2d4269781cf92f44526829066",
+          "finalStateDigest": "707778755b0e902bf9bf5d6730cda1766147a843a002f4d2bf4bb35b2a3e38bd",
+          "simulationMs": 1746.9835999999777,
+          "steps": 299,
+          "shots": 220,
+          "bladeShots": 0,
+          "skills": 28,
+          "strategyChanges": 104
+        },
+        {
+          "seed": 2281463802,
+          "t": 32.45,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 32.45,
+            "mission": "local-berlin"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "impulse-engages": true,
+            "murasame-engages": true,
+            "freedom-finishes-destroy": true,
+            "destroy-out": true,
+            "freedom-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "dcbebb8caa881f517c9b617fa2e6dd63b4dfeb04070bc62fd49689e7de3eca52",
+          "finalStateDigest": "a1441c8b71990e0d1ec919ac6e5ac97a49ce9a8589a0e195825f42ab2d6f44ac",
+          "simulationMs": 4080.8353999999817,
+          "steps": 649,
+          "shots": 454,
+          "bladeShots": 1,
+          "skills": 40,
+          "strategyChanges": 179
+        },
+        {
+          "seed": 3557293408,
+          "t": 14.05,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 14.05,
+            "mission": "local-berlin"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-engages": true,
+            "murasame-engages": true,
+            "freedom-finishes-destroy": false,
+            "destroy-out": true,
+            "freedom-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [
+            "freedom-finishes-destroy"
+          ],
+          "weight": 8,
+          "eventDigest": "4035af34b69938210c1944efc4b92d31ad8c387ac6aa233e3c179bf69ccf9d05",
+          "finalStateDigest": "91a599adcf4c570d7e65ed9969b8da10f2c45e5b88fca71b4f9975557f75a048",
+          "simulationMs": 1530.336900000053,
+          "steps": 281,
+          "shots": 195,
+          "bladeShots": 0,
+          "skills": 22,
+          "strategyChanges": 95
+        },
+        {
+          "seed": 2168379518,
+          "t": 15.4,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 15.4,
+            "mission": "local-berlin"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-engages": true,
+            "murasame-engages": true,
+            "freedom-finishes-destroy": false,
+            "destroy-out": true,
+            "freedom-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [
+            "freedom-finishes-destroy"
+          ],
+          "weight": 8,
+          "eventDigest": "0d2b8433da898d075978fc2fe3052136bc81e63ca18216fae155733f32d7db0a",
+          "finalStateDigest": "f954a177a6679d047d6db7a7a6e86507a0081924a0cbb9a949d97c8c3902c0b5",
+          "simulationMs": 1656.755700000038,
+          "steps": 308,
+          "shots": 272,
+          "bladeShots": 1,
+          "skills": 28,
+          "strategyChanges": 106
+        },
+        {
+          "seed": 836933209,
+          "t": 17.8,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 17.8,
+            "mission": "local-berlin"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-engages": true,
+            "murasame-engages": true,
+            "freedom-finishes-destroy": false,
+            "destroy-out": true,
+            "freedom-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [
+            "freedom-finishes-destroy"
+          ],
+          "weight": 8,
+          "eventDigest": "2fa3af1ed8d71689306c22ded3764e17b5e8fe1fbd61ed8bcb51c18785780e8a",
+          "finalStateDigest": "c97f6987e43244c24c3d2550633bb98624a19005e003eeaf19440e8524cefe81",
+          "simulationMs": 1918.1280999999726,
+          "steps": 356,
+          "shots": 350,
+          "bladeShots": 1,
+          "skills": 28,
+          "strategyChanges": 114
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-angel-down",
+      "name": "21 · SEED DESTINY · 大天使号追击脱离",
+      "best": {
+        "seed": 2553040195,
+        "t": 170.85000000000002,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 170.85000000000002,
+          "mission": "seed-submerge-escape"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "impulse-disabled": false,
+          "impulse-recovers": false,
+          "freedom-out": false,
+          "impulse-blade-finish": false,
+          "archangel-survives": true,
+          "mission": true
+        },
+        "failed": [
+          "impulse-disabled",
+          "impulse-recovers",
+          "freedom-out",
+          "impulse-blade-finish"
+        ],
+        "weight": 4,
+        "eventDigest": "dfcb7a4014ac6cea01921e423bbd8c980e70604a987a98117b47d585b02be225",
+        "finalStateDigest": "805b90fe023513697ebfc4e55507863eaa260ce61380f50d5258134135d5a32b",
+        "simulationMs": 5377.779000000039,
+        "steps": 3417,
+        "shots": 503,
+        "bladeShots": 0,
+        "skills": 29,
+        "strategyChanges": 111
+      },
+      "samples": [
+        {
+          "seed": 2553040195,
+          "t": 170.85000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 170.85000000000002,
+            "mission": "seed-submerge-escape"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-disabled": false,
+            "impulse-recovers": false,
+            "freedom-out": false,
+            "impulse-blade-finish": false,
+            "archangel-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "impulse-disabled",
+            "impulse-recovers",
+            "freedom-out",
+            "impulse-blade-finish"
+          ],
+          "weight": 4,
+          "eventDigest": "dfcb7a4014ac6cea01921e423bbd8c980e70604a987a98117b47d585b02be225",
+          "finalStateDigest": "805b90fe023513697ebfc4e55507863eaa260ce61380f50d5258134135d5a32b",
+          "simulationMs": 5377.779000000039,
+          "steps": 3417,
+          "shots": 503,
+          "bladeShots": 0,
+          "skills": 29,
+          "strategyChanges": 111
+        },
+        {
+          "seed": 3808383392,
+          "t": 174.20000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 174.20000000000002,
+            "mission": "seed-submerge-escape"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-disabled": false,
+            "impulse-recovers": false,
+            "freedom-out": false,
+            "impulse-blade-finish": false,
+            "archangel-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "impulse-disabled",
+            "impulse-recovers",
+            "freedom-out",
+            "impulse-blade-finish"
+          ],
+          "weight": 4,
+          "eventDigest": "556255070e01fedacc8abcfa228039995d7bf4e45cc664d58892f0ee35cb5333",
+          "finalStateDigest": "b276025307e293f6e095585d790daec7c44d4b7b878fd772c29780d81b604250",
+          "simulationMs": 5102.671700000006,
+          "steps": 3484,
+          "shots": 454,
+          "bladeShots": 0,
+          "skills": 27,
+          "strategyChanges": 119
+        },
+        {
+          "seed": 3538833287,
+          "t": 183.75,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 183.75,
+            "mission": "seed-submerge-escape"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-disabled": false,
+            "impulse-recovers": false,
+            "freedom-out": false,
+            "impulse-blade-finish": false,
+            "archangel-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "impulse-disabled",
+            "impulse-recovers",
+            "freedom-out",
+            "impulse-blade-finish"
+          ],
+          "weight": 4,
+          "eventDigest": "7376ced217c870046d418212fe561545230b32c1021a847662f825185f15b49d",
+          "finalStateDigest": "7174f60dc9a1fd7b7d9030a08a564bb2e5720239aa13758d75ba1d96dd15f516",
+          "simulationMs": 6265.39929999999,
+          "steps": 3675,
+          "shots": 473,
+          "bladeShots": 0,
+          "skills": 26,
+          "strategyChanges": 116
+        },
+        {
+          "seed": 2300883544,
+          "t": 279.55,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 279.55,
+            "mission": "seed-submerge-escape"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-disabled": false,
+            "impulse-recovers": false,
+            "freedom-out": false,
+            "impulse-blade-finish": false,
+            "archangel-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "impulse-disabled",
+            "impulse-recovers",
+            "freedom-out",
+            "impulse-blade-finish"
+          ],
+          "weight": 4,
+          "eventDigest": "d195c4ff345c087fde1ae4c5df7b710cafe810856bc66efb04ff39575ee87273",
+          "finalStateDigest": "ca76ce18dc9009bb0ccaf2dd880c948fd1a628052be953c8cddae789e6f24505",
+          "simulationMs": 10342.103400000022,
+          "steps": 5591,
+          "shots": 772,
+          "bladeShots": 1,
+          "skills": 41,
+          "strategyChanges": 209
+        },
+        {
+          "seed": 361489947,
+          "t": 480,
+          "result": null,
+          "allCriteria": false,
+          "criteria": {
+            "impulse-disabled": false,
+            "impulse-recovers": false,
+            "freedom-out": false,
+            "impulse-blade-finish": false,
+            "archangel-survives": true,
+            "mission": false
+          },
+          "failed": [
+            "impulse-disabled",
+            "impulse-recovers",
+            "freedom-out",
+            "impulse-blade-finish",
+            "mission"
+          ],
+          "weight": 2,
+          "eventDigest": "1a7b285b8b4a55bd196fd1380aef04f729fcb6ea24bd2e0ee08e5a28e2d6f8dc",
+          "finalStateDigest": "d1aaeca9ec4c2d36ae3238e489d3cfa23bb02bdcf3b89773afcdf825f0d20fad",
+          "simulationMs": 11261.873900000006,
+          "steps": 9600,
+          "shots": 434,
+          "bladeShots": 1,
+          "skills": 27,
+          "strategyChanges": 142
+        },
+        {
+          "seed": 4001502098,
+          "t": 480,
+          "result": null,
+          "allCriteria": false,
+          "criteria": {
+            "impulse-disabled": false,
+            "impulse-recovers": false,
+            "freedom-out": false,
+            "impulse-blade-finish": false,
+            "archangel-survives": true,
+            "mission": false
+          },
+          "failed": [
+            "impulse-disabled",
+            "impulse-recovers",
+            "freedom-out",
+            "impulse-blade-finish",
+            "mission"
+          ],
+          "weight": 2,
+          "eventDigest": "cd82215d95037b8e5097729a76871e93d4d9339daedaf2e78de0b51251470a05",
+          "finalStateDigest": "a64f0a346300241e50a9fa35fc19efb155c31b73d838bc97f2138741bdf10389",
+          "simulationMs": 11706.200799999991,
+          "steps": 9600,
+          "shots": 578,
+          "bladeShots": 1,
+          "skills": 33,
+          "strategyChanges": 161
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-heavens-base",
+      "name": "22 · SEED DESTINY · 天堂基地毁灭部队阻击",
+      "best": {
+        "seed": 2190622483,
+        "t": 217.55,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 217.55,
+          "mission": "local-heavens"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "shinn-attacks": true,
+          "rey-attacks": true,
+          "luna-attacks": true,
+          "five-destroy-out": true,
+          "aces-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 9,
+        "eventDigest": "aa6260fdbc6f8f6d4d093f850b4e15efe76aea6c12d197f6dd95ec71a33a4cf4",
+        "finalStateDigest": "08755a6558beaf3deddafc412bced6c4b99db13d1096401269b7ca78eda3bba9",
+        "simulationMs": 16699.374499999976,
+        "steps": 4351,
+        "shots": 1830,
+        "bladeShots": 2,
+        "skills": 92,
+        "strategyChanges": 454
+      },
+      "samples": [
+        {
+          "seed": 2190622483,
+          "t": 217.55,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 217.55,
+            "mission": "local-heavens"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "shinn-attacks": true,
+            "rey-attacks": true,
+            "luna-attacks": true,
+            "five-destroy-out": true,
+            "aces-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "aa6260fdbc6f8f6d4d093f850b4e15efe76aea6c12d197f6dd95ec71a33a4cf4",
+          "finalStateDigest": "08755a6558beaf3deddafc412bced6c4b99db13d1096401269b7ca78eda3bba9",
+          "simulationMs": 16699.374499999976,
+          "steps": 4351,
+          "shots": 1830,
+          "bladeShots": 2,
+          "skills": 92,
+          "strategyChanges": 454
+        },
+        {
+          "seed": 538432690,
+          "t": 259.15000000000003,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 259.15000000000003,
+            "mission": "local-heavens"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "shinn-attacks": true,
+            "rey-attacks": true,
+            "luna-attacks": true,
+            "five-destroy-out": true,
+            "aces-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "2cde37f77e6615ccab5c84f3643843b41f2c6febb11116aab3d6a3ca8007464b",
+          "finalStateDigest": "d1c701951cd5c415d08229024328e4fd2a0c3976d7755dc70c95cd186590b8b5",
+          "simulationMs": 18779.0527,
+          "steps": 5183,
+          "shots": 1899,
+          "bladeShots": 0,
+          "skills": 102,
+          "strategyChanges": 531
+        },
+        {
+          "seed": 377821763,
+          "t": 261.1,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 261.1,
+            "mission": "local-heavens"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "shinn-attacks": true,
+            "rey-attacks": true,
+            "luna-attacks": true,
+            "five-destroy-out": true,
+            "aces-survive": false,
+            "mission": true
+          },
+          "failed": [
+            "aces-survive"
+          ],
+          "weight": 7,
+          "eventDigest": "513b7ef1108f94f3739c14db098186743ecdf108a1b9d863aeca0edb99c92afc",
+          "finalStateDigest": "aeaccabf5040b75a091531e3c18f9b75b01b0a36a3cb9c1aa0866383e63afcdf",
+          "simulationMs": 17604.261300000013,
+          "steps": 5222,
+          "shots": 1946,
+          "bladeShots": 0,
+          "skills": 83,
+          "strategyChanges": 355
+        },
+        {
+          "seed": 1082921064,
+          "t": 152,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 152,
+            "mission": "local-heavens"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "shinn-attacks": true,
+            "rey-attacks": true,
+            "luna-attacks": true,
+            "five-destroy-out": false,
+            "aces-survive": false,
+            "mission": false
+          },
+          "failed": [
+            "five-destroy-out",
+            "aces-survive",
+            "mission"
+          ],
+          "weight": 3,
+          "eventDigest": "bdd372fd8ee883ff2b1071009c447fbae38d82928de9d735a7db6077635e870f",
+          "finalStateDigest": "ce3bd847a041cef0f129f767bf3c9137095f9779c48cfedc3703e5d713c2ac16",
+          "simulationMs": 11615.854299999948,
+          "steps": 3040,
+          "shots": 1777,
+          "bladeShots": 0,
+          "skills": 65,
+          "strategyChanges": 169
+        },
+        {
+          "seed": 3467516666,
+          "t": 207.9,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 207.9,
+            "mission": "local-heavens"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "shinn-attacks": true,
+            "rey-attacks": true,
+            "luna-attacks": true,
+            "five-destroy-out": false,
+            "aces-survive": false,
+            "mission": false
+          },
+          "failed": [
+            "five-destroy-out",
+            "aces-survive",
+            "mission"
+          ],
+          "weight": 3,
+          "eventDigest": "e57c18d4471829aaa2077442bd3261c8e6af2a5202df39cac0765235e5cecefc",
+          "finalStateDigest": "eb2b9a7180d0c4ae512ea11fb8f7e87102f1ae4bff38ec5f588b05091b730c95",
+          "simulationMs": 15127.318400000047,
+          "steps": 4158,
+          "shots": 1840,
+          "bladeShots": 0,
+          "skills": 104,
+          "strategyChanges": 175
+        },
+        {
+          "seed": 943092009,
+          "t": 480,
+          "result": {
+            "reason": "timeout",
+            "winner": null,
+            "t": 480,
+            "mission": "local-heavens"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "shinn-attacks": true,
+            "rey-attacks": true,
+            "luna-attacks": true,
+            "five-destroy-out": false,
+            "aces-survive": false,
+            "mission": false
+          },
+          "failed": [
+            "five-destroy-out",
+            "aces-survive",
+            "mission"
+          ],
+          "weight": 3,
+          "eventDigest": "78294c8f4ed76803edff07d78e50175e9b08ac29c28f398bcad03d6ef7880b47",
+          "finalStateDigest": "c273e599e23d8151de4c6c36f4637f88a1c529fa470ec508987cf166c60617bb",
+          "simulationMs": 20188.761200000008,
+          "steps": 9600,
+          "shots": 1830,
+          "bladeShots": 0,
+          "skills": 96,
+          "strategyChanges": 405
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-eternal-rescue",
+      "name": "23 · SEED DESTINY · 永恒号宇宙救援",
+      "best": {
+        "seed": 346648336,
+        "t": 43.35,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 43.35,
+          "mission": "seed-space-escape"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "strike-freedom-fire": true,
+          "dragoon-launch": true,
+          "eternal-kira-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 6,
+        "eventDigest": "06137ed75484094672efba9a2170e3fc99eaeeaff4d8473db41529b9cd7bc17f",
+        "finalStateDigest": "ebfc059800b70656285bf0364e334961461adf9c6bb0ac2153975ff653234efc",
+        "simulationMs": 5568.734400000016,
+        "steps": 867,
+        "shots": 671,
+        "bladeShots": 0,
+        "skills": 11,
+        "strategyChanges": 73
+      },
+      "samples": [
+        {
+          "seed": 346648336,
+          "t": 43.35,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 43.35,
+            "mission": "seed-space-escape"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "strike-freedom-fire": true,
+            "dragoon-launch": true,
+            "eternal-kira-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "06137ed75484094672efba9a2170e3fc99eaeeaff4d8473db41529b9cd7bc17f",
+          "finalStateDigest": "ebfc059800b70656285bf0364e334961461adf9c6bb0ac2153975ff653234efc",
+          "simulationMs": 5568.734400000016,
+          "steps": 867,
+          "shots": 671,
+          "bladeShots": 0,
+          "skills": 11,
+          "strategyChanges": 73
+        },
+        {
+          "seed": 3883545843,
+          "t": 43.35,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 43.35,
+            "mission": "seed-space-escape"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "strike-freedom-fire": true,
+            "dragoon-launch": true,
+            "eternal-kira-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "197f463e059899bdbc526a715daea757d0a151ba950dc39a1139f14dc807b982",
+          "finalStateDigest": "69094e700e0667db52c80cf61a724af7480756fdc312e837bc159df7c584c086",
+          "simulationMs": 6900.134999999951,
+          "steps": 867,
+          "shots": 702,
+          "bladeShots": 0,
+          "skills": 6,
+          "strategyChanges": 106
+        },
+        {
+          "seed": 3381122869,
+          "t": 43.35,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 43.35,
+            "mission": "seed-space-escape"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "strike-freedom-fire": true,
+            "dragoon-launch": true,
+            "eternal-kira-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "7e533d720a6dac88ef97d3ca35232fc7ed31b989afd0a7797d716b6141fbd2a6",
+          "finalStateDigest": "32a2ad7bbe0177ae36e10703daeaecdc9be5a6c6cee9d1eb55f8906ea34fc289",
+          "simulationMs": 6395.343300000008,
+          "steps": 867,
+          "shots": 713,
+          "bladeShots": 0,
+          "skills": 8,
+          "strategyChanges": 98
+        },
+        {
+          "seed": 3359921665,
+          "t": 43.35,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 43.35,
+            "mission": "seed-space-escape"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "strike-freedom-fire": true,
+            "dragoon-launch": true,
+            "eternal-kira-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "0f71c931c2cc6704c3a3c94fd214ebf3fc6bf49f07b98f17c4e7b585cd6763d1",
+          "finalStateDigest": "e6aa945d0fc208a2baac970ec4579ab82fb55a1670fa1cf3f47dfc8aad9c5032",
+          "simulationMs": 5906.825699999987,
+          "steps": 867,
+          "shots": 745,
+          "bladeShots": 0,
+          "skills": 8,
+          "strategyChanges": 81
+        },
+        {
+          "seed": 1181173433,
+          "t": 43.35,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 43.35,
+            "mission": "seed-space-escape"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "strike-freedom-fire": true,
+            "dragoon-launch": true,
+            "eternal-kira-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "89d19e12da66d908457b71b5e6ca239a4c1a2e815d16682373c0ab2b58e37745",
+          "finalStateDigest": "b1a5d34957945dbb7422bbd1fb478d6d076faebcf21f70b46f5a728314325894",
+          "simulationMs": 5375.88949999999,
+          "steps": 867,
+          "shots": 804,
+          "bladeShots": 0,
+          "skills": 13,
+          "strategyChanges": 69
+        },
+        {
+          "seed": 2637233469,
+          "t": 43.35,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 43.35,
+            "mission": "seed-space-escape"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "strike-freedom-fire": true,
+            "dragoon-launch": true,
+            "eternal-kira-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "3a5720c087925be0af3709296ad0d858394e04169a39a444002663f5692f61bb",
+          "finalStateDigest": "36eec9d09f4c4273c831b6e01843e9da7bdb9b26f65e3fe8aacaf8e77863a3dd",
+          "simulationMs": 5921.024700000009,
+          "steps": 867,
+          "shots": 753,
+          "bladeShots": 0,
+          "skills": 9,
+          "strategyChanges": 48
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-orb-high-air",
+      "name": "24 · SEED DESTINY · 奥布双机空域协防",
+      "best": {
+        "seed": 3986567158,
+        "t": 60,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 60,
+          "mission": "ce-orb-air-withdrawal"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "kira-fire": true,
+          "athrun-engages": true,
+          "shinn-engages": true,
+          "rey-engages": true,
+          "two-defenders-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "3544be990223ed612e4b9dd80eeb9f53ff762a2cad84da72ae7584b28c93baae",
+        "finalStateDigest": "9381c3a706b2282103b65c262394c075d5d8fa5d54090d11c44f4ed40753e064",
+        "simulationMs": 3493.581700000039,
+        "steps": 1200,
+        "shots": 419,
+        "bladeShots": 3,
+        "skills": 36,
+        "strategyChanges": 103
+      },
+      "samples": [
+        {
+          "seed": 3986567158,
+          "t": 60,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 60,
+            "mission": "ce-orb-air-withdrawal"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-engages": true,
+            "shinn-engages": true,
+            "rey-engages": true,
+            "two-defenders-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "3544be990223ed612e4b9dd80eeb9f53ff762a2cad84da72ae7584b28c93baae",
+          "finalStateDigest": "9381c3a706b2282103b65c262394c075d5d8fa5d54090d11c44f4ed40753e064",
+          "simulationMs": 3493.581700000039,
+          "steps": 1200,
+          "shots": 419,
+          "bladeShots": 3,
+          "skills": 36,
+          "strategyChanges": 103
+        },
+        {
+          "seed": 2071473783,
+          "t": 325.8,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 325.8,
+            "mission": "ce-orb-air-withdrawal"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-engages": true,
+            "shinn-engages": true,
+            "rey-engages": true,
+            "two-defenders-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "e6ff3bfd9ec2c6a3d000e3429093fe779cf80a58271bffc1a5029697d7e28968",
+          "finalStateDigest": "2a5e1fd2253f647aca1d730dead87bded29022d0cad4b3a2e3b37df91e1facba",
+          "simulationMs": 10613.043999999994,
+          "steps": 6516,
+          "shots": 1638,
+          "bladeShots": 2,
+          "skills": 149,
+          "strategyChanges": 515
+        },
+        {
+          "seed": 694846895,
+          "t": 334.90000000000003,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 334.90000000000003,
+            "mission": "ce-orb-air-withdrawal"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-engages": true,
+            "shinn-engages": true,
+            "rey-engages": true,
+            "two-defenders-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "f6521fe7db29a2cabad7b4e1d6867d21265471edb463c1ec393c1932f8afb4e4",
+          "finalStateDigest": "5d6ca8f5dc14e2b6ca170d9444cd4c13024c3a4b3559d812912d3c3e9ed648b1",
+          "simulationMs": 16836.31050000002,
+          "steps": 6698,
+          "shots": 1909,
+          "bladeShots": 6,
+          "skills": 159,
+          "strategyChanges": 567
+        },
+        {
+          "seed": 846773038,
+          "t": 430.6,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 430.6,
+            "mission": "ce-orb-air-withdrawal"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-engages": true,
+            "shinn-engages": true,
+            "rey-engages": true,
+            "two-defenders-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "f9f5ff77c87fb396d0d05a30ce74c83e29ae72a35192661215e595f3ac3cc682",
+          "finalStateDigest": "b48dd10839e5429d0b6146c11b69b230266edea90f354a840d0706da4e6d3c0a",
+          "simulationMs": 15702.445199999958,
+          "steps": 8612,
+          "shots": 2303,
+          "bladeShots": 4,
+          "skills": 182,
+          "strategyChanges": 827
+        },
+        {
+          "seed": 2824367303,
+          "t": 460.65000000000003,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 460.65000000000003,
+            "mission": "ce-orb-air-withdrawal"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-engages": true,
+            "shinn-engages": true,
+            "rey-engages": true,
+            "two-defenders-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "2e116fa614137c1df8262b2ae5b7e6c95d1a0296c98849b7013e489abc4e8db2",
+          "finalStateDigest": "acd252554c5ce05f0b682d63e625555359a9f8bde442d6d90e45417af172b3da",
+          "simulationMs": 16832.0478,
+          "steps": 9213,
+          "shots": 2468,
+          "bladeShots": 0,
+          "skills": 203,
+          "strategyChanges": 1095
+        },
+        {
+          "seed": 2003249120,
+          "t": 473.95000000000005,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 473.95000000000005,
+            "mission": "ce-orb-air-withdrawal"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-engages": true,
+            "shinn-engages": true,
+            "rey-engages": true,
+            "two-defenders-survive": false,
+            "mission": false
+          },
+          "failed": [
+            "two-defenders-survive",
+            "mission"
+          ],
+          "weight": 4,
+          "eventDigest": "a60b3763628ba65eb47f8a2382e4d99abe76516c5138dc367dd74601761dfb62",
+          "finalStateDigest": "d54203a8c01bc3d1875d558e539834bface2f33f86ff18eb753e1518eac213f4",
+          "simulationMs": 21476.974800000025,
+          "steps": 9479,
+          "shots": 2469,
+          "bladeShots": 1,
+          "skills": 201,
+          "strategyChanges": 1136
+        }
+      ],
+      "verified": true
+    }
+  ],
+  "recordingsWritten": 0,
+  "driverAccepted": false
+}

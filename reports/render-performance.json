@@ -1,0 +1,45 @@
+{
+  "viewport": {
+    "width": 1100,
+    "height": 600,
+    "devicePixelRatio": 1
+  },
+  "rows": [
+    {
+      "units": 2,
+      "remote": false,
+      "medianDrawMs": 0.7000000476837158,
+      "p95DrawMs": 1.7999999523162842,
+      "drones": 0,
+      "effects": 24,
+      "skills": 0
+    },
+    {
+      "units": 20,
+      "remote": false,
+      "medianDrawMs": 4.799999952316284,
+      "p95DrawMs": 7.200000047683716,
+      "drones": 0,
+      "effects": 94,
+      "skills": 2
+    },
+    {
+      "units": 64,
+      "remote": false,
+      "medianDrawMs": 16.700000047683716,
+      "p95DrawMs": 32.799999952316284,
+      "drones": 0,
+      "effects": 241,
+      "skills": 6
+    },
+    {
+      "units": 20,
+      "remote": true,
+      "medianDrawMs": 6.799999952316284,
+      "p95DrawMs": 9.5,
+      "drones": 161,
+      "effects": 125,
+      "skills": 40
+    }
+  ]
+}

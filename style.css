@@ -52,7 +52,7 @@
 #gws-report{display:block;margin-top:10px;width:100%;height:180px;background:#0a141d;color:#d4e2eb;border:1px solid #39556b;resize:vertical;padding:10px}
 #gundam-war-simulator .gws-recording{display:flex;align-items:center;gap:5px;padding:7px 0;border-bottom:1px solid #253b4a}#gundam-war-simulator .gws-recording span{flex:1;overflow-wrap:anywhere}
 @media(max-width:850px){#gundam-war-simulator .gws-panel{inset:1vh 1vw;width:98vw;height:98vh}#gundam-war-simulator .gws-layout{grid-template-columns:240px minmax(0,1fr)}#gundam-war-simulator .gws-huds{grid-template-columns:1fr}#gundam-war-simulator .gws-camera-note{display:none}}
-@media(max-width:600px){#gundam-war-simulator .gws-layout{display:block;overflow:auto}#gundam-war-simulator .gws-config{border-right:0;max-height:36vh}#gundam-war-simulator main{overflow:visible}#gundam-war-simulator .gws-stage{height:350px}#gundam-war-simulator .gws-recording{flex-wrap:wrap}}
+
 @media(max-width:850px){#gundam-war-simulator .gws-param{grid-template-columns:minmax(95px,35%) minmax(0,1fr) 28px}#gundam-war-simulator .gws-param details{grid-column:1 / 4;grid-row:2}}
 
 #gundam-war-simulator .gws-fullscreen{position:absolute;right:12px;bottom:12px;z-index:3;background:#102635d9;font-size:11px}
@@ -129,3 +129,103 @@
 #gundam-war-simulator #gws-report-injection.gws-injection-armed { color:#8ce2e8; }
 
 #gundam-war-simulator .gws-manual-request{display:grid;gap:7px;margin:12px 0;padding:10px;border:1px solid var(--gws-line);border-radius:7px}#gundam-war-simulator .gws-manual-request label{margin:0}#gundam-war-simulator .gws-manual-request textarea{width:100%;box-sizing:border-box;min-height:90px;resize:vertical;line-height:1.5}#gundam-war-simulator .gws-manual-request .gws-note{margin:0}#gundam-war-simulator .gws-manual-request button{justify-self:start}#gundam-war-simulator .gws-manual-request textarea:focus-visible{outline:2px solid #7edeea;outline-offset:2px}
+
+/* Narrow and touch layouts keep configuration and the map in separate scroll panes. */
+#gundam-war-simulator .gws-mobile-nav,#gundam-war-simulator .gws-touch-gesture{display:none}
+#gundam-war-simulator .gws-config,#gundam-war-simulator main{min-height:0;overscroll-behavior:contain}
+#gundam-war-simulator fieldset{min-width:0}
+#gundam-war-simulator .gws-panel{height:94dvh}
+@media(max-width:850px){#gundam-war-simulator .gws-panel{height:98dvh}}
+@media(max-width:700px),(pointer:coarse) and (max-width:1000px){
+ #gundam-war-simulator .gws-panel{inset:auto;top:var(--gws-viewport-top,0px);left:0;width:100%;height:100vh;height:var(--gws-viewport-height,100dvh);border-radius:0;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+ #gundam-war-simulator header{padding:8px 12px;gap:8px;flex-shrink:0}
+ #gundam-war-simulator header>div{min-width:0}
+ #gundam-war-simulator h2{font-size:18px;letter-spacing:1px}
+ #gundam-war-simulator header small{font-size:9px}
+ #gws-status{padding:7px 12px;max-height:74px;overflow:auto;flex-shrink:0;overflow-wrap:anywhere}
+ #gundam-war-simulator .gws-mobile-nav{display:flex;gap:8px;padding:6px 12px;background:#122330;border-bottom:1px solid var(--gws-line);flex-shrink:0}
+ #gundam-war-simulator .gws-mobile-nav button{flex:1;min-width:0}
+ #gundam-war-simulator .gws-mobile-nav button[aria-pressed=true]{background:#276e77;border-color:#62bfc5;color:white}
+ #gundam-war-simulator .gws-layout{display:block;overflow:hidden;min-width:0}
+ #gundam-war-simulator .gws-config,#gundam-war-simulator main{height:100%;max-height:none;overflow:auto;overflow-x:hidden;padding:12px;border-right:0;-webkit-overflow-scrolling:touch}
+ #gundam-war-simulator[data-mobile-view=config] main,#gundam-war-simulator[data-mobile-view=battle] .gws-config{display:none}
+ #gundam-war-simulator button,#gundam-war-simulator select,#gundam-war-simulator input:not([type=checkbox]):not([type=range]){min-height:44px;font-size:16px;max-width:100%}
+ #gundam-war-simulator textarea{font-size:16px;max-width:100%}
+ #gundam-war-simulator .gws-force-row input,#gundam-war-simulator .gws-force-row select,#gundam-war-simulator .gws-force-row>button{height:44px;min-height:44px}
+ #gundam-war-simulator label{font-size:13px;min-width:0}
+ #gundam-war-simulator summary{padding:8px 0;min-height:44px;overflow-wrap:anywhere}
+ #gundam-war-simulator .gws-stage{height:clamp(200px,calc(var(--gws-viewport-height,100vh)*.48),460px)}
+ #gundam-war-simulator .gws-stage-title{font-size:9px;top:10px;left:10px}
+ #gundam-war-simulator .gws-camera-note{display:block;top:28px;left:10px;right:auto;font-size:10px;letter-spacing:0}
+ #gundam-war-simulator .gws-desktop-gesture{display:none}
+ #gundam-war-simulator .gws-touch-gesture{display:inline}
+ #gundam-war-simulator .gws-playbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 8px;padding:10px 0;align-items:end}
+ #gundam-war-simulator .gws-playbar label{min-width:0;max-width:none;white-space:normal;display:flex;flex-direction:column;align-items:stretch;font-size:12px;gap:4px}
+ #gundam-war-simulator .gws-playbar select{width:100%;height:44px;min-height:44px;flex:auto}
+ #gundam-war-simulator .gws-playbar button{height:44px;min-height:44px;font-size:14px}
+ #gundam-war-simulator .gws-playbar .gws-camera-control{grid-column:1 / -1;min-width:0;max-width:none}
+ #gundam-war-simulator .gws-playbar .gws-seek-control{grid-column:1 / -1;min-width:0;max-width:none}
+ #gundam-war-simulator .gws-seek-control input[type=range]{width:100%;min-width:0;flex:auto;height:32px}
+ #gundam-war-simulator #gws-time{grid-column:1 / -1;margin:0;white-space:normal;overflow-wrap:anywhere}
+ #gundam-war-simulator .gws-huds{grid-template-columns:1fr;gap:8px}
+ #gundam-war-simulator .gws-recording{display:grid;grid-template-columns:24px repeat(2,minmax(0,1fr));gap:6px}
+ #gundam-war-simulator .gws-recording>span{grid-column:2 / -1;min-width:0}
+ #gundam-war-simulator .gws-recording>button{font-size:13px}
+ #gundam-war-simulator .gws-recording>input{grid-column:1;grid-row:1}
+ #gundam-war-simulator .gws-armory-toolbar{top:-12px;flex-wrap:wrap;gap:6px}
+ #gundam-war-simulator .gws-armory details{padding-left:5px}
+ #gundam-war-simulator .gws-param{grid-template-columns:minmax(0,1fr) 44px;gap:6px}
+ #gundam-war-simulator .gws-param-label{grid-column:1;grid-row:1;min-height:44px}
+ #gundam-war-simulator .gws-param>button{grid-column:2;grid-row:1;min-height:44px}
+ #gundam-war-simulator .gws-param>input,#gundam-war-simulator .gws-param>select,#gundam-war-simulator .gws-param>details{grid-column:1 / -1;grid-row:2;min-width:0}
+ #gundam-war-simulator .gws-param details .gws-param{grid-template-columns:minmax(0,1fr) 44px}
+ #gundam-war-simulator .gws-param:has(>details)>button{grid-column:2}
+ #gundam-war-simulator .gws-command-form label{width:100%;min-width:0}
+ #gundam-war-simulator .gws-deploy-row{grid-template-columns:repeat(3,minmax(0,1fr))}
+ #gundam-war-simulator .gws-deploy-row strong{grid-column:1 / -1}
+ #gundam-war-simulator .gws-pilot-toggle-list>label,#gundam-war-simulator .gws-import-seed,#gundam-war-simulator .gws-library-tools>label{min-height:44px}
+ #gundam-war-simulator .gws-launch{touch-action:none;max-width:calc(100vw - 16px)}
+}
+@media(max-width:370px){#gundam-war-simulator .gws-force-row,#gundam-war-simulator .gws-mission-fields{grid-template-columns:minmax(0,1fr)}}
+#gundam-war-simulator.gws-map-fullscreen .gws-stage{height:100vh;height:var(--gws-viewport-height,100dvh);top:var(--gws-viewport-top,0px);bottom:auto}
+
+#gundam-war-simulator .gws-launcher-setting{flex-direction:row;align-items:center;gap:8px;min-height:36px}
+#gundam-war-simulator .gws-linked-books{display:grid;gap:6px;min-width:0}
+#gundam-war-simulator .gws-linked-book{display:grid;grid-template-columns:minmax(0,1fr) 32px 32px 48px 32px;align-items:center;gap:4px;padding:6px;border:1px solid var(--gws-line);border-radius:5px;background:#0e1b26}
+#gundam-war-simulator .gws-linked-book span{min-width:0;overflow-wrap:anywhere;font-size:11px}
+#gundam-war-simulator .gws-linked-book button{min-width:0;padding:4px 2px;min-height:32px;font-size:11px}
+#gundam-war-simulator .gws-armory-toolbar strong{min-width:0;overflow-wrap:anywhere}
+@media(max-width:700px),(pointer:coarse) and (max-width:1000px){
+ #gundam-war-simulator .gws-linked-book{grid-template-columns:repeat(4,minmax(0,1fr))}
+ #gundam-war-simulator .gws-linked-book span{grid-column:1 / -1;font-size:13px}
+ #gundam-war-simulator .gws-linked-book button{min-height:44px;font-size:14px}
+ #gundam-war-simulator .gws-launcher-setting{min-height:44px}
+}
+
+.gws-pack-import{margin:8px 0;min-width:0}.gws-pack-import summary{cursor:pointer;padding:7px 9px;border:1px solid #536273;border-radius:5px}.gws-pack-options{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 4px}.gws-pack-options label{display:flex;align-items:center;gap:5px;margin:0}.gws-pack-options button{flex-basis:100%}
+
+#gundam-war-simulator header{gap:10px;flex-wrap:wrap;padding:10px 14px}#gundam-war-simulator header>div:first-child{margin-right:auto;min-width:0}#gundam-war-simulator .gws-header-actions{display:flex;gap:6px;flex-wrap:wrap}#gundam-war-simulator .gws-header-actions button{white-space:nowrap}#gws-action-help{width:34px;flex-shrink:0}#gws-close{flex-shrink:0}
+@media(max-width:1000px){#gundam-war-simulator header{display:grid;grid-template-columns:minmax(0,1fr) 34px 52px;gap:6px;padding:8px}#gundam-war-simulator header h2{font-size:17px;margin:0}#gundam-war-simulator header small{font-size:9px}#gundam-war-simulator .gws-header-actions{grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}#gundam-war-simulator .gws-header-actions button{font-size:11px;padding:5px 3px;min-height:32px}#gws-action-help{grid-column:2;grid-row:1}#gws-close{grid-column:3;grid-row:1}}
+
+#gundam-war-simulator .gws-linked-book .gws-book-name{display:flex;align-items:center;gap:4px;min-width:0}
+#gundam-war-simulator .gws-book-name span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#gundam-war-simulator .gws-linked-book .gws-rename-book{flex:none;padding:3px 5px;min-height:28px;height:28px;background:transparent;border-color:transparent;color:#c6dbe4}
+#gundam-war-simulator .gws-book-rename{position:absolute;inset:0;z-index:20;display:grid;place-items:center;background:#06111dcc;padding:16px}
+#gundam-war-simulator .gws-book-rename form{width:min(480px,100%);padding:20px;background:#122330;border:1px solid var(--gws-line);border-radius:10px;box-shadow:0 12px 40px #0008}
+#gundam-war-simulator .gws-book-rename h3{margin:0 0 12px}
+#gundam-war-simulator .gws-book-rename .gws-rename-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:16px}
+#gundam-war-simulator .gws-rename-error{color:#ffaaa0;min-height:1.5em;overflow-wrap:anywhere}
+
+@media(max-width:700px),(pointer:coarse) and (max-width:1000px){#gundam-war-simulator .gws-linked-book .gws-book-name{grid-column:1 / -1}#gundam-war-simulator .gws-linked-book .gws-rename-book{min-width:40px;min-height:40px}}
+
+#gundam-war-simulator .gws-log-skill,#gundam-war-simulator .gws-log-skill-ended{color:#edce78;background:#171511;border-left:2px solid #aa893d;padding-left:6px;text-shadow:0 1px 2px #000}
+
+#gundam-war-simulator .gws-active-skills{color:#f1d17d;background:#10100f;border:1px solid #a7873a77;border-radius:4px;padding:4px 6px;margin-top:4px;text-shadow:0 1px 2px #000}
+
+@media(min-width:701px) and (max-width:1000px){
+ #gundam-war-simulator .gws-playbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 8px;align-items:end}
+ #gundam-war-simulator .gws-playbar label{display:flex;flex-direction:column;align-items:stretch;gap:4px;min-width:0;max-width:none}
+ #gundam-war-simulator .gws-playbar select{width:100%;height:36px;flex:auto}
+ #gundam-war-simulator .gws-playbar .gws-camera-control,#gundam-war-simulator .gws-playbar .gws-seek-control,#gundam-war-simulator #gws-time{grid-column:1 / -1;min-width:0;max-width:none}
+ #gundam-war-simulator .gws-seek-control input[type=range]{width:100%;min-width:0;flex:auto}
+}

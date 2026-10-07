@@ -2,9 +2,33 @@ import {add,sub,mul,dot,length,norm,clamp,arcSolution} from './math.js';
 
 // Closed numeric engagement model. A distance/attitude window authorizes an
 // exchange; rendered blade meshes and physical hull collisions never score it.
+// Decisions use visible posture bands and known equipment, never the enemy pilot's
+// exact ability, energy or next stability value. A read is held across several ticks.
+export function observedMeleeCondition(b,u,target){
+ const seen=u.contacts.get(target?.id);
+ return seen&&b.t-seen.observedAt<.8?(seen.posture||'steady'):'unknown';
+}
+export function readMeleeRisk(b,u,target,closing=0){
+ const seen=u.contacts.get(target?.id),fresh=!!seen&&b.t-seen.observedAt<.8;
+ const posture=observedMeleeCondition(b,u,target),blade=meleeWeapon(u)?.definition;
+ const opposing=target.weapons.find(w=>w.definition.kind==='melee'&&!w.formDisabled)?.definition;
+ let read=u.meleeRead;
+ if(!read||read.targetId!==target.id||b.t>=read.until||read.posture!==posture){
+  const random=b.randomFor(u.id,'melee-read'),skill=meleeAbility(u);
+  // Better pilots judge the broad matchup more consistently, without knowing the outcome.
+  const uncertainty=(.2-.09*clamp(skill))*(random()*2-1);
+  const ratio=opposing?target.machine.sim.thrustN*(target.machine.bladeOutput||1)*Math.sqrt((opposing.sim.damage||40)/(blade?.sim.damage||40))/Math.max(1,u.machine.sim.thrustN*(u.machine.bladeOutput||1)):0;
+  read=u.meleeRead={targetId:target.id,until:b.t+Math.max(.45,Math.min(1.2,u.pilotState.sim.reactionS+.55)),posture,ratio:ratio*(1+uncertainty),uncertainty};
+ }
+ const speedBand=Math.min(3,Math.floor(Math.max(0,closing)/150)),impact=speedBand*.05;
+ const pressure=read.ratio<.7?.8:read.ratio>1.6?1.4:1;
+ const loss=opposing?Math.round((u.pilotState.tactics.meleeClashCost+impact)*pressure/Math.sqrt(.45+.55*clamp(meleeAbility(u)))*5)/5:0;
+ const momentum=u.machine.sim.massKg*target.machine.sim.massKg/Math.max(1,u.machine.sim.massKg+target.machine.sim.massKg)*Math.max(0,closing);
+ return {fresh,posture,opposing:!!opposing,ratio:read.ratio,loss:opposing?Math.max(0,loss+read.uncertainty*.3):0,momentum};
+}
 export function meleeAbility(u){
  const p=u.pilotState.sim,tags=u.pilotState.tags||[];
- return clamp(p.melee??(.6*p.maneuver+.2*p.tracking+.2*p.composure+(tags.includes('blade-specialist')?.08:0)),.1,1);
+ return clamp(p.melee??(.6*p.maneuver+.2*p.tracking+.2*p.composure+(tags.includes('blade-specialist')?.08:0)),0,1.25);
 }
 export function meleeWeapon(u){
  const usable=u.weapons.filter(w=>w.definition.kind==='melee'&&!w.disabled&&!w.formDisabled&&w.ammo!==0);

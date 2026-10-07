@@ -1,0 +1,1622 @@
+{
+  "hashes": {
+    "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+    "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
+    "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
+    "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
+  },
+  "rows": [
+    {
+      "id": "ce-heliopolis-ginn",
+      "name": "01 · SEED · 殖民地初战",
+      "best": {
+        "seed": 107446084,
+        "t": 49.650000000000006,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 49.650000000000006,
+          "mission": "ce-local-duel"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "ps-paid": true,
+          "os-adaptation": true,
+          "knife-after-os": true,
+          "knife-finishes": true,
+          "strike-survives": true,
+          "ginn-defeated": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "184c7430e6ca5c58da0e33e95338b69057202669c2ec3e26609112089cb949f4",
+        "finalStateDigest": "9f3eb086bc09205932611db91b5afab5037efe04d65bd75a559424c5062c8cb0",
+        "simulationMs": 1502.6644999999999,
+        "steps": 993,
+        "shots": 450,
+        "bladeShots": 14,
+        "skills": 17,
+        "strategyChanges": 50
+      },
+      "samples": [
+        {
+          "seed": 107446084,
+          "t": 49.650000000000006,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 49.650000000000006,
+            "mission": "ce-local-duel"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "ps-paid": true,
+            "os-adaptation": true,
+            "knife-after-os": true,
+            "knife-finishes": true,
+            "strike-survives": true,
+            "ginn-defeated": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "184c7430e6ca5c58da0e33e95338b69057202669c2ec3e26609112089cb949f4",
+          "finalStateDigest": "9f3eb086bc09205932611db91b5afab5037efe04d65bd75a559424c5062c8cb0",
+          "simulationMs": 1502.6644999999999,
+          "steps": 993,
+          "shots": 450,
+          "bladeShots": 14,
+          "skills": 17,
+          "strategyChanges": 50
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-orbital-interception",
+      "name": "02 · SEED · 宇宙夹击与PS危机",
+      "best": {
+        "seed": 3364519814,
+        "t": 65.8,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 65.8,
+          "mission": "ce-orbital-route"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "covering-gundams-fire": true,
+          "aegis-engages-strike": true,
+          "phase-energy-crisis": true,
+          "mu-forces-vessel-out": true,
+          "strike-alive": true,
+          "escape": true
+        },
+        "failed": [],
+        "weight": 7,
+        "eventDigest": "73197e1e71593e6562c90bae18f1cc016471097df4428155d8a5776a597686af",
+        "finalStateDigest": "1180cd594b49139fb36063f5c275077c6c05dbcfbe4ed560c8311650a7fc3a78",
+        "simulationMs": 6027.7417000000005,
+        "steps": 1316,
+        "shots": 350,
+        "bladeShots": 0,
+        "skills": 14,
+        "strategyChanges": 68
+      },
+      "samples": [
+        {
+          "seed": 3364519814,
+          "t": 65.8,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 65.8,
+            "mission": "ce-orbital-route"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "covering-gundams-fire": true,
+            "aegis-engages-strike": true,
+            "phase-energy-crisis": true,
+            "mu-forces-vessel-out": true,
+            "strike-alive": true,
+            "escape": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "73197e1e71593e6562c90bae18f1cc016471097df4428155d8a5776a597686af",
+          "finalStateDigest": "1180cd594b49139fb36063f5c275077c6c05dbcfbe4ed560c8311650a7fc3a78",
+          "simulationMs": 6027.7417000000005,
+          "steps": 1316,
+          "shots": 350,
+          "bladeShots": 0,
+          "skills": 14,
+          "strategyChanges": 68
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-awakening-defense",
+      "name": "03 · SEED · 三机突袭与首次觉醒",
+      "best": {
+        "seed": 2657896752,
+        "t": 71.45,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 71.45,
+          "mission": "ce-awakening-route"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "blitz-breakthrough": true,
+          "pressure-seed-duel-retreat": true,
+          "three-withdraw": true,
+          "friendlies-survive": true,
+          "duel-repelled-not-destroyed": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "ad124d98925ebc776cf8f5f55a6ab854d099b133f3b3b16e21c15a0518a602f8",
+        "finalStateDigest": "5ea25a145567aee106179a369207aab675fa13cd966a89c1afe3cb377e5a8da7",
+        "simulationMs": 5206.4566,
+        "steps": 1429,
+        "shots": 385,
+        "bladeShots": 0,
+        "skills": 22,
+        "strategyChanges": 148
+      },
+      "samples": [
+        {
+          "seed": 2657896752,
+          "t": 71.45,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 71.45,
+            "mission": "ce-awakening-route"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "blitz-breakthrough": true,
+            "pressure-seed-duel-retreat": true,
+            "three-withdraw": true,
+            "friendlies-survive": true,
+            "duel-repelled-not-destroyed": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "ad124d98925ebc776cf8f5f55a6ab854d099b133f3b3b16e21c15a0518a602f8",
+          "finalStateDigest": "5ea25a145567aee106179a369207aab675fa13cd966a89c1afe3cb377e5a8da7",
+          "simulationMs": 5206.4566,
+          "steps": 1429,
+          "shots": 385,
+          "bladeShots": 0,
+          "skills": 22,
+          "strategyChanges": 148
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-eighth-fleet-reentry",
+      "name": "04 · SEED · 第八舰队断后降落",
+      "best": {
+        "seed": 3126302103,
+        "t": 50.7,
+        "result": {
+          "reason": "objective",
+          "winner": "b",
+          "t": 50.7,
+          "mission": "ce-eighth-fleet-route"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "four-gundams-engage": true,
+          "duel-pursues-strike": true,
+          "menelaos-gamow-physical-contact": true,
+          "rear-guard-loss": true,
+          "archangel-strike-reentry": false,
+          "main-units-survive": false,
+          "mission": false,
+          "duel-remains-active": true,
+          "shuttle-loss-after-fleet-collision": true,
+          "screen-fleet-loss": true
+        },
+        "failed": [
+          "archangel-strike-reentry",
+          "main-units-survive",
+          "mission"
+        ],
+        "weight": 10,
+        "eventDigest": "315121be463479a974655d88fa58aba725dd8134a7032e7084c83fa37cfe1af5",
+        "finalStateDigest": "f2e6f3f17911da6554a15dd09c6e4fee34a1dbeede8632200a4196002bef1c63",
+        "simulationMs": 6687.310700000002,
+        "steps": 1014,
+        "shots": 854,
+        "bladeShots": 0,
+        "skills": 22,
+        "strategyChanges": 164
+      },
+      "samples": [
+        {
+          "seed": 3126302103,
+          "t": 50.7,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 50.7,
+            "mission": "ce-eighth-fleet-route"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-gundams-engage": true,
+            "duel-pursues-strike": true,
+            "menelaos-gamow-physical-contact": true,
+            "rear-guard-loss": true,
+            "archangel-strike-reentry": false,
+            "main-units-survive": false,
+            "mission": false,
+            "duel-remains-active": true,
+            "shuttle-loss-after-fleet-collision": true,
+            "screen-fleet-loss": true
+          },
+          "failed": [
+            "archangel-strike-reentry",
+            "main-units-survive",
+            "mission"
+          ],
+          "weight": 10,
+          "eventDigest": "315121be463479a974655d88fa58aba725dd8134a7032e7084c83fa37cfe1af5",
+          "finalStateDigest": "f2e6f3f17911da6554a15dd09c6e4fee34a1dbeede8632200a4196002bef1c63",
+          "simulationMs": 6687.310700000002,
+          "steps": 1014,
+          "shots": 854,
+          "bladeShots": 0,
+          "skills": 22,
+          "strategyChanges": 164
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-desert-lagowe",
+      "name": "05 · SEED · 沙漠虎最终决斗",
+      "best": {
+        "seed": 3491764948,
+        "t": 12.5,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 12.5,
+          "mission": "annihilation"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "lagowe-beam-pressure": true,
+          "real-beam-threat": true,
+          "seed-after-pressure": true,
+          "knife-finish": true,
+          "lagowe-out": true,
+          "strike-survives": true,
+          "friendly-win": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "2a8bcd5555dedc0be369d833bcdc1b599653d6b4a1a1bb41e0be48570fc082f4",
+        "finalStateDigest": "207a04814d744f733093fcd92dec46b8ee90945b182cfd7d9ea5b952a5695ce8",
+        "simulationMs": 584.8831000000009,
+        "steps": 250,
+        "shots": 81,
+        "bladeShots": 5,
+        "skills": 6,
+        "strategyChanges": 20
+      },
+      "samples": [
+        {
+          "seed": 3491764948,
+          "t": 12.5,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 12.5,
+            "mission": "annihilation"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "lagowe-beam-pressure": true,
+            "real-beam-threat": true,
+            "seed-after-pressure": true,
+            "knife-finish": true,
+            "lagowe-out": true,
+            "strike-survives": true,
+            "friendly-win": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "2a8bcd5555dedc0be369d833bcdc1b599653d6b4a1a1bb41e0be48570fc082f4",
+          "finalStateDigest": "207a04814d744f733093fcd92dec46b8ee90945b182cfd7d9ea5b952a5695ce8",
+          "simulationMs": 584.8831000000009,
+          "steps": 250,
+          "shots": 81,
+          "bladeShots": 5,
+          "skills": 6,
+          "strategyChanges": 20
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-orb-departure",
+      "name": "06 · SEED · 奥布出港与迅雷救援",
+      "best": {
+        "seed": 739084988,
+        "t": 15.3,
+        "result": {
+          "reason": "objective",
+          "winner": "b",
+          "t": 15.3,
+          "mission": "ce-orb-departure-duel"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "four-enemies-engage": true,
+          "aircraft-engage": true,
+          "strike-engages-aegis": true,
+          "blitz-stealth": true,
+          "blitz-covers-aegis": true,
+          "blade-finishes-blitz": false,
+          "blitz-out": false,
+          "core-survivors": false
+        },
+        "failed": [
+          "blade-finishes-blitz",
+          "blitz-out",
+          "core-survivors"
+        ],
+        "weight": 5,
+        "eventDigest": "68cf3f69c2e0773c30589017e583f6287cf7a4f3f40bac174ef18146451fe94c",
+        "finalStateDigest": "21938306197b1b1373bdd8789f4a78869a3d6b7c624e5683c64a4455fbc283e8",
+        "simulationMs": 1892.2260999999999,
+        "steps": 306,
+        "shots": 325,
+        "bladeShots": 0,
+        "skills": 16,
+        "strategyChanges": 90
+      },
+      "samples": [
+        {
+          "seed": 739084988,
+          "t": 15.3,
+          "result": {
+            "reason": "objective",
+            "winner": "b",
+            "t": 15.3,
+            "mission": "ce-orb-departure-duel"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "four-enemies-engage": true,
+            "aircraft-engage": true,
+            "strike-engages-aegis": true,
+            "blitz-stealth": true,
+            "blitz-covers-aegis": true,
+            "blade-finishes-blitz": false,
+            "blitz-out": false,
+            "core-survivors": false
+          },
+          "failed": [
+            "blade-finishes-blitz",
+            "blitz-out",
+            "core-survivors"
+          ],
+          "weight": 5,
+          "eventDigest": "68cf3f69c2e0773c30589017e583f6287cf7a4f3f40bac174ef18146451fe94c",
+          "finalStateDigest": "21938306197b1b1373bdd8789f4a78869a3d6b7c624e5683c64a4455fbc283e8",
+          "simulationMs": 1892.2260999999999,
+          "steps": 306,
+          "shots": 325,
+          "bladeShots": 0,
+          "skills": 16,
+          "strategyChanges": 90
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-island-duel",
+      "name": "07 · SEED · 群岛追逐与圣盾自爆",
+      "best": {
+        "seed": 3407440573,
+        "t": 206.70000000000002,
+        "result": {
+          "reason": "mutual-objective",
+          "winner": null,
+          "t": 206.70000000000002,
+          "mission": "ce-island-encounter"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "aegis-strike-engage": true,
+          "ship-receives-beam": true,
+          "buster-out": false,
+          "tolle-supports": true,
+          "aegis-finishes-tolle": false,
+          "tolle-out": true,
+          "strike-slashes-aegis": false,
+          "physical-capture-before-blast": true,
+          "duel-mutual-loss": true,
+          "core-other-survivors": false
+        },
+        "failed": [
+          "buster-out",
+          "aegis-finishes-tolle",
+          "strike-slashes-aegis",
+          "core-other-survivors"
+        ],
+        "weight": 8,
+        "eventDigest": "797d014a8f17d044a5bff5ab69105f495ab3bbb172ae8fcf2ddeaf4a7a658f06",
+        "finalStateDigest": "be9a454bd2cf9dd0cec026c5c0edfdf49450c1340567012db9b7bbc0a84d1464",
+        "simulationMs": 8234.712900000002,
+        "steps": 4134,
+        "shots": 526,
+        "bladeShots": 2,
+        "skills": 26,
+        "strategyChanges": 150
+      },
+      "samples": [
+        {
+          "seed": 3407440573,
+          "t": 206.70000000000002,
+          "result": {
+            "reason": "mutual-objective",
+            "winner": null,
+            "t": 206.70000000000002,
+            "mission": "ce-island-encounter"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "aegis-strike-engage": true,
+            "ship-receives-beam": true,
+            "buster-out": false,
+            "tolle-supports": true,
+            "aegis-finishes-tolle": false,
+            "tolle-out": true,
+            "strike-slashes-aegis": false,
+            "physical-capture-before-blast": true,
+            "duel-mutual-loss": true,
+            "core-other-survivors": false
+          },
+          "failed": [
+            "buster-out",
+            "aegis-finishes-tolle",
+            "strike-slashes-aegis",
+            "core-other-survivors"
+          ],
+          "weight": 8,
+          "eventDigest": "797d014a8f17d044a5bff5ab69105f495ab3bbb172ae8fcf2ddeaf4a7a658f06",
+          "finalStateDigest": "be9a454bd2cf9dd0cec026c5c0edfdf49450c1340567012db9b7bbc0a84d1464",
+          "simulationMs": 8234.712900000002,
+          "steps": 4134,
+          "shots": 526,
+          "bladeShots": 2,
+          "skills": 26,
+          "strategyChanges": 150
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-alaska-escape",
+      "name": "08 · SEED · 阿拉斯加包围突围",
+      "best": {
+        "seed": 3604658960,
+        "t": 65.10000000000001,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 65.10000000000001,
+          "mission": "local-alaska"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "freedom-engages": true,
+          "multi-weapon-fire": true,
+          "carrier-freedom-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 6,
+        "eventDigest": "4a5b55e78094f96fe5980f2a77db45e336ea15cf1d3ac2513188c45f0b7070ef",
+        "finalStateDigest": "930914deb6e29f1816ec649bb2345d044d264eee3704ee39eb39f33eea315fd1",
+        "simulationMs": 2552.670900000001,
+        "steps": 1302,
+        "shots": 503,
+        "bladeShots": 1,
+        "skills": 24,
+        "strategyChanges": 67
+      },
+      "samples": [
+        {
+          "seed": 3604658960,
+          "t": 65.10000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 65.10000000000001,
+            "mission": "local-alaska"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-engages": true,
+            "multi-weapon-fire": true,
+            "carrier-freedom-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "4a5b55e78094f96fe5980f2a77db45e336ea15cf1d3ac2513188c45f0b7070ef",
+          "finalStateDigest": "930914deb6e29f1816ec649bb2345d044d264eee3704ee39eb39f33eea315fd1",
+          "simulationMs": 2552.670900000001,
+          "steps": 1302,
+          "shots": 503,
+          "bladeShots": 1,
+          "skills": 24,
+          "strategyChanges": 67
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-orb-cooperation",
+      "name": "09 · SEED · 奥布首日双机协防",
+      "best": {
+        "seed": 1610631936,
+        "t": 22.200000000000003,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 22.200000000000003,
+          "mission": "ce-orb-cooperative-defense"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "kira-fire": true,
+          "athrun-fights": true,
+          "two-survivors": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 6,
+        "eventDigest": "db505a604237d62d6a4b9bd1d307d8cb60e944a11d251317134f74f20b7ef287",
+        "finalStateDigest": "92fd7ac75a2a9b69b0976fed39cd1c110546cb0dbebeec77659f6980e7dcc02b",
+        "simulationMs": 1376.5619000000006,
+        "steps": 444,
+        "shots": 179,
+        "bladeShots": 1,
+        "skills": 20,
+        "strategyChanges": 37
+      },
+      "samples": [
+        {
+          "seed": 1610631936,
+          "t": 22.200000000000003,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 22.200000000000003,
+            "mission": "ce-orb-cooperative-defense"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-fights": true,
+            "two-survivors": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "db505a604237d62d6a4b9bd1d307d8cb60e944a11d251317134f74f20b7ef287",
+          "finalStateDigest": "92fd7ac75a2a9b69b0976fed39cd1c110546cb0dbebeec77659f6980e7dcc02b",
+          "simulationMs": 1376.5619000000006,
+          "steps": 444,
+          "shots": 179,
+          "bladeShots": 1,
+          "skills": 20,
+          "strategyChanges": 37
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-meteor-interception",
+      "name": "10 · SEED · 流星核弹拦截",
+      "best": {
+        "seed": 1512152121,
+        "t": 21.200000000000003,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 21.200000000000003,
+          "mission": "local-nuclear"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "freedom-intercepts": true,
+          "justice-intercepts": true,
+          "all-warheads-intercepted": true,
+          "both-meteor-active": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "91ba4f1e5901f675e8e62e4165594528d2e79f52f29a312ade001397e910a68c",
+        "finalStateDigest": "0d91d7f3fbc1ee07e9ca14dc05af501e0417211f14cd5dba80b09d4913866445",
+        "simulationMs": 1147.6915999999983,
+        "steps": 424,
+        "shots": 122,
+        "bladeShots": 0,
+        "skills": 6,
+        "strategyChanges": 5
+      },
+      "samples": [
+        {
+          "seed": 1512152121,
+          "t": 21.200000000000003,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 21.200000000000003,
+            "mission": "local-nuclear"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-intercepts": true,
+            "justice-intercepts": true,
+            "all-warheads-intercepted": true,
+            "both-meteor-active": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "91ba4f1e5901f675e8e62e4165594528d2e79f52f29a312ade001397e910a68c",
+          "finalStateDigest": "0d91d7f3fbc1ee07e9ca14dc05af501e0417211f14cd5dba80b09d4913866445",
+          "simulationMs": 1147.6915999999983,
+          "steps": 424,
+          "shots": 122,
+          "bladeShots": 0,
+          "skills": 6,
+          "strategyChanges": 5
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-archangel-dominion",
+      "name": "11 · SEED · 大天使号终末炮战",
+      "best": {
+        "seed": 2845003353,
+        "t": 201.45000000000002,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 201.45000000000002,
+          "mission": "seed-final-fleet"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "archangel-main": true,
+          "dominion-main": true,
+          "strike-hit": true,
+          "archangel-survives": true,
+          "dominion-out": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 9,
+        "eventDigest": "910c855fb53a2fa608cf5cfe479e920969ab92900493b6a196de9b59ea74042d",
+        "finalStateDigest": "61bbaf05e5a58d025b8e455b85a6d3cdac3212e5b6c60209deffc248c41a8730",
+        "simulationMs": 3294.5985,
+        "steps": 4029,
+        "shots": 482,
+        "bladeShots": 0,
+        "skills": 1,
+        "strategyChanges": 4
+      },
+      "samples": [
+        {
+          "seed": 2845003353,
+          "t": 201.45000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 201.45000000000002,
+            "mission": "seed-final-fleet"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "archangel-main": true,
+            "dominion-main": true,
+            "strike-hit": true,
+            "archangel-survives": true,
+            "dominion-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "910c855fb53a2fa608cf5cfe479e920969ab92900493b6a196de9b59ea74042d",
+          "finalStateDigest": "61bbaf05e5a58d025b8e455b85a6d3cdac3212e5b6c60209deffc248c41a8730",
+          "simulationMs": 3294.5985,
+          "steps": 4029,
+          "shots": 482,
+          "bladeShots": 0,
+          "skills": 1,
+          "strategyChanges": 4
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-freedom-providence",
+      "name": "12 · SEED · 自由与神意最终决斗",
+      "best": {
+        "seed": 20713843,
+        "t": 305.45,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 305.45,
+          "mission": "annihilation"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "dragoon-launched": true,
+          "dragoon-real-rays": true,
+          "freedom-real-injury": true,
+          "blade-finish": false,
+          "freedom-heavily-damaged-survivor": true,
+          "providence-out": true,
+          "friendly-win": true
+        },
+        "failed": [
+          "blade-finish"
+        ],
+        "weight": 7,
+        "eventDigest": "98fb29738d4992b53a408b17bec7c5aa43cb2de47d22a5220333fc3322443624",
+        "finalStateDigest": "e8e6d389c14d53ae535bfec56e058c5674fa7397edb01e87244e677c0a0a0a56",
+        "simulationMs": 7495.677799999998,
+        "steps": 6109,
+        "shots": 1055,
+        "bladeShots": 0,
+        "skills": 55,
+        "strategyChanges": 432
+      },
+      "samples": [
+        {
+          "seed": 20713843,
+          "t": 305.45,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 305.45,
+            "mission": "annihilation"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "dragoon-launched": true,
+            "dragoon-real-rays": true,
+            "freedom-real-injury": true,
+            "blade-finish": false,
+            "freedom-heavily-damaged-survivor": true,
+            "providence-out": true,
+            "friendly-win": true
+          },
+          "failed": [
+            "blade-finish"
+          ],
+          "weight": 7,
+          "eventDigest": "98fb29738d4992b53a408b17bec7c5aa43cb2de47d22a5220333fc3322443624",
+          "finalStateDigest": "e8e6d389c14d53ae535bfec56e058c5674fa7397edb01e87244e677c0a0a0a56",
+          "simulationMs": 7495.677799999998,
+          "steps": 6109,
+          "shots": 1055,
+          "bladeShots": 0,
+          "skills": 55,
+          "strategyChanges": 432
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-genesis-interior",
+      "name": "13 · SEED · 创世纪内部破坏",
+      "best": {
+        "seed": 2201330993,
+        "t": 11.8,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 11.8,
+          "mission": "local-genesis"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "justice-attacks-core": true,
+          "core-out": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 5,
+        "eventDigest": "a82f6a051a31fba8fd21680ef2f6769ae12e90958ed9f722431a85fa08579505",
+        "finalStateDigest": "e25d023fc56f1f41a9aee7a1008166379f3a246b050c9f35998cc5a8bd71c115",
+        "simulationMs": 256.0185000000056,
+        "steps": 236,
+        "shots": 13,
+        "bladeShots": 0,
+        "skills": 3,
+        "strategyChanges": 4
+      },
+      "samples": [
+        {
+          "seed": 2201330993,
+          "t": 11.8,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 11.8,
+            "mission": "local-genesis"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "justice-attacks-core": true,
+            "core-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 5,
+          "eventDigest": "a82f6a051a31fba8fd21680ef2f6769ae12e90958ed9f722431a85fa08579505",
+          "finalStateDigest": "e25d023fc56f1f41a9aee7a1008166379f3a246b050c9f35998cc5a8bd71c115",
+          "simulationMs": 256.0185000000056,
+          "steps": 236,
+          "shots": 13,
+          "bladeShots": 0,
+          "skills": 3,
+          "strategyChanges": 4
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-armory-ground",
+      "name": "14 · SEED DESTINY · 军械库夺机迎击",
+      "best": {
+        "seed": 763888481,
+        "t": 9.65,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 9.65,
+          "mission": "ce-armory-withdrawal"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "impulse-engages": true,
+          "stolen-unit-1-reaches-exit": false,
+          "stolen-unit-2-reaches-exit": false,
+          "stolen-unit-3-reaches-exit": false,
+          "main-survivors": false,
+          "mission": false
+        },
+        "failed": [
+          "stolen-unit-1-reaches-exit",
+          "stolen-unit-2-reaches-exit",
+          "stolen-unit-3-reaches-exit",
+          "main-survivors",
+          "mission"
+        ],
+        "weight": 1,
+        "eventDigest": "eea9ddbe8901f17622d7b0aad0dc7781d999aad5212d47297515515ce456d9af",
+        "finalStateDigest": "33cb0836a1d2fc27fb2cb1a36631d998da1871c666bb08959b1abaae5720a265",
+        "simulationMs": 651.4084999999977,
+        "steps": 193,
+        "shots": 57,
+        "bladeShots": 0,
+        "skills": 10,
+        "strategyChanges": 20
+      },
+      "samples": [
+        {
+          "seed": 763888481,
+          "t": 9.65,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 9.65,
+            "mission": "ce-armory-withdrawal"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-engages": true,
+            "stolen-unit-1-reaches-exit": false,
+            "stolen-unit-2-reaches-exit": false,
+            "stolen-unit-3-reaches-exit": false,
+            "main-survivors": false,
+            "mission": false
+          },
+          "failed": [
+            "stolen-unit-1-reaches-exit",
+            "stolen-unit-2-reaches-exit",
+            "stolen-unit-3-reaches-exit",
+            "main-survivors",
+            "mission"
+          ],
+          "weight": 1,
+          "eventDigest": "eea9ddbe8901f17622d7b0aad0dc7781d999aad5212d47297515515ce456d9af",
+          "finalStateDigest": "33cb0836a1d2fc27fb2cb1a36631d998da1871c666bb08959b1abaae5720a265",
+          "simulationMs": 651.4084999999977,
+          "steps": 193,
+          "shots": 57,
+          "bladeShots": 0,
+          "skills": 10,
+          "strategyChanges": 20
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-u7-demolition",
+      "name": "15 · SEED DESTINY · 尤尼乌斯七破拆护卫",
+      "best": {
+        "seed": 1222423081,
+        "t": 180,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 180,
+          "mission": "seed-work-protection"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "work-completes": true,
+          "defender-engages": true,
+          "saboteur-engages": true,
+          "worker-survives": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 7,
+        "eventDigest": "7cbba5282cbde0385a83ad24e76b0db70db75bd4ffb78f6d669616c49772f2e2",
+        "finalStateDigest": "509f2e1ceaefb6868bf8c1e9f1718daad985076a5a0ec695f172eaf5e299e1da",
+        "simulationMs": 4224.1888000000035,
+        "steps": 3600,
+        "shots": 345,
+        "bladeShots": 0,
+        "skills": 23,
+        "strategyChanges": 105
+      },
+      "samples": [
+        {
+          "seed": 1222423081,
+          "t": 180,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 180,
+            "mission": "seed-work-protection"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "work-completes": true,
+            "defender-engages": true,
+            "saboteur-engages": true,
+            "worker-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "7cbba5282cbde0385a83ad24e76b0db70db75bd4ffb78f6d669616c49772f2e2",
+          "finalStateDigest": "509f2e1ceaefb6868bf8c1e9f1718daad985076a5a0ec695f172eaf5e299e1da",
+          "simulationMs": 4224.1888000000035,
+          "steps": 3600,
+          "shots": 345,
+          "bladeShots": 0,
+          "skills": 23,
+          "strategyChanges": 105
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-minerva-breakout",
+      "name": "16 · SEED DESTINY · 密涅瓦外海突破",
+      "best": {
+        "seed": 2096549867,
+        "t": 146.95000000000002,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 146.95000000000002,
+          "mission": "seed-sea-breakout"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "shinn-seed": true,
+          "ma-out": true,
+          "ship-impulse-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 7,
+        "eventDigest": "ebcea35eaf2ac1b9e8abef75e0733921e7d8f04651a9f39643b489cb4a058c32",
+        "finalStateDigest": "7377b05f042b78e5fa9b061e7c7b7aa722edf2fd154dabf4c98a0f17bf869d4c",
+        "simulationMs": 8121.284299999999,
+        "steps": 2939,
+        "shots": 912,
+        "bladeShots": 4,
+        "skills": 18,
+        "strategyChanges": 141
+      },
+      "samples": [
+        {
+          "seed": 2096549867,
+          "t": 146.95000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 146.95000000000002,
+            "mission": "seed-sea-breakout"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "shinn-seed": true,
+            "ma-out": true,
+            "ship-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 7,
+          "eventDigest": "ebcea35eaf2ac1b9e8abef75e0733921e7d8f04651a9f39643b489cb4a058c32",
+          "finalStateDigest": "7377b05f042b78e5fa9b061e7c7b7aa722edf2fd154dabf4c98a0f17bf869d4c",
+          "simulationMs": 8121.284299999999,
+          "steps": 2939,
+          "shots": 912,
+          "bladeShots": 4,
+          "skills": 18,
+          "strategyChanges": 141
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-lohengrin-gate",
+      "name": "17 · SEED DESTINY · 阳电子炮侧翼突破",
+      "best": {
+        "seed": 489104896,
+        "t": 9.15,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 9.15,
+          "mission": "local-gate"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "decoy-fire": true,
+          "impulse-hits-emplacement": true,
+          "emplacement-out": true,
+          "impulse-survives": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "ca4c91ed05bbd1ce4d72ab2bd620a018dd423baea520fac4b85fa24917161efc",
+        "finalStateDigest": "23505eb059ce5ac671cb7c7fcf7a3b15d8341c79f93c394392a30ec6d9925ca7",
+        "simulationMs": 640.1997000000047,
+        "steps": 183,
+        "shots": 65,
+        "bladeShots": 0,
+        "skills": 9,
+        "strategyChanges": 28
+      },
+      "samples": [
+        {
+          "seed": 489104896,
+          "t": 9.15,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 9.15,
+            "mission": "local-gate"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "decoy-fire": true,
+            "impulse-hits-emplacement": true,
+            "emplacement-out": true,
+            "impulse-survives": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "ca4c91ed05bbd1ce4d72ab2bd620a018dd423baea520fac4b85fa24917161efc",
+          "finalStateDigest": "23505eb059ce5ac671cb7c7fcf7a3b15d8341c79f93c394392a30ec6d9925ca7",
+          "simulationMs": 640.1997000000047,
+          "steps": 183,
+          "shots": 65,
+          "bladeShots": 0,
+          "skills": 9,
+          "strategyChanges": 28
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-dardanelles",
+      "name": "18 · SEED DESTINY · 达达尼尔三方交锋",
+      "best": {
+        "seed": 1070858284,
+        "t": 79.25,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 79.25,
+          "mission": "seed-threeway-breakout"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "freedom-intervenes": true,
+          "impulse-engages": true,
+          "minerva-survives": true,
+          "heine-out": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "f63167a68236642bac531f81f24bb7c3e1d13471eedaca1bf42ca6baf485c7ce",
+        "finalStateDigest": "d04e797bf76af0dde71d2b32567f1f728885ae8a7a98ecbc6c97fd61a5da29dd",
+        "simulationMs": 14567.970100000006,
+        "steps": 1585,
+        "shots": 1219,
+        "bladeShots": 0,
+        "skills": 58,
+        "strategyChanges": 349
+      },
+      "samples": [
+        {
+          "seed": 1070858284,
+          "t": 79.25,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 79.25,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "freedom-intervenes": true,
+            "impulse-engages": true,
+            "minerva-survives": true,
+            "heine-out": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "f63167a68236642bac531f81f24bb7c3e1d13471eedaca1bf42ca6baf485c7ce",
+          "finalStateDigest": "d04e797bf76af0dde71d2b32567f1f728885ae8a7a98ecbc6c97fd61a5da29dd",
+          "simulationMs": 14567.970100000006,
+          "steps": 1585,
+          "shots": 1219,
+          "bladeShots": 0,
+          "skills": 58,
+          "strategyChanges": 349
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-crete",
+      "name": "19 · SEED DESTINY · 克里特三方突围",
+      "best": {
+        "seed": 301533304,
+        "t": 76.25,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 76.25,
+          "mission": "seed-threeway-breakout"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "freedom-intervenes": true,
+          "abyss-out": false,
+          "orb-carrier-out": false,
+          "minerva-survives": true,
+          "mission": true
+        },
+        "failed": [
+          "abyss-out",
+          "orb-carrier-out"
+        ],
+        "weight": 5,
+        "eventDigest": "68e2c0ea113969a16e5d2d15ab0f16cbf83600e6628075050834e8e24c06e3c4",
+        "finalStateDigest": "9aad5c0241c981d1f45dbd50b6712a4600fdfb083210032620f619848e0b8479",
+        "simulationMs": 12632.936800000003,
+        "steps": 1525,
+        "shots": 1199,
+        "bladeShots": 2,
+        "skills": 61,
+        "strategyChanges": 309
+      },
+      "samples": [
+        {
+          "seed": 301533304,
+          "t": 76.25,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 76.25,
+            "mission": "seed-threeway-breakout"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "freedom-intervenes": true,
+            "abyss-out": false,
+            "orb-carrier-out": false,
+            "minerva-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "abyss-out",
+            "orb-carrier-out"
+          ],
+          "weight": 5,
+          "eventDigest": "68e2c0ea113969a16e5d2d15ab0f16cbf83600e6628075050834e8e24c06e3c4",
+          "finalStateDigest": "9aad5c0241c981d1f45dbd50b6712a4600fdfb083210032620f619848e0b8479",
+          "simulationMs": 12632.936800000003,
+          "steps": 1525,
+          "shots": 1199,
+          "bladeShots": 2,
+          "skills": 61,
+          "strategyChanges": 309
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-berlin",
+      "name": "20 · SEED DESTINY · 柏林毁灭阻击",
+      "best": {
+        "seed": 1160153093,
+        "t": 10.450000000000001,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 10.450000000000001,
+          "mission": "local-berlin"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "impulse-engages": true,
+          "murasame-engages": true,
+          "freedom-finishes-destroy": true,
+          "destroy-out": true,
+          "freedom-impulse-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 9,
+        "eventDigest": "0b2bc48bf1dfd7f11064f1dcaa635a23300bc7c131f0892a7bcb8a363b9b8636",
+        "finalStateDigest": "a274013bcbd379e38a33ab39f56a25f236c06ce11627b427e249330aa7e4aed6",
+        "simulationMs": 1779.917499999996,
+        "steps": 209,
+        "shots": 155,
+        "bladeShots": 0,
+        "skills": 21,
+        "strategyChanges": 71
+      },
+      "samples": [
+        {
+          "seed": 1160153093,
+          "t": 10.450000000000001,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 10.450000000000001,
+            "mission": "local-berlin"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "impulse-engages": true,
+            "murasame-engages": true,
+            "freedom-finishes-destroy": true,
+            "destroy-out": true,
+            "freedom-impulse-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "0b2bc48bf1dfd7f11064f1dcaa635a23300bc7c131f0892a7bcb8a363b9b8636",
+          "finalStateDigest": "a274013bcbd379e38a33ab39f56a25f236c06ce11627b427e249330aa7e4aed6",
+          "simulationMs": 1779.917499999996,
+          "steps": 209,
+          "shots": 155,
+          "bladeShots": 0,
+          "skills": 21,
+          "strategyChanges": 71
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-angel-down",
+      "name": "21 · SEED DESTINY · 大天使号追击脱离",
+      "best": {
+        "seed": 2553040195,
+        "t": 170.85000000000002,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 170.85000000000002,
+          "mission": "seed-submerge-escape"
+        },
+        "allCriteria": false,
+        "criteria": {
+          "impulse-disabled": false,
+          "impulse-recovers": false,
+          "freedom-out": false,
+          "impulse-blade-finish": false,
+          "archangel-survives": true,
+          "mission": true
+        },
+        "failed": [
+          "impulse-disabled",
+          "impulse-recovers",
+          "freedom-out",
+          "impulse-blade-finish"
+        ],
+        "weight": 4,
+        "eventDigest": "dfcb7a4014ac6cea01921e423bbd8c980e70604a987a98117b47d585b02be225",
+        "finalStateDigest": "805b90fe023513697ebfc4e55507863eaa260ce61380f50d5258134135d5a32b",
+        "simulationMs": 7205.513300000006,
+        "steps": 3417,
+        "shots": 503,
+        "bladeShots": 0,
+        "skills": 29,
+        "strategyChanges": 111
+      },
+      "samples": [
+        {
+          "seed": 2553040195,
+          "t": 170.85000000000002,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 170.85000000000002,
+            "mission": "seed-submerge-escape"
+          },
+          "allCriteria": false,
+          "criteria": {
+            "impulse-disabled": false,
+            "impulse-recovers": false,
+            "freedom-out": false,
+            "impulse-blade-finish": false,
+            "archangel-survives": true,
+            "mission": true
+          },
+          "failed": [
+            "impulse-disabled",
+            "impulse-recovers",
+            "freedom-out",
+            "impulse-blade-finish"
+          ],
+          "weight": 4,
+          "eventDigest": "dfcb7a4014ac6cea01921e423bbd8c980e70604a987a98117b47d585b02be225",
+          "finalStateDigest": "805b90fe023513697ebfc4e55507863eaa260ce61380f50d5258134135d5a32b",
+          "simulationMs": 7205.513300000006,
+          "steps": 3417,
+          "shots": 503,
+          "bladeShots": 0,
+          "skills": 29,
+          "strategyChanges": 111
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-heavens-base",
+      "name": "22 · SEED DESTINY · 天堂基地毁灭部队阻击",
+      "best": {
+        "seed": 2190622483,
+        "t": 217.55,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 217.55,
+          "mission": "local-heavens"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "shinn-attacks": true,
+          "rey-attacks": true,
+          "luna-attacks": true,
+          "five-destroy-out": true,
+          "aces-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 9,
+        "eventDigest": "aa6260fdbc6f8f6d4d093f850b4e15efe76aea6c12d197f6dd95ec71a33a4cf4",
+        "finalStateDigest": "08755a6558beaf3deddafc412bced6c4b99db13d1096401269b7ca78eda3bba9",
+        "simulationMs": 19748.882400000002,
+        "steps": 4351,
+        "shots": 1830,
+        "bladeShots": 2,
+        "skills": 92,
+        "strategyChanges": 454
+      },
+      "samples": [
+        {
+          "seed": 2190622483,
+          "t": 217.55,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 217.55,
+            "mission": "local-heavens"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "shinn-attacks": true,
+            "rey-attacks": true,
+            "luna-attacks": true,
+            "five-destroy-out": true,
+            "aces-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 9,
+          "eventDigest": "aa6260fdbc6f8f6d4d093f850b4e15efe76aea6c12d197f6dd95ec71a33a4cf4",
+          "finalStateDigest": "08755a6558beaf3deddafc412bced6c4b99db13d1096401269b7ca78eda3bba9",
+          "simulationMs": 19748.882400000002,
+          "steps": 4351,
+          "shots": 1830,
+          "bladeShots": 2,
+          "skills": 92,
+          "strategyChanges": 454
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-eternal-rescue",
+      "name": "23 · SEED DESTINY · 永恒号宇宙救援",
+      "best": {
+        "seed": 346648336,
+        "t": 43.35,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 43.35,
+          "mission": "seed-space-escape"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "strike-freedom-fire": true,
+          "dragoon-launch": true,
+          "eternal-kira-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 6,
+        "eventDigest": "06137ed75484094672efba9a2170e3fc99eaeeaff4d8473db41529b9cd7bc17f",
+        "finalStateDigest": "ebfc059800b70656285bf0364e334961461adf9c6bb0ac2153975ff653234efc",
+        "simulationMs": 7745.113100000002,
+        "steps": 867,
+        "shots": 671,
+        "bladeShots": 0,
+        "skills": 11,
+        "strategyChanges": 73
+      },
+      "samples": [
+        {
+          "seed": 346648336,
+          "t": 43.35,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 43.35,
+            "mission": "seed-space-escape"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "strike-freedom-fire": true,
+            "dragoon-launch": true,
+            "eternal-kira-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 6,
+          "eventDigest": "06137ed75484094672efba9a2170e3fc99eaeeaff4d8473db41529b9cd7bc17f",
+          "finalStateDigest": "ebfc059800b70656285bf0364e334961461adf9c6bb0ac2153975ff653234efc",
+          "simulationMs": 7745.113100000002,
+          "steps": 867,
+          "shots": 671,
+          "bladeShots": 0,
+          "skills": 11,
+          "strategyChanges": 73
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "ce-orb-high-air",
+      "name": "24 · SEED DESTINY · 奥布双机空域协防",
+      "best": {
+        "seed": 3986567158,
+        "t": 60,
+        "result": {
+          "reason": "objective",
+          "winner": "a",
+          "t": 60,
+          "mission": "ce-orb-air-withdrawal"
+        },
+        "allCriteria": true,
+        "criteria": {
+          "kira-fire": true,
+          "athrun-engages": true,
+          "shinn-engages": true,
+          "rey-engages": true,
+          "two-defenders-survive": true,
+          "mission": true
+        },
+        "failed": [],
+        "weight": 8,
+        "eventDigest": "3544be990223ed612e4b9dd80eeb9f53ff762a2cad84da72ae7584b28c93baae",
+        "finalStateDigest": "9381c3a706b2282103b65c262394c075d5d8fa5d54090d11c44f4ed40753e064",
+        "simulationMs": 3910.3004000000074,
+        "steps": 1200,
+        "shots": 419,
+        "bladeShots": 3,
+        "skills": 36,
+        "strategyChanges": 103
+      },
+      "samples": [
+        {
+          "seed": 3986567158,
+          "t": 60,
+          "result": {
+            "reason": "objective",
+            "winner": "a",
+            "t": 60,
+            "mission": "ce-orb-air-withdrawal"
+          },
+          "allCriteria": true,
+          "criteria": {
+            "kira-fire": true,
+            "athrun-engages": true,
+            "shinn-engages": true,
+            "rey-engages": true,
+            "two-defenders-survive": true,
+            "mission": true
+          },
+          "failed": [],
+          "weight": 8,
+          "eventDigest": "3544be990223ed612e4b9dd80eeb9f53ff762a2cad84da72ae7584b28c93baae",
+          "finalStateDigest": "9381c3a706b2282103b65c262394c075d5d8fa5d54090d11c44f4ed40753e064",
+          "simulationMs": 3910.3004000000074,
+          "steps": 1200,
+          "shots": 419,
+          "bladeShots": 3,
+          "skills": 36,
+          "strategyChanges": 103
+        }
+      ],
+      "verified": true
+    }
+  ]
+}

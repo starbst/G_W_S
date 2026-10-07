@@ -1,7 +1,7 @@
 // Bounded, playback-only blocks. No catalog, AI scores or simulation rules are stored.
-const DEF = [ "id", "side", "groupIndex", "name", "pilot", "pilotState", "radius", "maxArmor", "maxStructure", "maxEnergy", "maxTotalEnergy", "entityType", "renderProfile", "carrierId", "defenseLayers", "unlimitedEnergy" ];
+const DEF = [ "id", "side", "groupIndex", "name", "pilot", "pilotState", "radius", "maxArmor", "maxStructure", "maxEnergy", "maxTotalEnergy", "entityType", "renderProfile", "carrierId", "defenseLayers", "unlimitedEnergy", "gnSystem" ];
 
-const STATE = [ "position", "velocity", "forward", "armor", "structure", "energy", "track", "stability", "speedRate", "alive", "order", "weapon", "weaponKind", "targetId", "locked", "lockedTargetId", "targetedBy", "visible", "evasionMode", "recoveryDebuff", "recoveryDebuffRemaining", "shots", "hits", "damage", "aiming", "aimingWeapons", "fireArc", "threat", "weapons", "totalEnergy", "energyRecoveryRate", "energyArmorActive", "docked", "roll", "componentState", "powerCut", "formId", "stealthActive", "defenseActive", "moduleSeparated", "defenseIntegrity", "disabled", "coreActive", "coreStructure", "capturedBy", "grappleTarget" ];
+const STATE = [ "position", "velocity", "forward", "armor", "structure", "energy", "track", "stability", "speedRate", "alive", "order", "weapon", "weaponKind", "targetId", "locked", "lockedTargetId", "targetedBy", "visible", "evasionMode", "recoveryDebuff", "recoveryDebuffRemaining", "shots", "hits", "damage", "aiming", "aimingWeapons", "fireArc", "threat", "weapons", "totalEnergy", "energyRecoveryRate", "energyArmorActive", "docked", "roll", "componentState", "powerCut", "formId", "stealthActive", "defenseActive", "moduleSeparated", "defenseIntegrity", "disabled", "coreActive", "coreStructure", "capturedBy", "grappleTarget", "transAmActive", "activeSkills" ];
 
 const WDEF = [ "id", "name", "kind", "slot", "mount", "arcYawDeg", "arcPitchDeg", "windupS", "projectileSpeedMps" ];
 
@@ -27,7 +27,7 @@ export class RecordingWriter {
         this.header = {
             ...pick(meta, [ "id", "name", "createdAt", "engineVersion", "seed", "result", "battleName", "startConditions" ]),
             schemaVersion: 6,
-            columnVersion: 4,
+            columnVersion: 5,
             environment: pick(meta.environment, [ "medium", "visual" ]),
             battlefield: first.battlefield,
             ...(first.geometry?.length?{geometryDefs:first.geometry.map(o=>pick(o,['id','name','position','radiusM','structure','dimensions']))}:{}),
@@ -51,7 +51,7 @@ export class RecordingWriter {
         this.state = this.header.unitDefs.map(() => []);
     }
     observe(events = [], effects = []) {
-        this.events.push(...events.map(e => round(pick(e, [ "id", "t", "type", "actor", "text", "target", "weapon", "kind", "order", "readyAt", "position", "armorDamage", "structureDamage", "stabilityLoss", "opponent", "lossA", "lossB", "outcome", "removedMassKg", "massKg", "speedLimit", "cancelFraction", "availableImpulse", "requiredImpulse", "component", "health", "carrier", "count", "origin", "remote", "object", "drone", "droneEnergy", "accelerationGain", "skill", "pressure", "modifiers", "strategy", "progress", "loadout", "energy", "totalEnergy", "stock", "duration", "attacker", "distance", "relativeSpeed", "source", "command", "ally", "reason", "radius", "hitCount", "guarded", "shieldGuard", "shield", "reduction", "stabilityReduction" ]))));
+        this.events.push(...events.map(e => round(pick(e, [ "id", "t", "type", "actor", "text", "target", "weapon", "kind", "order", "readyAt", "position", "armorDamage", "structureDamage", "stabilityLoss", "opponent", "lossA", "lossB", "outcome", "removedMassKg", "massKg", "speedLimit", "cancelFraction", "availableImpulse", "requiredImpulse", "component", "health", "carrier", "count", "origin", "remote", "object", "drone", "droneEnergy", "accelerationGain", "skill", "skillName", "pressure", "modifiers", "strategy", "progress", "loadout", "energy", "totalEnergy", "stock", "duration", "attacker", "distance", "relativeSpeed", "source", "command", "ally", "reason", "radius", "hitCount", "guarded", "shieldGuard", "shield", "reduction", "stabilityReduction" ]))));
         this.cues.push(...effects.filter(e => CUE.has(e.type)).map(e => round(e)));
     }
     capture(f) {
@@ -96,8 +96,8 @@ export function validateV6(r) {
         throw Error("录像v6无效：" + m);
     };
     if(r?.startConditions!==undefined&&(r.startConditions?.version!==1||!r.startConditions.scenario||typeof r.startConditions.scenario!=='object'||Array.isArray(r.startConditions.scenario)||JSON.stringify(r.startConditions).length>65536))fail('开始条件');
-    const columnCount = r?.columnVersion === 4 ? STATE.length : r?.columnVersion === 3 ? 44 : r?.columnVersion === 2 ? 41 : r?.columnVersion === 1 ? 36 : 35;
-    if (r?.columnVersion !== undefined && ![1,2,3,4].includes(r.columnVersion)) fail("状态列版本");
+    const columnCount = r?.columnVersion === 5 ? STATE.length : r?.columnVersion === 4 ? STATE.length-1 : r?.columnVersion === 3 ? 44 : r?.columnVersion === 2 ? 41 : r?.columnVersion === 1 ? 36 : 35;
+    if (r?.columnVersion !== undefined && ![1,2,3,4,5].includes(r.columnVersion)) fail("状态列版本");
     const vec = v => Array.isArray(v) && v.length === 3 && v.every(x => Number.isFinite(x) && Math.abs(x) < 1e8);
     if (!r || r.schemaVersion !== 6 || typeof r.id !== "string" || r.id.length > 160 || typeof r.name !== "string" || r.name.length > 160 || !Array.isArray(r.unitDefs) || r.unitDefs.length < 1 || r.unitDefs.length > 128 || !Array.isArray(r.chunks) || r.chunks.length < 1 || r.chunks.length > 2e4) fail("头部容量");
     for (const k of [ "sky", "horizon", "sea" ]) if (!/^#[0-9a-f]{6}$/i.test(r.environment?.visual?.[k])) fail("环境颜色");
@@ -130,6 +130,7 @@ export function validateV6(r) {
                 }
                 if (!fi && seen.size !== columnCount) fail("块首帧");
                 const u = Object.fromEntries(STATE.map((k, j) => [ k, states[i][j] ]));
+                if(r.columnVersion===5&&(!Array.isArray(u.activeSkills)||u.activeSkills.length>32||u.activeSkills.some(s=>!s||typeof s.id!=='string'||s.id.length>64||typeof s.name!=='string'||s.name.length>160)))fail('技能状态');
                 if (columnCount >= 42 && u.disabled !== null && (typeof u.disabled !== 'boolean' || u.disabled && (u.alive || u.structure !== 0 || !u.coreActive && u.velocity.some(n=>n!==0)))) fail('失能状态');
                 if(columnCount>=46)for(const key of ["capturedBy","grappleTarget"])if(u[key]!==null&&!ids.has(u[key]))fail("抓取实体引用");
                 if(columnCount>=44){if(u.coreActive!==null&&typeof u.coreActive!=='boolean'||u.coreStructure!==null&&(!Number.isFinite(u.coreStructure)||u.coreStructure<0||u.coreStructure>300)||u.coreActive&&(!u.disabled||!(u.coreStructure>0)))fail('核心战机状态');}

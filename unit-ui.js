@@ -15,6 +15,7 @@ function fullCard(u,focus){const activeProtection=u.defenseActive!=null&&(u.defe
  for(const [label,value,max,percentage]of [['结构',u.structure,u.maxStructure],['装甲',u.armor,u.maxArmor],['能源',u.energy,u.maxEnergy],['稳定',u.stability??1,1,true],['跟踪',u.track,1,true]])if(label!=='稳定'||u.entityType!=='ship')card.append(meter(label,value,max,percentage));
  card.append(node('small','速度 '+Math.hypot(...u.velocity).toFixed(0)+'m/s · 高度 '+u.position[1].toFixed(0)+'m'),node('small',u.weapon+' · '+u.shots+' 发 / '+u.hits+' 命中'));
  if(!u.alive)card.append(node('small',u.coreActive?'失能 · 核心战机飞行中 · 等待有限组件重组':u.disabled?'失能 · 无法移动与攻击 · 可等待有限组件换装':'击毁'));
+ if(u.alive&&u.activeSkills?.length)card.append(node('small',u.activeSkills.map(s=>'◆ '+s.name).join(' · '),'gws-active-skills'));
  if(u.totalEnergy!==undefined)card.append(node('small','总能源 '+(u.unlimitedEnergy?'∞':u.totalEnergy.toFixed(0)+' / '+u.maxTotalEnergy)+' · 回气 '+(u.energyRecoveryRate??0).toFixed(1)+'/s'+(u.energyArmorActive?' · 能量装甲启用':'')));
  if(u.coreActive)card.append(node('small','核心战机结构 '+Math.round(u.coreStructure??0)));
  if(u.formId||u.stealthActive||activeProtection||u.moduleSeparated)card.append(node('small',[u.formId?'形态 '+(u.formId==='ms'?'MS':'MA'):null,u.stealthActive?'海市蜃楼运行':null,activeProtection?'主动防护 '+(u.defenseActive?'运行':'能源不足'):null,u.moduleSeparated?'模块分离避射':null].filter(Boolean).join(' · ')));

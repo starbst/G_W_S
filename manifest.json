@@ -1,11 +1,10 @@
 {
-  "display_name": "高达战争模拟器 · v1.0",
+  "display_name": "高达战争模拟器",
   "loading_order": 110,
   "js": "index.js",
   "css": "style.css",
   "author": "starbst",
   "version": "1.0.0",
-  "minimum_client_version": "1.19.0",
   "hooks": {
     "activate": "init",
     "disable": "dispose",

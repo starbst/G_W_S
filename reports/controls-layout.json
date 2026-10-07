@@ -1,0 +1,170 @@
+[
+  {
+    "width": 1440,
+    "controls": [
+      {
+        "id": "pause",
+        "left": 368.1875,
+        "right": 414.1875,
+        "bottom": 683.234375,
+        "top": 647.234375
+      },
+      {
+        "id": "speed",
+        "left": 454.1875,
+        "right": 500.1875,
+        "bottom": 683.234375,
+        "top": 647.234375
+      },
+      {
+        "id": "camera",
+        "left": 540.1875,
+        "right": 808.984375,
+        "bottom": 683.234375,
+        "top": 647.234375
+      },
+      {
+        "id": "fire-arcs",
+        "left": 848.984375,
+        "right": 892.984375,
+        "bottom": 683.234375,
+        "top": 647.234375
+      },
+      {
+        "id": "reset-camera",
+        "left": 902.984375,
+        "right": 974.984375,
+        "bottom": 683.234375,
+        "top": 647.234375
+      }
+    ],
+    "maxSameRowBottomDifference": 0,
+    "overflowPx": 0
+  },
+  {
+    "width": 768,
+    "controls": [
+      {
+        "id": "pause",
+        "left": 262.671875,
+        "right": 499.984375,
+        "bottom": 740,
+        "top": 704
+      },
+      {
+        "id": "speed",
+        "left": 507.984375,
+        "right": 745.296875,
+        "bottom": 740,
+        "top": 704
+      },
+      {
+        "id": "camera",
+        "left": 262.671875,
+        "right": 745.296875,
+        "bottom": 808,
+        "top": 772
+      },
+      {
+        "id": "fire-arcs",
+        "left": 262.671875,
+        "right": 499.984375,
+        "bottom": 876,
+        "top": 840
+      },
+      {
+        "id": "reset-camera",
+        "left": 507.984375,
+        "right": 745.296875,
+        "bottom": 876,
+        "top": 840
+      }
+    ],
+    "maxSameRowBottomDifference": 0,
+    "overflowPx": 0
+  },
+  {
+    "width": 430,
+    "controls": [
+      {
+        "id": "pause",
+        "left": 13,
+        "right": 211,
+        "bottom": 776,
+        "top": 732
+      },
+      {
+        "id": "speed",
+        "left": 219,
+        "right": 417,
+        "bottom": 776,
+        "top": 732
+      },
+      {
+        "id": "camera",
+        "left": 13,
+        "right": 417,
+        "bottom": 852,
+        "top": 808
+      },
+      {
+        "id": "fire-arcs",
+        "left": 13,
+        "right": 211,
+        "bottom": 928,
+        "top": 884
+      },
+      {
+        "id": "reset-camera",
+        "left": 219,
+        "right": 417,
+        "bottom": 928,
+        "top": 884
+      }
+    ],
+    "maxSameRowBottomDifference": 0,
+    "overflowPx": 0
+  },
+  {
+    "width": 360,
+    "controls": [
+      {
+        "id": "pause",
+        "left": 13,
+        "right": 176,
+        "bottom": 795,
+        "top": 751
+      },
+      {
+        "id": "speed",
+        "left": 184,
+        "right": 347,
+        "bottom": 795,
+        "top": 751
+      },
+      {
+        "id": "camera",
+        "left": 13,
+        "right": 347,
+        "bottom": 871,
+        "top": 827
+      },
+      {
+        "id": "fire-arcs",
+        "left": 13,
+        "right": 176,
+        "bottom": 947,
+        "top": 903
+      },
+      {
+        "id": "reset-camera",
+        "left": 184,
+        "right": 347,
+        "bottom": 947,
+        "top": 903
+      }
+    ],
+    "maxSameRowBottomDifference": 0,
+    "overflowPx": 0
+  }
+]

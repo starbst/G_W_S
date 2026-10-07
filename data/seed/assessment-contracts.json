@@ -1,0 +1,1507 @@
+{
+  "cases": [
+    {
+      "id": "ce-heliopolis-ginn",
+      "scope": "基拉接手至首次金恩失去战斗能力；角色生死交由RP判断",
+      "seconds": 180,
+      "criteria": [
+        {
+          "id": "ps-paid",
+          "type": "event",
+          "match": {
+            "type": "defense",
+            "actor": "a-0-0",
+            "defense": "ps"
+          },
+          "minimum": {
+            "physicalBlocked": 1,
+            "energy": 0.01
+          }
+        },
+        {
+          "id": "os-adaptation",
+          "type": "event",
+          "match": {
+            "type": "skill",
+            "actor": "a-0-0",
+            "skill": "battle-os-adaptation"
+          }
+        },
+        {
+          "id": "knife-after-os",
+          "type": "sequence",
+          "events": [
+            {
+              "match": {
+                "type": "skill",
+                "actor": "a-0-0",
+                "skill": "battle-os-adaptation"
+              }
+            },
+            {
+              "match": {
+                "type": "hit",
+                "actor": "a-0-0",
+                "target": "b-0-0",
+                "weapon": "w3-knife",
+                "kind": "melee"
+              },
+              "minimum": {
+                "structureDamage": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "knife-finishes",
+          "type": "last-hit",
+          "target": "b-0-0",
+          "match": {
+            "actor": "a-0-0",
+            "weapon": "w3-knife",
+            "kind": "melee"
+          }
+        },
+        {
+          "id": "strike-survives",
+          "type": "unit",
+          "unit": "a-0-0",
+          "alive": true
+        },
+        {
+          "id": "ginn-defeated",
+          "type": "unit",
+          "unit": "b-0-0",
+          "alive": false
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-orbital-interception",
+      "scope": "经用户2026-10-03明确许可，仅还原第5话重点局势：四台敌高达参与夹击、穆实际袭击威萨利乌斯并促成撤离、强袭发生PS能源危机、强袭与大天使存活且母舰脱离。圣盾近距抓取、穆实射解救、背包交接与Agni反击保留机制但不强制出现或按原作顺序发生；精确时点与坐标非官定。 此版采用12公里脱离航段，属于模拟初始条件校准而非原作精确坐标；穆袭舰促使撤离保留，穆存活、逐动作解救与换装顺序不在本版保证范围。",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "covering-gundams-fire",
+          "type": "event-actors",
+          "actors": [
+            "b-0-0",
+            "b-1-0",
+            "b-3-0"
+          ],
+          "match": {
+            "type": "shot",
+            "target": "a-1-0"
+          }
+        },
+        {
+          "id": "aegis-engages-strike",
+          "type": "event",
+          "match": {
+            "type": "strategy",
+            "actor": "b-2-0",
+            "target": "a-1-0"
+          }
+        },
+        {
+          "id": "phase-energy-crisis",
+          "type": "event",
+          "match": {
+            "type": "phase-down",
+            "actor": "a-1-0"
+          }
+        },
+        {
+          "id": "mu-forces-vessel-out",
+          "type": "sequence",
+          "events": [
+            {
+              "match": {
+                "type": "hit",
+                "actor": "a-2-0",
+                "target": "b-4-0"
+              }
+            },
+            {
+              "match": {
+                "type": "withdrawn",
+                "actor": "b-4-0"
+              }
+            }
+          ]
+        },
+        {
+          "id": "strike-alive",
+          "type": "unit",
+          "unit": "a-1-0",
+          "alive": true
+        },
+        {
+          "id": "escape",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-desert-lagowe",
+      "scope": "沙漠虎最终近距片段：强袭步枪不能继续使用，仍需应对双炮、觉醒、用格斗短刀决胜；此前丢枪镜头不在本局流程。",
+      "seconds": 360,
+      "criteria": [
+        {
+          "id": "lagowe-beam-pressure",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "b-0-0",
+            "weapon": "w1-cannon",
+            "kind": "beam"
+          },
+          "count": 2
+        },
+        {
+          "id": "real-beam-threat",
+          "type": "event",
+          "match": {
+            "type": "warning",
+            "actor": "a-0-0",
+            "weapon": "w1-cannon"
+          }
+        },
+        {
+          "id": "seed-after-pressure",
+          "type": "sequence",
+          "events": [
+            {
+              "match": {
+                "type": "aim",
+                "actor": "b-0-0",
+                "weapon": "w1-cannon"
+              }
+            },
+            {
+              "match": {
+                "type": "skill",
+                "actor": "a-0-0",
+                "skill": "seed-focus"
+              }
+            },
+            {
+              "match": {
+                "type": "hit",
+                "actor": "a-0-0",
+                "target": "b-0-0"
+              },
+              "oneOf": {
+                "weapon": [
+                  "w3-knife",
+                  "combat-knife"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "knife-finish",
+          "type": "last-hit",
+          "target": "b-0-0",
+          "match": {
+            "actor": "a-0-0"
+          },
+          "oneOf": {
+            "weapon": [
+              "w3-knife",
+              "combat-knife"
+            ]
+          }
+        },
+        {
+          "id": "lagowe-out",
+          "type": "unit",
+          "unit": "b-0-0",
+          "alive": false
+        },
+        {
+          "id": "strike-survives",
+          "type": "unit",
+          "unit": "a-0-0",
+          "alive": true
+        },
+        {
+          "id": "friendly-win",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-freedom-providence",
+      "scope": "重点终局的两机核心交战：神意龙骑兵实射包围、自由重伤并以军刀近战击败神意。救生艇事件和创世纪外部波及未实现完整核查，不把这段称为全部终局，人物生死由RP。",
+      "seconds": 600,
+      "criteria": [
+        {
+          "id": "dragoon-launched",
+          "type": "event",
+          "match": {
+            "type": "funnel-launch",
+            "actor": "b-0-0",
+            "weapon": "w4-dragoon"
+          }
+        },
+        {
+          "id": "dragoon-real-rays",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "b-0-0",
+            "weapon": "w4-dragoon",
+            "remote": true
+          },
+          "count": 6
+        },
+        {
+          "id": "freedom-real-injury",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "target": "a-0-0",
+            "actor": "b-0-0"
+          },
+          "minimum": {
+            "structureDamage": 1
+          }
+        },
+        {
+          "id": "blade-finish",
+          "type": "last-hit",
+          "target": "b-0-0",
+          "match": {
+            "actor": "a-0-0",
+            "weapon": "w3-saber",
+            "kind": "melee"
+          }
+        },
+        {
+          "id": "freedom-heavily-damaged-survivor",
+          "type": "unit",
+          "unit": "a-0-0",
+          "alive": true,
+          "maximum": {
+            "structure": 248.4
+          },
+          "minimum": {
+            "structure": 1
+          }
+        },
+        {
+          "id": "providence-out",
+          "type": "unit",
+          "unit": "b-0-0",
+          "alive": false
+        },
+        {
+          "id": "friendly-win",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-awakening-defense",
+      "scope": "第11话三机护舰：迅雷突破并威胁母舰，SEED觉醒后重创决斗，敌三机撤退，大天使及强袭存活。精确坐标/秒数/损伤比例为模拟校准。",
+      "seconds": 360,
+      "criteria": [
+        {
+          "id": "blitz-breakthrough",
+          "type": "event",
+          "match": {
+            "type": "aim",
+            "actor": "b-2-0",
+            "target": "a-0-0"
+          }
+        },
+        {
+          "id": "pressure-seed-duel-retreat",
+          "type": "sequence",
+          "events": [
+            {
+              "match": {
+                "type": "aim",
+                "actor": "b-2-0",
+                "target": "a-0-0"
+              }
+            },
+            {
+              "match": {
+                "type": "skill",
+                "actor": "a-1-0",
+                "skill": "seed-first-awakening"
+              }
+            },
+            {
+              "match": {
+                "type": "hit",
+                "actor": "a-1-0",
+                "target": "b-0-0"
+              },
+              "minimum": {
+                "structureDamage": 1
+              }
+            },
+            {
+              "match": {
+                "type": "withdrawn",
+                "actor": "b-0-0"
+              }
+            }
+          ]
+        },
+        {
+          "id": "three-withdraw",
+          "type": "event-actors",
+          "actors": [
+            "b-0-0",
+            "b-1-0",
+            "b-2-0"
+          ],
+          "match": {
+            "type": "withdrawn"
+          }
+        },
+        {
+          "id": "friendlies-survive",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0",
+            "a-2-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "duel-repelled-not-destroyed",
+          "type": "unit",
+          "unit": "b-0-0",
+          "alive": false,
+          "match": {
+            "withdrawn": true
+          }
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-eighth-fleet-reentry",
+      "scope": "第12—13话会战末段代表编制：四高达及金恩实战、决斗追击强袭、受损两舰实际碰撞毁损、断后舰队损失、伊扎克误判并击毁平民梭、大天使及强袭进入大气区域并存活脱离。普通兵力是抽样而非动画总数，起始损伤与坐标为模拟校准。平民梭最后攻击在此录像为导弹；未复现镜头级武器一致性、热防护或母舰接机，不能标为逐动作完整还原。 持续隐身修复后重新校准末段护航舰初始损伤：德雷克剩余结构20%、装甲35%，均为片段初态，不在运行中指定毁损。",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "four-gundams-engage",
+          "type": "event-actors",
+          "actors": [
+            "b-0-0",
+            "b-1-0",
+            "b-2-0",
+            "b-3-0"
+          ],
+          "match": {
+            "type": "shot"
+          }
+        },
+        {
+          "id": "duel-pursues-strike",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "b-0-0",
+            "target": "a-1-0"
+          }
+        },
+        {
+          "id": "menelaos-gamow-physical-contact",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "actor": "a-2-0",
+            "target": "b-4-0",
+            "kind": "collision"
+          }
+        },
+        {
+          "id": "rear-guard-loss",
+          "type": "units",
+          "units": [
+            "a-2-0",
+            "b-4-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "archangel-strike-reentry",
+          "type": "event-actors",
+          "actors": [
+            "a-0-0",
+            "a-1-0"
+          ],
+          "match": {
+            "type": "environment",
+            "environment": "air"
+          }
+        },
+        {
+          "id": "main-units-survive",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        },
+        {
+          "id": "duel-remains-active",
+          "type": "units",
+          "units": [
+            "b-0-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "shuttle-loss-after-fleet-collision",
+          "type": "sequence",
+          "events": [
+            {
+              "match": {
+                "type": "hit",
+                "kind": "collision",
+                "actor": "a-2-0",
+                "target": "b-4-0"
+              }
+            },
+            {
+              "match": {
+                "type": "hit",
+                "actor": "b-0-0",
+                "target": "a-5-0"
+              }
+            },
+            {
+              "match": {
+                "type": "destroyed",
+                "actor": "a-5-0"
+              }
+            }
+          ]
+        },
+        {
+          "id": "screen-fleet-loss",
+          "type": "units",
+          "units": [
+            "a-3-0",
+            "a-3-1",
+            "a-4-0",
+            "a-4-1"
+          ],
+          "alive": false
+        }
+      ]
+    },
+    {
+      "id": "ce-orb-departure",
+      "scope": "官方正文和配图核对的末段岛屿交锋：四机与两架支援机参与，巨剑强袭对舰刀，迅雷隐身援护圣盾并被刀击退出。炮装/翔翼/巨剑前序换装尚未覆盖。数值坐标与初始损伤是模拟校准，不冒称正片测量。",
+      "seconds": 180,
+      "criteria": [
+        {
+          "id": "four-enemies-engage",
+          "type": "event-actors",
+          "actors": [
+            "b-0-0",
+            "b-1-0",
+            "b-2-0",
+            "b-3-0"
+          ],
+          "match": {
+            "type": "shot"
+          }
+        },
+        {
+          "id": "aircraft-engage",
+          "type": "event-actors",
+          "actors": [
+            "a-2-0",
+            "a-3-0"
+          ],
+          "match": {
+            "type": "shot"
+          }
+        },
+        {
+          "id": "strike-engages-aegis",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-1-0",
+            "target": "b-0-0"
+          }
+        },
+        {
+          "id": "blitz-stealth",
+          "type": "event",
+          "match": {
+            "type": "stealth",
+            "actor": "b-3-0"
+          }
+        },
+        {
+          "id": "blitz-covers-aegis",
+          "type": "event",
+          "match": {
+            "type": "command",
+            "actor": "b-3-0",
+            "command": "escort",
+            "ally": "b-0-0",
+            "target": "a-1-0"
+          }
+        },
+        {
+          "id": "blade-finishes-blitz",
+          "type": "last-hit",
+          "target": "b-3-0",
+          "match": {
+            "actor": "a-1-0",
+            "kind": "melee"
+          }
+        },
+        {
+          "id": "blitz-out",
+          "type": "units",
+          "units": [
+            "b-3-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "core-survivors",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0",
+            "a-2-0",
+            "a-3-0",
+            "b-0-0",
+            "b-1-0",
+            "b-2-0"
+          ],
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "ce-island-duel",
+      "scope": "官方第28页（重制28/原PHASE30）确认大天使受炮击坠地、暴风退出后投降、圣盾击毁援护托尔、强袭斩断圣盾右臂后被抓抱自爆。当前正式初态仍待调整；自爆末段诊断不能代替完整场。盾牌击落、具体耗尽量及坐标尚非官方梗概直接给出的数值。局内击毁只表达机体退出。",
+      "seconds": 360,
+      "criteria": [
+        {
+          "id": "aegis-strike-engage",
+          "type": "event-actors",
+          "actors": [
+            "a-1-0",
+            "b-0-0"
+          ],
+          "match": {
+            "type": "shot"
+          }
+        },
+        {
+          "id": "ship-receives-beam",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "target": "a-0-0",
+            "kind": "beam"
+          }
+        },
+        {
+          "id": "buster-out",
+          "type": "units",
+          "units": [
+            "b-2-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "tolle-supports",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-3-0",
+            "target": "b-0-0"
+          }
+        },
+        {
+          "id": "aegis-finishes-tolle",
+          "type": "last-hit",
+          "target": "a-3-0",
+          "match": {
+            "actor": "b-0-0"
+          }
+        },
+        {
+          "id": "tolle-out",
+          "type": "units",
+          "units": [
+            "a-3-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "strike-slashes-aegis",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "actor": "a-1-0",
+            "target": "b-0-0",
+            "kind": "melee"
+          }
+        },
+        {
+          "id": "physical-capture-before-blast",
+          "type": "sequence",
+          "events": [
+            {
+              "match": {
+                "type": "captured",
+                "actor": "b-0-0",
+                "target": "a-1-0"
+              }
+            },
+            {
+              "match": {
+                "type": "self-destruct-armed",
+                "actor": "b-0-0",
+                "target": "a-1-0"
+              }
+            },
+            {
+              "match": {
+                "type": "self-destruct",
+                "actor": "b-0-0",
+                "target": "a-1-0"
+              }
+            }
+          ]
+        },
+        {
+          "id": "duel-mutual-loss",
+          "type": "units",
+          "units": [
+            "a-1-0",
+            "b-0-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "core-other-survivors",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-2-0",
+            "b-1-0"
+          ],
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": "ce-alaska-escape",
+      "scope": "自由支援并解除包围，大天使撤离；独眼巨人爆破与全军广播暂未覆盖",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "freedom-engages",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "multi-weapon-fire",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-1-0"
+          },
+          "count": 3
+        },
+        {
+          "id": "carrier-freedom-survive",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-orb-cooperation",
+      "scope": "自由/正义联合作战击退三机；弹药危机归舰可由通用撤离条件表达",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "kira-fire",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-0-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "athrun-fights",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "two-survivors",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-meteor-interception",
+      "scope": "代表8枚已发射核弹全部实际拦截；不模拟之前博亚兹毁灭和核弹爆炸",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "freedom-intercepts",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "actor": "a-0-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "justice-intercepts",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "actor": "a-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "all-warheads-intercepted",
+          "type": "units",
+          "units": [
+            "b-0-0",
+            "b-0-1",
+            "b-0-2",
+            "b-0-3",
+            "b-0-4",
+            "b-0-5",
+            "b-0-6",
+            "b-0-7"
+          ],
+          "alive": false
+        },
+        {
+          "id": "both-meteor-active",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-archangel-dominion",
+      "scope": "对射、强袭承受大型攻击、大天使受损后击沉主天使；穆生死交由RP判断",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "archangel-main",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-0-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "dominion-main",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "b-0-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "strike-hit",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "target": "a-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "archangel-survives",
+          "type": "units",
+          "units": [
+            "a-0-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "dominion-out",
+          "type": "units",
+          "units": [
+            "b-0-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-genesis-interior",
+      "scope": "仅突入核心破坏；原作正义自爆、救援载员脱出未实现，不能标完整",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "justice-attacks-core",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "actor": "a-0-0",
+            "target": "b-0-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "core-out",
+          "type": "units",
+          "units": [
+            "b-0-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-armory-ground",
+      "scope": "脉冲剑战参与、三台夺取机成功脱离；两扎古迎击，具名者存活",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "impulse-engages",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-0-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "stolen-unit-1-reaches-exit",
+          "type": "position-near",
+          "unit": "b-0-0",
+          "point": [
+            15000,
+            20,
+            -1200
+          ],
+          "radiusM": 1600
+        },
+        {
+          "id": "stolen-unit-2-reaches-exit",
+          "type": "position-near",
+          "unit": "b-1-0",
+          "point": [
+            15000,
+            20,
+            0
+          ],
+          "radiusM": 1600
+        },
+        {
+          "id": "stolen-unit-3-reaches-exit",
+          "type": "position-near",
+          "unit": "b-2-0",
+          "point": [
+            15000,
+            20,
+            1200
+          ],
+          "radiusM": 1600
+        },
+        {
+          "id": "main-survivors",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0",
+            "a-2-0",
+            "b-0-0",
+            "b-1-0",
+            "b-2-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "b"
+        }
+      ]
+    },
+    {
+      "id": "ce-u7-demolition",
+      "scope": "破拆装置完成、护卫与阻挠方交火；不模拟随后残骸大气灾害",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "work-completes",
+          "type": "event",
+          "match": {
+            "type": "work",
+            "actor": "a-0-0"
+          },
+          "count": 1,
+          "minimum": {
+            "progress": 1
+          }
+        },
+        {
+          "id": "defender-engages",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-2-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "saboteur-engages",
+          "type": "event",
+          "match": {
+            "type": "shot"
+          },
+          "count": 1,
+          "actorPrefix": "b-"
+        },
+        {
+          "id": "worker-survives",
+          "type": "units",
+          "units": [
+            "a-0-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-minerva-breakout",
+      "scope": "真在压力下觉醒、击破扎姆扎扎并帮助舰艇突破包围 敌方普通舰艇与MS采用较小代表编制，不冒称原作真实数量。",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "shinn-seed",
+          "type": "event",
+          "match": {
+            "type": "skill",
+            "actor": "a-1-0",
+            "skill": "seed-focus"
+          },
+          "count": 1
+        },
+        {
+          "id": "ma-out",
+          "type": "units",
+          "units": [
+            "b-2-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "ship-impulse-survive",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-lohengrin-gate",
+      "scope": "正面牵制、侧翼脉冲击毁炮位；隧道实际导航及分体突入未覆盖",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "decoy-fire",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "impulse-hits-emplacement",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "actor": "a-2-0",
+            "target": "b-0-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "emplacement-out",
+          "type": "units",
+          "units": [
+            "b-0-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "impulse-survives",
+          "type": "units",
+          "units": [
+            "a-2-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-dardanelles",
+      "scope": "三方干预、海涅退出、密涅瓦突围；精确误斩与呼吁停战暂不保证",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "freedom-intervenes",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "c-0-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "impulse-engages",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "minerva-survives",
+          "type": "units",
+          "units": [
+            "a-0-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "heine-out",
+          "type": "units",
+          "units": [
+            "a-5-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-crete",
+      "scope": "自由制止交火、深渊与奥布母舰退出、密涅瓦存活；穆/基拉的情绪交流不计算",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "freedom-intervenes",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "c-0-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "abyss-out",
+          "type": "units",
+          "units": [
+            "b-3-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "orb-carrier-out",
+          "type": "units",
+          "units": [
+            "b-0-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "minerva-survives",
+          "type": "units",
+          "units": [
+            "a-0-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-berlin",
+      "scope": "村雨迎击混沌，自由与脉冲迎击毁灭，自由最终致命命中；心理停战变化暂未建模",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "impulse-engages",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "murasame-engages",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-3-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "freedom-finishes-destroy",
+          "type": "last-hit",
+          "target": "b-0-0",
+          "match": {
+            "actor": "a-0-0"
+          }
+        },
+        {
+          "id": "destroy-out",
+          "type": "units",
+          "units": [
+            "b-0-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "freedom-impulse-survive",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-angel-down",
+      "scope": "基拉多次制止脉冲、脉冲重组再战、最终自由退出且大天使脱离",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "impulse-disabled",
+          "type": "event",
+          "match": {
+            "type": "disabled",
+            "actor": "b-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "impulse-recovers",
+          "type": "event",
+          "match": {
+            "type": "reactivated",
+            "actor": "b-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "freedom-out",
+          "type": "units",
+          "units": [
+            "a-1-0"
+          ],
+          "alive": false
+        },
+        {
+          "id": "impulse-blade-finish",
+          "type": "last-hit",
+          "target": "a-1-0",
+          "match": {
+            "actor": "b-1-0",
+            "kind": "melee"
+          }
+        },
+        {
+          "id": "archangel-survives",
+          "type": "units",
+          "units": [
+            "a-0-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-heavens-base",
+      "scope": "三台精锐机击破五台毁灭；尼伯龙根高空炮、基地投降与吉普利尔逃走未覆盖",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "shinn-attacks",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "actor": "a-0-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "rey-attacks",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "actor": "a-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "luna-attacks",
+          "type": "event",
+          "match": {
+            "type": "hit",
+            "actor": "a-2-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "five-destroy-out",
+          "type": "units",
+          "units": [
+            "b-0-0",
+            "b-1-0",
+            "b-1-1",
+            "b-1-2",
+            "b-1-3"
+          ],
+          "alive": false
+        },
+        {
+          "id": "aces-survive",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0",
+            "a-2-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-eternal-rescue",
+      "scope": "强袭自由火力压制护舰并成功救援，安德鲁参与；全舰队精确退出顺序不强制",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "strike-freedom-fire",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "dragoon-launch",
+          "type": "event",
+          "match": {
+            "type": "funnel-launch",
+            "actor": "a-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "eternal-kira-survive",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    },
+    {
+      "id": "ce-orb-high-air",
+      "scope": "强袭自由/无限正义协防对抗命运/传说、敌舰撤退；拂晓盾反射细节另需检查",
+      "seconds": 480,
+      "criteria": [
+        {
+          "id": "kira-fire",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-0-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "athrun-engages",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "a-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "shinn-engages",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "b-1-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "rey-engages",
+          "type": "event",
+          "match": {
+            "type": "shot",
+            "actor": "b-2-0"
+          },
+          "count": 1
+        },
+        {
+          "id": "two-defenders-survive",
+          "type": "units",
+          "units": [
+            "a-0-0",
+            "a-1-0"
+          ],
+          "alive": true
+        },
+        {
+          "id": "mission",
+          "type": "winner",
+          "side": "a"
+        }
+      ]
+    }
+  ]
+}

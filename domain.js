@@ -1,3 +1,4 @@
+import {registerWorldbookOrigins} from './worldbook-stack.js';
 import {validateAliases} from './catalog-names.js';
 import {missionConditionSchema,missionSchema} from './missions.js';
 import { validateV5Catalog,validateV5Scenario } from './catalog-contract.js';
@@ -9,7 +10,7 @@ function requireThat(ok, message) { if (!ok) throw new Error(message); }
 function number(n, lo, hi, path) { requireThat(typeof n === 'number' && Number.isFinite(n) && n >= lo && n <= hi, path + ' 数值越界'); }
 const ranges = {
  machine:{massKg:[1000,1e7],thrustN:[0,1e9],maxSpeedMps:[0,4000],turnRateDeg:[5,180],dragCoefficient:[0,0.01],radiusM:[1,500],structure:[1,20000],armor:[0,20000],energyCapacity:[10,1000],energyRegen:[0,250],sensorRangeM:[500,200000],sensorFovDeg:[30,180],trackGain:[0.1,3],trackDecay:[0.1,3],flightPower:[0,50]},
- weapon:{rangeM:[20,60000],effectiveRangeM:[10,60000],minimumDamageFactor:[0.05,1],minRangeM:[0,1000],preferredRangeM:[10,30000],projectileSpeedMps:[0,50000],cooldownS:[0.15,30],damage:[0,500],energyCost:[0,1000],spreadRad:[0.0001,0.2],arcYawDeg:[2,180],arcPitchDeg:[2,180],edgeSpreadMultiplier:[1,10],windupS:[0,3],lifeS:[0.05,30],turnRateDeg:[0,360],seekerHalfAngleDeg:[0,180],ammo:[-1,2000],burst:[1,12],blastRadiusM:[0,100]},
+ weapon:{rangeM:[20,60000],effectiveRangeM:[10,60000],minimumDamageFactor:[0.05,1],minRangeM:[0,1000],preferredRangeM:[10,30000],projectileSpeedMps:[0,50000],cooldownS:[0.15,30],damage:[0,500],energyCost:[0,1000],spreadRad:[0.0001,0.2],arcYawDeg:[2,180],arcPitchDeg:[2,180],edgeSpreadMultiplier:[1,10],windupS:[0,3],lifeS:[0.05,30],turnRateDeg:[0,360],seekerHalfAngleDeg:[0,180],ammo:[-1,2000],burst:[1,12],blastRadiusM:[0,1000]},
  pilot:{reactionS:[0.1,3],aim:[0.1,1],tracking:[0.1,1],maneuver:[0.1,1],composure:[0.1,1]},
  environment:{density:[0,2],visibilityM:[500,200000],seaClutter:[0,0.9],gravity:[0,20]},
 };
@@ -78,15 +79,15 @@ export function parseWorldbook(book) {
  }
  for(const w of catalog.weaponTemplates){requireThat(['beam','ballistic','missile','funnel-missile','funnel','melee'].includes(w.weaponKind),'武器模板类别错误');requireThat(['head','hand','shoulder','arm','body','skirt'].includes(w.mount)&&typeof w.requiresLock==='boolean','武器模板安装/锁定错误');tags(w.tags,w.id);stats('weapon',w.sim,w.id);}
  for(const m of catalog.machines){m.weapons=m.weapons.map(w=>{if(!w.template)return applyProjectilePolicy({...w,slot:w.slot||'slot1'},m);const base=catalog.weaponTemplates.find(x=>x.id===w.template);requireThat(base,'缺少或已禁用武器模板 '+w.template);return applyProjectilePolicy({...structuredClone(base),...w,kind:base.weaponKind,sim:{...base.sim,...w.sim},facts:{...base.facts,...w.facts},slot:w.slot||'slot1'},m);});validateMachine(m);}
- validateSkills(catalog.skillTemplates);catalog.pilots=resolvePilotProfiles(catalog.pilots,catalog.pilotTemplates);
+ validateSkills(catalog.skillTemplates);catalog.pilots=resolvePilotProfiles(catalog.pilots,catalog.pilotTemplates,book.gwsWorldbooks?.commonTemplates);
  for(const p of catalog.pilots)for(const s of p.states)for(const id of Object.keys(s.skills||{}))requireThat(catalog.skillTemplates.some(d=>d.id===id),'缺少驾驶员技能 '+id);
- requireThat(catalog.rules?.schemaVersion===5&&catalog.options,'当前扩展需要第5版数据结构，请导入 v1.0 配套世界书');
+ requireThat(catalog.rules?.schemaVersion===5&&catalog.options,'当前扩展需要第5版数据结构，请导入配套参数世界书');
  const r=catalog.rules;if(r.damageMultiplier!==undefined)number(r.damageMultiplier,1,6,'伤害倍率');requireThat(r.stepSeconds===0.05,'当前计算器使用固定20Hz');
  for(const [k,lo,hi]of [['maxSeconds',0,86400],['lockThreshold',0.1,1],['unlockThreshold',0,0.9],['damageVariance',0,0.5],['armorAbsorption',0,0.9],['componentDamageFraction',0,0.01],['boundaryRadiusM',3000,200000],['minimumAltitudeM',10,100]])number(r[k],lo,hi,k);
  requireThat(r.unlockThreshold<r.lockThreshold,'丢锁阈值必须低于锁定阈值');
  for(const k of ['machines','pilots','environments'])requireThat(catalog[k].length>0&&catalog[k].length<=(k==='environments'?100:512),'缺少或过多条目 '+k);
  validateV5Catalog(catalog);
- validateScenario(catalog.options.defaultScenario,catalog);return catalog;
+ validateScenario(catalog.options.defaultScenario,catalog);return registerWorldbookOrigins(catalog,book);
 }
 export function scenarioChoices(c){
  return {environmentId:c.environments.map(x=>x.id),focus:['overall','a','b','c'],mode:['auto','soft','hard'],machines:c.machines.map(x=>x.id),pilots:c.pilots.map(x=>x.id),states:[...new Set(c.pilots.flatMap(x=>x.states.map(y=>y.id)))],strategies:(['attack','escort','screen','objective','survive','simple']),battlefields:c.battlefields.map(x=>x.id),missions:c.missions.map(x=>x.id)};

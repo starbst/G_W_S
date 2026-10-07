@@ -1,3 +1,4 @@
+import {perceivedValue} from './pilot-judgment.js';
 import {isAreaShot,fuseCrossing,detonateArea,evadeBeamContact,beamGuard} from './projectile-policy.js';
 import {meleeEngagementWindow} from './melee-exchange.js';
 import {updateAttackAim} from './fire-control.js';
@@ -17,7 +18,7 @@ import {shipWeaponWindow,shipWeaponRole,shipShotCue,shipMainEnergyCost} from './
 import {disablesOnLethal} from './pilot-skills.js';
 import {captureObjective} from './missions.js';
 import {weaponTarget} from './weapon-allocation.js';
-import {weaponUtility} from './weapon-choice.js';
+import {weaponUtility,meaningfulThreat} from './weapon-choice.js';
 import {applyPilotOptions,initializeSkills} from './pilot-skills.js';
 import {initializeSeed,seedDefense,predictedProtectionCost,mountedRemote,concealedFrom,trySeparate,bestBlade,remoteTarget,launchCore,coreHit} from './seed-systems.js';
 import {decideV5} from './tactics.js';
@@ -153,7 +154,8 @@ export class Battle {
   if(u.breakaway&&this.t<u.breakaway.until||u.pendingReaction||u.missileThreat||u.weapons.some(w=>w.definition.kind==='melee'&&(w.attack||w.salvo))||u.swing)return null;
   if(u.commandAssignment?.source==='player'&&['hold','withdraw','move'].includes(u.commandAssignment.type)||!mayEngage(this,u,target))return null;
   const w=blade.definition,s=w.sim,point=add(contact.position,mul(contact.velocity,Math.max(0,this.t-contact.observedAt))),delta=sub(point,u.position),distance=length(delta),reach=s.rangeM+(target.entityType==='ship'?target.machine.sim.radiusM:0),closing=dot(sub(u.velocity,contact.velocity),norm(delta));
-  if(distance<=reach+12||distance>reach+motionSpeedLimit(this,u,true)*c.meleeDashLookaheadS||dot(u.forward,norm(delta))<.7||!this.available(u,blade)||this.meleeFriendlyBlocked(u,target,w)||!meleeAltitudeReachable(this,u,contact,reach)||!this.canSee(u.position,point))return null;
+  if(closing>180&&distance/closing<1.4)return null;
+   if(distance<=reach+12||distance>reach+motionSpeedLimit(this,u,true)*c.meleeDashLookaheadS||dot(u.forward,norm(delta))<.7||!this.available(u,blade)||this.meleeFriendlyBlocked(u,target,w)||!meleeAltitudeReachable(this,u,contact,reach)||!this.canSee(u.position,point))return null;
   if(s.environments&&(!s.environments.includes(environmentAt(this,u.position).medium)||!s.environments.includes(environmentAt(this,point).medium)))return null;
   const trade=bladeTrade(this,u,target,Math.max(0,closing));if(trade.unsafe)return null;
   const pulse=c.meleeDashPulseS,slot=w.slot||'slot1',prepare=Math.max(0,blade.readyAt-this.t,(u.slotReadyAt[slot]||0)-this.t,u.slotSelected[slot]===w.id?0:s.switchS??.18)+s.windupS;
@@ -196,7 +198,8 @@ export class Battle {
  }
  prepareBlade(u,target,blade,reason){
   // Movement intent and slot service share the same contact deadline.
-  if(this.bladeReserve(u,target))this.selectWeapon(u,blade,reason);
+  const guns=u.weapons.filter(w=>w.definition.slot===blade.definition.slot&&w.definition.kind!=='melee');
+  if(this.bladeReserve(u,target)||(u.order==='melee'||u.meleeIntent?.targetId===target.id)&&!guns.some(w=>this.available(u,w)))this.selectWeapon(u,blade,reason);
  }
  state(u,id=u.selected){return u.weapons.find(w=>w.definition.id===id)||u.weapons[0]||{definition:{id:'unarmed',name:'无武装',kind:'ballistic',sim:{rangeM:1,arcYawDeg:0,arcPitchDeg:0,edgeSpreadMultiplier:1}},ammo:0,readyAt:Infinity,shots:0,hits:0};}
  available(u,w){const cost=shipMainEnergyCost(u,w.definition)??weaponEnergyCost(w.definition);return !w.disabled&&!w.formDisabled&&w.ammo!==0&&u.energy>=cost&&(u.totalEnergy??energyTotalCapacity(u))>=cost;}
@@ -390,8 +393,12 @@ export class Battle {
  sweepMelee(previous){
   // Only committed exchanges are evaluated. There is no scan for an accidental
   // blade mesh collision or friendly victim; macro/body collisions stay below.
-  for(let i=0;i<this.units.length;i++){
-   const u=this.units[i],swing=u.swing,target=this.unitById.get(swing?.targetId);
+  const ready=[];for(let i=0;i<this.units.length;i++){const u=this.units[i];if(u.swing)ready.push({u,i});}
+  // Earlier strokes keep initiative. Equal-time strokes contest initiative once
+  // at release instead of always handing the first exchange to the lower ID.
+  ready.sort((a,z)=>a.u.swing.started-z.u.swing.started||(a.u.swing.initiative??0)-(z.u.swing.initiative??0));
+  for(const {u,i}of ready){
+   const swing=u.swing,target=this.unitById.get(swing?.targetId);
    if(!swing)continue;
    if(!u.alive||!target?.alive||!mayEngage(this,u,target)){u.swing=null;continue;}
    if(this.t>swing.until){this.emit('blade-miss',u.id,u.machine.name+' 近战交锋窗口已关闭',{target:target.id,weapon:swing.weaponId,reason:'expired'});u.swing=null;this.recordExchange(u,target.id,'melee','miss');continue;}
@@ -409,7 +416,7 @@ export class Battle {
    const n=distance>1e-6?mul(delta,1/distance):[1,0,0],ma=a.machine.sim.massKg,mb=b.machine.sim.massKg;
    // Resolve hull overlap after a numerical exchange without adding a second
    // physical parry penalty. Other body/ship collisions remain independent.
-   const resolvedMelee=a.entityType!=='ship'&&b.entityType!=='ship'&&a.meleeExchangePartner===b.id&&b.meleeExchangePartner===a.id&&this.t-(a.meleeExchangeAt??-Infinity)<.15&&this.t-(b.meleeExchangeAt??-Infinity)<.15;
+   const resolvedMelee=a.entityType!=='ship'&&b.entityType!=='ship'&&a.meleeExchangePartner===b.id&&b.meleeExchangePartner===a.id&&this.t-(a.meleeExchangeAt??-Infinity)<.75&&this.t-(b.meleeExchangeAt??-Infinity)<.75;
    const speed=resolvedMelee?0:Math.max(0,dot(sub(a.velocity,b.velocity),n)),impulse=1.15*speed/(1/ma+1/mb);
    a.velocity=sub(a.velocity,mul(n,impulse/ma));b.velocity=add(b.velocity,mul(n,impulse/mb));
    a.position=sub(a.position,mul(n,(radius-distance)*mb/(ma+mb)));b.position=add(b.position,mul(n,(radius-distance)*ma/(ma+mb)));
@@ -485,15 +492,15 @@ export class Battle {
   const attacker=this.unitById.get(r.attacker)||target,contact=u.contacts.get(attacker?.id),freshContact=contact&&this.t-contact.observedAt<.8;
    const closing=freshContact?Math.max(0,-dot(sub(contact.velocity,u.velocity),norm(sub(contact.position,u.position)))):0;
    const trade=r.kind==='melee'&&freshContact?bladeTrade(this,u,attacker,closing):null,safeGuard=!trade?.unsafe,canDodge=u.energy>=(u.machine.sim.dodgeEnergyCost??5)&&u.components.engine>.1;
-   if(r.kind==='melee'&&(!canDodge||safeGuard)&&u.stability>.12&&this.t>=(u.meleeBreakUntil||0)){
+   if(r.kind==='melee'&&(!canDodge||safeGuard||trade?.canParry)&&u.stability>.12&&this.t>=(u.meleeBreakUntil||0)){
     const blade=this.bestBlade(u,attacker);
     if(blade&&this.available(u,blade)){
       if(u.drift)this.interrupt(u,'拔刀迎击');
       this.selectWeapon(u,blade,'拔刀迎击');
       const slot=blade.definition.slot||'slot1';
       u.guardReadyAt=Math.max(u.guardUntil>this.t?(u.guardReadyAt||this.t):this.t+(blade.definition.sim.windupS||0)*.4,u.slotReadyAt[slot]||0);
-      u.guardUntil=this.t+Math.max(.9,u.pilotState.tactics.meleeLookaheadS+.5);u.nextDecision=this.t;
-      this.emit('reaction',u.id,u.machine.name+' 拔刀迎击',{weaponKind:r.kind,weapon:blade.definition.id,readyAt:u.guardReadyAt});return;
+      u.guardUntil=this.t+Math.max(.9,u.pilotState.tactics.meleeLookaheadS+.5);u.guardMode=!safeGuard?'deflect':'brace';u.nextDecision=this.t;
+      this.emit('reaction',u.id,u.machine.name+(u.guardMode==='deflect'?' 拔刀卸力格挡':' 拔刀迎击'),{weaponKind:r.kind,weapon:blade.definition.id,readyAt:u.guardReadyAt});return;
     }
    }
   if(r.missile&&!this.projectiles.some(s=>s.id===r.missile&&s.target===u.id&&dot(sub(s.velocity,u.velocity),sub(u.position,s.position))>0))return;
@@ -549,7 +556,7 @@ export class Battle {
   const seen=u.lastSeen,c=u.pilotState.tactics;if(!seen||this.t-u.lastSeenAt>.6)return null;
   const delta=sub(seen.position,u.position),distance=length(delta),toward=norm(delta),carry=length(u.velocity)>60?norm(u.velocity):u.forward;
   const weapon=this.state(target,seen.weaponId).definition,range=Math.min(c.tailThreatRangeM,weapon.sim.rangeM);
-  if(!isTacticalThreat(weapon,u,this.rules.damageMultiplier))return null;
+  if(!isTacticalThreat(weapon,u,this.rules.damageMultiplier)||!meaningfulThreat(this,target,weapon,u,distance,toward))return null;
   const behind=length(u.velocity)>60?dot(carry,toward)<-.2:dot(u.forward,toward)<-.3;
   const aiming=arcSolution(seen.forward,mul(delta,-1),weapon.sim).inside;
   if(!behind||!aiming||distance>range||distance<Math.max(90,u.machine.sim.radiusM*4))return null;
@@ -580,6 +587,7 @@ export class Battle {
   if(trajectory)ghost.trajectory=trajectory;return ghost;
  }
  proactiveBreakaway(u,target,safeWindow){
+  if(!(u.machine.sim.maxSpeedMps>0&&u.machine.sim.thrustN>0)||!target?.alive)return null;
   const c=u.pilotState.tactics,pressure=this.tailPressure(u,target);
   if(u.tailContactId!==target.id){u.tailContactId=target.id;u.breakaway=null;u.tailAttempt=null;u.tailFailures=0;u.tailSuppressedUntil=0;u.tailEpisodeAt=null;u.tailClearAt=null;}
   if(!pressure){
@@ -608,11 +616,11 @@ export class Battle {
     const gain=(separation-pressure.distance)/Math.max(80,pressure.distance*.15),courseChange=lateral/Math.max(12,u.machine.sim.radiusM*3);
     const lateralSpeed=length(cross(sub(pred.velocity,pressure.seen.velocity),pressure.toward));
     const resourceCost=(style==='boost'?.08:style==='jink'?.15:.2)+budget.cost/Math.max(1,u.energy)*.4;
-    const score=courseChange*.55+gain*.75+lateralSpeed/600+length(pred.velocity)/u.machine.sim.maxSpeedMps*.3-resourceCost;
-    candidates.push({plan,score,separation,lateral});
+    const score=perceivedValue(this,u,'tail-route:'+style+':'+sign,courseChange*.55+gain*.75+lateralSpeed/600+length(pred.velocity)/u.machine.sim.maxSpeedMps*.3-resourceCost,{step:.15,relative:.08});
+    if(Number.isFinite(score)&&[...pred.position,...pred.velocity].every(Number.isFinite))candidates.push({plan,score,separation,lateral});
    }
    if(!candidates.length)return null;candidates.sort((a,b)=>b.score-a.score);
-   const near=candidates.filter(x=>x.score>=candidates[0].score-.12),chosen=near[Math.min(near.length-1,Math.floor(this.random()*near.length))];
+   const near=candidates.filter(x=>x.score>=candidates[0].score-.12),chosen=near[Math.min(near.length-1,Math.floor(this.random()*near.length))]||candidates[0];
    this.interrupt(u,'提前摆脱追尾');u.breakaway=chosen.plan;u.retreat=null;this.effects.push({type:'dodge-jet',actor:u.id,t:this.t,life:.45,position:[...u.position],direction:mul(chosen.plan.axis,-1)});u.tailAttempt??={evaluateAt:chosen.plan.until,distance:pressure.distance,structure:u.structure};
    this.emit('strategy',u.id,u.machine.name+' 发现追尾射击态势，主动'+({boost:'加速拉开',jink:'大范围横切变向',roll:'滚动横向机动'}[chosen.plan.style]),{strategy:'tail-break',target:target.id,style:chosen.plan.style,distance:pressure.distance,closing:pressure.closing,predictedLateral:chosen.lateral,predictedSeparation:chosen.separation});
   }
@@ -791,7 +799,10 @@ export class Battle {
    if(u.entityType!=='ship'&&(u.stability<(urgent?.16:burst?c.burstStability:c.singleStability)||u.stableTime<(burst?.04:.12)))return;
   }
   if(w.kind==='melee'){
-   const delta=sub(this.observed(u,target),u.position),d=length(delta),lead=s.rangeM+((target.entityType==='ship')?target.machine.sim.radiusM:0)+Math.max(0,dot(sub(u.velocity,target.velocity),norm(delta)))*(s.windupS+.25);
+   // Draw on approach, but begin the stroke only when its recovery-time release
+   // can meet the predicted contact. An early dash windup otherwise fires at empty air.
+   const dash=u.breakaway;if(dash?.meleeDash&&dash.target===target.id&&dash.started+dash.contactIn>this.t+s.windupS+this.rules.stepSeconds)return;
+   const delta=sub(this.observed(u,target),u.position),d=length(delta),reach=s.rangeM+((target.entityType==='ship')?target.machine.sim.radiusM:0),closing=Math.max(0,dot(sub(u.velocity,u.lastSeen?.velocity||target.velocity),norm(delta))),lead=reach+closing*(s.windupS+this.rules.stepSeconds);
    if(d>lead&&!(u.breakaway?.meleeDash&&u.breakaway.target===target.id&&this.t<u.breakaway.until))return;
   }
   const solution=target.entityType==='remote'?{position:target.position,velocity:target.velocity,t:this.t}:((state.fireControl?.solution))||u.fireSolution||u.lastSeen||{position:target.position,velocity:target.velocity,t:this.t};
@@ -843,7 +854,7 @@ export class Battle {
    this.effects.push({type:'slash',t:this.t,life:.42,from:[...u.position],to:add(u.position,mul(toward,s.rangeM)),actor:u.id,reachM:s.rangeM,meleeStyle:weaponVisual(w)});
    // A committed stroke enters one bounded numerical exchange after movement.
     // Effects depict it; rendered blade intersection cannot score the attack.
-    u.swing={weaponId:w.id,targetId:target.id,started:this.t,forward:[...u.forward],until:this.t+.35};
+    u.swing={weaponId:w.id,targetId:target.id,started:this.t,initiative:this.randomFor(u.id,'blade-initiative')(),forward:[...u.forward],until:this.t+.35};
   }else{
    // Aim commits before the defender reacts. No beam homing after emission.
    // Each burst aim is prepared between shots, not snapped to a fresh solution on the firing tick.
@@ -981,8 +992,8 @@ export class Battle {
   const attackers=new Map();for(const x of this.units){const target=this.unitById.get(x.lockedTargetId);if(x.alive&&target&&x.side!==target.side&&!attackers.has(target.id))attackers.set(target.id,x.id);}
   return {commandTargets:[...new Set(this.units.filter(u=>u.side==='a'&&u.alive).flatMap(u=>[...u.contacts].filter(([id,c])=>this.t-c.observedAt<=.8&&this.unitById.get(id)?.alive).map(([id])=>id)))],commands:this.units.filter(u=>u.commandAssignment).map(u=>({unitId:u.id,...u.commandAssignment})),learning:[],t:this.t,tick:this.tick,result:this.result,units:this.units.map(u=>{
    const state=this.state(u),w=state.definition,target=this.targetFor(u),direction=sub(this.observed(u,target),u.position),arc=arcSolution(u.forward,direction,w.sim);
-   return {...(hasUnlimitedEnergy(u)?{unlimitedEnergy:true}:{}),...(u.disabled!==undefined?{disabled:u.disabled,...(u.machine.moduleSystem?.coreFlight?{coreActive:!!u.coreActive,coreStructure:u.coreStructure??null}:{})}:{}),...(u.machine.defenses?{defenseLayers:u.machine.defenses.map(d=>({type:d.type,capacity:d.capacity,active:d.upkeep>0||d.energyPerDamage>0||['ps','tp','vps'].includes(d.type)}))}:{}),...(u.machine.defenses?.some(d=>d.capacity)?{defenseIntegrity:{...u.defenseIntegrity}}:{}),...(u.machine.moduleSystem?{moduleSeparated:this.t<(u.moduleSeparatedUntil||0)}:{}),...((u.machine.forms||u.machine.loadoutSystem)?{formId:u.formId}:{}),...(u.machine.stealth?{stealthActive:u.stealthActive||false}:{}),...(u.machine.defenses?{defenseActive:u.defenseActive??false}:{}),capturedBy:u.capturedBy||null,grappleTarget:u.grappleTarget||null,carrierId:u.carrierId||u.mountId||null,entityType:u.entityType||'ms',renderProfile:u.machine.renderProfile,docked:u.docked??false,powerCut:this.t<(u.powerCutUntil||0),roll:u.roll||0,componentState:u.componentState?structuredClone(u.componentState):undefined,side:u.side,groupIndex:u.groupIndex,visible:u.visible,detectionLocked:u.detectionLocked,evasionMode:u.evasionMode,estimatedTarget:this.observed(u,target),strategyWeights:{...u.weights},stableTime:u.stableTime,recoveryDebuff:this.t<(u.recoveryDebuffUntil||0)?u.recoveryDebuff:null,recoveryDebuffRemaining:Math.max(0,(u.recoveryDebuffUntil||0)-this.t),id:u.id,name:u.machine.name,pilot:u.pilot,pilotState:u.pilotState.name,weapon:w.name,weaponKind:w.kind,position:[...u.position],velocity:[...u.velocity],forward:[...u.forward],armor:u.armor,maxArmor:u.machine.sim.armor,structure:u.structure,maxStructure:u.machine.sim.structure,energy:u.energy,maxEnergy:u.machine.sim.energyCapacity,totalEnergy:u.totalEnergy,maxTotalEnergy:energyTotalCapacity(u),energyRecoveryRate:energyRechargeRate(u),energyArmorActive:u.energyArmorActive??false,components:{...u.components},track:u.track,locked:u.locked,alive:u.alive,order:u.order,orderLabel:ORDER_NAMES[u.order],shots:u.shots,hits:u.hits,damage:u.damage,radius:u.machine.sim.radiusM,
-    speedRate:u.speedRate||0,stability:u.stability,targetId:u.targetId,lockedTargetId:u.lockedTargetId||null,targetedBy:attackers.get(u.id)||null,aiming:u.weapons.some(s=>!!s.attack),aimingWeapons:u.weapons.filter(s=>s.attack).map(s=>s.definition.name),decisionReason:ORDER_NAMES[u.order],outsideEnemyArc:u.arcEvaluated?u.outsideEnemyArc:null,fireArc:{yaw:w.sim.arcYawDeg,pitch:w.sim.arcPitchDeg,effectiveRange:w.sim.effectiveRangeM,range:w.sim.rangeM,inside:arc.inside,edge:arc.edge},reactionRemaining:u.pendingReaction?Math.max(0,u.pendingReaction.at-this.t):0,threat:u.pendingReaction||this.t<u.evadeUntil?u.threatLabel:u.missileThreat?'导弹接近 · 加速脱离':'无攻击警报',
+   return {...(u.machine.tags.includes('anno-domini')?{gnSystem:u.machine.powerSystem?.type?.startsWith('gn-')?u.machine.powerSystem.type:false,transAmActive:!!u.skillRuntime?.definitions.some(d=>d.equipmentGate==='trans-am'&&u.skillRuntime.active.has(d.id))}:{}),...(hasUnlimitedEnergy(u)?{unlimitedEnergy:true}:{}),...(u.disabled!==undefined?{disabled:u.disabled,...(u.machine.moduleSystem?.coreFlight?{coreActive:!!u.coreActive,coreStructure:u.coreStructure??null}:{})}:{}),...(u.machine.defenses?{defenseLayers:u.machine.defenses.map(d=>({type:d.type,capacity:d.capacity,active:d.upkeep>0||d.energyPerDamage>0||['ps','tp','vps'].includes(d.type)}))}:{}),...(u.machine.defenses?.some(d=>d.capacity)?{defenseIntegrity:{...u.defenseIntegrity}}:{}),...(u.machine.moduleSystem?{moduleSeparated:this.t<(u.moduleSeparatedUntil||0)}:{}),...((u.machine.forms||u.machine.loadoutSystem)?{formId:u.formId}:{}),...(u.machine.stealth?{stealthActive:u.stealthActive||false}:{}),...(u.machine.defenses?{defenseActive:u.defenseActive??false}:{}),capturedBy:u.capturedBy||null,grappleTarget:u.grappleTarget||null,carrierId:u.carrierId||u.mountId||null,entityType:u.entityType||'ms',renderProfile:u.machine.renderProfile,docked:u.docked??false,powerCut:this.t<(u.powerCutUntil||0),roll:u.roll||0,componentState:u.componentState?structuredClone(u.componentState):undefined,side:u.side,groupIndex:u.groupIndex,visible:u.visible,detectionLocked:u.detectionLocked,evasionMode:u.evasionMode,estimatedTarget:this.observed(u,target),strategyWeights:{...u.weights},stableTime:u.stableTime,recoveryDebuff:this.t<(u.recoveryDebuffUntil||0)?u.recoveryDebuff:null,recoveryDebuffRemaining:Math.max(0,(u.recoveryDebuffUntil||0)-this.t),id:u.id,name:u.machine.name,pilot:u.pilot,pilotState:u.pilotState.name,weapon:w.name,weaponKind:w.kind,position:[...u.position],velocity:[...u.velocity],forward:[...u.forward],armor:u.armor,maxArmor:u.machine.sim.armor,structure:u.structure,maxStructure:u.machine.sim.structure,energy:u.energy,maxEnergy:u.machine.sim.energyCapacity,totalEnergy:u.totalEnergy,maxTotalEnergy:energyTotalCapacity(u),energyRecoveryRate:energyRechargeRate(u),energyArmorActive:u.energyArmorActive??false,components:{...u.components},track:u.track,locked:u.locked,alive:u.alive,order:u.order,orderLabel:ORDER_NAMES[u.order],shots:u.shots,hits:u.hits,damage:u.damage,radius:u.machine.sim.radiusM,
+    activeSkills:u.alive?(u.skillRuntime?.definitions||[]).filter(d=>u.skillRuntime.active.has(d.id)).map(d=>({id:d.id,name:d.name})):[],speedRate:u.speedRate||0,stability:u.stability,targetId:u.targetId,lockedTargetId:u.lockedTargetId||null,targetedBy:attackers.get(u.id)||null,aiming:u.weapons.some(s=>!!s.attack),aimingWeapons:u.weapons.filter(s=>s.attack).map(s=>s.definition.name),decisionReason:ORDER_NAMES[u.order],outsideEnemyArc:u.arcEvaluated?u.outsideEnemyArc:null,fireArc:{yaw:w.sim.arcYawDeg,pitch:w.sim.arcPitchDeg,effectiveRange:w.sim.effectiveRangeM,range:w.sim.rangeM,inside:arc.inside,edge:arc.edge},reactionRemaining:u.pendingReaction?Math.max(0,u.pendingReaction.at-this.t):0,threat:u.pendingReaction||this.t<u.evadeUntil?u.threatLabel:u.missileThreat?'导弹接近 · 加速脱离':'无攻击警报',
     weapons:u.weapons.map(s=>({id:s.definition.id,name:s.definition.name,kind:s.definition.kind,mount:s.definition.mount,slot:s.definition.slot||'slot1',disabled:!!(s.disabled||s.formDisabled),track:s.fireControl?.track,locked:s.fireControl?.locked,ammo:s.ammo,readyIn:Math.max(0,s.readyAt-this.t),active:s.definition.id===u.slotSelected[s.definition.slot||'slot1'],windup:!!s.attack,windupUntil:s.attack?.at??0,windupS:s.definition.sim.windupS,projectileSpeedMps:s.definition.sim.projectileSpeedMps,burstRemaining:s.salvo?.remaining||0,shots:s.shots,hits:s.hits,arcYawDeg:s.definition.sim.arcYawDeg,arcPitchDeg:s.definition.sim.arcPitchDeg}))};
   }),objects:(this.objects.map(o=>({...o}))),drones:(this.drones.map(d=>({id:d.id,owner:d.owner,side:d.side,position:[...d.position],forward:[...d.forward],velocity:[...d.velocity],target:d.target,weaponId:d.weaponId,phase:d.phase}))),clouds:(structuredClone(this.clouds)),mission:this.mission?.name,battlefield:this.field?.id,geometry:(this.field?.obstacles||[]).map(o=>({id:o.id,name:o.name,position:[...o.position],radiusM:o.radiusM,...(o.dimensions?{dimensions:[...o.dimensions]}:{}),structure:o.structure??null,health:o.health??o.structure??null})),effects:structuredClone(this.effects),projectiles:this.projectiles.filter(p=>GUIDED.has(p.kind)).map(p=>({id:p.id,owner:p.owner,kind:p.kind,position:[...p.position],previous:[...p.previous],trace:p.trace.map(v=>[...v]),guiding:p.guiding}))};
  }

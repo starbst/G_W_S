@@ -1,6 +1,6 @@
 {
   "ce-heliopolis-ginn": {
-    "seed": 2667180510,
+    "seed": 107446084,
     "status": "current-core-verified",
     "allCriteria": true,
     "criteria": {
@@ -15,85 +15,77 @@
     "scope": "基拉接手至首次金恩失去战斗能力；角色生死交由RP判断",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "8532ef327a0d0bb1a026c8eaccdcf5919648d6572327e7946870af541ce65176",
-    "finalStateDigest": "7981b6b792739321e7b109caf43c932935ee401aab7acb16ad010e3f0dddd3bf",
+    "eventDigest": "184c7430e6ca5c58da0e33e95338b69057202669c2ec3e26609112089cb949f4",
+    "finalStateDigest": "9f3eb086bc09205932611db91b5afab5037efe04d65bd75a559424c5062c8cb0",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-orbital-interception": {
-    "seed": 2783547088,
-    "status": "current-partial-reference",
-    "allCriteria": false,
+    "seed": 3364519814,
+    "status": "current-core-verified",
+    "allCriteria": true,
     "criteria": {
       "covering-gundams-fire": true,
       "aegis-engages-strike": true,
       "phase-energy-crisis": true,
       "mu-forces-vessel-out": true,
       "strike-alive": true,
-      "escape": false
+      "escape": true
     },
     "scope": "经用户2026-10-03明确许可，仅还原第5话重点局势：四台敌高达参与夹击、穆实际袭击威萨利乌斯并促成撤离、强袭发生PS能源危机、强袭与大天使存活且母舰脱离。圣盾近距抓取、穆实射解救、背包交接与Agni反击保留机制但不强制出现或按原作顺序发生；精确时点与坐标非官定。 此版采用12公里脱离航段，属于模拟初始条件校准而非原作精确坐标；穆袭舰促使撤离保留，穆存活、逐动作解救与换装顺序不在本版保证范围。",
-    "failed": [
-      "escape"
-    ],
+    "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "3a560e17fe276b33ef22adf984d3f1c5c7e60b91488428582f7c563ead94fac1",
-    "finalStateDigest": "50dafc376e0c7172b5bdcbdda11d07bac4e67d02ed551910b70471b41295d170",
+    "eventDigest": "73197e1e71593e6562c90bae18f1cc016471097df4428155d8a5776a597686af",
+    "finalStateDigest": "1180cd594b49139fb36063f5c275077c6c05dbcfbe4ed560c8311650a7fc3a78",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的较接近样本；仍未完整达到登记条件，不能当作完整还原。勾选导入种子才使用。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-awakening-defense": {
-    "seed": 2813142768,
-    "status": "current-partial-reference",
-    "allCriteria": false,
+    "seed": 2657896752,
+    "status": "current-core-verified",
+    "allCriteria": true,
     "criteria": {
       "blitz-breakthrough": true,
-      "pressure-seed-duel-retreat": false,
-      "three-withdraw": false,
-      "friendlies-survive": false,
-      "duel-repelled-not-destroyed": false,
-      "mission": false
+      "pressure-seed-duel-retreat": true,
+      "three-withdraw": true,
+      "friendlies-survive": true,
+      "duel-repelled-not-destroyed": true,
+      "mission": true
     },
     "scope": "第11话三机护舰：迅雷突破并威胁母舰，SEED觉醒后重创决斗，敌三机撤退，大天使及强袭存活。精确坐标/秒数/损伤比例为模拟校准。",
-    "failed": [
-      "pressure-seed-duel-retreat",
-      "three-withdraw",
-      "friendlies-survive",
-      "duel-repelled-not-destroyed",
-      "mission"
-    ],
+    "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "58ad4e835b492482d66f98aad241785158208dacd3079821f1dca04ed3166270",
-    "finalStateDigest": "a421504bd0a92980e6d6deae3d43f8305f66cd252ad479f0e177e4f41d87902f",
+    "eventDigest": "ad124d98925ebc776cf8f5f55a6ab854d099b133f3b3b16e21c15a0518a602f8",
+    "finalStateDigest": "5ea25a145567aee106179a369207aab675fa13cd966a89c1afe3cb377e5a8da7",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的较接近样本；仍未完整达到登记条件，不能当作完整还原。勾选导入种子才使用。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-eighth-fleet-reentry": {
-    "seed": 784532152,
+    "seed": 3126302103,
     "status": "current-partial-reference",
     "allCriteria": false,
     "criteria": {
@@ -101,69 +93,64 @@
       "duel-pursues-strike": true,
       "menelaos-gamow-physical-contact": true,
       "rear-guard-loss": true,
-      "archangel-strike-reentry": true,
+      "archangel-strike-reentry": false,
       "main-units-survive": false,
       "mission": false,
       "duel-remains-active": true,
-      "shuttle-loss-after-fleet-collision": false,
+      "shuttle-loss-after-fleet-collision": true,
       "screen-fleet-loss": true
     },
     "scope": "第12—13话会战末段代表编制：四高达及金恩实战、决斗追击强袭、受损两舰实际碰撞毁损、断后舰队损失、伊扎克误判并击毁平民梭、大天使及强袭进入大气区域并存活脱离。普通兵力是抽样而非动画总数，起始损伤与坐标为模拟校准。平民梭最后攻击在此录像为导弹；未复现镜头级武器一致性、热防护或母舰接机，不能标为逐动作完整还原。 持续隐身修复后重新校准末段护航舰初始损伤：德雷克剩余结构20%、装甲35%，均为片段初态，不在运行中指定毁损。",
     "failed": [
+      "archangel-strike-reentry",
       "main-units-survive",
-      "mission",
-      "shuttle-loss-after-fleet-collision"
+      "mission"
     ],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "eec0df0074d20931fd9c0a0f616e8d1476e146f41661023d81f6ba085c2c4d3c",
-    "finalStateDigest": "12281bf15554794acbd1f84f06871e1f97a623ded8ec9dd8a38d26b2759363d5",
+    "eventDigest": "315121be463479a974655d88fa58aba725dd8134a7032e7084c83fa37cfe1af5",
+    "finalStateDigest": "f2e6f3f17911da6554a15dd09c6e4fee34a1dbeede8632200a4196002bef1c63",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的较接近样本；仍未完整达到登记条件，不能当作完整还原。勾选导入种子才使用。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。尚有未满足条件，不视为完整还原。勾选导入种子才使用。"
   },
   "ce-desert-lagowe": {
-    "seed": 3766604531,
-    "status": "current-partial-reference",
-    "allCriteria": false,
+    "seed": 3491764948,
+    "status": "current-core-verified",
+    "allCriteria": true,
     "criteria": {
       "lagowe-beam-pressure": true,
       "real-beam-threat": true,
       "seed-after-pressure": true,
-      "knife-finish": false,
-      "lagowe-out": false,
-      "strike-survives": false,
-      "friendly-win": false
+      "knife-finish": true,
+      "lagowe-out": true,
+      "strike-survives": true,
+      "friendly-win": true
     },
     "scope": "沙漠虎最终近距片段：强袭步枪不能继续使用，仍需应对双炮、觉醒、用格斗短刀决胜；此前丢枪镜头不在本局流程。",
-    "failed": [
-      "knife-finish",
-      "lagowe-out",
-      "strike-survives",
-      "friendly-win"
-    ],
+    "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "fffd080d8444d1a6a38da94200029f07f27d5445a2de29625e05d0482507f066",
-    "finalStateDigest": "5c42010c679a4cf2ff3f769ba0b5c513be400604793816cb8ebe8dbf26cb262c",
+    "eventDigest": "2a8bcd5555dedc0be369d833bcdc1b599653d6b4a1a1bb41e0be48570fc082f4",
+    "finalStateDigest": "207a04814d744f733093fcd92dec46b8ee90945b182cfd7d9ea5b952a5695ce8",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的较接近样本；仍未完整达到登记条件，不能当作完整还原。勾选导入种子才使用。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-orb-departure": {
-    "seed": 208281869,
+    "seed": 739084988,
     "status": "current-partial-reference",
     "allCriteria": false,
     "criteria": {
@@ -171,72 +158,70 @@
       "aircraft-engage": true,
       "strike-engages-aegis": true,
       "blitz-stealth": true,
-      "blitz-covers-aegis": false,
+      "blitz-covers-aegis": true,
       "blade-finishes-blitz": false,
       "blitz-out": false,
       "core-survivors": false
     },
     "scope": "官方正文和配图核对的末段岛屿交锋：四机与两架支援机参与，巨剑强袭对舰刀，迅雷隐身援护圣盾并被刀击退出。炮装/翔翼/巨剑前序换装尚未覆盖。数值坐标与初始损伤是模拟校准，不冒称正片测量。",
     "failed": [
-      "blitz-covers-aegis",
       "blade-finishes-blitz",
       "blitz-out",
       "core-survivors"
     ],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "ea235cc5f19ea44a2505d2c4975e6ac3a534afdacd6ce57c3dceb7fa6f8ff22c",
-    "finalStateDigest": "fefc88700eb7b75867461a4965e621761cb494bfc0231377658835910023ce81",
+    "eventDigest": "68cf3f69c2e0773c30589017e583f6287cf7a4f3f40bac174ef18146451fe94c",
+    "finalStateDigest": "21938306197b1b1373bdd8789f4a78869a3d6b7c624e5683c64a4455fbc283e8",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的较接近样本；仍未完整达到登记条件，不能当作完整还原。勾选导入种子才使用。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。尚有未满足条件，不视为完整还原。勾选导入种子才使用。"
   },
   "ce-island-duel": {
-    "seed": 1332038377,
+    "seed": 3407440573,
     "status": "current-partial-reference",
     "allCriteria": false,
     "criteria": {
       "aegis-strike-engage": true,
       "ship-receives-beam": true,
-      "buster-out": true,
+      "buster-out": false,
       "tolle-supports": true,
       "aegis-finishes-tolle": false,
       "tolle-out": true,
       "strike-slashes-aegis": false,
-      "physical-capture-before-blast": false,
-      "duel-mutual-loss": false,
+      "physical-capture-before-blast": true,
+      "duel-mutual-loss": true,
       "core-other-survivors": false
     },
     "scope": "官方第28页（重制28/原PHASE30）确认大天使受炮击坠地、暴风退出后投降、圣盾击毁援护托尔、强袭斩断圣盾右臂后被抓抱自爆。当前正式初态仍待调整；自爆末段诊断不能代替完整场。盾牌击落、具体耗尽量及坐标尚非官方梗概直接给出的数值。局内击毁只表达机体退出。",
     "failed": [
+      "buster-out",
       "aegis-finishes-tolle",
       "strike-slashes-aegis",
-      "physical-capture-before-blast",
-      "duel-mutual-loss",
       "core-other-survivors"
     ],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "bea8486790abc70c96b38b06829c9475d92e7310d834dc8275817f8785d1ff92",
-    "finalStateDigest": "030014d1cbe76cbe74d154786a6552cea105dcc65665cfcaef88baa4623c2297",
+    "eventDigest": "797d014a8f17d044a5bff5ab69105f495ab3bbb172ae8fcf2ddeaf4a7a658f06",
+    "finalStateDigest": "be9a454bd2cf9dd0cec026c5c0edfdf49450c1340567012db9b7bbc0a84d1464",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的较接近样本；仍未完整达到登记条件，不能当作完整还原。勾选导入种子才使用。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。尚有未满足条件，不视为完整还原。勾选导入种子才使用。"
   },
   "ce-alaska-escape": {
-    "seed": 137655467,
+    "seed": 3604658960,
     "status": "current-core-verified",
     "allCriteria": true,
     "criteria": {
@@ -248,21 +233,21 @@
     "scope": "自由支援并解除包围，大天使撤离；独眼巨人爆破与全军广播暂未覆盖",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "e4029c268eee606f75796e32fac1ad9361f1dabf1c8e5bddad6d74c82062b14a",
-    "finalStateDigest": "22e57d641bb9f63c7905b2e46024697d85da198cb3bca93b800112e4e3d06725",
+    "eventDigest": "4a5b55e78094f96fe5980f2a77db45e336ea15cf1d3ac2513188c45f0b7070ef",
+    "finalStateDigest": "930914deb6e29f1816ec649bb2345d044d264eee3704ee39eb39f33eea315fd1",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-orb-cooperation": {
-    "seed": 3637482825,
+    "seed": 1610631936,
     "status": "current-core-verified",
     "allCriteria": true,
     "criteria": {
@@ -274,21 +259,21 @@
     "scope": "自由/正义联合作战击退三机；弹药危机归舰可由通用撤离条件表达",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "00a70ea49b16ebfb328069cc2d046faeb2678fe06453a33d3e7ced49335053dc",
-    "finalStateDigest": "573ac324fbfc88e7f31a97204cf977919c0a28961df4a858c5d644aa4759d56a",
+    "eventDigest": "db505a604237d62d6a4b9bd1d307d8cb60e944a11d251317134f74f20b7ef287",
+    "finalStateDigest": "92fd7ac75a2a9b69b0976fed39cd1c110546cb0dbebeec77659f6980e7dcc02b",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-meteor-interception": {
-    "seed": 714398895,
+    "seed": 1512152121,
     "status": "current-core-verified",
     "allCriteria": true,
     "criteria": {
@@ -301,18 +286,18 @@
     "scope": "代表8枚已发射核弹全部实际拦截；不模拟之前博亚兹毁灭和核弹爆炸",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "9510fe0ded09d4647260079e5963d6da15fc752e797046ebdcfb0c1def667d4e",
-    "finalStateDigest": "3a4a07ac3d86973ec20b855fd48c3460b5cc011dc0ef2898b54b30d2d90dfc4b",
+    "eventDigest": "91ba4f1e5901f675e8e62e4165594528d2e79f52f29a312ade001397e910a68c",
+    "finalStateDigest": "0d91d7f3fbc1ee07e9ca14dc05af501e0417211f14cd5dba80b09d4913866445",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-archangel-dominion": {
     "seed": 2845003353,
@@ -329,21 +314,21 @@
     "scope": "对射、强袭承受大型攻击、大天使受损后击沉主天使；穆生死交由RP判断",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "333bc87f2fd276690e8567bc2e14ca2413d2ac10c02c7a882c5f44cba8fd9005",
-    "finalStateDigest": "9517c9c25d38f5efb619fbd0d6942da44deeab03117cbb0e0c77b137a3db827e",
+    "eventDigest": "910c855fb53a2fa608cf5cfe479e920969ab92900493b6a196de9b59ea74042d",
+    "finalStateDigest": "61bbaf05e5a58d025b8e455b85a6d3cdac3212e5b6c60209deffc248c41a8730",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-freedom-providence": {
-    "seed": 2001065307,
+    "seed": 20713843,
     "status": "current-partial-reference",
     "allCriteria": false,
     "criteria": {
@@ -351,30 +336,27 @@
       "dragoon-real-rays": true,
       "freedom-real-injury": true,
       "blade-finish": false,
-      "freedom-heavily-damaged-survivor": false,
-      "providence-out": false,
-      "friendly-win": false
+      "freedom-heavily-damaged-survivor": true,
+      "providence-out": true,
+      "friendly-win": true
     },
     "scope": "重点终局的两机核心交战：神意龙骑兵实射包围、自由重伤并以军刀近战击败神意。救生艇事件和创世纪外部波及未实现完整核查，不把这段称为全部终局，人物生死由RP。",
     "failed": [
-      "blade-finish",
-      "freedom-heavily-damaged-survivor",
-      "providence-out",
-      "friendly-win"
+      "blade-finish"
     ],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "90721660f809ed7501a2936e70f62e6ce4a83a1f47d65fc72dca21ace427f161",
-    "finalStateDigest": "c75b4c3251c274aaf6d1ec5e4eba79590b73266be57f668dd3c1e772aa9aff9b",
+    "eventDigest": "98fb29738d4992b53a408b17bec7c5aa43cb2de47d22a5220333fc3322443624",
+    "finalStateDigest": "e8e6d389c14d53ae535bfec56e058c5674fa7397edb01e87244e677c0a0a0a56",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的较接近样本；仍未完整达到登记条件，不能当作完整还原。勾选导入种子才使用。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。尚有未满足条件，不视为完整还原。勾选导入种子才使用。"
   },
   "ce-genesis-interior": {
     "seed": 2201330993,
@@ -388,21 +370,21 @@
     "scope": "仅突入核心破坏；原作正义自爆、救援载员脱出未实现，不能标完整",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "661699431de90b08745802ef14cc461b3dbc9516661a169e1843235b874dc772",
-    "finalStateDigest": "eafc38cee10c7427e9231944f9ae6e9fb66e88267f547c91ed6ffaa9cf29ee9c",
+    "eventDigest": "a82f6a051a31fba8fd21680ef2f6769ae12e90958ed9f722431a85fa08579505",
+    "finalStateDigest": "e25d023fc56f1f41a9aee7a1008166379f3a246b050c9f35998cc5a8bd71c115",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-armory-ground": {
-    "seed": 1334118111,
+    "seed": 763888481,
     "status": "current-partial-reference",
     "allCriteria": false,
     "criteria": {
@@ -422,21 +404,21 @@
       "mission"
     ],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "0a2fa3b6251e16e065585305144655679af48a3530a0908d3b2a12d9b0b03091",
-    "finalStateDigest": "79cab809337642ea46130d09b09bc852bfd896603adb65b949286306a4f9d0be",
+    "eventDigest": "eea9ddbe8901f17622d7b0aad0dc7781d999aad5212d47297515515ce456d9af",
+    "finalStateDigest": "33cb0836a1d2fc27fb2cb1a36631d998da1871c666bb08959b1abaae5720a265",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的较接近样本；仍未完整达到登记条件，不能当作完整还原。勾选导入种子才使用。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。尚有未满足条件，不视为完整还原。勾选导入种子才使用。"
   },
   "ce-u7-demolition": {
-    "seed": 2414470232,
+    "seed": 1222423081,
     "status": "current-core-verified",
     "allCriteria": true,
     "criteria": {
@@ -449,21 +431,21 @@
     "scope": "破拆装置完成、护卫与阻挠方交火；不模拟随后残骸大气灾害",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "ccfa6b326b35244ba643f918bb6fb41a91229458f1a0b079601af9a268624d12",
-    "finalStateDigest": "9b82522df784c2ca95007e1c3235efd9c771f9093e1d369346a80d251fde05c4",
+    "eventDigest": "7cbba5282cbde0385a83ad24e76b0db70db75bd4ffb78f6d669616c49772f2e2",
+    "finalStateDigest": "509f2e1ceaefb6868bf8c1e9f1718daad985076a5a0ec695f172eaf5e299e1da",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-minerva-breakout": {
-    "seed": 1031404851,
+    "seed": 2096549867,
     "status": "current-core-verified",
     "allCriteria": true,
     "criteria": {
@@ -475,21 +457,21 @@
     "scope": "真在压力下觉醒、击破扎姆扎扎并帮助舰艇突破包围 敌方普通舰艇与MS采用较小代表编制，不冒称原作真实数量。",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "dfe986cdf618ea94200545cbaffc59cbbda85ec190fb009f90d411323c222eea",
-    "finalStateDigest": "93211f991396870bb7687df680b698ef410079ffa69d2b7b84195ab1c3f67ecb",
+    "eventDigest": "ebcea35eaf2ac1b9e8abef75e0733921e7d8f04651a9f39643b489cb4a058c32",
+    "finalStateDigest": "7377b05f042b78e5fa9b061e7c7b7aa722edf2fd154dabf4c98a0f17bf869d4c",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-lohengrin-gate": {
-    "seed": 1370207293,
+    "seed": 489104896,
     "status": "current-core-verified",
     "allCriteria": true,
     "criteria": {
@@ -502,21 +484,21 @@
     "scope": "正面牵制、侧翼脉冲击毁炮位；隧道实际导航及分体突入未覆盖",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "74682d3ad0e7ce3f30f21ff00df48fdae0cfb0794450c29bca7216e7570e0b05",
-    "finalStateDigest": "5de5962e587492d4c782e182ac15f95495d9b2c1e67354f9e902970027e72326",
+    "eventDigest": "ca4c91ed05bbd1ce4d72ab2bd620a018dd423baea520fac4b85fa24917161efc",
+    "finalStateDigest": "23505eb059ce5ac671cb7c7fcf7a3b15d8341c79f93c394392a30ec6d9925ca7",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-dardanelles": {
-    "seed": 1771545078,
+    "seed": 1070858284,
     "status": "current-core-verified",
     "allCriteria": true,
     "criteria": {
@@ -529,21 +511,21 @@
     "scope": "三方干预、海涅退出、密涅瓦突围；精确误斩与呼吁停战暂不保证",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "c5bf0d3b1c29a2cc434c9db2153e58bcea5b63e13419d219137bb5a00318166f",
-    "finalStateDigest": "9b29903117a8f73df1b3060b1fbf51fc6f4edf67f43df97d8997ff1afe4198f5",
+    "eventDigest": "f63167a68236642bac531f81f24bb7c3e1d13471eedaca1bf42ca6baf485c7ce",
+    "finalStateDigest": "d04e797bf76af0dde71d2b32567f1f728885ae8a7a98ecbc6c97fd61a5da29dd",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-crete": {
-    "seed": 3496085411,
+    "seed": 301533304,
     "status": "current-partial-reference",
     "allCriteria": false,
     "criteria": {
@@ -559,18 +541,18 @@
       "orb-carrier-out"
     ],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "af510cbbd25c565239693ec16acbcf09c5f44d892aff71099209184962607c2f",
-    "finalStateDigest": "1ed1464b3a381ea7c7b6cd77a197e611c6272aa9f7f62b879e8e92a6124c813b",
+    "eventDigest": "68e2c0ea113969a16e5d2d15ab0f16cbf83600e6628075050834e8e24c06e3c4",
+    "finalStateDigest": "9aad5c0241c981d1f45dbd50b6712a4600fdfb083210032620f619848e0b8479",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的较接近样本；仍未完整达到登记条件，不能当作完整还原。勾选导入种子才使用。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。尚有未满足条件，不视为完整还原。勾选导入种子才使用。"
   },
   "ce-berlin": {
     "seed": 1160153093,
@@ -587,21 +569,21 @@
     "scope": "村雨迎击混沌，自由与脉冲迎击毁灭，自由最终致命命中；心理停战变化暂未建模",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "430e28299cb4ba5b65fc92feb6adcdb6d730891ae26c3b94d6d67ac578dad01f",
-    "finalStateDigest": "c0567b2e6497966ba0c3b900bbe7d08f14e041ce4e01b6a95d78ab77b6515b5f",
+    "eventDigest": "0b2bc48bf1dfd7f11064f1dcaa635a23300bc7c131f0892a7bcb8a363b9b8636",
+    "finalStateDigest": "a274013bcbd379e38a33ab39f56a25f236c06ce11627b427e249330aa7e4aed6",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-angel-down": {
-    "seed": 1799068167,
+    "seed": 2553040195,
     "status": "current-partial-reference",
     "allCriteria": false,
     "criteria": {
@@ -620,21 +602,21 @@
       "impulse-blade-finish"
     ],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "48611fc56f9c8c53ae69c80587b0c10eb13aa322b293c094fb97d2fca125456f",
-    "finalStateDigest": "918bcd809a2b22d17499ddc41dadd77105ab9b2f8a24a8448bd9a54d7fd8fb1b",
+    "eventDigest": "dfcb7a4014ac6cea01921e423bbd8c980e70604a987a98117b47d585b02be225",
+    "finalStateDigest": "805b90fe023513697ebfc4e55507863eaa260ce61380f50d5258134135d5a32b",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的较接近样本；仍未完整达到登记条件，不能当作完整还原。勾选导入种子才使用。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。尚有未满足条件，不视为完整还原。勾选导入种子才使用。"
   },
   "ce-heavens-base": {
-    "seed": 1327480673,
+    "seed": 2190622483,
     "status": "current-core-verified",
     "allCriteria": true,
     "criteria": {
@@ -648,18 +630,18 @@
     "scope": "三台精锐机击破五台毁灭；尼伯龙根高空炮、基地投降与吉普利尔逃走未覆盖",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "b21bf471a0f7b60c3b333ca713c33772b34af10481070594ad007c41fc4e357d",
-    "finalStateDigest": "d7919a552e0f7fda65b1984c907f4045bdd2b13d0765eb5af08ec67fed928176",
+    "eventDigest": "aa6260fdbc6f8f6d4d093f850b4e15efe76aea6c12d197f6dd95ec71a33a4cf4",
+    "finalStateDigest": "08755a6558beaf3deddafc412bced6c4b99db13d1096401269b7ca78eda3bba9",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-eternal-rescue": {
     "seed": 346648336,
@@ -674,21 +656,21 @@
     "scope": "强袭自由火力压制护舰并成功救援，安德鲁参与；全舰队精确退出顺序不强制",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "dcba341f3ac187a8c460acfd48a33367b5a702ab9136c71600f661409c6c6a02",
-    "finalStateDigest": "1e54ba418ced99e7f49523c5cf9d520a9dc67f74e15750657f5d49ec293c61e0",
+    "eventDigest": "06137ed75484094672efba9a2170e3fc99eaeeaff4d8473db41529b9cd7bc17f",
+    "finalStateDigest": "ebfc059800b70656285bf0364e334961461adf9c6bb0ac2153975ff653234efc",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   },
   "ce-orb-high-air": {
-    "seed": 1091181251,
+    "seed": 3986567158,
     "status": "current-core-verified",
     "allCriteria": true,
     "criteria": {
@@ -702,17 +684,17 @@
     "scope": "强袭自由/无限正义协防对抗命运/传说、敌舰撤退；拂晓盾反射细节另需检查",
     "failed": [],
     "hashes": {
-      "runtime": "55bb7ea0403f1baebfdd03cf62fb7d1de90399e5b2b8e8891441b82e295da2dd",
-      "worldbook": "370a8393ddbf67a12cc5312f9c2648a5bcc987b161fe07ece10c88b16c44bae8",
+      "runtime": "b93f190ac476a606285418c5d2d9c0eecc6914a5ba21fc7680c4a68bc81466bd",
+      "worldbook": "e30731eebab56c7903c56b3c9615b46fc291c54a4b32b5ea0c79f996d3a7d506",
       "presets": "e9bd948737ffd9fbceffaeba3627dbcd68e9c3d57f2c7bb4fc3c6e19fda4812a",
-      "contracts": "0a79fac3eddaf971832c8f0be146758b7f3a6e35540b2c9db054c714d875dddf"
+      "contracts": "294231c31fb2e9713ddd6cb1c3154a79f54b8a3d5fe063de7d9eb5deefe4b4ec"
     },
-    "eventDigest": "2aa6a7781da7466f487042daadefae111b550c266951d3949f67112e35364574",
-    "finalStateDigest": "0d70082eb78ff86b7384fee901575cf676680f48a7e8059fbd0190751c216400",
+    "eventDigest": "3544be990223ed612e4b9dd80eeb9f53ff762a2cad84da72ae7584b28c93baae",
+    "finalStateDigest": "9381c3a706b2282103b65c262394c075d5d8fa5d54090d11c44f4ed40753e064",
     "samples": 6,
     "defaultRandom": true,
     "recording": null,
     "driverAccepted": false,
-    "referenceNote": "六个不同种子中的核心条件通过样本，最终代码两次复跑一致；勾选导入种子才使用，不保证任意种子都达到原作结果。"
+    "referenceNote": "6个候选中的较接近样本，最终代码复跑一致。登记核心条件通过。勾选导入种子才使用。"
   }
 }
