@@ -20,8 +20,10 @@ export function battleFraming(units,focus='overall'){
  }
  const pool=active.length?active:units.filter(u=>!u.docked);if(!pool.length)return {center:[0,0,0],members:[],enemyId:null,yaw:.7,pitch:.43};
  const combat=pool.filter(small),anchors=combat.length?combat:pool;
- const middle=[0,1,2].map(axis=>{const values=anchors.map(u=>u.position[axis]).sort((a,b)=>a-b);return values[Math.floor(values.length/2)];});
- const members=anchors.length>=8?anchors.map(u=>({u,d:length(sub(u.position,middle))})).sort((a,b)=>a.d-b.d).slice(0,Math.ceil(anchors.length*.9)).map(x=>x.u):anchors;
+ const middle=[0,1,2].map(axis=>anchors.reduce((sum,u)=>sum+u.position[axis],0)/Math.max(1,anchors.length));
+ // Use the moving combat group centroid instead of a median/top-90% sample. The median can jump
+ // when two units cross, which makes the otherwise smooth camera appear to teleport.
+ const members=anchors.length>64?anchors.map(u=>({u,d:length(sub(u.position,middle))})).sort((a,b)=>a.d-b.d).slice(0,64).map(x=>x.u):anchors;
  // Ships contribute a small centering hint; distant hulls never set the zoom
  // envelope while mobile combatants remain. All-ship battles still fit hulls.
  let sum=[0,0,0],weight=0;for(const u of members){const w=['pod','vehicle','turret'].includes(u.entityType)?.8:1;sum=add(sum,mul(u.position,w));weight+=w;}
@@ -112,7 +114,7 @@ export function motionCue(u){
 export class BattleRenderer {
  constructor(canvas) {
   this.canvas=canvas;this.ctx=canvas.getContext('2d');if(!this.ctx)throw Error('浏览器无法创建画布');
-  this.yaw=0.7;this.pitch=0.43;this.distance=3000;this.focus='overall';this.showFireArcs=true;this.target=[0,500,0];this.pan=[0,0,0];this.targetPan=[0,0,0];this.followYaw=null;this.cameraZoom=1;this.cameraCenter=null;
+  this.yaw=0.7;this.pitch=0.43;this.distance=3000;this.focus='overall';this.cameraEnemy=null;this.showFireArcs=true;this.target=[0,500,0];this.pan=[0,0,0];this.targetPan=[0,0,0];this.followYaw=null;this.cameraZoom=1;this.cameraCenter=null;
   this.projectileTrails=new Map();this.trails=new Map();this.lastTrailTick=-1;this.drag=null;this.abort=new AbortController();
   this.impactFeedback=new FocusedImpactFeedback();this.impactShakeEnabled=true;this.motionPreference=globalThis.matchMedia?.('(prefers-reduced-motion: reduce)');
   const opts={signal:this.abort.signal};
@@ -139,13 +141,14 @@ export class BattleRenderer {
   },{...opts,passive:false});
   canvas.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','-','w','a','s','d'].includes(e.key)){e.preventDefault();this.touchCamera(performance.now());}if(e.key==='ArrowLeft')this.yaw-=0.12;if(e.key==='ArrowRight')this.yaw+=0.12;if(e.key==='ArrowUp')this.pitch=clamp(this.pitch+0.1,0.04,1.45);if(e.key==='ArrowDown')this.pitch=clamp(this.pitch-0.1,0.04,1.45);if(e.key==='+'){this.cameraZoom=clamp(this.cameraZoom*.85,.25,4);this.manualDistance=clamp(this.distance*.85,130,180000);}if(e.key==='-'){this.cameraZoom=clamp(this.cameraZoom/.85,.25,4);this.manualDistance=clamp(this.distance/.85,130,180000);}if(['w','a','s','d'].includes(e.key)){this.targetPan[2]+=(e.key==='w'?-1:e.key==='s'?1:0)*150;this.targetPan[0]+=(e.key==='a'?-1:e.key==='d'?1:0)*150;this.panHoldUntil=performance.now()+2500;}},opts);
  }
- reset(){this.touchPoints.clear();this.touchGesture=null;this.drag=null;this.impactFeedback.reset();this.projectileTrails.clear();this.trails.clear();this.lastTrailTick=-1;this.yaw=0.7;this.pitch=0.43;this.distance=3000;this.pan=[0,0,0];this.targetPan=[0,0,0];this.followYaw=null;this.lastFocus=null;this.cameraTime=null;this.cameraCenter=null;this.cameraZoom=1;this.panHoldUntil=0;this.cameraHoldUntil=0;this.manualDistance=null;}
+ reset(){this.touchPoints.clear();this.touchGesture=null;this.drag=null;this.impactFeedback.reset();this.projectileTrails.clear();this.trails.clear();this.lastTrailTick=-1;this.yaw=0.7;this.pitch=0.43;this.distance=3000;this.pan=[0,0,0];this.targetPan=[0,0,0];this.followYaw=null;this.lastFocus=null;this.cameraEnemy=null;this.cameraTime=null;this.cameraCenter=null;this.cameraZoom=1;this.panHoldUntil=0;this.cameraHoldUntil=0;this.manualDistance=null;}
  fitPreparation(units){if(this.focus!=='overall'||!units.length)return;this.cameraZoom=1;this.cameraCenter=null;this.lastFocus=null;}
  touchCamera(now){this.cameraHoldUntil=now+1800;this.manualDistance=this.distance;}
  updateCamera(units,now){
-  const plan=battleFraming(units,this.focus),focused=units.find(u=>u.id===this.focus),changed=this.lastFocus!==this.focus,dt=Math.max(0,Math.min(.1,(now-(this.cameraTime??now-16))/1000)),blend=1-Math.exp(-dt*1.4);
+  const plan=battleFraming(units,this.focus),focused=units.find(u=>u.id===this.focus),changed=this.lastFocus!==this.focus,dt=Math.max(0,Math.min(.1,(now-(this.cameraTime??now-16))/1000)),blend=1-Math.exp(-dt*2.2);
+  if(focused&&plan.enemyId&&this.cameraEnemy&&this.cameraEnemy!==plan.enemyId){const held=units.find(u=>u.id===this.cameraEnemy),next=units.find(u=>u.id===plan.enemyId);if(held&&held.alive&&next){const oldD=length(sub(held.position,focused.position)),newD=length(sub(next.position,focused.position));if(oldD<=newD*1.35+350){plan.enemyId=this.cameraEnemy;plan.center=mul(add(mul(focused.position,2),held.position),1/3);}else this.cameraEnemy=plan.enemyId;}}else if(focused)this.cameraEnemy=plan.enemyId||this.cameraEnemy;
   this.cameraTime=now;
-  if(changed){this.targetPan=[0,0,0];this.lastFocus=this.focus;} // Never snap position, orbit or zoom on focus changes.
+  if(changed){this.targetPan=[0,0,0];this.cameraEnemy=null;this.lastFocus=this.focus;} // Never snap position, orbit or zoom on focus changes.
   const manual=!!this.drag||now<(this.cameraHoldUntil||0);
   if(!this.cameraCenter)this.cameraCenter=[...plan.center];
   if(!manual){this.yaw+=angleDelta(plan.yaw??.7,this.yaw)*blend;this.pitch+=((plan.pitch??.43)-this.pitch)*blend;this.cameraCenter=lerp(this.cameraCenter,plan.center,blend);this.targetPan=lerp(this.targetPan,[0,0,0],blend);this.cameraZoom+=(1-this.cameraZoom)*blend;}
